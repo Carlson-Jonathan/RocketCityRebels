@@ -22,7 +22,7 @@
                     know who they are and do not compromise their individuality 
                     or personal opinion for anyone."
                 </p>
-                <p class="script">
+                <p>
                     Rocket City Rebels (formerly Rad Recruits) is a co-ed junior 
                     roller derby team in north Alabama for skaters ages 8 to 18 
                     who are dedicated to learning the sport. Coaches teach 
@@ -42,9 +42,9 @@
         <!-------------------------------------------------------------------->
         
         <h2 class="headingbar">Bout Schedule:</h2>
-        <p class="script" style="text-align: center">All home bouts are double 
-            headers with our adult sister league, the Dixie Derby Girls.</p>
         <p class="script" style="background-color: white">
+            All home bouts are double headers with our adult sister league, 
+            the Dixie Derby Girls. <br>
             <img src="images/derbychick.webp" style="float:left; margin: 25px; 
                 width: 105px">02/20/2019 - Away vs Tragic City (Birmingham)<br><br>
             03/20/2019 - Home RCR Mixer<br><br>
@@ -56,22 +56,7 @@
             09/14/2019 - Away vs West Ky Rockin Rollers (Paducah, KY)</p><br>
 
         <!-------------------------------------------------------------------->
-        
-        <h2 class="headingbar">Special Thanks to Our Sponsors:</h2>
-        <div class="row">
-            <div class="columnleft">
-                <img src="images/ChickFilALogo.gif" width="45%" class="sponsorsleft">
-                <img src="images/InsanityLogo.webp" width="45%" class="sponsorsleft">
-                <img src="images/OReilyLogo.webp" width="45%" class="sponsorsleft">
 
-            </div>
-
-            <div class="columnright">
-                <img src="images/JacksLogo.webp" width="60%" class="sponsorsright">
-                <img src="images/AirplaneLogo.webp" width="60%" class="sponsorsright">
-            </div>
-
-        </div>
     </main>
 
     <?php include "pages/footer.php"; ?>

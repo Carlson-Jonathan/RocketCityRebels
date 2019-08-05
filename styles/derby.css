@@ -4,12 +4,15 @@
 }
 
 header {
-    font-size: 1.5em;
     background-color: #251010;
-    padding: 10px;
-    font-family: 'Allerta Stencil', sans-serif;
     position: fixed;
     width: 100%;
+    padding: 10px;
+    font-size: 1.5em;
+}
+
+nav {
+    font-family: 'Allerta Stencil', sans-serif;
 }
 
 body {
@@ -49,7 +52,7 @@ li.navbuttons {
 }
 
 li.navbuttons:hover {
-    background-color: #444444;
+    background-color: #664444;
 }
 
 a li {
@@ -63,14 +66,14 @@ li a.active {
 
 .columnleft, .columnright {
     float: left;
-    width: 70%;
+    width: 75%;
     background-color: #251010;
     color: white;
     padding: 0 10px 50px 25px;
 }
 
 .columnright {
-    width: 30%;
+    width: 25%;
     padding: 0 25px 0 0;
 }
 
@@ -119,26 +122,12 @@ h1, h2 {
 
 .script {
     font-size: 1.1em;
-    background-color: #dddddd;
+    background-color: #592626;
     padding: 12px 20px;
 }
 
 .schedule {
     padding: 25px;
-}
-
-h4 {
-    width: 100%;
-    background-color: #251010;
-    color: #5cf236;
-    text-align: center;
-    padding: 10px;
-    margin: 0;
-}
-
-p {
-    font-family: sans-serif;
-    color: #251010;
 }
 
 side {
@@ -164,4 +153,20 @@ side {
     background-color: #251010;
     color: #5cf236;
     float: left;
+}
+
+.sponsors {
+    width: 100px;
+    margin: 10px;
+    max-height: 50px;
+}
+
+footer {
+    width: 100%;
+    background-color: #251010;
+    color: #5cf236;
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+    font-size: 1.3em;
 }

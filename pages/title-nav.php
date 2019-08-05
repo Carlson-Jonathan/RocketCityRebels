@@ -23,8 +23,8 @@
                 <li id="schedule.php" class="navbuttons">SCHEDULE</li>    
             </a>
             
-            <a href="../pages/schedule.php">   
-                <li id="schedule.php" class="navbuttons">STORE</li>       
+            <a href="../pages/store.php">   
+                <li id="store.php" class="navbuttons">STORE</li>       
             </a>
             
             <a href="../pages/sponsors.php">   
@@ -37,7 +37,7 @@
         </ul>    
     </nav>
     
-    <script src="scripts/activeNav.js">
+    <script src="../scripts/activeNav.js">
         //Highlights active page on navigation bar
     </script>
 </header>
