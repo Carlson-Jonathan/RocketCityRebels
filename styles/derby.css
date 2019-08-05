@@ -4,13 +4,16 @@
 }
 
 header {
-}
-
-iframe {
-    margin: 0;
+    font-size: 1.5em;
+    background-color: #251010;
+    padding: 10px;
+    font-family: 'Allerta Stencil', sans-serif;
+    position: fixed;
+    width: 100%;
 }
 
 body {
+    background-image: url("../images/background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;   
@@ -22,37 +25,30 @@ main {
     opacity: 1;
 }
 
-iframe {
+#intromovie {
+    margin: 100px 0 20px;
     width: 100%;
     height: 515px;
 }
 
-ul {
+ul#navigation {
     list-style-type: none;
     background-color: #251010;
     margin: 0;
     text-align: center;
-    position: fixed;
     width: 100%;
     padding: 0;
+    font-size: .5em;
 }
 
-.fix {
-    background-color: #251010;
-    padding: 15px;
-    margin-top: -4px;
-    font-family: 'Allerta Stencil', sans-serif;
-    font-size: 1.6em;
-}
-
-li {
+li.navbuttons {
     display: inline-block;
-    padding: 7px 20px;
+    padding: 3px 20px;
     font-family: 'Allerta Stencil', sans-serif;
-    font-size: 1.3em;
+    font-size: 1.5em;
 }
 
-li:hover {
+li.navbuttons:hover {
     background-color: #444444;
 }
 
@@ -65,18 +61,27 @@ li a.active {
     font-weight: 900;
 }
 
-
 .columnleft, .columnright {
     float: left;
-    width: 60%;
-    padding: 10px;
+    width: 70%;
     background-color: #251010;
     color: white;
-    height: 435px;
+    padding: 0 10px 50px 25px;
 }
 
 .columnright {
-    width: 40%
+    width: 30%;
+    padding: 0 25px 0 0;
+}
+
+.boximage {
+    width: 100%;
+}
+
+.row {
+    background-color: #251010;
+    height: 100%;
+    margin-bottom: 30px;
 }
 
 .row:after {
@@ -85,25 +90,31 @@ li a.active {
     clear: both;
 }
 
-h1 {
+h1, h2 {
     font-family: 'Saira Semi Condensed', sans-serif;
     color: #5cf236;
     text-align: center;
     margin: 0;
 }
 
-h1.bar {
+.headingbar {
     background-color: #251010;
-    padding: 15px 0 10px 0;
+    padding: 15px 0;
+    font-size: 2em;
 }
 
 .quote {
     font-style: italic;
     text-align: center;
     font-size: 1.15em;
-    font-weight: 900;
     color: #5cf236;
-    padding: 10px 45px 30px;
+    margin: 10px 50px;
+}
+
+#rebel {
+    font-size: 1.5em;
+    font-style: normal;
+    margin: 0;
 }
 
 .script {
@@ -144,7 +155,7 @@ side {
     margin: 10px 0px;
 }
 
-#thispage {
+.thispage {
     background-color: #5cf236;
     color: black;
 }

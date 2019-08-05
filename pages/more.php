@@ -1,29 +1,11 @@
 <!DOCTYPE HTML>  
 <html lang="en-US">
 
-<head>
-    <meta charset="utf-8">
-    <meta name="Prove06" content="width=device-width, initial-scale=1">
-    <title>Rocket City Rebels Prototype Page</title>
-    <meta name = "description" content="CS371 Project for Jonathan Carlson.">
-    <link href="https://fonts.googleapis.com/css?family=Allerta+Stencil&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Saira+Semi+Condensed&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/normalize.css">
-    <link id="styles" rel="stylesheet" href="../styles/pages.css">
-</head>
+<?php include "head.php"; ?>
     
-<body background="../images/background.jpg">
+<body>
 
-    <header>
-        <ul>
-            <a href="../index.php"><li>HOME</li></a>
-            <a href="skaters.php"><li>SKATERS</li></a>
-            <a href="dues.php"><li>DUES AND DONATIONS</li></a>
-            <a href="schedule.php"><li>SCHEDULE</li></a>
-            <a href="sponsors.php"><li>SPONSORS</li></a>
-            <a href="more.php"><li id="thispage">MORE</li></a>
-        </ul>
-    </header><br><br><br>
+    <?php include "title-nav.php"; ?>
 
     <main>
         
@@ -91,9 +73,7 @@
 
     </main>
 
-    <footer>
-        <h4>&copy; RocketCityRebels 2019, Huntsville, Al</h4>
-    </footer>
+    <?php include "pages/footer.php"; ?>
     
 </body>
     
