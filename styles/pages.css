@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;   
+}
+
+ul {
+    list-style-type: none;
+    background-color: #251010;
+    margin: auto;
+    padding: 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+}
+
+li {
+    display: inline-block;
+    padding: 7px 20px;
+    font-family: 'Allerta Stencil', sans-serif;
+    font-size: 1.3em;
+}
+
+li:hover {
+    background-color: #444444;
+}
+
+a li {
+    color: #5cf236;
+}
+
+li a.active {
+    color: yellow;
+    font-weight: 900;
+}
+
+main {
+    width: 900px;
+    margin: auto;
+    opacity: 1;
+}
+
+.columnleft, .columnright {
+    float: left;
+    width: 35%;
+    padding: 15px;
+    background-color: #251010;
+    color: white;
+    margin-bottom: 30px;
+    min-height: 275px;
+}
+
+.columnright {
+	width: 65%
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+h1 {
+    font-family: 'Saira Semi Condensed', sans-serif;
+    color: #5cf236;
+    text-align: center;
+    margin: 0;
+}
+
+h1.bar {
+    background-color: #251010;
+    padding: 15px 0;
+}
+
+#thispage {
+    background-color: #5cf236;
+    color: black;
+}
+
+footer {
+    width: 100%;
+    background-color: #251010;
+    color: #5cf236;
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+}
+
+img {
+	width: 100%;
+	margin: auto;
+	text-align: center;
+	display: block;
+}
+
+p.emphasistext {
+	color: #5cf236;
+	font-size: 1.3em;
+
+}
+
+.calendar {
+	margin: auto;
+	width: 100%;
+	text-align: center;
+	display: block;
+}
+
+.backdrop {
+	background-color: #775555;
+}
+
+button {
+	font-size: 1.5em;
+	border-radius: 15px;
+	background-color: #5cf236;
+	margin: auto;
+	text-align: center;
+	width: 175px;
+	color: #251010;
+	font-weight: 900;
+	display: block;
+}
+
+form {
+	background-color: #251010;
+	text-align: left;
+	color: #5cf236;
+	margin: 0 0 30px;
+}
+
