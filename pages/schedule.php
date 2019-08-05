@@ -16,12 +16,12 @@
 
     <header>
         <ul>
-            <a href="../index.html"><li>HOME</li></a>
-            <a href="skaters.html"><li>SKATERS</li></a>
-            <a href="dues.html"><li>DUES AND DONATIONS</li></a>
-            <a href="schedule.html"><li id="thispage">SCHEDULE</li></a>
-            <a href="sponsors.html"><li>SPONSORS</li></a>
-            <a href="more.html"><li>MORE</li></a>
+            <a href="../index.php"><li>HOME</li></a>
+            <a href="skaters.php"><li>SKATERS</li></a>
+            <a href="dues.php"><li>DUES AND DONATIONS</li></a>
+            <a href="schedule.phpl"><li id="thispage">SCHEDULE</li></a>
+            <a href="sponsors.php"><li>SPONSORS</li></a>
+            <a href="more.php"><li>MORE</li></a>
         </ul>
     </header><br><br><br>
     

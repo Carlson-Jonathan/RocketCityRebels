@@ -17,11 +17,11 @@
     <header>
         <ul>
             <a href="#home"><li id="thispage">HOME</li></a>
-            <a href="pages/skaters.html"><li>SKATERS</li></a>
-            <a href="pages/dues.html"><li>DUES AND DONATIONS</li></a>
-            <a href="pages/schedule.html"><li>SCHEDULE</li></a>
-            <a href="pages/sponsors.html"><li>SPONSORS</li></a>
-            <a href="pages/more.html"><li>MORE</li></a>
+            <a href="pages/skaters.php"><li>SKATERS</li></a>
+            <a href="pages/dues.php"><li>DUES AND DONATIONS</li></a>
+            <a href="pages/schedule.php"><li>SCHEDULE</li></a>
+            <a href="pages/sponsors.php"><li>SPONSORS</li></a>
+            <a href="pages/more.php"><li>MORE</li></a>
         </ul>
     </header>
 
