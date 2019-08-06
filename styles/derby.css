@@ -6,6 +6,7 @@
 header {
     background-color: #251010;
     position: fixed;
+    top: 0;
     width: 100%;
     padding: 10px;
     font-size: 1.5em;
@@ -26,6 +27,11 @@ main {
     width: 900px;
     margin: auto;
     opacity: 1;
+}
+
+.start {
+    margin: 130px;
+    line-height: 0;
 }
 
 #intromovie {
@@ -64,9 +70,20 @@ li a.active {
     font-weight: 900;
 }
 
+/*************************************
+* These are the CSS properties to 
+* create the box templates with header
+* bars, 25% images on the right/left,
+* and 75% text.
+* Left/Right = image on right with
+* dark background.
+* Left/Right2 = image on left with
+* a white background.
+*************************************/
+
 .columnleft, .columnright {
-    float: left;
     width: 75%;
+    float: left;
     background-color: #251010;
     color: white;
     padding: 0 10px 50px 25px;
@@ -74,24 +91,56 @@ li a.active {
 
 .columnright {
     width: 25%;
-    padding: 0 25px 0 0;
+    padding: 0 25px 0 15px;
+}
+
+.columnleft2, .columnright2 {
+    width: 25%;
+    float: left;
+    background-color: white;
+    color: #251010;
+    padding: 0 10px 0 25px;
+}
+
+.columnright2 {
+    width: 75%;
+    padding: 0 25px 0 15px;
 }
 
 .boximage {
     width: 100%;
 }
 
-.row {
+/* This is the container for boxes */
+.row, .row2 {
     background-color: #251010;
     height: 100%;
     margin-bottom: 30px;
 }
 
-.row:after {
+.row2 {
+    background-color: white;
+}
+
+.row:after, .row2:after {
     content: "";
     display: table;
     clear: both;
 }
+
+.script, .script2 {
+    font-size: 1.1em;
+    background-color: white;
+    padding: 10px 0 25px 0;
+}
+
+.script2 {
+    background-color: #251010;
+    color: white;
+    padding: 10px 0 25px 0;
+}
+
+/*****************************************/
 
 h1, h2 {
     font-family: 'Saira Semi Condensed', sans-serif;
@@ -120,39 +169,14 @@ h1, h2 {
     margin: 0;
 }
 
-.script {
-    font-size: 1.1em;
-    background-color: #592626;
-    padding: 12px 20px;
-}
 
 .schedule {
     padding: 25px;
 }
 
-side {
-    display: inline-block;
-    color: white;
-    width: 100px;
-}
-
-.sponsorsleft {
-    margin: 10px 100px;
-}
-
-.sponsorsright {
-    margin: 10px 0px;
-}
-
 .thispage {
     background-color: #5cf236;
     color: black;
-}
-
-.heading {
-    background-color: #251010;
-    color: #5cf236;
-    float: left;
 }
 
 .sponsors {
