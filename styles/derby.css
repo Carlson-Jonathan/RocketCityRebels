@@ -5,8 +5,8 @@
 
 @font-face {
     font-family: 'docktrinregular';
-    src: url('../fonts/docktrin-webfont.woff2') format('woff2'),
-    url('../fonts/docktrin-webfont.woff') format('woff');
+    src: url('../.fonts/docktrin-webfont.woff2') format('woff2'),
+    url('../.fonts/docktrin-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -21,7 +21,7 @@ header {
     font-size: 1.5em;
 }
 
-p.pagetitle {
+.pagetitle {
     font-family: 'docktrinregular';
     font-weight: normal;
     font-style: normal;
