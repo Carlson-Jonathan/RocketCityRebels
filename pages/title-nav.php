@@ -3,7 +3,7 @@
 ------------------------------------------------------------------------------>
 
 <header>
-    <h1>Rocket City Rebels Jr. Roller Derby</h1>
+    <p class="pagetitle">Rocket City Rebels</p>
 
     <nav>
         <ul id="navigation">

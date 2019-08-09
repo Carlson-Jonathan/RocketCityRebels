@@ -22,6 +22,7 @@
                     do eiusmod tempor incididunt ut labore et dolore magna 
                     aliqua. Ut enim ad minim veniam, quis nostrud.</p>
             </div>
+            
 
             <div class="columnright2">
                 <p class="script">Here is a sample copy-paste information box.

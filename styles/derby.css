@@ -3,6 +3,15 @@
     margin: 0;
 }
 
+@font-face {
+    font-family: 'docktrinregular';
+    src: url('../fonts/docktrin-webfont.woff2') format('woff2'),
+    url('../fonts/docktrin-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 header {
     background-color: #251010;
     position: fixed;
@@ -10,6 +19,16 @@ header {
     width: 100%;
     padding: 10px;
     font-size: 1.5em;
+}
+
+p.pagetitle {
+    font-family: 'docktrinregular';
+    font-weight: normal;
+    font-style: normal;
+    color: #5cf236;
+    text-align: center;
+    font-size: 3em;
+    padding: 15px;
 }
 
 nav {
@@ -30,7 +49,7 @@ main {
 }
 
 .start {
-    margin: 130px;
+    margin: 175px;
     line-height: 0;
 }
 
@@ -111,6 +130,12 @@ li a.active {
     width: 100%;
 }
 
+.boximagehome {
+    display: block;
+    width: 70%;
+    margin: auto;
+}
+
 /* This is the container for boxes */
 .row, .row2 {
     background-color: #251010;
@@ -151,8 +176,12 @@ h1, h2 {
 
 .headingbar {
     background-color: #251010;
-    padding: 15px 0;
-    font-size: 2em;
+    padding: 25px 0 5px;
+    font-size: 2.5em;
+    font-family: 'docktrinregular';
+    font-weight: normal;
+    font-style: normal;
+    color: #5cf236;
 }
 
 .quote {
@@ -160,7 +189,7 @@ h1, h2 {
     text-align: center;
     font-size: 1.15em;
     color: #5cf236;
-    margin: 10px 50px;
+    margin: 50px 50px;
 }
 
 #rebel {
@@ -169,6 +198,10 @@ h1, h2 {
     margin: 0;
 }
 
+.info {
+    margin: 20px;
+    text-align: justify;
+}
 
 .schedule {
     padding: 25px;

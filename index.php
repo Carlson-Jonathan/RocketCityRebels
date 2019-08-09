@@ -9,20 +9,15 @@
 
     <main>
         
-        <iframe id="intromovie" src="https://www.youtube.com/embed/a4Jcieddb60" 
-            frameborder="0" allow="accelerometer; autoplay; encrypted-media; 
-            gyroscope; picture-in-picture" allowfullscreen></iframe>
-        
-        <!-------------------------------------------------------------------->
-        
-        <h2 class="headingbar">About Us:</h2>
-        <div class="row">
-            <div class="columnleft">
+        <div class="start"></div>
+        <div class="row" style="padding: 30px 0;">
+            <div class="columnleft" style="width: 40%" >
+                <img class="boximagehome" src="../images/logo.webp">
                 <p class="quote"><span id="rebel">Rebel:</span><br>"True rebels 
                     know who they are and do not compromise their individuality 
                     or personal opinion for anyone."
                 </p>
-                <p>
+                <p class="info">
                     Rocket City Rebels (formerly Rad Recruits) is a co-ed junior 
                     roller derby team in north Alabama for skaters ages 8 to 18 
                     who are dedicated to learning the sport. Coaches teach 
@@ -32,6 +27,20 @@
                     lifestyles on and off the track. Roller derby is a very 
                     physically and emotionally demanding sport. It is also a 
                     very rewarding and character building adventure.
+                </p>
+                
+            </div>
+            <div class="columnright" style="width: 60%">
+                <img src="images/poster.jpg" width="100%">
+            </div>
+        </div>
+        <!-------------------------------------------------------------------->
+        
+        <h2 class="headingbar">Heading Bar</h2>
+        <div class="row">
+            <div class="columnleft">
+                <p>
+                    Column Text.
                 </p>
             </div>
             <div class="columnright">
