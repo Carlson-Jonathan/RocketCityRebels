@@ -11,20 +11,19 @@
         
         <!-------------------------------------------------------------------->
         
-        <div class="start"></div>
-        <h2 class="headingbar">Board of Directors</h2>    
+        <div style="margin: 58px"></div>
+        <iframe id="intromovie" src="https://www.youtube.com/embed/a4Jcieddb60" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        
+        <!-------------------------------------------------------------------->
+        
+        <h2 class="headingbar">What We Do</h2>    
         <div class="row2">
-            <div class="columnleft2">
-                <img class="boximage" src="../images/logo.webp">
-                    aliqua. Ut enim ad minim veniam, quis nostrud.
-                    <p class="script">Lorem 
-                    ipsum dolor sit amet, consectetur adipiscing elit, sed 
-                    do eiusmod tempor incididunt ut labore et dolore magna 
-                    aliqua. Ut enim ad minim veniam, quis nostrud.</p>
+            <div class="columnleft2" style="width: 20%">
+                <img class="boximage" src="../images/derbychick.webp">
             </div>
             
 
-            <div class="columnright2">
+            <div class="columnright2" style="width: 80%">
                 <p class="script">Here is a sample copy-paste information box.
                 </p>
                 <p class="script">Specs:<br>
@@ -39,7 +38,7 @@
         
         <!-------------------------------------------------------------------->        
 
-        <h2 class="headingbar">Coaches</h2>    
+        <h2 class="headingbar">How to Join</h2>    
         <div class="row">
             <div class="columnleft">
                 <p class="script2">Lorem ipsum dolor sit amet, consectetur 
@@ -62,7 +61,7 @@
         
         <!-------------------------------------------------------------------->
         
-        <h2 class="headingbar">Skaters</h2>    
+        <h2 class="headingbar">Template box - Image Left</h2>    
         <div class="row2">
             <div class="columnleft2">
                 <img class="boximage" src="../images/logo.webp">
@@ -114,12 +113,13 @@
             </div>
         </div>        
         
-        <!-------------------------------------------------------------------->       
-    <script>
-        document.getElementById("pagetitle").innerHTML = "Meet the Rebels";
-    </script>
-    </main>
+        <!-------------------------------------------------------------------->        
 
+    </main>
+    <script>
+        document.getElementById("pagetitle").innerHTML = "Become a Rebel";
+    </script>
+    
     <?php include "../pages/footer.php"; ?>
     
 </body>

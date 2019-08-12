@@ -3,13 +3,17 @@
 ------------------------------------------------------------------------------>
 
 <header>
-    <p class="pagetitle">Rocket City Rebels</p>
+    <p id="pagetitle">Rocket City Rebels</p>
 
     <nav>
         <ul id="navigation">
             <a href="../index.php">      
                 <li id="index.php" class="navbuttons">HOME</li>           
             </a>
+            
+            <a href="../pages/enlist.php">    
+                <li id="enlist.php" class="navbuttons">ENLIST</li>      
+            </a>  
             
             <a href="../pages/skaters.php">    
                 <li id="skaters.php" class="navbuttons">SKATERS</li>      

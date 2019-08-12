@@ -4,7 +4,7 @@
     <meta name = "description" content="Senior Project for Jonathan Carlson.">
     
     <!-------------------------------------------------------------------------
-    - Google Fonts & jQuery
+    - Fonts & jQuery
     -------------------------------------------------------------------------->
     <link href=
         "https://fonts.googleapis.com/css?family=Allerta+Stencil&display=swap" rel="stylesheet">

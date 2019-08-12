@@ -21,11 +21,11 @@ header {
     font-size: 1.5em;
 }
 
-.pagetitle {
+#pagetitle {
     font-family: 'docktrinregular';
     font-weight: normal;
     font-style: normal;
-    color: #5cf236;
+    color: #aad400;
     text-align: center;
     font-size: 3em;
     padding: 15px;
@@ -57,6 +57,7 @@ main {
     margin: 100px 0 20px;
     width: 100%;
     height: 515px;
+    
 }
 
 ul#navigation {
@@ -81,7 +82,7 @@ li.navbuttons:hover {
 }
 
 a li {
-    color: #5cf236;
+    color: #aad400;
 }
 
 li a.active {
@@ -105,12 +106,12 @@ li a.active {
     float: left;
     background-color: #251010;
     color: white;
-    padding: 0 10px 50px 25px;
+    padding: 0 10px 0 0;
 }
 
 .columnright {
     width: 25%;
-    padding: 0 25px 0 15px;
+    padding: 0 25px 0 0;
 }
 
 .columnleft2, .columnright2 {
@@ -118,12 +119,12 @@ li a.active {
     float: left;
     background-color: white;
     color: #251010;
-    padding: 0 10px 0 25px;
+    padding: 0 10px 0 0;
 }
 
 .columnright2 {
     width: 75%;
-    padding: 0 25px 0 15px;
+    padding: 0 25px 0 0;
 }
 
 .boximage {
@@ -141,6 +142,7 @@ li a.active {
     background-color: #251010;
     height: 100%;
     margin-bottom: 30px;
+    padding: 30px;
 }
 
 .row2 {
@@ -169,26 +171,26 @@ li a.active {
 
 h1, h2 {
     font-family: 'Saira Semi Condensed', sans-serif;
-    color: #5cf236;
+    color: #aad400;
     text-align: center;
     margin: 0;
 }
 
 .headingbar {
     background-color: #251010;
-    padding: 25px 0 5px;
+    padding: 19px 0 0;
     font-size: 2.5em;
     font-family: 'docktrinregular';
     font-weight: normal;
     font-style: normal;
-    color: #5cf236;
+    color: #aad400;
 }
 
 .quote {
     font-style: italic;
     text-align: center;
     font-size: 1.15em;
-    color: #5cf236;
+    color: #aad400;
     margin: 50px 50px;
 }
 
@@ -201,6 +203,14 @@ h1, h2 {
 .info {
     margin: 20px;
     text-align: justify;
+    font-size: 19px;
+    line-height: 1.3em;
+    font-family: arial;
+    color: white;
+}
+
+.info a{
+    color: white;
 }
 
 .schedule {
@@ -208,7 +218,7 @@ h1, h2 {
 }
 
 .thispage {
-    background-color: #5cf236;
+    background-color: #aad400;
     color: black;
 }
 
@@ -221,7 +231,7 @@ h1, h2 {
 footer {
     width: 100%;
     background-color: #251010;
-    color: #5cf236;
+    color: #aad400;
     text-align: center;
     padding: 10px;
     margin: 0;
