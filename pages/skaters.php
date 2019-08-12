@@ -93,7 +93,7 @@
         
         <!-------------------------------------------------------------------->        
 
-        <h2 class="headingbar">Template box - Image Right</h2>    
+        <h2 class="headingbar">Template Box</h2>    
         <div class="row">
             <div class="columnleft">
                 <p class="script2">Lorem ipsum dolor sit amet, consectetur 

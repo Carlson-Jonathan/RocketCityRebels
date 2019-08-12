@@ -10,7 +10,7 @@
     <main>
         
         <div class="start"></div>
-        <div class="row" style="padding: 30px 0 0;">
+        <div class="row">
             <div class="columnleft" style="width: 40%" >
                 <img class="boximagehome" src="../images/logo.webp">
                 <p class="quote"><span id="rebel">Rebel:</span><br>"True rebels 
@@ -37,15 +37,15 @@
         <!-------------------------------------------------------------------->
         
         <h2 class="headingbar">What is Roller Derby?</h2>
-        <div class="row">
+        <div class="row" style="padding-top: 12px">
             
-            <iframe src="https://www.youtube.com/embed/sFC6YE8zLmY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen width="100%" height="450px"></iframe>
+            <iframe src="https://www.youtube.com/embed/sFC6YE8zLmY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen width="100%" height="450px"></iframe><br><br>
             
             <p class="info">
                 "Roller derby is a contact sport played by two teams of five 
                 members roller skating counter-clockwise around a track. Roller 
                 derby is played by approximately 1,250 amateur leagues worldwide, 
-                mostly inside the United States.[2]  <br><br>
+                mostly inside the United States. <br><br>
 
                 Game play consists of a series of short match-ups (jams) in which 
                 both teams designate a jammer (who wears a star on the helmet). 
@@ -66,7 +66,7 @@
                 derby retains some sports entertainment qualities such as player 
                 pseudonyms and colorful uniforms, it has abandoned scripted bouts 
                 with predetermined winners."
-            </p>
+            </p><br>
 
             <p class="info" style="font-style: italic; font-size: 12px; text-align: left;">
                 Wikipedia contributors. Roller derby. Wikipedia, The Free Encyclopedia. August 3, 2019, 13:55 UTC. Available at: <a href="https://en.wikipedia.org/w/index.php?title=Roller_derby&oldid=909154352">
@@ -77,19 +77,36 @@
         
         <!-------------------------------------------------------------------->
         
-        <h2 class="headingbar">Bout Schedule:</h2>
-        <p class="script" style="background-color: white">
-            All home bouts are double headers with our adult sister league, 
-            the Dixie Derby Girls. <br>
-            <img src="images/derbychick.webp" style="float:left; margin: 25px; 
-                width: 105px">02/20/2019 - Away vs Tragic City (Birmingham)<br><br>
-            03/20/2019 - Home RCR Mixer<br><br>
-            04/13/2019 - Home vs West Ky Rockin Rollers<br><br>
-            05/18/2019 - Home vs Atlanta Derby Brats (tentatively)<br><br>
-            06/22/2019 - Home vs Nashville Nashvillians<br><br>
-            07/13/2019 - Home vs County Line Fireballs <br><br>
-            08/17/2019 - Home RCR Mixer<br><br>
-            09/14/2019 - Away vs West Ky Rockin Rollers (Paducah, KY)</p><br>
+        <h2 class="headingbar">Template Box</h2>    
+        <div class="row2">
+            <div class="columnleft2">
+                <img class="boximage" src="../images/logo.webp">
+                    aliqua. Ut enim ad minim veniam, quis nostrud.
+                    <p class="script">Lorem 
+                    ipsum dolor sit amet, consectetur adipiscing elit, sed 
+                    do eiusmod tempor incididunt ut labore et dolore magna 
+                    aliqua. Ut enim ad minim veniam, quis nostrud.</p>
+            </div>
+
+            <div class="columnright2">
+                <p class="script">Flowery statement about how wonderful 
+                    the staff is (especially the treasurer and her husband. 
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                    sed do eiusmod tempor incididunt ut labore et dolore magna 
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                    Duis aute irure dolor in reprehenderit in voluptate velit 
+                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
+                    occaecat cupidatat non proident, sunt in culpa.</p>
+                <p class="script">Ut enim ad minim veniam, quis nostrud 
+                    exercitation ullamco laboris nisi ut aliquip ex ea commodo 
+                    consequat. Duis aute irure dolor in reprehenderit in 
+                    voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                </p>
+            </div>
+        </div>
+        
+            
 
         <!-------------------------------------------------------------------->
 

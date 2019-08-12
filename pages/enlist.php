@@ -24,15 +24,16 @@
             
 
             <div class="columnright2" style="width: 80%">
-                <p class="script">Here is a sample copy-paste information box.
-                </p>
-                <p class="script">Specs:<br>
-                30 pixel gap between info boxes.<br>
-                Header bar on each box.<br>
-                Left column: 25%<br>
-                Right column: 75%<br>
-                Left/Right/Center margins: 25 pixels<br>
-                Can alternate dark or white color themes.</p>
+                <pre class="script">
+                    - About the Rebels
+                    - Team Size
+                    - Participant Ages
+                    - Participant ranks and rosters
+                    - Weekly Rhythm
+                    - Practice times and locations
+                    - Events and games
+                    - Social Activities
+                </pre>
             </div>
         </div>
         
@@ -61,7 +62,7 @@
         
         <!-------------------------------------------------------------------->
         
-        <h2 class="headingbar">Template box - Image Left</h2>    
+        <h2 class="headingbar">Player and Parental Commitments</h2>    
         <div class="row2">
             <div class="columnleft2">
                 <img class="boximage" src="../images/logo.webp">
@@ -73,15 +74,17 @@
             </div>
 
             <div class="columnright2">
-                <p class="script">Flowery statement about how wonderful 
-                    the staff is (especially the treasurer and her husband. 
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                    sed do eiusmod tempor incididunt ut labore et dolore magna 
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                    Duis aute irure dolor in reprehenderit in voluptate velit 
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
-                    occaecat cupidatat non proident, sunt in culpa.</p>
+                <pre class="script">
+                    Financial commitment:
+                        - Dues
+                        - Equipment Costs
+                        - Insurance
+                    Time Commitment:
+                        - Volunteer Work
+                        - At home physical activity
+                        - Attendence
+                    Rewards for diligence
+                </pre>
                 <p class="script">Ut enim ad minim veniam, quis nostrud 
                     exercitation ullamco laboris nisi ut aliquip ex ea commodo 
                     consequat. Duis aute irure dolor in reprehenderit in 

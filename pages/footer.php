@@ -1,5 +1,5 @@
 <footer>
-    <p>&copy; RocketCityRebels 2019, Huntsville, Al<br><br>Sponsored by:<br></p>
+    <p>&copy; 2019 Rocket City Rebels Jr. Roller Derby<br>Huntsville, Alabama<br><br>Sponsored by:<br></p>
 
     <img class="sponsors" src="../images/ChickFilALogo.gif">
     <img class="sponsors" src="../images/InsanityLogo.webp">
