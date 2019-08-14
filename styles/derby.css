@@ -11,7 +11,6 @@
     font-style: normal;
 }
 
-
 header {
     background-color: #251010;
     position: fixed;
@@ -48,6 +47,11 @@ main {
     opacity: 1;
 }
 
+/******************************************************
+* The "start" class introduces a margin from the top 
+* of the page because the fixed title and navigation
+* bar sit on top of the rest of the page content.
+******************************************************/
 .start {
     margin: 175px;
     line-height: 0;
@@ -58,6 +62,23 @@ main {
     width: 100%;
     height: 515px;
     
+}
+
+h1, h2 {
+    font-family: 'Saira Semi Condensed', sans-serif;
+    color: #aad400;
+    text-align: center;
+    margin: 0;
+}
+
+.headingbar {
+    background-color: #251010;
+    padding: 19px 0 0;
+    font-size: 2.5em;
+    font-family: 'docktrinregular';
+    font-weight: normal;
+    font-style: normal;
+    color: #aad400;
 }
 
 ul#navigation {
@@ -90,21 +111,17 @@ li a.active {
     font-weight: 900;
 }
 
-/*************************************
-* These are the CSS properties to 
-* create the box templates with header
-* bars, 25% images on the right/left,
-* and 75% text.
-* Left/Right = image on right with
-* dark background.
-* Left/Right2 = image on left with
-* a white background.
-*************************************/
+/******************************************************
+* These are the CSS properties to create the box 
+* templates with header bars, 25% images on the right
+* and left, and 75% text. Left/Right = image on right 
+* with dark background. Left/Right2 = image on left 
+* with a white background.
+******************************************************/
 
 .columnleft, .columnright {
     width: 75%;
     float: left;
-    background-color: #251010;
     color: white;
     padding: 0 35px 0 0;
 }
@@ -117,7 +134,6 @@ li a.active {
 .columnleft2, .columnright2 {
     width: 25%;
     float: left;
-    background-color: white;
     color: #251010;
     padding: 0 35px 0 0;
 }
@@ -154,36 +170,36 @@ li a.active {
     clear: both;
 }
 
-.script, .script2 {
+/******************************************************
+* Below are the different styles for paragraph content
+* text ranging from light text on dark backgrounds, 
+* dark text on light backgrounds, special green text
+* and other varieties including link text. None of the
+* heading text is found below this line.
+******************************************************/
+
+.lighttext, .darktext {
     font-size: 1.1em;
-    background-color: white;
+    text-align: justify;
+    font-size: 18px;
+    font-weight: 100;
+    line-height: 1.3em;
+    font-family: roboto;
 }
 
-.script2 {
-    background-color: #251010;
+.lighttext {
     color: white;
 }
 
-/*****************************************/
-
-h1, h2 {
-    font-family: 'Saira Semi Condensed', sans-serif;
-    color: #aad400;
-    text-align: center;
-    margin: 0;
+.lighttext a {
+    color: white;
 }
 
-.headingbar {
-    background-color: #251010;
-    padding: 19px 0 0;
-    font-size: 2.5em;
-    font-family: 'docktrinregular';
-    font-weight: normal;
-    font-style: normal;
-    color: #aad400;
+.darktext {
+    color: #251010;
 }
 
-.quote {
+.greentext {
     font-style: italic;
     text-align: center;
     font-size: 1.15em;
@@ -191,38 +207,18 @@ h1, h2 {
     margin: 45px 45px;
 }
 
-#rebel {
+#specialtext {
     font-size: 1.5em;
     font-style: normal;
     margin: 0;
 }
 
-.info {
-    text-align: justify;
-    font-size: 18px;
-    font-weight: 100;
-    line-height: 1.3em;
-    font-family: roboto;
-    color: white;
-}
-
-.info a{
-    color: white;
-}
-
-.schedule {
-    padding: 25px;
-}
-
+/******************************************************
+* Used to highlight active navigation bar tab.
+******************************************************/
 .thispage {
     background-color: #aad400;
     color: black;
-}
-
-.sponsors {
-    width: 100px;
-    margin: 10px;
-    max-height: 50px;
 }
 
 footer {
@@ -234,4 +230,40 @@ footer {
     margin: 0;
     font-size: 1.2em;
     font-family: roboto;
+}
+
+.sponsors {
+    width: 100px;
+    margin: 10px;
+    max-height: 50px;
+}
+
+/******************************************************
+* Skater page items used to create a player gallery.
+******************************************************/
+div.gallery {
+  margin: 10px;
+  border: 3px solid white;
+  float: left;
+  width: 180px;
+}
+
+div.gallery:hover {
+  border: 3px solid #aad400;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+.center {
+    display: block;
+    width: 100%;
+    margin: 0 30px;
 }

@@ -24,7 +24,7 @@
             
 
             <div class="columnright2" style="width: 80%">
-                <pre class="script">
+                <pre class="darktext">
                     - About the Rebels
                     - Team Size
                     - Participant Ages
@@ -42,7 +42,7 @@
         <h2 class="headingbar">How to Join</h2>    
         <div class="row">
             <div class="columnleft">
-                <p class="script2">Lorem ipsum dolor sit amet, consectetur 
+                <p class="lighttext">Lorem ipsum dolor sit amet, consectetur 
                     adipiscing elit, sed do eiusmod tempor incididunt ut labore 
                     et dolore magna Ut enim ad minim veniam, quis nostrud 
                     exercitation ullamco laboris nisi ut aliquip ex ea commodo 
@@ -54,7 +54,7 @@
 
             <div class="columnright">
                 <img class="boximage" src="../images/logo.webp">
-                <p class="script2">Lorem ipsum dolor sit amet, consectetur 
+                <p class="lighttext">Lorem ipsum dolor sit amet, consectetur 
                     adipiscing elit, sed do eiusmod tempor incididunt ut labore 
                     et dolore magna aliqua. </p>
             </div>
@@ -66,15 +66,14 @@
         <div class="row2">
             <div class="columnleft2">
                 <img class="boximage" src="../images/logo.webp">
-                    aliqua. Ut enim ad minim veniam, quis nostrud.
-                    <p class="script">Lorem 
+                    <p class="darktext">Lorem 
                     ipsum dolor sit amet, consectetur adipiscing elit, sed 
                     do eiusmod tempor incididunt ut labore et dolore magna 
                     aliqua. Ut enim ad minim veniam, quis nostrud.</p>
             </div>
 
             <div class="columnright2">
-                <pre class="script">
+                <pre class="darktext">
                     Financial commitment:
                         - Dues
                         - Equipment Costs
