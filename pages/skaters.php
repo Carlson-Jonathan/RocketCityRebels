@@ -5,7 +5,9 @@
     
 <body>
 
-    <?php include "title-nav.php"; ?>
+    <?php 
+        include "title-nav.php"; 
+    ?>
 
     <main>
         
@@ -15,6 +17,9 @@
         <h2 class="headingbar">Skaters</h2>    
         
         <div class="row2" style="padding: auto"><div class="center">
+            <?php include "../scripts/dbsetup.php";
+                echo "<p class='darktext'>PHP is stupid</p>"; 
+            ?>
             <div class="gallery">
                 <img src="../images/portraits/animeniac.jpg" alt="Not found">
             </div>
