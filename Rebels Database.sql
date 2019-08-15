@@ -34,7 +34,10 @@ CREATE TABLE public.skaters (
 /* Sample table test inserts: */
 INSERT INTO skaters (name, number, DOB, start, description, image)
 VALUES 
-('Player 1', 14,  '2005-05-23', '2017-12-18', 'Player 1 is a super elite jammer...', 'p1.jpg'),
+('Player 1', 14,  '2005-05-23', '2017-12-18', 
+'Player 1 is a super elite jammer who will circle the arena like Wonder Woman. 
+She is a senior member of the Rebels who always has her team mates backs and 
+will go the extra mile.', 'p1.jpg'),
 ('Player 2', 68,  '2009-11-15', '2018-03-28', 'Player 2 loves to eat...', 'p2.jpg'),
 ('Player 3', 911, '2007-06-04', '2016-01-14', 'Player 3 one jumped off of a...', 'p3.jpg'),
 ('Player 4', 23,  '2005-05-23', '2017-08-09', 'Player 4 is a super elite jammer...', 'p4.jpg');

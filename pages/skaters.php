@@ -36,18 +36,27 @@
 
                     echo "
                         <div class='gallery' id='myBtn'>
-                            <img src='../images/portraits/$image' alt='Image file not found'>
+                            <img src='../images/portraits/$image
+                            ' alt='Image file not found'>
                         </div>
                         
                         <div id='myModal' class='modal'>
                             <div class='modal-content'>
                                 <span class='close'>&times;</span>
-                                <img src='../images/portraits/$image' alt='Image file not found'>
-                                <p>Player name: $name</p>
-                                <p>Jersy number: $number</p>
-                                <p>Age: $dob</p>
-                                <p>Rebel Since $start</p>
-                                <p>About $name:<br> $description</p>
+                                <img src='../images/portraits/$image
+                                ' alt='Image file not found' class='innerpic'>
+                                <div class='textblock'>
+                                    <span class='popuptext'>Player name:
+                                    </span><br><p> $name</p><br>
+                                    <span class='popuptext'>Jersy number:
+                                    </span><br> $number</p><br>
+                                    <span class='popuptext'>Age:</span><br> 
+                                    $dob</p><br>
+                                    <p>Rebel Since $start</p>
+                                </div>
+                                <div class='line'></div>
+                                <p style='margin-top: 15px; text-align: left'>
+                                $description</p>
                             </div>
                         </div>
                     ";

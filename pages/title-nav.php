@@ -3,7 +3,7 @@
 ------------------------------------------------------------------------------>
 
 <header>
-    <h1>Rocket City Rebels</h1>
+    <h1 id="pagetitle">Rocket City Rebels</h1>
 
     <nav>
         <ul id="navigation">
