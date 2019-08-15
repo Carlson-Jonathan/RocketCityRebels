@@ -1,7 +1,7 @@
 <head>
     <meta charset="utf-8">
-    <meta name="Prove06" content="width=device-width, initial-scale=1">
-    <meta name = "description" content="Senior Project for Jonathan Carlson.">
+    <meta name="Rocket City Rebels" content="width=device-width, initial-scale=1">
+    <meta name = "description" content="Rocket City Rebels Jr. Roller Derby">
     
     <!-------------------------------------------------------------------------
     - Fonts & jQuery

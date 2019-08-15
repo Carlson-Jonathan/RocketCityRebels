@@ -36,7 +36,7 @@
         </div>
         <!-------------------------------------------------------------------->
         
-        <h2 class="headingbar">What is Roller Derby?</h2>
+        <h2>What is Roller Derby?</h2>
         <div class="row" style="padding-top: 12px">
             
             <iframe src="https://www.youtube.com/embed/sFC6YE8zLmY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen width="100%" height="450px"></iframe><br><br>

@@ -16,7 +16,8 @@
 *   "number" - The skater's player number on their jersy
 *   "DOB" - The skater's MM/YYYY date of birth. This will only be used to
 *           calculate and display the skater's age in years only. No PII.
-*           See http://www.postgresqltutorial.com/postgresql-date/ for age.       
+*           See http://www.postgresqltutorial.com/postgresql-date/ for age.
+*   "start" - Represents the date the skater joined the Rebels.       
 *   "description" - Text information about the player entered by the admin
 *   "image" - The name of the .jpg file that is a portrait of the skater.
 ******************************************************************************/
@@ -25,17 +26,18 @@ CREATE TABLE public.skaters (
 	name VARCHAR(50) NOT NULL UNIQUE,
     number int NOT NULL UNIQUE,
 	DOB DATE,
+    start DATE,
 	description text,
     image VARCHAR(20)
 );
 
-/* Sample table inserts: */
-INSERT INTO skaters (name, number, DOB, description, image)
+/* Sample table test inserts: */
+INSERT INTO skaters (name, number, DOB, start, description, image)
 VALUES 
-('Player 1', 14,  '2005-05-23', 'Player 1 is a super elite jammer...', 'p1.jpg'),
-('Player 2', 68,  '2009-11-15', 'Player 2 loves to eat...', 'p2.jpg'),
-('Player 3', 911, '2007-06-04', 'Player 3 one jumped off of a...', 'p3.jpg'),
-('Player 4', 23,  '2005-05-23', 'Player 4 is a super elite jammer...', 'p4.jpg');
+('Player 1', 14,  '2005-05-23', '2017-12-18', 'Player 1 is a super elite jammer...', 'p1.jpg'),
+('Player 2', 68,  '2009-11-15', '2018-03-28', 'Player 2 loves to eat...', 'p2.jpg'),
+('Player 3', 911, '2007-06-04', '2016-01-14', 'Player 3 one jumped off of a...', 'p3.jpg'),
+('Player 4', 23,  '2005-05-23', '2017-08-09', 'Player 4 is a super elite jammer...', 'p4.jpg');
 
 
 /******************************************************************************

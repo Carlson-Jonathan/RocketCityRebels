@@ -16,7 +16,7 @@
         
         <!-------------------------------------------------------------------->
         
-        <h2 class="headingbar">What We Do</h2>    
+        <h2>What We Do</h2>    
         <div class="row2">
             <div class="columnleft2" style="width: 20%">
                 <img class="boximage" src="../images/derbychick.webp">
@@ -39,7 +39,7 @@
         
         <!-------------------------------------------------------------------->        
 
-        <h2 class="headingbar">How to Join</h2>    
+        <h2>How to Join</h2>    
         <div class="row">
             <div class="columnleft">
                 <p class="lighttext">Lorem ipsum dolor sit amet, consectetur 
@@ -62,7 +62,7 @@
         
         <!-------------------------------------------------------------------->
         
-        <h2 class="headingbar">Player and Parental Commitments</h2>    
+        <h2>Player and Parental Commitments</h2>    
         <div class="row2">
             <div class="columnleft2">
                 <img class="boximage" src="../images/logo.webp">
@@ -94,7 +94,7 @@
         
         <!-------------------------------------------------------------------->        
 
-        <h2 class="headingbar">Template box - Image Right</h2>    
+        <h2>Template box - Image Right</h2>    
         <div class="row">
             <div class="columnleft">
                 <p class="script2">Lorem ipsum dolor sit amet, consectetur 

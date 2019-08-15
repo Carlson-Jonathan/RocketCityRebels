@@ -20,15 +20,6 @@ header {
     font-size: 1.5em;
 }
 
-#pagetitle {
-    font-family: 'docktrinregular';
-    font-weight: normal;
-    font-style: normal;
-    color: #aad400;
-    text-align: center;
-    font-size: 3em;
-    padding: 15px;
-}
 
 nav {
     font-family: 'Allerta Stencil', sans-serif;
@@ -61,17 +52,22 @@ main {
     margin: 100px 0 20px;
     width: 100%;
     height: 515px;
-    
 }
 
-h1, h2 {
-    font-family: 'Saira Semi Condensed', sans-serif;
+/* Page titles */
+h1 {
+    font-family: 'docktrinregular';
+    font-weight: normal;
+    font-style: normal;
     color: #aad400;
     text-align: center;
+    font-size: 3em;
+    padding: 15px;
     margin: 0;
 }
 
-.headingbar {
+/* Heading bars */
+h2 {
     background-color: #251010;
     padding: 19px 0 0;
     font-size: 2.5em;
@@ -79,8 +75,10 @@ h1, h2 {
     font-weight: normal;
     font-style: normal;
     color: #aad400;
+    text-align: center;
 }
 
+/* Navigation Bar */
 ul#navigation {
     list-style-type: none;
     background-color: #251010;
@@ -113,10 +111,7 @@ li a.active {
 
 /******************************************************
 * These are the CSS properties to create the box 
-* templates with header bars, 25% images on the right
-* and left, and 75% text. Left/Right = image on right 
-* with dark background. Left/Right2 = image on left 
-* with a white background.
+* templates. Default column widths are 25% and 75%.
 ******************************************************/
 
 .columnleft, .columnright {
@@ -236,34 +231,4 @@ footer {
     width: 100px;
     margin: 10px;
     max-height: 50px;
-}
-
-/******************************************************
-* Skater page items used to create a player gallery.
-******************************************************/
-div.gallery {
-  margin: 10px;
-  border: 3px solid white;
-  float: left;
-  width: 180px;
-}
-
-div.gallery:hover {
-  border: 3px solid #aad400;
-}
-
-div.gallery img {
-  width: 100%;
-  height: auto;
-}
-
-div.desc {
-  padding: 15px;
-  text-align: center;
-}
-
-.center {
-    display: block;
-    width: 100%;
-    margin: 0 30px;
 }

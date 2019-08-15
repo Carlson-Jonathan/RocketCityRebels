@@ -2,108 +2,62 @@
 <html lang="en-US">
 
 <?php include "head.php"; ?>
+<head>
+    <link id="styles" rel="stylesheet" href="../styles/skaters.css">
+</head>
     
 <body>
 
     <?php 
         include "title-nav.php"; 
+        require "../scripts/dbsetup.php";
     ?>
 
     <main>
+        <div class="start"></div>
         
         <!-------------------------------------------------------------------->
         
-        <div class="start"></div>
-        <h2 class="headingbar">Skaters</h2>    
+        <h2>Skaters</h2>    
         
-        <div class="row2" style="padding: auto"><div class="center">
-            <?php include "../scripts/dbsetup.php";
-                echo "<p class='darktext'>PHP is stupid</p>"; 
+        <div class="row2">
+        
+            <?php
+                $skaterPortraits = $db->prepare("SELECT * FROM skaters");
+                $skaterPortraits->execute();
+
+                while ($row = $skaterPortraits->fetch(PDO::FETCH_ASSOC)) {
+                    $name = $row['name'];
+                    $number = $row['number'];
+                    $dob = $row['dob'];
+                    $start = $row['start'];
+                    $description = $row['description'];
+                    $image = $row['image'];
+
+                    echo "
+                        <div class='gallery' id='myBtn'>
+                            <img src='../images/portraits/$image' alt='Image file not found'>
+                        </div>
+                        
+                        <div id='myModal' class='modal'>
+                            <div class='modal-content'>
+                                <span class='close'>&times;</span>
+                                <img src='../images/portraits/$image' alt='Image file not found'>
+                                <p>Player name: $name</p>
+                                <p>Jersy number: $number</p>
+                                <p>Age: $dob</p>
+                                <p>Rebel Since $start</p>
+                                <p>About $name:<br> $description</p>
+                            </div>
+                        </div>
+                    ";
+                }
             ?>
-            <div class="gallery">
-                <img src="../images/portraits/animeniac.jpg" alt="Not found">
-            </div>
-
-            <div class="gallery">
-                <img src="../images/rrlogo.png" alt="Not found" width="200" height="auto">
-              <div class="darktext, desc">Player Name</div>
-            </div>
-            
-            <div class="gallery">
-                <img src="../images/rrlogo.png" alt="Not found" width="200" height="auto">
-              <div class="darktext, desc">Player Name</div>
-            </div>
-            
-            <div class="gallery">
-                <img src="../images/rrlogo.png" alt="Not found" width="200" height="auto">
-              <div class="darktext, desc">Player Name</div>
-            </div>
-            
-            <div class="gallery">
-                <img src="../images/rrlogo.png" alt="Not found" width="200" height="auto">
-              <div class="darktext, desc">Player Name</div>
-            </div>
-            
-            <div class="gallery">
-                <img src="../images/rrlogo.png" alt="Not found" width="200" height="auto">
-              <div class="darktext, desc">Player Name</div>
-            </div>
-            
-            <div class="gallery">
-                <img src="../images/rrlogo.png" alt="Not found" width="200" height="auto">
-              <div class="darktext, desc">Player Name</div>
-            </div>
-            
-            <div class="gallery">
-                <img src="../images/rrlogo.png" alt="Not found" width="200" height="auto">
-              <div class="darktext, desc">Player Name</div>
-            </div>
-            
-            <div class="gallery">
-                <img src="../images/rrlogo.png" alt="Not found" width="200" height="auto">
-              <div class="darktext, desc">Player Name</div>
-            </div>
-            
-            <div class="gallery">
-                <img src="../images/rrlogo.png" alt="Not found" width="200" height="auto">
-              <div class="darktext, desc">Player Name</div>
-            </div>
-            
-            <div class="gallery">
-                <img src="../images/rrlogo.png" alt="Not found" width="200" height="auto">
-              <div class="darktext, desc">Player Name</div>
-            </div>
-            
-            <div class="gallery">
-                <img src="../images/rrlogo.png" alt="Not found" width="200" height="auto">
-              <div class="darktext, desc">Player Name</div>
-            </div>
-            
-            <div class="gallery">
-                <img src="../images/rrlogo.png" alt="Not found" width="200" height="auto">
-              <div class="darktext, desc">Player Name</div>
-            </div>
-            
-            <div class="gallery">
-                <img src="../images/rrlogo.png" alt="Not found" width="200" height="auto">
-              <div class="darktext, desc">Player Name</div>
-            </div>
-            
-            <div class="gallery">
-                <img src="../images/rrlogo.png" alt="Not found" width="200" height="auto">
-              <div class="darktext, desc">Player Name</div>
-            </div>
-
-            <div class="gallery">
-                <img src="../images/rrlogo.png" alt="Not found" width="200" height="auto">
-              <div class="darktext, desc">Player Name</div>
-            </div><br>      
-            </div></div>
-        
+        </div>
         
         <!-------------------------------------------------------------------->        
 
-        <h2 class="headingbar">Coaches</h2>    
+        <h2>Coaches</h2>    
         <div class="row">
             <div class="columnleft">
                 <p class="lighttext">Lorem ipsum dolor sit amet, consectetur 
@@ -128,7 +82,7 @@
         
         <!-------------------------------------------------------------------->
         
-        <h2 class="headingbar">Jr. Referees</h2>    
+        <h2>Jr. Referees</h2>    
         <div class="row2">
             <div class="columnleft">
                 <p class="darktext">Lorem ipsum dolor sit amet, consectetur 
@@ -150,7 +104,7 @@
         </div> 
         <!-------------------------------------------------------------------->
         
-        <h2 class="headingbar">Board of Directors</h2>    
+        <h2>Board of Directors</h2>    
         <div class="row">
             <div class="columnleft2">
                 <img class="boximage" src="../images/logo.webp">
@@ -181,9 +135,11 @@
         
         <!-------------------------------------------------------------------->        
         
-    <script>
-        document.getElementById("pagetitle").innerHTML = "Meet the Rebels";
-    </script>
+        <script src="../scripts/skaters.js"></script>
+
+        <script>
+            document.getElementById("pagetitle").innerHTML = "Meet the Rebels";
+        </script>
     </main>
 
     <?php include "../pages/footer.php"; ?>
