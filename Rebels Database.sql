@@ -27,7 +27,7 @@ CREATE TABLE public.skaters (
     number int NOT NULL UNIQUE,
 	DOB DATE,
     start DATE,
-	description text,
+	description TEXT,
     image VARCHAR(20)
 );
 
@@ -40,9 +40,95 @@ She is a senior member of the Rebels who always has her team mates backs and
 will go the extra mile.', 'p1.jpg'),
 ('Player 2', 68,  '2009-11-15', '2018-03-28', 'Player 2 loves to eat...', 'p2.jpg'),
 ('Player 3', 911, '2007-06-04', '2016-01-14', 'Player 3 one jumped off of a...', 'p3.jpg'),
-('Player 4', 23,  '2005-05-23', '2017-08-09', 'Player 4 is a super elite jammer...', 'p4.jpg');
+('Player 4', 23,  '2005-05-23', '2017-08-09', 'Player 4 is a super elite jammer...', 'p4.jpg'),
 ('Jonnyboy', 3712,  '1981-05-23', '2019-08-15', 'Jonnyboy is super handsome and can eat a lot!', 'jon2.jpg');
 
+/******************************************************************************
+* "coaches" Table
+* Same as the "skaters" table for use on the skaters page.
+* Contents: 
+*   SERIAL "coach_id".
+*   "name" - coach name.
+*   "position" - eg. "Head coach", "Assistant Coach", etc.
+*   "start" - Date they became a coach.
+*   "filler" - replacable field for keeping CSS balanced.
+*   "description" - Misc info about the coach.
+*   "image" - the image file name for the coach's portrait.
+******************************************************************************/
+CREATE TABLE public.coaches (
+	coach_id SERIAL PRIMARY KEY,		
+	name VARCHAR(50) NOT NULL UNIQUE,
+    position VARCHAR(30),
+    start DATE,
+    filler VARCHAR (50),
+	description TEXT,
+    image VARCHAR(20)
+);
+
+/* Sample table test inserts: */
+INSERT INTO coaches (name, position, start, filler, description, image)
+VALUES
+('Coach 1', 'Head Coach', '2019-11-15', 'Lorem Ipsum', 'This coach will make you a super star!', 'coach1.jpg'),
+('Coach 2', 'Assistant Coach', '2017-11-15', 'Lorem Ipsum', 'This is the right hand coach.', 'coach2.jpg'),
+('Coach 3', 'Lacky Coach', '2025-11-15', 'Lorem Ipsum', 'This coach washes the other coachs cars.', 'coach3.png');
+
+/******************************************************************************
+* "referees" Table
+* Same as the "skaters" table for use on the skaters page.
+* Contents: 
+*   SERIAL "referee_id".
+*   "name" - referee name.
+*   "position" - eg. "Head referee", "Jr. referee", etc.
+*   "start" - Date they became a referee.
+*   "filler" - replacable field for keeping CSS balanced.
+*   "description" - Misc info about the referee.
+*   "image" - the image file name for the referee's portrait.
+******************************************************************************/
+CREATE TABLE public.referees (
+	referee_id SERIAL PRIMARY KEY,		
+	name VARCHAR(50) NOT NULL UNIQUE,
+    position VARCHAR(30),
+    start DATE,
+    filler VARCHAR (50),
+	description TEXT,
+    image VARCHAR(20)
+);
+
+/* Sample table test inserts: */
+INSERT INTO referees (name, position, start, filler, description, image)
+VALUES
+('Ref 1', 'Head Ref', '2019-11-15', 'Lorem Ipsum', 'This ref cheats!', 'ref1.jpg'),
+('Ref 2', 'Assistant Ref', '2017-11-15', 'Lorem Ipsum', 'This is the left hand ref.', 'ref2.jpg'),
+('Ref 3', 'Lacky Ref', '2025-11-15', 'Lorem Ipsum', 'This ref washes anyones car.', 'ref3.png');
+
+/******************************************************************************
+* "board" Table
+* Board of Directors. Same as the "skaters" table for use on the skaters page.
+* Contents: 
+*   SERIAL "member_id".
+*   "name" - member name.
+*   "position" - eg. "President", "Treasurer", etc.
+*   "start" - Date they joined the RCR board of directors.
+*   "contact" - Contact info for member.
+*   "description" - Misc info about the board of directors member.
+*   "image" - the image file name for the members's portrait.
+******************************************************************************/
+CREATE TABLE public.board (
+	referee_id SERIAL PRIMARY KEY,		
+	name VARCHAR(50) NOT NULL UNIQUE,
+    position VARCHAR(30),
+    start DATE,
+    contact VARCHAR (50),
+	description TEXT,
+    image VARCHAR(20)
+);
+
+/* Sample table test inserts: */
+INSERT INTO board (name, position, start, contact, description, image)
+VALUES
+('Sally Smith', 'President', '2019-11-15', 'Sally.Smith@gmail.com - 256-123-4567', 'I love to hang glide!', 'pres.jpg'),
+('Rufus Rodrigez', 'Vice President', '2011-11-15', 'bite.me@hotmail.com - 1-800-654-9870', 'Tigers are good, tigers are great!', 'VP.jpg'),
+('Joe Shmoe Nobody', 'Treasurer', '2048-11-15', 'moneyman@AOL.com - 555-555-5555', 'The Little Mermaid was the best Disney movie ever!', 'Tr.png');
 
 /******************************************************************************
 * "sponsors" Table
@@ -65,6 +151,5 @@ VALUES
 ('Sponsor 1', 's1.jpg'),
 ('Sponsor 2', 's2.jpg');
 
-
-
-
+INSERT INTO board (name, position, start, contact, description, image)
+VALUES ('Cora Snake', 'A Player', '2010-01-02', 'Cora@coramail.com', 'Meet Cora L. Snake! She is #911 on the Rebels and has been involved with derby since 2010. "I'm currently in the engineering strand at New Century, but I'm thinking about being a Graphic Designer! Being on my skates is freedom. The feeling of movement is the escape I need after dealing with everything going on in the world today. Derby is tough, but it's one of the most fantastic feelings in the world everytime I hit the track. Don't let other people's opinions run how you're going to live your life. You need to be unapologetic and expressive with everything you do. First and foremost, make sure you are comfortable with your decisions. You don't want to put yourself in a position that you'll regret in the long run. Only you can dictate who you are, so don't let others tell you what you need to be. You are a piece of art, and that is beautiful. Fun Fact: I could live off of mashed potatoes. 2 minute mashed potatoes + salt, pepper, sour cream, and butter? The greatest food in the world. Also, I've been to two junior roller cons, and they were pretty great." Keep a lookout for more introductions to our amazing skaters!', 'cora.jpg');

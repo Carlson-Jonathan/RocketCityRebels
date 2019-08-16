@@ -18,68 +18,82 @@
 * element ID which allows specific information to be displayed when any
 * individual element is clicked on. 
 **************************************************************************/
-$skaterPortraits = $db->prepare("SELECT * FROM skaters");
-$skaterPortraits->execute();
+$coachPortraits = $db->prepare("SELECT * FROM coaches");
+$coachPortraits->execute();
 $x = 1;
 
-while ($row = $skaterPortraits->fetch(PDO::FETCH_ASSOC)) {
+while ($row = $coachPortraits->fetch(PDO::FETCH_ASSOC)) {
     $name = $row['name'];
-    $number = $row['number'];
-    $dob = $row['dob'];
+    $position = $row['position'];
     $start = $row['start'];
+    $filler = $row['filler'];
     $description = $row['description'];
     $image = $row['image'];
 
-    $btnID = "myBtn" . $x;
-    $modelID = "myModel" . $x;
+    $cbtnID = "cmyBtn" . $x;
+    $cmodelID = "cmyModel" . $x;
 
     /**********************************************************************
     * Propogates and displays each element to the screen upon page load. On
     * clicking a specific element, this code will display a special CSS 
     * box which can be un-displayed by re-clicking anywhere on the screen.
     **********************************************************************/
-    
+
     echo "
-        <div class='gallery' id='$btnID'>
+        <div class='gallery' id='$cbtnID'>
             <img src='../images/portraits/$image
-            ' alt='Image file not found'>
+            'alt='Image file not found'>
         </div>
 
-        <div id='$modelID' class='modal'>
+        <div id='$cmodelID' class='modal'>
             <div class='modal-content'>
                 <img src='../images/portraits/$image
-                ' alt='Image file not found' class='innerpic'>
+                'alt='Image file not found' class='innerpic'>
+
                 <div class='textblock'>
-                    <span class='popuptext'>Player name:
-                    </span><br><p> $name</p><br>
-                    <span class='popuptext'>Jersy number:
-                    </span><br> $number</p><br>
-                    <span class='popuptext'>Age:</span><br> 
-                    $dob</p><br>
-                    <p>Rebel Since $start</p>
+                    <span class='popuptext'>
+                        Coach name:
+                    </span><br>
+                    <p>$name</p><br>
+
+                    <span class='popuptext'>
+                        Position:
+                    </span>
+                    <p>$position</p><br>
+
+                    <span class='popuptext'>
+                        Filler:</span><br>
+                    </span>
+                    <p>$filler</p><br>
+
+                    <p>Coach since $start</p><br>
+
                 </div>
+
                 <div class='line'></div>
+
                 <p style='margin-top: 15px; text-align: left'>
                 $description</p>
             </div>
         </div>
 
         <script>
+        // The code that displays and un-displays the modal boxes.
+        
         // Get the modal
-        var modal" . $x . " = document.getElementById('$modelID');
+        var cmodal" . $x . " = document.getElementById('$cmodelID');
 
         // Get the button that opens the modal
-        var btn" . $x . " = document.getElementById('$btnID');
+        var cbtn" . $x . " = document.getElementById('$cbtnID');
 
         // When the user clicks the button, open the modal 
-        btn" . $x . ".onclick = function() {
-          modal" . $x . ".style.display = 'block';
+        cbtn" . $x . ".onclick = function() {
+          cmodal" . $x . ".style.display = 'block';
         }
 
-        modal" . $x . ".onclick=function() {
-            modal" . $x . ".style.display = 'none';
+        cmodal" . $x . ".onclick=function() {
+            cmodal" . $x . ".style.display = 'none';
         }
-
         </script>
     ";
     $x++;
