@@ -21,47 +21,7 @@
         <h2>Skaters</h2>    
         
         <div class="row2">
-        
-            <?php
-                $skaterPortraits = $db->prepare("SELECT * FROM skaters");
-                $skaterPortraits->execute();
-
-                while ($row = $skaterPortraits->fetch(PDO::FETCH_ASSOC)) {
-                    $name = $row['name'];
-                    $number = $row['number'];
-                    $dob = $row['dob'];
-                    $start = $row['start'];
-                    $description = $row['description'];
-                    $image = $row['image'];
-
-                    echo "
-                        <div class='gallery' id='myBtn'>
-                            <img src='../images/portraits/$image
-                            ' alt='Image file not found'>
-                        </div>
-                        
-                        <div id='myModal' class='modal'>
-                            <div class='modal-content'>
-                                <span class='close'>&times;</span>
-                                <img src='../images/portraits/$image
-                                ' alt='Image file not found' class='innerpic'>
-                                <div class='textblock'>
-                                    <span class='popuptext'>Player name:
-                                    </span><br><p> $name</p><br>
-                                    <span class='popuptext'>Jersy number:
-                                    </span><br> $number</p><br>
-                                    <span class='popuptext'>Age:</span><br> 
-                                    $dob</p><br>
-                                    <p>Rebel Since $start</p>
-                                </div>
-                                <div class='line'></div>
-                                <p style='margin-top: 15px; text-align: left'>
-                                $description</p>
-                            </div>
-                        </div>
-                    ";
-                }
-            ?>
+            <?php include "../scripts/skaters.php"; ?>
         </div>
         
         <!-------------------------------------------------------------------->        
@@ -144,7 +104,6 @@
         
         <!-------------------------------------------------------------------->        
         
-        <script src="../scripts/skaters.js"></script>
 
         <script>
             document.getElementById("pagetitle").innerHTML = "Meet the Rebels";

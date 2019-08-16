@@ -41,6 +41,7 @@ will go the extra mile.', 'p1.jpg'),
 ('Player 2', 68,  '2009-11-15', '2018-03-28', 'Player 2 loves to eat...', 'p2.jpg'),
 ('Player 3', 911, '2007-06-04', '2016-01-14', 'Player 3 one jumped off of a...', 'p3.jpg'),
 ('Player 4', 23,  '2005-05-23', '2017-08-09', 'Player 4 is a super elite jammer...', 'p4.jpg');
+('Jonnyboy', 3712,  '1981-05-23', '2019-08-15', 'Jonnyboy is super handsome and can eat a lot!', 'jon2.jpg');
 
 
 /******************************************************************************
