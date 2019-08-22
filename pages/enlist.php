@@ -60,25 +60,8 @@
         <div class="row">
             <div class="columnleft">
                 <p class="lighttext">
-                    The Rocket City Rebels host a 4-day Boot Camp once a year 
-                    in the fall.  During 
-                    this camp new skaters will be taught how to skate derby 
-                    style and learn the basic rules of derby.  At the end of 
-                    bootcamp all participants will be offered the opportunity 
-                    to join the team.  After boot camp we typically offer open 
-                    enrollment from Oct-Jan. <br><br>
-
-                    If you miss Boot Camp and wish to join during open enrollment, 
-                    please contact us through the form below to schedule a skating 
-                    evaluation with a coach for training placement. <br><br>
-                    
-                    During game season (Feb-Sept) we do not accept new players but 
-                    will make exceptions for transfer players from other teams and 
-                    highly skilled skaters who do not require basic skills 
-                    training.  Skaters wishing an exception may contact us below 
-                    to schedule an evaluation. <br><br>
-
-                    RCR hosts a 4-day Boot Camp once a year in the fall.  Boot 
+                    The Rocket City Rebels RCR hosts a 4-day Boot Camp once a 
+                    year in the fall.  Boot 
                     Camp dates will be announced on our facebook page and will 
                     be listed on our calendar.  During this camp new skaters 
                     will be taught how to skate derby style and learn the basic 
@@ -100,8 +83,6 @@
             </div>
 
             <div class="columnright">
-                <img class="boximage" src="../images/logo.webp">
-                <div class="start"></div>
                 <img class="boximage" src="../images/logo.webp">
               
             </div>
