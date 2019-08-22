@@ -164,13 +164,12 @@
                 <h3>Volunteering</h3>
                 <p class="darktext">
                     A member from each skater's family must voluteer their time 
-                    to assist with monthly bouts (games against other teams).
-                    There are 3 games each season (approx. 2.5 hours per game).
-                    A family member of each skater must also volunteer at a 
-                    minimum of 2 Saturday events (approx. 4 hours each) per 
-                    year. If you are unable or unwilling to meet your volunteer 
-                    commitments you can opt to pay a once per year donation of 
-                    $150 to cover your volunteer hours.
+                    to assist with 3 of the monthly bouts (games against other 
+                    teams - 2.5 hours per bout). A family member of each skater 
+                    must also volunteer at a minimum of 2 Saturday events (approx. 
+                    4 hours each) per year. If you are unable or unwilling to 
+                    meet your volunteer commitments you can opt to pay a once per 
+                    year donation of $150 to cover your volunteer hours.
                 </p><br>
             </div>
         </div>
