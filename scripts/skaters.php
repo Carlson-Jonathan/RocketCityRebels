@@ -52,7 +52,7 @@ while ($row = $skaterPortraits->fetch(PDO::FETCH_ASSOC)) {
                 <div class='textblock'>
                     <span class='popuptext'>Player name:
                     </span><br><p> $name</p><br>
-                    <span class='popuptext'>Jersy number:
+                    <span class='popuptext'>Jersey number:
                     </span><br> $number</p><br>
                     <span class='popuptext'>Age:</span><br> 
                     $dob</p><br>

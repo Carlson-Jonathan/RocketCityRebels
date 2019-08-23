@@ -60,14 +60,16 @@
         <div class="row">
             <div class="columnleft">
                 <p class="lighttext">
-                    The Rocket City Rebels RCR hosts a 4-day Boot Camp once a 
+                    The Rocket City Rebels hosts a 4-day Boot Camp once a 
                     year in the fall.  Boot 
                     Camp dates will be announced on our facebook page and will 
-                    be listed on our calendar.  During this camp new skaters 
+                    be listed on our <a href="../pages/schedule.php">calendar</a>.  
+                    During this camp new skaters 
                     will be taught how to skate derby style and learn the basic 
                     rules of derby.  At the end of bootcamp all participants 
                     will be offered the opportunity to join the team.  After 
-                    boot camp we typically offer open enrollment from Oct-Jan. 
+                    boot camp we typically offer open enrollment from October 
+                    through January. 
                     <br><br>
 
                     If you miss Boot Camp and wish to join during open 
@@ -75,7 +77,8 @@
                     schedule a skating evaluation with a coach for training 
                     placement. <br><br>
                     
-                    During game season (Feb-Sept) we do not accept new players 
+                    During game season (February - September) we do not accept 
+                    new players 
                     but will make exceptions for transfer players from other 
                     teams and highly skilled skaters who do not require basic 
                     skills training.  Skaters wishing an exception may contact 
@@ -121,7 +124,7 @@
                 
                 <div class="line"></div>
                 
-                <h3>Required Purchases:</h3>
+                <h3>Required Purchases</h3>
                 <p class="darktext">
                     A set of basic derby equipment will cost approximately $250 
                     and up. Check the links below for suggested beginner 
@@ -134,10 +137,10 @@
                     <li>Rocket City Rebels Team Jersey ($70 + tax)</li>
                     <li>Derby Skates</li>
                     <li>Helmet</li>
-                    <li>Elbow pads</li>
-                    <li>Knee pads</li>
+                    <li>Elbow Pads</li>
+                    <li>Knee Pads</li>
                     <li>Wrist Guards</li>
-                    <li>Mouth guard</li>
+                    <li>Moldable Mouth Guard</li>
                 </ul>
                 
                 <div class="line"></div>

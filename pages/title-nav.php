@@ -19,16 +19,12 @@
                 <li id="skaters.php" class="navbuttons">SKATERS</li>      
             </a>
             
-            <a href="../pages/dues.php">       
-                <li id="dues.php" class="navbuttons">DUES</li>            
-            </a>
-            
             <a href="../pages/schedule.php">   
                 <li id="schedule.php" class="navbuttons">SCHEDULE</li>    
             </a>
             
-            <a href="../pages/store.php">   
-                <li id="store.php" class="navbuttons">STORE</li>       
+            <a href="../pages/store.php">       
+                <li id="store.php" class="navbuttons">STORE</li>            
             </a>
             
             <a href="../pages/sponsors.php">   

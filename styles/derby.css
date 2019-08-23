@@ -215,6 +215,14 @@ li a.active {
     margin: 0;
 }
 
+.backdrop {
+    background-color: #251010;
+}
+
+.calendar {
+    color: white;
+}
+
 /******************************************************
 * Used to highlight active navigation bar tab.
 ******************************************************/
