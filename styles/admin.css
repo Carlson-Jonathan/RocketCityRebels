@@ -1,0 +1,67 @@
+table {
+    font-family: roboto, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    text-align: left;
+    padding: 10px 0;
+    width: 175px;
+}
+
+tr {
+    color: #251010;
+    font-size: 18px;
+}
+
+tr:nth-child(even) {
+    background-color: #eeeeee;
+}
+
+input[type=number] {
+    width: 50px;
+    font-size: 14px;
+    padding-left: 5px;
+    border: solid #aad400 1px;
+}
+
+input[type=text], input[type=date] {
+    width: 130px;
+    font-size: 14px;
+    padding-left: 5px;
+    border: solid #aad400 1px;
+}
+
+input[type=date] {
+    width: 140px;
+}
+
+.delete {
+    background-color: darkred;
+    color: white;
+    border-radius: 100px;
+    font-weight: 900;
+    font-size: 14px;
+}
+
+.edit, .save {
+    font-size: 14px;
+    background-color: #aad400;
+    color: black;
+    border-radius: 100px;
+    padding: 0 7px;
+}
+
+.save {
+    font-size: 28px;
+    padding: 0 10px;
+}
+
+.add {
+    background-color: #aad400;
+}
+
+.darktext {
+    font-size: 14px;
+}
