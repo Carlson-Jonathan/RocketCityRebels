@@ -22,11 +22,11 @@
 *   "image" - The name of the .jpg file that is a portrait of the skater.
 ******************************************************************************/
 CREATE TABLE public.skaters (
-	player_id SERIAL PRIMARY KEY,		
+	person_id SERIAL PRIMARY KEY,		
 	name VARCHAR(50) NOT NULL UNIQUE,
     number int NOT NULL UNIQUE,
-	DOB DATE,
-    start DATE,
+	DOB DATE NOT NULL,
+    start DATE NOT NULL,
 	description TEXT,
     image VARCHAR(20)
 );
@@ -56,7 +56,7 @@ will go the extra mile.', 'p1.jpg'),
 *   "image" - the image file name for the coach's portrait.
 ******************************************************************************/
 CREATE TABLE public.coaches (
-	coach_id SERIAL PRIMARY KEY,		
+	person_id SERIAL PRIMARY KEY,		
 	name VARCHAR(50) NOT NULL UNIQUE,
     position VARCHAR(30),
     start DATE,
@@ -85,7 +85,7 @@ VALUES
 *   "image" - the image file name for the referee's portrait.
 ******************************************************************************/
 CREATE TABLE public.referees (
-	referee_id SERIAL PRIMARY KEY,		
+	person_id SERIAL PRIMARY KEY,		
 	name VARCHAR(50) NOT NULL UNIQUE,
     position VARCHAR(30),
     start DATE,
@@ -114,7 +114,7 @@ VALUES
 *   "image" - the image file name for the members's portrait.
 ******************************************************************************/
 CREATE TABLE public.board (
-	referee_id SERIAL PRIMARY KEY,		
+	person_id SERIAL PRIMARY KEY,		
 	name VARCHAR(50) NOT NULL UNIQUE,
     position VARCHAR(30),
     start DATE,
@@ -130,6 +130,26 @@ VALUES
 ('Rufus Rodrigez', 'Vice President', '2011-11-15', 'bite.me@hotmail.com - 1-800-654-9870', 'Tigers are good, tigers are great!', 'VP.jpg'),
 ('Joe Shmoe Nobody', 'Treasurer', '2048-11-15', 'moneyman@AOL.com - 555-555-5555', 'The Little Mermaid was the best Disney movie ever!', 'Tr.png'),
 ('Cora Snake', 'A Player', '2010-01-02', 'Cora@coramail.com', 'Meet Cora L. Snake! She is #911 on the Rebels and has been involved with derby since 2010. Im currently in the engineering strand at New Century, but Im thinking about being a Graphic Designer! Being on my skates is freedom. The feeling of movement is the escape I need after dealing with everything going on in the world today. Derby is tough, but its one of the most fantastic feelings in the world everytime I hit the track. Dont let other peoples opinions run how youre going to live your life. You need to be unapologetic and expressive with everything you do. First and foremost, make sure you are comfortable with your decisions. You dont want to put yourself in a position that youll regret in the long run. Only you can dictate who you are, so dont let others tell you what you need to be. You are a piece of art, and that is beautiful. Fun Fact: I could live off of mashed potatoes. 2 minute mashed potatoes + salt, pepper, sour cream, and butter? The greatest food in the world. Also, Ive been to two junior roller cons, and they were pretty great. Keep a lookout for more introductions to our amazing skaters!', 'cora.jpg');
+
+/******************************************************************************
+* "images" Table
+* This table contains a list of images used throughout the website that the
+* stakeholder may wish to change. 
+* Contents: 
+*   SERIAL "image_id"
+*   "name" - A brief description of the photo
+*   "filename" - The photo's file name
+******************************************************************************/
+CREATE TABLE public.images (
+    image_id SERIAL PRIMARY KEY,
+    name VARCHAR(50),
+    filename VARCHAR(20)
+);
+
+/* Sample sponsor table inserts */
+INSERT INTO images (name, filename)
+VALUES
+('Team Picture 2019', 'teampic.jpg');
 
 /******************************************************************************
 * "sponsors" Table

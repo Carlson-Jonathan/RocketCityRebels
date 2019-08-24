@@ -28,6 +28,7 @@ echo "
 
 // Extract and prepare table from database
 while($row = $skaterList->fetch(PDO::FETCH_ASSOC)) {
+    $player_id = $row['person_id'];
     $name = $row['name'];
     $number = $row['number'];
     $dob = $row['dob'];
@@ -38,9 +39,12 @@ while($row = $skaterList->fetch(PDO::FETCH_ASSOC)) {
     // Display skater table information
     echo "
         <tr>
-            <td style='width: 10px'>
-                <button type='text' class='delete'>X</button>
-            </td>
+            <form method='POST' 
+            action='../scripts/admin/removePerson.php?person_id=" . $player_id . "'>
+                <td><input type='submit' class='delete' value='X'></td>
+                <input type='hidden' name='table' value='skaters'>
+            </form>
+            
             <td><p class='darktext'>$name</p></td>
             <td><p class='darktext'>$number</p></td>
             <td><p class='darktext'>$dob</p></td>
@@ -56,14 +60,17 @@ while($row = $skaterList->fetch(PDO::FETCH_ASSOC)) {
 // Add additional player to database
 echo "
         <tr>
-            <td style='width: 10px'>
-                <button type='text' class='delete' style='background-color: #aad400'>+</button>
-            </td>
-            <td><input class='darktext' type='text' maxlength='49'></td>
-            <td><input class='darktext' type='number' style='width: 75px'></td>
-            <td><input class='darktext' type='date'></td>
-            <td><input class='darktext' type='date'></td>
-            <td><input class='darktext' type='text' maxlength='19'></td>
+            <form method='POST' action='../scripts/admin/addPerson.php'>
+                
+                <td><input type='submit' class='delete' value='+' style='background-color: #aad400'></td>
+                <td><input class='darktext' type='text' maxlength='49' name='name' required></td>
+                <td><input class='darktext' type='number' name='number' required></td>
+                <td><input class='darktext' type='date' name='dob' required></td>
+                <td><input class='darktext' type='date' name='start' required></td>
+                <td><input class='darktext' type='text' name='image' maxlength='19' required></td>
+                <input type='hidden' name='table' value='skaters'>
+            </form>            
+        </tr>
     </table>
 ";
     

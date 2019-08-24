@@ -16,8 +16,8 @@
     <main>
         <div class="start"></div>
         
-        <h2>Rocket City Rebels Team 2019</h2>
-        <img src="../images/teampic.jpg"><br><br>
+        <h2>Rocket City Rebels Team</h2>
+        <img src="../images/PagePhotos/SkatersPage/TeamPicture.jpg"><br><br>
         
         <!-------------------------------------------------------------------->
         
