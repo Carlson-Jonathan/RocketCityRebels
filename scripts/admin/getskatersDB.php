@@ -11,6 +11,7 @@
 
 $skaterList = $db->prepare("SELECT * FROM skaters ORDER BY name ASC");
 $skaterList->execute();
+$x = 1;
 
 // Heading for table
 echo "
@@ -22,7 +23,7 @@ echo "
             <th>Birthday</th>
             <th>Start Date</th>
             <th>Image File</th>
-            <th style='text-align: center'>Description</th>
+            <th style='text-align: center'>Profile</th>
         </tr>
 ";
 
@@ -35,6 +36,10 @@ while($row = $skaterList->fetch(PDO::FETCH_ASSOC)) {
     $start = $row['start'];
     $description = $row['description'];
     $image = $row['image'];
+    
+    $btnID = "myBtn" . $x;
+    $modelID = "myModel" . $x;
+    $close = "close" . $x;
 
     // Display skater table information
     echo "
@@ -51,10 +56,60 @@ while($row = $skaterList->fetch(PDO::FETCH_ASSOC)) {
             <td><p class='darktext'>$start</p></td>
             <td><p class='darktext'>$image</p></td>
             <td style='text-align: center'>
-                <button type='text' class='edit'>Edit</button>
-            </td>
+            <button type='text' class='edit' id='$btnID'>Edit</button></td>
+            
+            <!---------------------------------------------------------------->
+
+            <div id='$modelID' class='modal'>
+                <div class='modal-content'>
+                    <span class='close' id='$close'>&times;</span>
+                    <form type='POST' action=''>
+                        <img src='../images/portraits/$image' 
+                        alt='Image file not found' class='innerpic'>
+                        
+                        <div class='textblock'>
+                            <span class='popuptext'>Player name:</span><br>
+                                <input name='name' type='text' value='$name'><br><br>
+                            <span class='popuptext'>Jersey number:</span><br> 
+                                <input name='number' type='number' value='$number'><br><br>
+                            <span class='popuptext'>Birthday:</span><br> 
+                                <input type='date' name='dob' value='$dob'><br><br>
+                            <span class='popuptext'>Rebel Since</span><br>
+                                <input type='date' name='start' value='$start'<br>
+                        </div>
+                        
+                        <div class='line'></div>
+                        
+                        <textarea rows='8' cols='50' placeholder='Enter descriptive text here.'>$description</textarea>
+                        <input type='submit' value='Save' class='save'>
+                        
+                    </form>
+                </div>
+            </div>
+
+            <script>
+            // Get the modal
+            var modal" . $x . " = document.getElementById('$modelID');
+
+            // Get the button that opens the modal
+            var btn" . $x . " = document.getElementById('$btnID');
+
+            var exit" . $x . " = document.getElementById('$close');
+            
+            // When the user clicks the button, open the modal 
+            btn" . $x . ".onclick = function() {
+              modal" . $x . ".style.display = 'block';
+            }
+
+            // When the user clicks 'X', close the modal
+            exit" . $x . ".onclick=function() {
+                modal" . $x . ".style.display = 'none';
+            }
+
+            </script>
         </tr>
     ";
+    $x++;
 }
 
 // Add additional player to database

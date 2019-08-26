@@ -132,26 +132,6 @@ VALUES
 ('Cora Snake', 'A Player', '2010-01-02', 'Cora@coramail.com', 'Meet Cora L. Snake! She is #911 on the Rebels and has been involved with derby since 2010. Im currently in the engineering strand at New Century, but Im thinking about being a Graphic Designer! Being on my skates is freedom. The feeling of movement is the escape I need after dealing with everything going on in the world today. Derby is tough, but its one of the most fantastic feelings in the world everytime I hit the track. Dont let other peoples opinions run how youre going to live your life. You need to be unapologetic and expressive with everything you do. First and foremost, make sure you are comfortable with your decisions. You dont want to put yourself in a position that youll regret in the long run. Only you can dictate who you are, so dont let others tell you what you need to be. You are a piece of art, and that is beautiful. Fun Fact: I could live off of mashed potatoes. 2 minute mashed potatoes + salt, pepper, sour cream, and butter? The greatest food in the world. Also, Ive been to two junior roller cons, and they were pretty great. Keep a lookout for more introductions to our amazing skaters!', 'cora.jpg');
 
 /******************************************************************************
-* "images" Table
-* This table contains a list of images used throughout the website that the
-* stakeholder may wish to change. 
-* Contents: 
-*   SERIAL "image_id"
-*   "name" - A brief description of the photo
-*   "filename" - The photo's file name
-******************************************************************************/
-CREATE TABLE public.images (
-    image_id SERIAL PRIMARY KEY,
-    name VARCHAR(50),
-    filename VARCHAR(20)
-);
-
-/* Sample sponsor table inserts */
-INSERT INTO images (name, filename)
-VALUES
-('Team Picture 2019', 'teampic.jpg');
-
-/******************************************************************************
 * "sponsors" Table
 * This table lists the current sponsors with their associated logo's filename.
 * This table will be displayed on the footer of each page.

@@ -11,6 +11,7 @@
 
 $coachList = $db->prepare("SELECT * FROM coaches ORDER BY name ASC");
 $coachList->execute();
+$x = 1;
 
 // Heading for table
 echo "

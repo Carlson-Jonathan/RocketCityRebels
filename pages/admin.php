@@ -4,6 +4,7 @@
 <?php include "head.php"; ?>
 <head>
     <link id="styles" rel="stylesheet" href="../styles/admin.css">
+    <link id="styles" rel="stylesheet" href="../styles/skaters.css">    
 </head>   
     
 <body>
@@ -57,7 +58,12 @@
                 1.) Click the red "X" button next to the person you want to remove.
                 (No undo)<br>
                 2.) Marvel at how easy the web designer made this step.
-            </p>                
+            </p><br><br>
+            <p class="lighttext" style="font-size: 14px">Tip: Create and save all of the information
+            about the skaters in a spreadsheet or word document, then copy and
+            paste the information to this page. Do not rely on this page to be
+            the only place the skater information is stored.</p>
+            
         </div>
             
         <h2>Skaters</h2>  

@@ -38,7 +38,6 @@ while ($row = $skaterPortraits->fetch(PDO::FETCH_ASSOC)) {
     * clicking a specific element, this code will display a special CSS 
     * box which can be un-displayed by re-clicking anywhere on the screen.
     **********************************************************************/
-    
     echo "
         <div class='gallery' id='$btnID'>
             <img src='../images/portraits/$image
@@ -76,6 +75,7 @@ while ($row = $skaterPortraits->fetch(PDO::FETCH_ASSOC)) {
           modal" . $x . ".style.display = 'block';
         }
 
+        // When the user clicks anywhere, close the modal
         modal" . $x . ".onclick=function() {
             modal" . $x . ".style.display = 'none';
         }

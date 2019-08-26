@@ -75,6 +75,7 @@ div.desc {
     display: inline-block;
     text-align: left;
     margin-bottom: 15px;
+    padding: 20px 20px 0;
 }
 
 .popuptext {

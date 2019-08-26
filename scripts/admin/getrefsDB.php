@@ -11,6 +11,7 @@
 
 $refList = $db->prepare("SELECT * FROM referees ORDER BY name ASC");
 $refList->execute();
+$x = 1;
 
 // Heading for table
 echo "
@@ -22,7 +23,7 @@ echo "
             <th>Start Date</th>
             <th>Filler</th>
             <th>Image File</th>
-            <th style='text-align: center'>Description</th>
+            <th style='text-align: center'>Profile</th>
         </tr>
 ";
 
@@ -35,12 +36,17 @@ while($row = $refList->fetch(PDO::FETCH_ASSOC)) {
     $filler = $row['filler'];
     $image = $row['image'];
     $description = $row['description'];
+    
+    $rbtnID = "rmyBtn" . $x;
+    $rmodelID = "rmyModel" . $x;   
+    $rclose = "rclose" . $x;    
 
     // Display referee table information
     echo "
         <tr>
             <form method='POST' 
-            action='../scripts/admin/removePerson.php?person_id=" . $ref_id . "'>
+            action='../scripts/admin/removePerson.php?person_id=" . 
+            $ref_id . "'>
                 <td><input type='submit' class='delete' value='X'></td>
                 <input type='hidden' name='table' value='referees'>
             </form>            
@@ -50,9 +56,60 @@ while($row = $refList->fetch(PDO::FETCH_ASSOC)) {
             <td><p class='darktext'>$start</p></td>
             <td><p class='darktext'>$filler</p></td>
             <td><p class='darktext'>$image</p></td>
-            <td style='text-align: center'><button type='text' class='edit'>Edit</button></td>
+            <td style='text-align: center'>
+            <button type='text' class='edit' id='$rbtnID'>Edit</button></td>
+            
+            <!---------------------------------------------------------------->
+            
+            <div id='$rmodelID' class='modal'>
+                <div class='modal-content'>
+                    <span class='close' id='$rclose'>&times;</span>   
+                    <form type='POST' action=''>
+                        <img src='../images/portraits/$image'
+                        alt='Image file not found' class='innerpic'>
+                    
+                    <div class='textblock'>
+                        <span class='popuptext'>Referee name:</span><br>
+                            <input name='name' type='text' value='$name'><br><br>
+                        <span class='popuptext'>Position:</span><br>
+                            <input name='position' type='text' value='$position'><br><br>
+                        <span class='popuptext'>Filler:</span><br> 
+                            <input type='text' name='filler' value='$filler'><br><br>
+                        <span class='popuptext'>Referee since</span><br>
+                            <input type='date' name='start' value='$start'>
+                    </div>
+                    
+                    <div class='line'></div>
+                    
+                    <textarea rows='8' cols='50' placeholder='Enter descriptive text here.'>$description</textarea>
+                    <input type='submit' value='Save' class='save'>
+                    
+                    </form>
+                </div>
+            </div>
+
+            <script>
+            // Get the modal
+            var rmodal" . $x . " = document.getElementById('$rmodelID');
+
+            // Get the button that opens the modal
+            var rbtn" . $x . " = document.getElementById('$rbtnID');
+
+            var rexit" . $x . " = document.getElementById('$rclose');
+            
+            // When the user clicks the button, open the modal 
+            rbtn" . $x . ".onclick = function() {
+              rmodal" . $x . ".style.display = 'block';
+            }
+            
+            rexit" . $x . ".onclick=function() {
+                rmodal" . $x . ".style.display = 'none';
+            }
+
+            </script>            
         </tr>
     ";
+    $x++;
 }
 
 // Add additional referee to database
