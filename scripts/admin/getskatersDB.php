@@ -9,6 +9,7 @@
 *   displayed and updated from the admin page.
 ******************************************************************************/
 
+// Prepare skaters table
 $skaterList = $db->prepare("SELECT * FROM skaters ORDER BY name ASC");
 $skaterList->execute();
 $x = 1;
@@ -37,11 +38,14 @@ while($row = $skaterList->fetch(PDO::FETCH_ASSOC)) {
     $description = $row['description'];
     $image = $row['image'];
     
+    // Variables that make this page unique
     $btnID = "myBtn" . $x;
     $modelID = "myModel" . $x;
     $close = "close" . $x;
 
-    // Display skater table information
+    /**************************************************************************
+    * Displays skaters table by line with associated buttons.
+    **************************************************************************/
     echo "
         <tr>
             <form method='POST' 
@@ -58,7 +62,9 @@ while($row = $skaterList->fetch(PDO::FETCH_ASSOC)) {
             <td style='text-align: center'>
             <button type='text' class='edit' id='$btnID'>Edit</button></td>
             
-            <!---------------------------------------------------------------->
+            <!-----------------------------------------------------------------
+            - The pop-up that appears when the 'edit' button is clicked.
+            ------------------------------------------------------------------>
 
             <div id='$modelID' class='modal'>
                 <div class='modal-content'>
@@ -112,17 +118,22 @@ while($row = $skaterList->fetch(PDO::FETCH_ASSOC)) {
     $x++;
 }
 
-// Add additional player to database
+/******************************************************************************
+* The line that allows the user to add a person to the database.
+******************************************************************************/
 echo "
         <tr>
             <form method='POST' action='../scripts/admin/addPerson.php'>
                 
-                <td><input type='submit' class='delete' value='+' style='background-color: #aad400'></td>
-                <td><input class='darktext' type='text' maxlength='49' name='name' required></td>
+                <td><input type='submit' class='delete' value='+' 
+                    style='background-color: #aad400'></td>
+                <td><input class='darktext' type='text' maxlength='49' 
+                    name='name' required></td>
                 <td><input class='darktext' type='number' name='number' required></td>
                 <td><input class='darktext' type='date' name='dob' required></td>
                 <td><input class='darktext' type='date' name='start' required></td>
-                <td><input class='darktext' type='text' name='image' maxlength='19' required></td>
+                <td><input class='darktext' type='text' name='image' 
+                    maxlength='19' required></td>
                 <input type='hidden' name='table' value='skaters'>
             </form>            
         </tr>

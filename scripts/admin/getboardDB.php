@@ -9,8 +9,10 @@
 *   displayed and updated from the admin page.
 ******************************************************************************/
 
+// Prepare board member table
 $boardList = $db->prepare("SELECT * FROM board ORDER BY name ASC");
 $boardList->execute();
+$x = 1;
 
 // Heading for table
 echo "
@@ -26,7 +28,7 @@ echo "
         </tr>
 ";
 
-// Extract and prepare table from database
+// Extract and set table variables 
 while($row = $boardList->fetch(PDO::FETCH_ASSOC)) {
     $board_id = $row['person_id'];
     $name = $row['name'];
@@ -35,8 +37,15 @@ while($row = $boardList->fetch(PDO::FETCH_ASSOC)) {
     $contact = $row['contact'];
     $image = $row['image'];
     $description = $row['description'];
+    
+    // Variables that make this page unique
+    $bbtnID = "bmyBtn" . $x;
+    $bmodelID = "bmyModel" . $x;   
+    $bclose = "bclose" . $x;     
 
-    // Display Board of Directors table information
+     /**************************************************************************
+     * Displays board table by line with associated buttons.
+    **************************************************************************/
     echo "
         <tr>
             <form method='POST' 
@@ -50,22 +59,80 @@ while($row = $boardList->fetch(PDO::FETCH_ASSOC)) {
             <td><p class='darktext'>$start</p></td>
             <td><p class='darktext'>$contact</p></td>
             <td><p class='darktext'>$image</p></td>
-            <td style='text-align: center'><button type='text' class='edit'>Edit</button></td>
+            <td style='text-align: center'>
+            <button type='text' class='edit' id='$bbtnID'>Edit</button></td>
+            
+            <!-----------------------------------------------------------------
+            - The pop-up that appears when the 'edit' button is clicked.
+            ------------------------------------------------------------------>
+            
+            <div id='$bmodelID' class='modal'>
+                <div class='modal-content'>
+                    <span class='close' id='$bclose'>&times;</span>   
+                    <form type='POST' action=''>
+                        <img src='../images/portraits/$image'
+                        alt='Image file not found' class='innerpic'>
+                    
+                    <div class='textblock'>
+                        <span class='popuptext'>Board member name:</span><br>
+                            <input name='name' type='text' value='$name'><br><br>
+                        <span class='popuptext'>Position:</span><br>
+                            <input name='position' type='text' value='$position'><br><br>
+                        <span class='popuptext'>Board member since</span><br>
+                            <input type='date' name='start' value='$start'><br><br>
+                        <span class='popuptext'>Contact</span><br> 
+                            <input type='text' name='contact' value='$contact'><br><br>
+                    </div>
+                    
+                    <div class='line'></div>
+                    
+                    <textarea rows='8' cols='50' placeholder='Enter descriptive text here.'>$description</textarea>
+                    <input type='submit' value='Save' class='save'>
+                    
+                    </form>
+                </div>
+            </div>
+
+            <script>
+            // Get the modal
+            var bmodal" . $x . " = document.getElementById('$bmodelID');
+
+            // Get the button that opens the modal
+            var bbtn" . $x . " = document.getElementById('$bbtnID');
+
+            var bexit" . $x . " = document.getElementById('$bclose');
+            
+            // When the user clicks the button, open the modal 
+            bbtn" . $x . ".onclick = function() {
+              bmodal" . $x . ".style.display = 'block';
+            }
+            
+            bexit" . $x . ".onclick=function() {
+                bmodal" . $x . ".style.display = 'none';
+            }
+
+            </script>            
         </tr>
     ";
+    $x++;
 }
 
-// Add additional board member to database
+/******************************************************************************
+* The line that allows the user to add a person to the database.
+******************************************************************************/
 echo "
         <tr>
             <form method='POST' action='../scripts/admin/addPerson.php'>
                 
-                <td><input type='submit' class='delete' value='+' style='background-color: #aad400'></td>
-                <td><input class='darktext' type='text' name='name' maxlength='49' required></td>
+                <td><input type='submit' class='delete' value='+' 
+                    style='background-color: #aad400'></td>
+                <td><input class='darktext' type='text' name='name' 
+                    maxlength='49' required></td>
                 <td><input class='darktext' type='text' name='position' required></td>
                 <td><input class='darktext' type='date' name='start' required></td>
                 <td><input class='darktext' type='text' name='contact' required></td>
-                <td><input class='darktext' type='text' name='image' maxlength='19' required></td>
+                <td><input class='darktext' type='text' name='image' 
+                    maxlength='19' required></td>
                 <input type='hidden' name='table' value='board'>
             </form>            
         </tr>
