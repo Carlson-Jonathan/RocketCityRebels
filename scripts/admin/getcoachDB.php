@@ -69,25 +69,28 @@ while($row = $coachList->fetch(PDO::FETCH_ASSOC)) {
             <div id='$cmodelID' class='modal'>
                 <div class='modal-content'>
                     <span class='close' id='$cclose'>&times;</span>   
-                    <form type='POST' action=''>
+                    <form method='POST' action='../scripts/admin/editPerson.php'>
                         <img src='../images/portraits/$image'
                         alt='Image file not found' class='innerpic'>
                     
                     <div class='textblock'>
                         <span class='popuptext'>Coach name:</span><br>
-                            <input name='name' type='text' value='$name'><br><br>
+                            <input name='name' type='text' value='$name' maxlength='49' required><br><br>
                         <span class='popuptext'>Position:</span><br>
-                            <input name='position' type='text' value='$position'><br><br>
+                            <input name='position' type='text' value='$position' maxlength='30' required><br><br>
                         <span class='popuptext'>Filler:</span><br> 
-                            <input type='text' name='filler' value='$filler'><br><br>
+                            <input type='text' name='filler' value='$filler' maxlength='50' required><br><br>
                         <span class='popuptext'>Coach since</span><br>
-                            <input type='date' name='start' value='$start'>
+                            <input type='date' name='start' value='$start' required>
                     </div>
                     
                     <div class='line'></div>
                     
-                    <textarea rows='8' cols='50' placeholder='Enter 
-                    descriptive text here.'>$description</textarea>
+                    <textarea rows='8' cols='50' name='description' placeholder='Enter descriptive text here.'>$description</textarea>
+
+                    <input type='hidden' value='coaches' name='table'>
+                    <input type='hidden' value='$coach_id' name='person_id'>
+                    
                     <input type='submit' value='Save' class='save'>
                     
                     </form>

@@ -65,31 +65,39 @@ while($row = $skaterList->fetch(PDO::FETCH_ASSOC)) {
             <!-----------------------------------------------------------------
             - The pop-up that appears when the 'edit' button is clicked.
             ------------------------------------------------------------------>
-
             <div id='$modelID' class='modal'>
                 <div class='modal-content'>
                     <span class='close' id='$close'>&times;</span>
-                    <form type='POST' action=''>
-                        <img src='../images/portraits/$image' 
-                        alt='Image file not found' class='innerpic'>
+                    
+                    <form method='POST' action='../scripts/admin/editPerson.php'>
+                        
+                        <img src='../images/portraits/$image' alt='Image file not found' class='innerpic'>
                         
                         <div class='textblock'>
                             <span class='popuptext'>Player name:</span><br>
-                                <input name='name' type='text' value='$name'><br><br>
+                                <input name='name' type='text' value='$name' maxlength='49' required><br><br>
+                            
                             <span class='popuptext'>Jersey number:</span><br> 
-                                <input name='number' type='number' value='$number'><br><br>
+                                <input name='number' type='number' value='$number' required><br><br>
+                            
                             <span class='popuptext'>Birthday:</span><br> 
-                                <input type='date' name='dob' value='$dob'><br><br>
+                                <input type='date' name='dob' value='$dob' required><br><br>
+                            
                             <span class='popuptext'>Rebel Since</span><br>
-                                <input type='date' name='start' value='$start'<br>
+                                <input type='date' name='start' value='$start' required><br>
                         </div>
                         
                         <div class='line'></div>
                         
-                        <textarea rows='8' cols='50' placeholder='Enter descriptive text here.'>$description</textarea>
+                        <textarea rows='8' cols='50' name='description' placeholder='Enter descriptive text here.'>$description</textarea>
+                        
+                        <input type='hidden' value='skaters' name='table'>
+                        <input type='hidden' value='$player_id' name='person_id'>
+                        
                         <input type='submit' value='Save' class='save'>
                         
                     </form>
+                    
                 </div>
             </div>
 

@@ -69,24 +69,29 @@ while($row = $boardList->fetch(PDO::FETCH_ASSOC)) {
             <div id='$bmodelID' class='modal'>
                 <div class='modal-content'>
                     <span class='close' id='$bclose'>&times;</span>   
-                    <form type='POST' action=''>
+                    
+                    <form method='POST' action='../scripts/admin/editPerson.php'>
                         <img src='../images/portraits/$image'
                         alt='Image file not found' class='innerpic'>
                     
                     <div class='textblock'>
                         <span class='popuptext'>Board member name:</span><br>
-                            <input name='name' type='text' value='$name'><br><br>
+                            <input name='name' type='text' value='$name' maxlength='49' required><br><br>
                         <span class='popuptext'>Position:</span><br>
-                            <input name='position' type='text' value='$position'><br><br>
-                        <span class='popuptext'>Board member since</span><br>
-                            <input type='date' name='start' value='$start'><br><br>
-                        <span class='popuptext'>Contact</span><br> 
-                            <input type='text' name='contact' value='$contact'><br><br>
+                            <input name='position' type='text' value='$position' maxlength='30' required><br><br>
+                        <span class='popuptext'>Filler:</span><br> 
+                            <input type='text' name='contact' value='$contact' maxlength='50' required><br><br>
+                        <span class='popuptext'>Coach since</span><br>
+                            <input type='date' name='start' value='$start' required>
                     </div>
                     
                     <div class='line'></div>
                     
-                    <textarea rows='8' cols='50' placeholder='Enter descriptive text here.'>$description</textarea>
+                    <textarea rows='8' cols='50' name='description' placeholder='Enter descriptive text here.'>$description</textarea>
+
+                    <input type='hidden' value='board' name='table'>
+                    <input type='hidden' value='$board_id' name='person_id'>
+                    
                     <input type='submit' value='Save' class='save'>
                     
                     </form>

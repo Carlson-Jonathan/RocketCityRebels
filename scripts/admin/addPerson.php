@@ -58,7 +58,7 @@ function test_input($data) {
     else
         echo "<p>Error Loading contact!</p>";
 
-// Test output
+/* Test output
 echo "
     name = $name<br>
     number = $number<br>
@@ -69,6 +69,7 @@ echo "
     position = $position<br>
     filler = $filler<br>
 ";
+*/
     
 // Determines which table to query
 switch($table) {
