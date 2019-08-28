@@ -66,7 +66,7 @@ while ($row = $boardPortraits->fetch(PDO::FETCH_ASSOC)) {
                     </span>
                     <p>$contact</p><br>
 
-                    <p>Board member since $start</p><br>
+                    <p>Board member since " . adjust_date($start) . "</p><br>
 
                 </div>
 

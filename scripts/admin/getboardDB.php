@@ -56,8 +56,8 @@ while($row = $boardList->fetch(PDO::FETCH_ASSOC)) {
 
             <td><p class='darktext'>$name</p></td>
             <td><p class='darktext'>$position</p></td>
-            <td><p class='darktext'>$start</p></td>
-            <td><p class='darktext'>$contact</p></td>
+            <td><p class='darktext'>" . format_date($start) . "</p></td>
+            <td><p class='darktext' style='width: 170px; font-size: 10px'>$contact</p></td>
             <td><p class='darktext'>$image</p></td>
             <td style='text-align: center'>
             <button type='text' class='edit' id='$bbtnID'>Edit</button></td>
@@ -80,7 +80,7 @@ while($row = $boardList->fetch(PDO::FETCH_ASSOC)) {
                         <span class='popuptext'>Position:</span><br>
                             <input name='position' type='text' value='$position' maxlength='30' required><br><br>
                         <span class='popuptext'>Filler:</span><br> 
-                            <input type='text' name='contact' value='$contact' maxlength='50' required><br><br>
+                            <input type='text' name='contact' value='$contact' maxlength='35' required><br><br>
                         <span class='popuptext'>Coach since</span><br>
                             <input type='date' name='start' value='$start' required>
                     </div>
@@ -135,7 +135,7 @@ echo "
                     maxlength='49' required></td>
                 <td><input class='darktext' type='text' name='position' required></td>
                 <td><input class='darktext' type='date' name='start' required></td>
-                <td><input class='darktext' type='text' name='contact' required></td>
+                <td><input class='darktext' type='text' name='contact' maxlength='35' required'></td>
                 <td><input class='darktext' type='text' name='image' 
                     maxlength='19' required></td>
                 <input type='hidden' name='table' value='board'>

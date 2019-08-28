@@ -11,6 +11,23 @@
     <?php 
         include "title-nav.php"; 
         require "../scripts/dbsetup.php";
+    
+        // Sets dates to read "Month YYYY" format. Used in all sections.
+        function adjust_date($dt) {
+            $date = date_create($dt);
+            $format = date_format($date, "F Y");
+            return $format;
+        }
+    
+    // Calculates age "YY" from date of birth
+    function getAge($then) {
+        $then_ts = strtotime($then);
+        $then_year = date('Y', $then_ts);
+        $age = date('Y') - $then_year;
+        if(strtotime('+' . $age . ' years', $then_ts) > time()) $age--;
+        return $age;
+    }
+    
     ?>
 
     <main>

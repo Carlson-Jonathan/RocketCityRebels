@@ -66,7 +66,7 @@ while ($row = $coachPortraits->fetch(PDO::FETCH_ASSOC)) {
                     </span>
                     <p>$filler</p><br>
 
-                    <p>Coach since $start</p><br>
+                    <p>Coach since " . adjust_date($start) . "</p><br>
 
                 </div>
 

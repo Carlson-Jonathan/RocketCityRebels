@@ -42,7 +42,7 @@ while($row = $refList->fetch(PDO::FETCH_ASSOC)) {
     $rbtnID = "rmyBtn" . $x;
     $rmodelID = "rmyModel" . $x;   
     $rclose = "rclose" . $x;    
-
+    
     /**************************************************************************
     * Displays referee table by line with associated buttons.
     **************************************************************************/
@@ -57,7 +57,7 @@ while($row = $refList->fetch(PDO::FETCH_ASSOC)) {
             
             <td><p class='darktext'>$name</p></td>
             <td><p class='darktext'>$position</p></td>
-            <td><p class='darktext'>$start</p></td>
+            <td><p class='darktext'>" . format_date($start) . "</p></td>
             <td><p class='darktext'>$filler</p></td>
             <td><p class='darktext'>$image</p></td>
             <td style='text-align: center'>

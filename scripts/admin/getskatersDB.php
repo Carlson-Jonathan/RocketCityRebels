@@ -28,6 +28,14 @@ echo "
         </tr>
 ";
 
+// Converts the SQL date to mm/dd/yyyy format instead of yyyy/dd/mm
+// This function delcaration rolls over to getrefsDB, getcoachDB and getboardDB
+function format_date($dt) {
+    $date = date_create($dt);
+    $format = date_format($date, "m/d/Y");
+    return $format;
+}
+
 // Extract and prepare table from database
 while($row = $skaterList->fetch(PDO::FETCH_ASSOC)) {
     $player_id = $row['person_id'];
@@ -47,6 +55,7 @@ while($row = $skaterList->fetch(PDO::FETCH_ASSOC)) {
     * Displays skaters table by line with associated buttons.
     **************************************************************************/
     echo "
+    
         <tr>
             <form method='POST' 
             action='../scripts/admin/removePerson.php?person_id=" . $player_id . "'>
@@ -56,8 +65,8 @@ while($row = $skaterList->fetch(PDO::FETCH_ASSOC)) {
             
             <td><p class='darktext'>$name</p></td>
             <td><p class='darktext'>$number</p></td>
-            <td><p class='darktext'>$dob</p></td>
-            <td><p class='darktext'>$start</p></td>
+            <td><p class='darktext'>" . format_date($dob) . "</p></td>
+            <td><p class='darktext'>" . format_date($start) . "</p></td>
             <td><p class='darktext'>$image</p></td>
             <td style='text-align: center'>
             <button type='text' class='edit' id='$btnID'>Edit</button></td>

@@ -32,6 +32,7 @@ while ($row = $skaterPortraits->fetch(PDO::FETCH_ASSOC)) {
 
     $btnID = "myBtn" . $x;
     $modelID = "myModel" . $x;
+    
 
     /**********************************************************************
     * Propogates and displays each element to the screen upon page load. On
@@ -50,12 +51,12 @@ while ($row = $skaterPortraits->fetch(PDO::FETCH_ASSOC)) {
                 ' alt='Image file not found' class='innerpic'>
                 <div class='textblock'>
                     <span class='popuptext'>Player name:
-                    </span><br><p> $name</p><br>
+                    </span><br><p>$name</p><br>
                     <span class='popuptext'>Jersey number:
                     </span><br> $number</p><br>
                     <span class='popuptext'>Age:</span><br> 
-                    $dob</p><br>
-                    <p>Rebel Since $start</p>
+                    " . getAge($dob) . "</p><br>
+                    <p>Rebel Since " . adjust_date($start) ."</p>
                 </div>
                 <div class='line'></div>
                 <p style='margin-top: 15px; text-align: left'>

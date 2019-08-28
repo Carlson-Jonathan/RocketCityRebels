@@ -73,17 +73,17 @@
         
         <!-------------------------------------------------------------------->
         
-        <h2>Referees</h2>    
-        <div class="row2">
-            <?php include "../scripts/admin/getrefsDB.php"; ?>
-        </div>        
-        
-        <!-------------------------------------------------------------------->
-        
         <h2>Coaches</h2>    
         <div class="row2">
             <?php include "../scripts/admin/getcoachDB.php"; ?>
         </div>
+        
+        <!-------------------------------------------------------------------->
+        
+        <h2>Referees</h2>    
+        <div class="row2">
+            <?php include "../scripts/admin/getrefsDB.php"; ?>
+        </div>        
         
         <!-------------------------------------------------------------------->        
         <h2>Board of Directors</h2>    

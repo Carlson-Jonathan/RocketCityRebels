@@ -56,7 +56,7 @@ while($row = $coachList->fetch(PDO::FETCH_ASSOC)) {
 
             <td><p class='darktext'>$name</p></td>
             <td><p class='darktext'>$position</p></td>
-            <td><p class='darktext'>$start</p></td>
+            <td><p class='darktext'>" . format_date($start) . "</p></td>
             <td><p class='darktext'>$filler</p></td>
             <td><p class='darktext'>$image</p></td>
             <td style='text-align: center'>
