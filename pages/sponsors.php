@@ -8,7 +8,6 @@
     <?php include "title-nav.php"; ?>
 
     <main>
-        <div class="start"></div>
         <h2>Sponsors</h2>
         <div class="row">
             <div class="columnleft">

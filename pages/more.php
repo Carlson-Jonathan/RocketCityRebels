@@ -8,7 +8,6 @@
     <?php include "title-nav.php"; ?>
 
     <main>
-        <div class="start"></div>
         <div class="row">
 
             <div class="columnleft">

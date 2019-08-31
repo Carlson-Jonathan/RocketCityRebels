@@ -62,7 +62,10 @@
             <p class="lighttext" style="font-size: 14px">Tip: Create and save all of the information
             about the skaters in a spreadsheet or word document, then copy and
             paste the information to this page. Do not rely on this page to be
-            the only place the skater information is stored.</p>
+            the only place the skater information is stored.<br><br>
+            Any time you need to use an apostrphe, enter it twice. For example,
+            "coach's" would be entered as "coach''s". This is a security work-around
+            to prevent web hacking attempts.</p>
             
         </div>
             

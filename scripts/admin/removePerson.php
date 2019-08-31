@@ -18,7 +18,7 @@ else
 $removePerson = $db->prepare("DELETE FROM $table WHERE person_id = $person_id;");
 $removePerson->execute();
 
-header("Location: ../../pages/admin.php");
+header("Location: ../../pages/A-skaters.php");
 die();	
 
 ?>

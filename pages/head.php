@@ -19,6 +19,7 @@
     -------------------------------------------------------------------------->  
     <link rel="stylesheet" href="../styles/normalize.css">
     <link id="styles" rel="stylesheet" href="../styles/derby.css">
+    <link id="styles" rel="stylesheet" href="../styles/bcanimation.css">
     
     <title>Rocket City Rebels Prototype Page</title>
 </head>

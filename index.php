@@ -9,7 +9,6 @@
 
     <main>
         
-        <div class="start"></div>
         <div class="row">
             <div class="columnleft" style="width: 40%" >
                 <img class="boximagehome" src="../images/logo.webp">

@@ -38,7 +38,7 @@ main {
 * of the page because the fixed title and navigation
 * bar sit on top of the rest of the page content.
 ******************************************************/
-.start {
+#start {
     margin: 175px;
     line-height: 0;
 }
@@ -246,4 +246,25 @@ footer {
     width: 100px;
     margin: 10px;
     max-height: 50px;
+}
+
+#bootcampbar {
+    display: none;
+    background-color: #251010;
+    padding: 5px 0 10px;
+    width: 900px;
+    text-align: center;
+    margin: auto;
+    font-family: roboto;
+    border-radius: 100px;
+    border: solid #251010 2px;
+    
+}
+
+#bootcampbar:hover {
+    border: solid #aad400 2px;
+}
+
+html {
+    scroll-behavior: smooth;
 }

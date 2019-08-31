@@ -103,7 +103,7 @@ switch($table) {
     
 $editPerson->execute();
 
-header("Location: ../../pages/admin.php");
+header("Location: ../../pages/A-skaters.php");
 die();	
 
 ?>

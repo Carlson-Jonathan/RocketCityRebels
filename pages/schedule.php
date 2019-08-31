@@ -10,7 +10,6 @@
     <?php include "title-nav.php"; ?>
     
     <main>
-        <div class="start"></div>
         
         <h2>Heading about schedules and stuff</h2>
         <div class="row">

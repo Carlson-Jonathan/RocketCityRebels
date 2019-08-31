@@ -9,6 +9,16 @@
 
     <main>
         
+        <script>
+            document.getElementById("pagetitle").innerHTML = "Become a Rebel";
+            window.onload = scrolldown;
+            var bc = document.getElementById("start");
+            if(inSeason())
+                bc.style.margin = "165px";
+            else
+                bc.style.margin = "58px";
+        </script>
+        
         <!-------------------------------------------------------------------->
         
         <div style="margin: 58px"></div>
@@ -180,9 +190,6 @@
         <!-------------------------------------------------------------------->        
 
     </main>
-    <script>
-        document.getElementById("pagetitle").innerHTML = "Become a Rebel";
-    </script>
     
     <?php include "../pages/footer.php"; ?>
     

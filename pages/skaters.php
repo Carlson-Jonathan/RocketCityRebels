@@ -31,8 +31,6 @@
     ?>
 
     <main>
-        <div class="start"></div>
-        
         <h2>Rocket City Rebels Team</h2>
         <img src="../images/PagePhotos/SkatersPage/TeamPicture.jpg"><br><br>
         

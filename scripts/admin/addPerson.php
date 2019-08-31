@@ -97,7 +97,7 @@ switch($table) {
     
 $addPerson->execute();
 
-header("Location: ../../pages/admin.php");
+header("Location: ../../pages/A-skaters.php");
 die();	
 
 ?>
