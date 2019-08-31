@@ -9,16 +9,6 @@
 
     <main>
         
-        <script>
-            document.getElementById("pagetitle").innerHTML = "Become a Rebel";
-            window.onload = scrolldown;
-            var bc = document.getElementById("start");
-            if(inSeason())
-                bc.style.margin = "165px";
-            else
-                bc.style.margin = "58px";
-        </script>
-        
         <!-------------------------------------------------------------------->
         
         <div style="margin: 58px"></div>
@@ -33,7 +23,6 @@
             <div class="columnleft2" style="width: 23%">
                 <img class="boximage" src="../images/derbygirl.jpg">
             </div>
-            
 
             <div class="columnright2" style="width: 77%">
                 <p class="darktext">
@@ -96,8 +85,13 @@
             </div>
 
             <div class="columnright">
-                <img class="boximage" src="../images/logo.webp">
-              
+                <img class="boximage" src="../images/logo.webp" style="margin-bottom: 85px">
+                
+                <p class="lighttext" id="bcinfo">Enrollment closes in<br>
+                    <span style="font-size: 56px; line-height: 56px">    
+                        <script>daysRemaining();</script> days
+                    </span>
+                <span style="font-size: 16px">Don't miss out! Sign up now!</span></p>
             </div>
         </div>
         
@@ -187,8 +181,20 @@
             </div>
         </div>
         
-        <!-------------------------------------------------------------------->        
-
+        <!-------------------------------------------------------------------->     
+        
+        <script>
+        // Adjustments to CSS when boot camp is in season
+            document.getElementById("pagetitle").innerHTML = "Become a Rebel";
+            if(inSeason()) {
+                window.onload = scrolldown;
+                document.getElementById("start").style.margin = "165px";
+                document.getElementById("bcinfo").style.display = "block";
+            }
+            else
+                document.getElementById("start").style.margin = "58px";
+        </script>
+        
     </main>
     
     <?php include "../pages/footer.php"; ?>

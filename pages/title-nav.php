@@ -37,23 +37,8 @@
         </ul>    
     </nav>
     
-    <a href="enlist.php" style="text-decoration: none; color: #251010">
-    <div id="bootcampbar">
-        <script src="../scripts/bootcamp.js"></script>
-
-        <div class="neon">
-          <span class="text" data-text="boot_camp">boot_camp</span>
-          <span class="gradient"></span>
-          <span class="spotlight"></span>
-        </div>
-        <p style="color:#aad400">Enrollment Season Now Open!</p>
-        <p style="color:#aad400; font-size: 13px">Click here to find out how to join the Rocket City Rebels.</p>
-    </div>
-    </a>
+    <?php require "../scripts/admin/bootcampheader.php"; ?>
     
-    
-    <script>startHeight();</script>
-
     <script src="../scripts/activeNav.js">
         // Highlights active page on navigation bar
     </script>

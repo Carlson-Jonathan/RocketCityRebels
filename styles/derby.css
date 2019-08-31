@@ -248,6 +248,9 @@ footer {
     max-height: 50px;
 }
 
+/******************************************************
+* CSS for boot camp related items
+******************************************************/
 #bootcampbar {
     display: none;
     background-color: #251010;
@@ -258,7 +261,6 @@ footer {
     font-family: roboto;
     border-radius: 100px;
     border: solid #251010 2px;
-    
 }
 
 #bootcampbar:hover {
@@ -267,4 +269,14 @@ footer {
 
 html {
     scroll-behavior: smooth;
+}
+
+#bcinfo {
+    text-align: center;
+    font-size: 22px;
+    color: #aad400;
+    display: none;
+    border-top: solid #aad400 2px;
+    border-bottom: solid #aad400 2px;
+    padding: 7px 0;
 }

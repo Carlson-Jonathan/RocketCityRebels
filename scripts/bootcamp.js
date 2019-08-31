@@ -12,8 +12,14 @@
 ******************************************************************************/
 
 // Admin defined "from" and "to" dates for bootcamp.
-var dateFrom = "08/30/2019";
-var dateTo = "12/01/2019";
+var dateFrom = "08/31/2019";
+var dateTo = "09/21/2019";
+var bcbar = document.getElementById('bootcampbar');
+
+function setDates() {
+    dateFrom = document.getElementById('begin').value;
+    dateTo = document.getElementById('finish').value;
+}
 
 // Get today's date in JS
 function getDateToday() {
@@ -28,27 +34,28 @@ function getDateToday() {
 // Determine if today's date lies between the open and close dates for 
 // boot camp season.
 function inSeason() {
-    var d1 = dateFrom.split("/");
-    var d2 = dateTo.split("/");
+    var d1 = dateFrom.split("-");
+    var d2 = dateTo.split("-");
     var c = getDateToday().split("/");
 
     // -1 because months are from 0 to 11
-    var from = new Date(d1[2], parseInt(d1[0])-1, d1[1]);  
-    var to = new Date(d2[2], parseInt(d2[0])-1, d2[1]);
+    var from = new Date(d1[0], parseInt(d1[1])-1, d1[2]);  
+    var to = new Date(d2[0], parseInt(d2[1])-1, d2[2]);
     var check = new Date(c[2], parseInt(c[0])-1, c[1]);
+    //return true;
     return (check >= from && check <= to);
 }
 
 // Used only on the 'Enlist' page while bootcamp is in season.
 function scrolldown() {
-    if(inSeason() == true)
+    if(inSeason())
         window.scroll(0,1150);
 }
 
 // Changes the bootcamp bar display from 'none' to 'block' if in season.
-var bcbar = document.getElementById('bootcampbar');
-if(inSeason() == true) {
-    bcbar.style.display = 'block';
+function adjustDisplay() {
+    if(inSeason())
+        bcbar.style.display = 'block';
 }
 
 // Adjust the CSS after the header
@@ -57,3 +64,16 @@ function startHeight() {
         document.getElementById("start").style.margin = "285px";
 }
 
+// Returns the number of days between now and the close of boot camp season.
+function daysRemaining() {
+    var d1 = dateFrom.split("-");
+    var d2 = dateTo.split("-");
+    var c = getDateToday().split("/");
+
+    // -1 because months are from 0 to 11
+    var from = new Date(d1[0], parseInt(d1[1])-1, d1[2]);  
+    var to = new Date(d2[0], parseInt(d2[1])-1, d2[2]);
+    var check = new Date(c[2], parseInt(c[0])-1, c[1]);
+    document.write((to - check)/60/60/1000/24);
+    return ((to - check)/60/60/1000/24);
+}

@@ -152,3 +152,23 @@ VALUES
 ('Sponsor 1', 's1.jpg'),
 ('Sponsor 2', 's2.jpg');
 
+/******************************************************************************
+* "bootcamp" Table
+* This table contains only a single line representing the start and stop dates
+* of the bootcamp enrollment periods.
+* Contents: 
+*   SERIAL "dates"
+*   "start" - The first day of the enrollment season.
+*   "end" - The last day of the enrollment season.
+******************************************************************************/
+CREATE TABLE public.bootcamp (
+    id SERIAL PRIMARY KEY,
+    begin date,
+    finish date
+);
+
+/* Sample sponsor table inserts */
+INSERT INTO bootcamp (begin, finish)
+VALUES
+('2019-08-31', '2019-09-16');
+
