@@ -37,7 +37,7 @@
         </ul>    
     </nav>
     
-    <?php require "../scripts/admin/bootcampheader.php"; ?>
+    <?php require ($_SERVER['DOCUMENT_ROOT'].'/scripts/admin/bootcampheader.php');?>
     
     <script src="../scripts/activeNav.js">
         // Highlights active page on navigation bar
