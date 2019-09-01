@@ -172,3 +172,23 @@ INSERT INTO bootcamp (begin, finish)
 VALUES
 ('2019-08-31', '2019-09-16');
 
+/******************************************************************************
+* "passwords" Table
+* This table contains the hashed passwords for acess to the administrative 
+* site. 
+* Contents: 
+*   SERIAL "id"
+*   "hash1" - User defined password hash.
+*   "hash2" - Web designer password (for backup only).
+******************************************************************************/
+CREATE TABLE public.passwords (
+    id SERIAL PRIMARY KEY,
+    hash1 VARCHAR(255),
+    hash2 VARCHAR(255)
+);
+
+/* Password table inserts */
+INSERT INTO passwords (hash1, hash2)
+VALUES
+('$2y$10$YS8qQEG0O/zPqTEi8kMnWORxdKQb2/jfUurqHj1Sm82SqQ2nQyaii', '$2y$10$JQgtFqLUcwM9TZPT7i.qROoEMgy85.ebRXZURwn3H.mZgGQc0F/Xq');
+

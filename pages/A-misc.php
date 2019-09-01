@@ -9,23 +9,27 @@
 <body>
 
     <?php 
-        include "title-nav.php"; 
+        include "A-header.php"; 
         require "../scripts/dbsetup.php";
     ?>
 
     <main>
         <div class="start"></div>
+        
+        <!-------------------------------------------------------------------->
+        
+            <?php include "../scripts/admin/resetPW.php"; ?>
+        
         <!-------------------------------------------------------------------->
         
             <?php include "../scripts/admin/getBCdates.php"; ?>
         
         <!-------------------------------------------------------------------->        
+            <?php include "../scripts/admin/editSponsors.php"; ?>
         
+        <!-------------------------------------------------------------------->        
     </main>
-    <script>
-        document.getElementById("pagetitle").innerHTML = "Administrative Access";
-    </script>
-    
+
     <?php include "../pages/footer.php"; ?>
     
 </body>

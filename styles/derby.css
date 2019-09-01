@@ -280,3 +280,24 @@ html {
     border-bottom: solid #aad400 2px;
     padding: 7px 0;
 }
+
+#password {
+    border-radius: 25px;
+    padding: 5px;
+    font-size: 18px;
+    color: #aad400;
+}
+
+.save {
+    font-size: 14px;
+    background-color: #aad400;
+    color: black;
+    border-radius: 100px;
+    padding: 0 7px;
+}
+
+.save {
+    font-size: 20px;
+    padding: 0 10px;
+    margin-top: 10px;
+}

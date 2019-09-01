@@ -1,7 +1,11 @@
+<?php session_start(); ?>
 <!DOCTYPE HTML>  
 <html lang="en-US">
 
-<?php include "pages/head.php"; ?>
+<?php 
+    include "pages/head.php"; 
+    $_SESSION['access'] = false;
+?>
     
 <body>
 
