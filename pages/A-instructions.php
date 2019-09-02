@@ -101,10 +101,8 @@
             <p class="darktext" style="font-size: 14px">
                 <span style="color: green">*Tip:</span><br> Create and save all of the information
             about the skaters in a spreadsheet or word document, then copy and
-            paste the information to the admin skaters page. Do not rely on this site to be
-            paste the information to the admin skaters page. Do not rely on this site to be
-            the only place the skater information is stored.<br><br>
-            <span style="color: red">*IMPORTANT*</span><br> Any time you need to use an apostrphe, enter it twice. For example,
+            paste the information to the admin skaters page.  Do not rely on this site to be the only place the skater information is stored.<br><br>
+            <span style="color: red">*IMPORTANT*</span><br> Any time you need to use an apostrophe, enter it twice. For example,
             "coach's" would be entered as "coach''s". This is a security work-around
             to prevent web hacking attempts. Not doing this will ignore and erase
             anything you enter after clicking "save".</p>
