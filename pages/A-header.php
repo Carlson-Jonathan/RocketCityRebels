@@ -17,12 +17,9 @@
 
     <nav>
         <ul id="navigation">
-            <a href="../index.php">      
-                <li id="index.php" class="navbuttons">RETURN</li>           
-            </a>
             
             <a href="../pages/A-instructions.php">   
-                <li id="A-instructions.php" class="navbuttons">INSTRUCTIONS</li>    
+                <li id="A-instructions.php" class="navbuttons">INSTRUCTIONS</li>   
             </a>
             
             <a href="../pages/A-skaters.php">    
@@ -36,13 +33,17 @@
             <a href="../pages/A-store.php">       
                 <li id="A-store.php" class="navbuttons">STORE</li>            
             </a>
+                        
+            <a href="../pages/A-more.php">       
+                <li id="A-more.php" class="navbuttons">MORE</li>            
+            </a>
             
             <a href="../pages/A-misc.php">    
                 <li id="A-misc.php" class="navbuttons">MISC</li>      
             </a> 
             
-            <a href="../pages/A-more.php">       
-                <li id="A-more.php" class="navbuttons">MORE</li>            
+            <a href="../index.php">      
+                <li id="index.php" class="navbuttons">RETURN</li>           
             </a>
         </ul>    
     </nav>

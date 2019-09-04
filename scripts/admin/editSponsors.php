@@ -1,35 +1,61 @@
 <?php
 /*****************************************************************************
-* getBCdates.php
+* editSponsors.php
 * Author:
 *   Jonathan Carlson
 * Description: 
-*   This file retrives the bootcamp dates from the database and sets
-*   them on the website, which can allow other content to be displayed if BC
-*   is in season.
+*   This file allows the admin user to add and removes sponsors from the 
+*   database. 
 *****************************************************************************/
 require($_SERVER['DOCUMENT_ROOT'].'/scripts/dbsetup.php');
 
-$getBootCamp = $db->prepare("SELECT * FROM bootcamp");
-$getBootCamp->execute();
+$getSponsors = $db->prepare("SELECT * FROM sponsors");
+$getSponsors->execute();
 
-while($row = $getBootCamp->fetch(PDO::FETCH_ASSOC)) {
-    $dbBegin = $row['begin'];
-    $dbFinish = $row['finish'];
-    
-    echo "
+echo "
         <h2>Add/Remove Sponsors</h2>
-        <div class='row'>
-            <p class='lighttext' style='font-size: 18px'>    
+        <div class='row2'>
+            <p class='darktext' style='font-size: 18px'>    
                 Below is a list of the current sponsors and their logo image
                 file name. As with the skaters page, you can upload a new
                 sponsor's logo to the appropriate web folder and add them to
                 the below list. Their logo will then appear in the footer on
                 each page as well as be included in the 'sponsors' page.
-            </p><br><br>
-            <p class='lighttext' style='text-align: center'>Functionality comming soon...</p>
-        </div>
+            </p><br>
+            
+        <table>
+            <tr>
+                <th style='width: 1px'></th>
+                <th>Sponsor Name:</th>
+                <th>Sponsor Logo File:</th>
+            </tr>
+";
+
+while($row = $getSponsors->fetch(PDO::FETCH_ASSOC)) {
+    $spname = $row['name'];
+    $splogo = $row['logo'];
+    
+    echo "
+        <tr>
+            <form method='POST' action='../scripts/admin/addSponsor.php?remove=true'>
+                <td style='width: 1px'><input type='submit' class='delete' value='X'></td>
+                <input type='hidden' name='name' value='$spname'>
+            </form>
+            <td>$spname</td>
+            <td>$splogo</td>
+        </tr>
     ";
 }
 
+echo "
+        <tr>
+            <form method='POST' action='../scripts/admin/addSponsor.php'>
+                <td style='width: 1px'><input type='submit' class='delete' value='+' style='background-color: #aad400'></td>
+                <td><input type='text' maxlength='20' name='name'></td>
+                <td><input type='text' maxlength='20' name='logo'></td>
+            </form>
+        </tr>
+    </table>
+    </div>
+";
 ?>

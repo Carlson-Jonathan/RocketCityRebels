@@ -288,7 +288,7 @@ html {
     color: #aad400;
 }
 
-.save {
+.save, .edit {
     font-size: 14px;
     background-color: #aad400;
     color: black;

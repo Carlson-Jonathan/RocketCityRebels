@@ -40,7 +40,7 @@
                 <p class="lighttext" style="text-align: center" id="incorrect"></p>
                     <?php if($_SESSION['pw']) echo "
                     <p style='color: red'>Invalid Password!</p><br>" ?>
-                    <input type="submit" value="ENTER">
+                    <input type="submit" value="ENTER" class="save">
                 </form>
             </div>
             

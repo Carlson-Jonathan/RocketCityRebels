@@ -141,7 +141,7 @@ VALUES
 *   "logo" - sponsor's logo image file name
 ******************************************************************************/
 CREATE TABLE public.sponsors (
-    sponsor_id SERIAL PRIMARY KEY,
+    id SERIAL PRIMARY KEY,
     name VARCHAR(50),
     logo VARCHAR(20)
 );
@@ -149,8 +149,11 @@ CREATE TABLE public.sponsors (
 /* Sample sponsor table inserts */
 INSERT INTO sponsors (name, logo)
 VALUES
-('Sponsor 1', 's1.jpg'),
-('Sponsor 2', 's2.jpg');
+('Black Hall', 'blackhall.jpg'),
+('Chick Fil-A', 'chickfila.jpg'),
+('Insanity', 'insanity.jpg'),
+('Jacks', 'jacks.png'),
+('OReilly', 'oreilly.jpg');
 
 /******************************************************************************
 * "bootcamp" Table
@@ -190,5 +193,6 @@ CREATE TABLE public.passwords (
 /* Password table inserts */
 INSERT INTO passwords (hash1, hash2)
 VALUES
-('$2y$10$YS8qQEG0O/zPqTEi8kMnWORxdKQb2/jfUurqHj1Sm82SqQ2nQyaii', '$2y$10$JQgtFqLUcwM9TZPT7i.qROoEMgy85.ebRXZURwn3H.mZgGQc0F/Xq');
+('$2y$10$YS8qQEG0O/zPqTEi8kMnWORxdKQb2/jfUurqHj1Sm82SqQ2nQyaii', 
+'$2y$10$JQgtFqLUcwM9TZPT7i.qROoEMgy85.ebRXZURwn3H.mZgGQc0F/Xq');
 

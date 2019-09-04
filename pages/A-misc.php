@@ -18,11 +18,11 @@
         
         <!-------------------------------------------------------------------->
         
-            <?php include "../scripts/admin/resetPW.php"; ?>
+            <?php include "../scripts/admin/getBCdates.php"; ?>
         
         <!-------------------------------------------------------------------->
         
-            <?php include "../scripts/admin/getBCdates.php"; ?>
+            <?php include "../scripts/admin/resetPW.php"; ?>
         
         <!-------------------------------------------------------------------->        
             <?php include "../scripts/admin/editSponsors.php"; ?>

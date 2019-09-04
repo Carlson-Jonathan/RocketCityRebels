@@ -34,7 +34,7 @@ WHERE id=1");
 
 $setBootCamp->execute();
 
-header("Location: ../../pages/A-enlist.php");
+header("Location: ../../pages/A-misc.php");
 die();	
 
 ?>
