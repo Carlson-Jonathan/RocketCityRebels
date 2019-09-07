@@ -54,6 +54,10 @@
             </div>
 
         </div>
+        
+        <script>
+            document.getElementById("pagetitle").innerHTML = "Support Your Rebels";
+        </script>        
 
     </main>
 

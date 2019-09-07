@@ -76,6 +76,10 @@
             </div>
 
         </div>
+        
+        <script>
+            document.getElementById("pagetitle").innerHTML = "Rad Rebel Merch";
+        </script>
 
     </main>
 

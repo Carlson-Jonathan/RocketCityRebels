@@ -196,3 +196,27 @@ VALUES
 ('$2y$10$YS8qQEG0O/zPqTEi8kMnWORxdKQb2/jfUurqHj1Sm82SqQ2nQyaii', 
 '$2y$10$JQgtFqLUcwM9TZPT7i.qROoEMgy85.ebRXZURwn3H.mZgGQc0F/Xq');
 
+/******************************************************************************
+* "practicedays" Table
+* This table contains the weekdays and times that practices are held. 
+* Contents: 
+*   SERIAL "id"
+*   "day" - Day of the week (eg. "Mondays", "Wednesdays"
+*   "begin" - Time that the practice begins.
+*   "stop" - Time that practice ends.
+******************************************************************************/
+CREATE TABLE public.practicedays (
+    id SERIAL PRIMARY KEY,
+    day VARCHAR(25),
+    begin VARCHAR(25),
+    stop VARCHAR(25)
+);
+
+/* practicedays table inserts */
+INSERT INTO practicedays (day, begin, stop)
+VALUES
+('Mondays', '6:00 PM', '8:00 PM'),
+('Wednesdays', '6:00 PM', '8:00 PM');
+
+
+

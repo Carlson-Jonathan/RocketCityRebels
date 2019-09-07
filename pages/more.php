@@ -69,7 +69,7 @@
 
     </main>
 
-    <?php include "pages/footer.php"; ?>
+    <?php include "../pages/footer.php"; ?>
     
 </body>
     

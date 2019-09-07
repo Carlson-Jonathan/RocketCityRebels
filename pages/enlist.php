@@ -82,9 +82,6 @@
                     teams and highly skilled skaters who do not require basic 
                     skills training.  Skaters wishing an exception may contact 
                     us below to schedule an evaluation.
-                    
-                    
-                    
             </div>
 
             <div class="columnright">
