@@ -107,6 +107,7 @@
             <div class="columnright" style="width: 75%">
 
             <?php 
+                
                 while ($row = $getGames->fetch(PDO::FETCH_ASSOC)) {
                     $day = format_date($row['day']);
                     $title = $row['title'];

@@ -17,8 +17,13 @@ function test_input($data) {
     return $data;
 }
 
-// Set variables and run through security function
-if(isset($_POST['day']))
+// Set variables
+if(isset($_POST['id']))
+    $id = test_input($_POST['id']);
+else
+    echo "<p>Error Loading id!</p>";
+
+if(isset($_POST['day'])) 
     $day = test_input($_POST['day']);
 else
     echo "<p>Error Loading day!</p>";
@@ -32,17 +37,27 @@ if(isset($_POST['description']))
     $description = test_input($_POST['description']);
 else
     echo "<p>Error Loading description!</p>";
-
-if(isset($_POST['id']))
-    $id = test_input($_POST['id']);
-else
-    echo "<p>Error Loading id!</p>";
-
-$setGames = $db->prepare("UPDATE games SET day='$day',
-title='$title', description='$description' WHERE id = $id");
-$setGames->execute();
+    
+// Remove item 
+if(isset($_POST['delete'])) {
+    $deleteGame = $db->prepare("DELETE FROM games WHERE id = $id");
+    $deleteGame->execute();
+}
+    
+// Edit item
+if(isset($_POST['save'])) {
+    $setGames = $db->prepare("UPDATE games SET day='$day',
+    title='$title', description='$description' WHERE id = $id");
+    $setGames->execute();
+}
+    
+// Create item
+if(isset($_POST['create'])) {
+    $createGame = $db->prepare("INSERT INTO games (day, title, description)
+    VALUES ('$day', '$title', '$description')");
+    $createGame->execute();
+}
 
 header("Location: ../../pages/A-schedule.php");
 die();	
-
 ?>
