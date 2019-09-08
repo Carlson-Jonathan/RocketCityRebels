@@ -258,3 +258,33 @@ INSERT INTO gps (gps)
 VALUES
 ('<div style="width: 100%"><iframe width="100%" height="600" src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;q=100%20Skate%20Park%20Dr+(Insanity%20Complex)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"><a href="https://www.maps.ie/coordinates.html">find my coordinates</a></iframe></div><br />');
 
+/******************************************************************************
+* "games" Table
+* This table stores the upcomming games and events for the schedule page. 
+* Contents: 
+*   SERIAL "id"
+*   "day" - Date of the upcomming game/event
+*   "title" - The heading of the event
+*   "description" - details about the event (location, times, etc)
+******************************************************************************/
+CREATE TABLE public.games (
+    id SERIAL PRIMARY KEY,
+    day date,
+    title VARCHAR(255),
+    description text
+);
+
+/* Insanity complex GPS */
+INSERT INTO games (day, title, description)
+VALUES
+('2019-12-24', 'Christmas Eve Bash', 'Will be held at Wonder Womans house
+at 555 Bunny Hop Lane from 4:30 PM to 1:00 AM. Bring drinks, fireworks,
+and your favorite voodoo doll.'),
+('2020-01-13', 'Jonnyboys Birthday', 'Celebraties only. Will be held on a
+private yacht and sail to Hawaii. Bring lots of money for Jonnyboy and gifts.'),
+('2023-07-13', 'Solar Eclipse!', 'Bring your eclipse glasses because this will
+be awesome! I will go to Austin to see this bad boy and chill with Damon, the
+wussy and Andrea.'),
+('2019-10-31', 'Haloween Party', 'Dress up. There will be a costume contest. The 
+winner will get a Willi Wankas everlasting gob stopper that explodes in your mouth!');
+

@@ -10,9 +10,11 @@
         require($_SERVER['DOCUMENT_ROOT'].'/scripts/dbsetup.php');
 
         $getpracticedays = $db->prepare("SELECT * FROM practicedays");
+        $getGames = $db->prepare("SELECT * FROM games ORDER BY day");
         $getScheduleChanges = $db->prepare("SELECT * FROM schedulechanges");
         $getGPS = $db->prepare("SELECT * FROM gps");
         $getpracticedays->execute();
+        $getGames->execute();
         $getScheduleChanges->execute();
         $getGPS->execute();
     
@@ -103,17 +105,20 @@
                 </div>
             
             <div class="columnright" style="width: 75%">
-                <h3 style="color: #aad400">July 4, 2019 - Home vs Nashville</h3>
-                <p class="lighttext">Descriptive text about the above game and stuff.
-                Here, we should be allowed to rant on and on and on and on
-                about blah blah blah so the people know what is going on with
-                the above game. This should not screw up the format fo the page!</p><br>
-                    
-                <h3 style="color: #aad400">December 31, 2019 - Home vs County Line Fireballs</h3>
-                <p class="lighttext">Descriptive text about the above game and stuff.
-                Here, we should be allowed to rant on and on and on and on
-                about blah blah blah so the people know what is going on with
-                the above game. This should not screw up the format fo the page!</p><br>
+
+            <?php 
+                while ($row = $getGames->fetch(PDO::FETCH_ASSOC)) {
+                    $day = format_date($row['day']);
+                    $title = $row['title'];
+                    $description = $row['description'];
+                    echo "
+                        <h3 style='color: #aad400'>$day - $title</h3>
+                        <p class='lighttext'>$description</p><br>
+                        <div class='line' style='border-bottom: solid #aad400 1px'></div>
+                    ";
+                }
+            ?>
+                
             </div>
         </div>
         
