@@ -5,16 +5,30 @@
 
 <body>
 
-    <?php include "title-nav.php"; 
+    <?php 
+        include "title-nav.php"; 
         require($_SERVER['DOCUMENT_ROOT'].'/scripts/dbsetup.php');
 
         $getpracticedays = $db->prepare("SELECT * FROM practicedays");
+        $getScheduleChanges = $db->prepare("SELECT * FROM schedulechanges");
+        $getGPS = $db->prepare("SELECT * FROM gps");
         $getpracticedays->execute();
+        $getScheduleChanges->execute();
+        $getGPS->execute();
+    
+        // Changes format of dates to display mm/dd/YYYY
+        function format_date($dt) {
+            $date = date_create($dt);
+            $format = date_format($date, "M d, Y");
+            return $format;
+        }
     ?>
     
     <style> .darktext, .lighttext {margin-left: 30px;} </style>
     
     <main>
+        
+        <!-------------------------------------------------------------------->
         
         <h2>Weekly Rhythm</h2>
         <div class="row2">
@@ -39,18 +53,35 @@
                     ";
                 }
             ?>
-                <br>
-                <h3 style="color: #251010">Upcomming Changes to Weekly Schedule</h3>
-                <p class="darktext">08/06/2019 - Monday practice moved to Tuesday</p>
-                <p class="darktext">12/01/2019 - Practice Cancelled due to weather</p>
-                <p class="darktext">02/08/2020 - Practice Cancelled due zombie apocolypse</p><br><br>
+            <div class='line'></div>
+            <h3 style="color: #251010">
+                Upcomming Changes to Weekly Schedule
+            </h3><br>
+            <?php 
+                while ($row = $getScheduleChanges->fetch(PDO::FETCH_ASSOC)) {
+                    $day = $row['day'];
+                    $description = $row['description'];
+                    echo "
+                        <p class='darktext'><span style='font-weight: 900'>" . format_date($day) . "</span> - $description</p>
+                    ";
+                }
+            ?>                       
+            <div class='line'></div><br>
+
+            <!-- Google GPS map -->    
+            <h3 style="color: #251010">Practice Location</h3>
                 
-                <h3 style="color: #251010">Practice Location</h3>
-                <p class="darktext">Insanity Skate Complex - Madison, Al<br><br>
-                <div style="width: 100%"><iframe width="75%" height="400" src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;q=100%20skate%20park%20drive%2C%20madison%2C%20al%2035758+(Insanity%20Complex)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"><a href="https://www.maps.ie/coordinates.html">gps coordinates finder</a></iframe></div><br />
+            <?php 
+                $row = $getGPS->fetch(PDO::FETCH_ASSOC); 
+                $gps = $row['gps'];
+                echo $gps;
+            ?>  
+                
             </div>
         </div>
                 
+        <!-------------------------------------------------------------------->
+        
         <h2>Upcomming Games and Events</h2>
         <div class="row">
             <div class="columnleft" style="width: 25%">

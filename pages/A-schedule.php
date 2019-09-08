@@ -2,13 +2,16 @@
 <html lang="en-US">
 
 <?php include "head.php"; ?>
-
+<head>
+    <link rel="stylesheet" href="../styles/admin.css">
+    <style> .darktext, .lighttext {margin-left: 30px;} </style>
+</head>
+    
 <body>
 
     <?php 
         include "A-header.php"; 
     ?>
-    <style> .darktext, .lighttext {margin-left: 30px;} </style>
     
     <main>
         
@@ -38,6 +41,7 @@
                         </a>
                     </p>
                 </div>
+            
             
             <div class="columnright" style="width: 75%">
                 <h3 style="color: #aad400">July 4, 2019 - Home vs Nashville</h3>

@@ -201,7 +201,7 @@ VALUES
 * This table contains the weekdays and times that practices are held. 
 * Contents: 
 *   SERIAL "id"
-*   "day" - Day of the week (eg. "Mondays", "Wednesdays"
+*   "day" - Day of the week (eg. "Mondays", "Wednesdays")
 *   "begin" - Time that the practice begins.
 *   "stop" - Time that practice ends.
 ******************************************************************************/
@@ -218,5 +218,43 @@ VALUES
 ('Mondays', '6:00 PM', '8:00 PM'),
 ('Wednesdays', '6:00 PM', '8:00 PM');
 
+/******************************************************************************
+* "schedulechanges" Table
+* This table stores information about any upcomming changes to the weekly 
+* practice schedule. 
+* Contents: 
+*   SERIAL "id"
+*   "day" - Date of change
+*   "description" - An explaination of why the change is happening.
+******************************************************************************/
+CREATE TABLE public.schedulechanges (
+    id SERIAL PRIMARY KEY,
+    day date,
+    description text
+);
 
+/* practicedays table inserts */
+INSERT INTO schedulechanges (day, description)
+VALUES
+('2019-07-24', 'Practice cancelled due to zombie apocolypse'),
+('2019-11-21', 'Monday practice will be held on Tuesday 11/22/2019'),
+('2019-12-18', 'Cookout at Shannon''s house');
+
+/******************************************************************************
+* "googlemap" Table
+* This table stores the google map code that shows the GPS location of the
+* roller rink where the Rebels practice and have games. 
+* Contents: 
+*   SERIAL "id"
+*   "gps" - Google's GPS code - see https://www.maps.ie/create-google-map/
+******************************************************************************/
+CREATE TABLE public.gps (
+    id SERIAL PRIMARY KEY,
+    gps text
+);
+
+/* Insanity complex GPS */
+INSERT INTO gps (gps)
+VALUES
+('<div style="width: 100%"><iframe width="100%" height="600" src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;q=100%20Skate%20Park%20Dr+(Insanity%20Complex)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"><a href="https://www.maps.ie/coordinates.html">find my coordinates</a></iframe></div><br />');
 
