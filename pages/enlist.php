@@ -5,7 +5,29 @@
     
 <body>
 
-    <?php include "title-nav.php"; ?>
+    <?php 
+        include "title-nav.php"; 
+    
+        require($_SERVER['DOCUMENT_ROOT'].'/scripts/dbsetup.php');
+        $getBC = $db->prepare("SELECT * FROM bootcamp");
+        $getEnroll = $db->prepare("SELECT * FROM enroll");
+        $getBC->execute();
+        $getEnroll->execute();
+        
+        $BC = $getBC->fetch(PDO::FETCH_ASSOC);
+        $ER = $getEnroll->fetch(PDO::FETCH_ASSOC);
+        $begin = $BC['begin'];
+        $finish = $BC['finish'];
+        $bcurl = $ER['url'];
+    
+        function format_date($dt) {
+            $date = date_create($dt);
+            $format = date_format($date, "F d");
+            return $format;
+        }
+    
+        $finish = format_date($finish);
+    ?>
 
     <main>
         
@@ -57,31 +79,43 @@
 
         <h2>How to Join</h2>    
         <div class="row">
-            <div class="columnleft">
+            <div class="columnleft" id='offseason'>
                 <p class="lighttext">
-                    The Rocket City Rebels hosts a 4-day Boot Camp once a 
-                    year in the fall.  Boot 
-                    Camp dates will be announced on our facebook page and will 
-                    be listed on our <a href="../pages/schedule.php">calendar</a>.  
-                    During this camp new skaters 
-                    will be taught how to skate derby style and learn the basic 
-                    rules of derby.  At the end of bootcamp all participants 
-                    will be offered the opportunity to join the team.  After 
-                    boot camp we typically offer open enrollment from October 
-                    through January. 
+                    The Rocket City Rebels hosts a 4-day Boot Camp once a year 
+                    in the fall. Boot camp dates will be announced on our 
+                    facebook page and will be listed on our 
+                    <a href="../pages/schedule.php">schedule page</a>. During 
+                    this camp new skaters will be taught how to skate derby style 
+                    and learn the basic rules of derby.  At the end of bootcamp 
+                    all participants will be offered the opportunity to join the 
+                    team.  After boot camp we typically offer open enrollment from 
+                    October through January. 
                     <br><br>
 
-                    If you miss Boot Camp and wish to join during open 
-                    enrollment, please contact us through the form below to 
+                    If you miss Boot Camp and still wish to join during open 
+                    enrollment, please contact us to 
                     schedule a skating evaluation with a coach for training 
                     placement. <br><br>
                     
                     During game season (February - September) we do not accept 
-                    new players 
-                    but will make exceptions for transfer players from other 
+                    new players but will make exceptions for transfer players from other 
                     teams and highly skilled skaters who do not require basic 
                     skills training.  Skaters wishing an exception may contact 
                     us below to schedule an evaluation.
+            </div>
+            <div class='columnleft' id='onseason'>
+                <h3 style='color: #aad400'>Boot camp season is here!</h3>
+                <p class="lighttext">
+                    From now until <?php echo "$finish"; ?> (the first day of boot camp), the Rebels will be accepting enrollment applications! During boot camp, new skaters will be taught how to skate derby style, learn skating safety techniques, and learn the basic rules of derby. At the end of bootcamp all participants will be offered the opportunity to join the team. To sign up you must:</p><br>
+                <ol class='lighttext'>
+                    <li>Complete and submit the <?php echo "
+                    <a href='$bcurl' style='color: #aad400'>
+                    enrollment form</a>"; ?>,</li>
+                    <li>Pay the $50 registration fee (use PayPal link provided).</li>
+                </ol><br>
+                <p class='lighttext'>Boot camp will take place twice a week 
+                    (usually on Monday and Wednesday evenings) for 2 weeks in a row starting <?php echo "$finish"; ?>. Skater age range is 8 to 18. Application and fees may be accepted at the door. If you miss Boot Camp and still wish to join during open enrollment, please contact us to schedule a skating evaluation with a coach for training placement. <br><br>
+                    Don't miss out on this once-a-year opportunity! Enroll today!</p>
             </div>
 
             <div class="columnright">
@@ -94,19 +128,20 @@
                 <span style="font-size: 16px">Don't miss out! Sign up now!</span></p><br>
                 
                 <!-- Paypal payment form -->
-                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" id='regfee'>
                     <input type="hidden" name="cmd" value="_s-xclick">
                     <input type="hidden" name="hosted_button_id" value="TP3E9S69NG6ML">
                     <table>
                         <tbody>
                             <tr>
                                 <td>
-                                    <input type="hidden" name="on0" value="Enter Skater's Name"><p class="lighttext" style="color: #aad400; text-align: center">Enter Skater's Name
+                                    <input type="hidden" name="on0" value="Enter Skater's Name"><p class="lighttext" style="color: #aad400; text-align: center">Pay Registration Fee
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <input type="text" name="os0" maxlength="200" style="width: 165px; margin: 0 20px">
+                                    <input type="text" name="os0" maxlength="200" style="width: 165px; margin: 0 20px"
+                                           placeholder="Skater's Name">
                                 </td>
                             </tr>
                         </tbody>
@@ -212,6 +247,9 @@
                 window.onload = scrolldown;
                 document.getElementById("start").style.margin = "165px";
                 document.getElementById("bcinfo").style.display = "block";
+                document.getElementById("regfee").style.display = "block";
+                document.getElementById("offseason").style.display = "none";
+                document.getElementById("onseason").style.display = "block";
             }
             else
                 document.getElementById("start").style.margin = "58px";

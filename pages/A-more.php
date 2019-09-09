@@ -18,7 +18,6 @@
         <h2>Admin More Page Comming Soon!</h2>
         <div class="row"></div>
         
-        
     </main>
 
     <?php include "../pages/footer.php"; ?>

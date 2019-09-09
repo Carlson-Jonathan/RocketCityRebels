@@ -288,3 +288,19 @@ wussy and Andrea.'),
 ('2019-10-31', 'Haloween Party', 'Dress up. There will be a costume contest. The 
 winner will get a Willi Wankas everlasting gob stopper that explodes in your mouth!');
 
+/******************************************************************************
+* "enroll" Table
+* This table stores the enrollment form URL address for boot camp season. 
+* Contents: 
+*   SERIAL "id"
+*   "url" - URL of enrollment form
+******************************************************************************/
+CREATE TABLE public.enroll (
+    id SERIAL PRIMARY KEY,
+    url VARCHAR(255)
+);
+
+/* Insanity complex GPS */
+INSERT INTO enroll (url)
+VALUES
+('https://www.rocketcityrebels.com/boot-camp');

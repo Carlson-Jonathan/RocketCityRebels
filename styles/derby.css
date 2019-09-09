@@ -281,6 +281,10 @@ html {
     padding: 7px 0;
 }
 
+#regfee, #onseason {
+    display: none;
+}
+
 #password {
     border-radius: 25px;
     padding: 5px;
