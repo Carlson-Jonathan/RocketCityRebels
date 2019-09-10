@@ -64,7 +64,7 @@
                     $day = $row['day'];
                     $description = $row['description'];
                     echo "
-                        <p class='darktext'><span style='font-weight: 900'>" . format_date($day) . "</span><br>$description</p><br>
+                        <p class='darktext'><span style='font-weight: 700'>" . format_date($day) . "</span><br>$description</p><br>
                     ";
                 }
             ?>                       
@@ -96,7 +96,7 @@
                     'http://insanitycomplex.com/roller-derby/'" class="save">
                         Buy Home Game Tickets</button>
                 </div><br>
-                    <p class="lighttext" style="font-size: 13px; margin: 10px 0">
+                    <p class="lighttext" style="font-size: 13px; margin: 10px 0; text-align: center; width: 170px">
                         All home bouts are double headers with our adult sister 
                         leage, the
                         <a href="http://www.dixiederbygirls.com/" 

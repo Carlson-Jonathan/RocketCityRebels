@@ -163,10 +163,8 @@ li a.active {
 /* This is the container for boxes */
 .row, .row2 {
     background-color: #251010;
-    margin: 0;
     margin-bottom: 30px;
     padding: 40px;
-    
 }
 
 .row2 {

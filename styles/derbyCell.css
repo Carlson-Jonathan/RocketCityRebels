@@ -70,8 +70,8 @@ h2 {
 }
 
 h3 {
-    font-family: roboto;
-    font-size: 24px;
+    font-family: roboto, arial, sans-serif;
+    font-size: 20px;
 }
 
 /* Navigation Bar */
@@ -171,6 +171,7 @@ li a.active {
     font-weight: 100;
     line-height: 1.3em;
     font-family: roboto, arial, sans-serif;
+    padding: 0;
 }
 
 .lighttext {

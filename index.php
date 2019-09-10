@@ -32,7 +32,7 @@
                     lifestyles on and off the track. Roller derby is a very 
                     physically and emotionally demanding sport. It is also a 
                     very rewarding and character building adventure.
-                </p>
+                </p><br>
                 
             </div>
             <div class="columnright homeR">
@@ -42,7 +42,7 @@
         <!-------------------------------------------------------------------->
         
         <h2>What is Roller Derby?</h2>
-        <div class="row" style="margin-top: 12px">
+        <div class="row">
             
             <iframe src="https://www.youtube.com/embed/sFC6YE8zLmY" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen width="100%" height="250px"></iframe><br><br>
             
