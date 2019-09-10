@@ -100,9 +100,6 @@ li a.active {
     font-weight: 900;
 }
 
-h1, h2, h3, p, li {
-    font-size: 250%;
-}
 
 /******************************************************
 * These are the CSS properties to create the box 
@@ -288,6 +285,10 @@ html {
 #mapcontainer {
     width: 100%;
     margin: auto;
+}
+
+h1, h2, h3, p, li {
+    font-size: 250%;
 }
 
 /****************************************************************
