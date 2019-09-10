@@ -3,10 +3,6 @@
     margin: 0;
 }
 
-body {
-    zoom: 50%;
-}
-
 @font-face {
     font-family: 'docktrinregular';
     src: url('../.fonts/docktrin-webfont.woff2') format('woff2'),
@@ -23,6 +19,7 @@ header {
 
 body {
     background-color: #aad400;
+    zoom: 200%;
 }
 
 main {
