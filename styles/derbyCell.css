@@ -1,3 +1,5 @@
+
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -96,6 +98,10 @@ a li {
 li a.active {
     color: yellow;
     font-weight: 900;
+}
+
+h1, h2, h3, p, li {
+    font-size: 250%;
 }
 
 /******************************************************
