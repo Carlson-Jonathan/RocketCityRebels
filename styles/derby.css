@@ -115,7 +115,7 @@ li a.active {
 /******************************************************
 * These are the CSS properties to create the box 
 * templates. Default column widths are 25% and 75%.
-******************************************************/
+*******************1.***********************************/
 
 .columnleft, .columnright{
     width: 75%;

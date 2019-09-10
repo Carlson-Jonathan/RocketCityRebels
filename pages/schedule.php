@@ -26,8 +26,6 @@
         }
     ?>
     
-    <style> .darktext, .lighttext {margin-left: 30px;} </style>
-    
     <main>
         
         <!-------------------------------------------------------------------->
@@ -95,8 +93,8 @@
                     <button onclick="window.location.href = 
                     'http://insanitycomplex.com/roller-derby/'" class="save">
                         Buy Home Game Tickets</button>
-                </div><br>
-                    <p class="lighttext" style="font-size: 13px; margin: 10px 0; text-align: center; width: 170px">
+                </div>
+                    <p class="lighttext" style="font-size: 13px; text-align: center; width: 200px; margin: auto">
                         All home bouts are double headers with our adult sister 
                         leage, the
                         <a href="http://www.dixiederbygirls.com/" 
@@ -104,7 +102,7 @@
                             Dixie Derby Girls.
                         </a>
                     </p>
-                </div>
+                </div><br>
             
             <div class="columnright2">
 

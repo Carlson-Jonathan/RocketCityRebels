@@ -87,7 +87,7 @@ ul#navigation {
 
 li.navbuttons {
     display: inline-block;
-    padding: 3px 20px;
+    padding: 7px 20px 7px;
     font-family: 'Allerta Stencil', sans-serif;
     font-size: 1.5em;
 }
