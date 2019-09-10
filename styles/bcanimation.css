@@ -7,13 +7,13 @@
     text-transform: uppercase;
     position: relative;
     user-select: none;
-    padding: 20px 0;
+    padding: 50px 20px;
 }
 
 .neon {
     position: relative;
     overflow: hidden;
-    width: 319px;
+    width: 340px;
     height: 55px;
     filter: brightness(200%);
     margin: 0 auto;
@@ -22,13 +22,13 @@
 
 @media only screen and (max-width: 900px) {
     .neon {
-        width: 255px;
+        width: 275px;
         height: 45px;
     }
     
     .text {
         font-size: 40px;
-        padding: 20px 0;
+        padding: 50px 20px;
     }
 }
 
