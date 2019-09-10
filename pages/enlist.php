@@ -111,10 +111,10 @@
                 <p class="lighttext">
                     From now until <?php echo "$finish"; ?> (the first day of boot camp), the Rebels will be accepting enrollment applications! During boot camp, new skaters will be taught how to skate derby style, learn skating safety techniques, and learn the basic rules of derby. At the end of bootcamp all participants will be offered the opportunity to join the team. To sign up you must:</p><br>
                 <ol class='lighttext'>
-                    <li>Complete and submit the <?php echo "
+                    <li>Complete the <?php echo "
                     <a href='$bcurl' style='color: #aad400; text-decoration: underline'>
-                    enrollment form</a>"; ?>,</li>
-                    <li>Pay the $50 registration fee (use PayPal link provided).</li>
+                    enrollment form</a>"; ?></li>
+                    <li>Pay the $50 registration fee<br><span style='font-size: 14px'>(use PayPal link provided)</span></li>
                 </ol><br>
                 <p class='lighttext'>Boot camp will take place twice a week 
                     (usually on Monday and Wednesday evenings) for 2 weeks in a row starting <?php echo "$finish"; ?>. Skater age range is 8 to 18. Application and fees may be accepted at the door. If you miss Boot Camp and still wish to join during open enrollment, please contact us to schedule a skating evaluation with a coach for training placement. <br><br>
@@ -131,14 +131,13 @@
                 <span style="font-size: 16px"><br>Don't miss out! Sign up now!</span></p><br>
                 
                 <!-- Paypal payment form -->
-                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" id='regfee'>
+                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" id='regfee' style="width: 200px; margin: auto">
                     <input type="hidden" name="cmd" value="_s-xclick">
                     <input type="hidden" name="hosted_button_id" value="TP3E9S69NG6ML">
 
                     <input type="hidden" name="on0" value="Enter Skater's Name"><p class="lighttext" style="color: #aad400; text-align: center">Pay Registration Fee
 
-                    <input type="text" name="os0" maxlength="200" style="width: 165px; margin: 0 20px"
-                           placeholder="Skater's Name">
+                    <input type="text" name="os0" maxlength="200" style="width: 165px; margin: 0 20px" placeholder="Skater's Name"><br>
 
                     <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_paynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!" style="margin: 10px 35px">
                     <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">

@@ -30,6 +30,7 @@ body {
 
 main {
     width: 100%;
+    margin: 0;
 }
 
 #start {
@@ -70,8 +71,7 @@ h2 {
 
 h3 {
     font-family: roboto;
-    font-weight: 900;
-    font-size: 20px;
+    font-size: 24px;
 }
 
 /* Navigation Bar */
@@ -117,10 +117,12 @@ li a.active {
 
 .columnleft, .columnright {
     color: white;
+    width: 100%;
 }
 
 .columnleft2, .columnright2 {
     color: #251010;
+    width: 100%;
 }
 
 .boximage {
@@ -136,7 +138,6 @@ li a.active {
     background-color: #251010;
     margin: 0 0 3px 0;
     padding: 20px;
-    
 }
 
 .row2 {
@@ -262,6 +263,7 @@ html {
     border-top: solid #aad400 2px;
     border-bottom: solid #aad400 2px;
     padding: 7px 0;
+    width: 100%;
 }
 
 #regfee, #onseason {
