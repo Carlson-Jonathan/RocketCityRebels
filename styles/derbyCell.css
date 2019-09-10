@@ -289,7 +289,7 @@ html {
 /****************************************************************
 * Navigation menu hamburger style
 ****************************************************************/
-@media only screen and (max-width: 900px) {
+@media only screen and (min-resolution: 1.1dppx) {
     nav .icon {
         display: none;
     }
