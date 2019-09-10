@@ -51,13 +51,17 @@ div.desc {
     font-family: roboto;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 900px), (min-resolution: 1.1dppx) {
     .modal-content {
         width: 90%;
     }
     
     .modal {
         padding-top: 25%;
+    }
+    
+    div.gallery {
+        width: 42%;
     }
 }
 
