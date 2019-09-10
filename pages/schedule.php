@@ -35,13 +35,13 @@
         <h2>Weekly Rhythm</h2>
         <div class="row2">
             
-            <div class="columnleft" style="width: 25%">
+            <div class="columnleft2">
                 <img src="../images/logo.webp" class="boximage">
                 <img src="../images/logo.webp" class="boximage">
                 <img src="../images/logo.webp" class="boximage">
             </div>
             
-            <div class="columnright" style="width: 75%">
+            <div class="columnright2">
                 <h3 style="color: #251010">Practice Schedule</h3>
                 
             <?php 
@@ -64,7 +64,7 @@
                     $day = $row['day'];
                     $description = $row['description'];
                     echo "
-                        <p class='darktext'><span style='font-weight: 900'>" . format_date($day) . "</span> - $description</p>
+                        <p class='darktext'><span style='font-weight: 900'>" . format_date($day) . "</span><br>$description</p><br>
                     ";
                 }
             ?>                       
@@ -72,13 +72,15 @@
 
             <!-- Google GPS map -->    
             <h3 style="color: #251010">Practice Location</h3>
+            <div id='mapcontainer'>
                 
             <?php 
                 $row = $getGPS->fetch(PDO::FETCH_ASSOC); 
-                $gps = $row['gps'];
+                    $gps = $row['gps'];
                 echo $gps;
             ?>  
                 
+            </div>
             </div>
         </div>
                 
@@ -86,15 +88,15 @@
         
         <h2>Upcomming Games and Events</h2>
         <div class="row">
-            <div class="columnleft" style="width: 25%">
+            <div class="columnleft2">
                 <img src="../images/logo.webp" class="boximage">
                 <div style="width: 100%; margin: auto; text-align: center">
-                <p class="darktext"></p><br>
+                <p class="darktext"></p>
                     <button onclick="window.location.href = 
                     'http://insanitycomplex.com/roller-derby/'" class="save">
                         Buy Home Game Tickets</button>
                 </div><br>
-                    <p class="lighttext" style="font-size: 13px; margin: 0">
+                    <p class="lighttext" style="font-size: 13px; margin: 10px 0">
                         All home bouts are double headers with our adult sister 
                         leage, the
                         <a href="http://www.dixiederbygirls.com/" 
@@ -104,7 +106,7 @@
                     </p>
                 </div>
             
-            <div class="columnright" style="width: 75%">
+            <div class="columnright2">
 
             <?php 
                 

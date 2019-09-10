@@ -31,16 +31,16 @@ while($row = $getBootCamp->fetch(PDO::FETCH_ASSOC)) {
             <script>setDates();</script>
 
             <div class='neon'>
-                <span class='text' data-text='_boot_camp_'>
-                    _boot_camp_
+                <span class='text' data-text='boot_camp'>
+                    boot_camp
                 </span>
                 <span class='gradient'></span>
                 <span class='spotlight'></span>
             </div>
-            <p style='color:#aad400; font-size: 24px'>
+            <p style='color:#aad400; font-size: 24px; margin: 0; padding: 0'>
                 Enrollment Season Now Open!
             </p>
-            <p style='color:#aad400; font-size: 13px'>
+            <p style='color:#aad400; margin: 0; font-size: 13px'>
                 Click here to find out how to join the Rocket City Rebels
             </p>
         </div>

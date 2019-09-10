@@ -1,6 +1,9 @@
 <!DOCTYPE HTML>  
 <html lang="en-US">
 
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
 <?php include "head.php"; ?>
     
 <body>
@@ -33,20 +36,21 @@
         
         <!-------------------------------------------------------------------->
         
-        <div style="margin: 58px"></div>
-        <iframe id="intromovie" src="https://www.youtube.com/embed/a4Jcieddb60" 
-                frameborder="0" allow="accelerometer; encrypted-media; 
-                gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div class="embed-responsive embed-responsive-16by9" id="movie">
+            <iframe src="https://www.youtube.com/embed/a4Jcieddb60" 
+                    frameborder="0" allow="accelerometer; encrypted-media; 
+                    gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
         
         <!-------------------------------------------------------------------->
         
         <h2>What We Do</h2>    
         <div class="row2">
-            <div class="columnleft2" style="width: 23%">
+            <div class="columnleft2">
                 <img class="boximage" src="../images/derbygirl.jpg">
             </div>
 
-            <div class="columnright2" style="width: 77%">
+            <div class="columnright2">
                 <p class="darktext">
                     Established in 2011 the Rocket City Rebels is Alabama’s 
                     first Junior Roller Derby team.  We are a co-ed team with 
@@ -109,7 +113,7 @@
                     From now until <?php echo "$finish"; ?> (the first day of boot camp), the Rebels will be accepting enrollment applications! During boot camp, new skaters will be taught how to skate derby style, learn skating safety techniques, and learn the basic rules of derby. At the end of bootcamp all participants will be offered the opportunity to join the team. To sign up you must:</p><br>
                 <ol class='lighttext'>
                     <li>Complete and submit the <?php echo "
-                    <a href='$bcurl' style='color: #aad400'>
+                    <a href='$bcurl' style='color: #aad400; text-decoration: underline'>
                     enrollment form</a>"; ?>,</li>
                     <li>Pay the $50 registration fee (use PayPal link provided).</li>
                 </ol><br>
@@ -125,27 +129,18 @@
                     <span style="font-size: 56px; line-height: 56px">    
                         <script>daysRemaining();</script> days
                     </span>
-                <span style="font-size: 16px">Don't miss out! Sign up now!</span></p><br>
+                <span style="font-size: 16px"><br>Don't miss out! Sign up now!</span></p><br>
                 
                 <!-- Paypal payment form -->
                 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" id='regfee'>
                     <input type="hidden" name="cmd" value="_s-xclick">
                     <input type="hidden" name="hosted_button_id" value="TP3E9S69NG6ML">
-                    <table>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <input type="hidden" name="on0" value="Enter Skater's Name"><p class="lighttext" style="color: #aad400; text-align: center">Pay Registration Fee
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <input type="text" name="os0" maxlength="200" style="width: 165px; margin: 0 20px"
-                                           placeholder="Skater's Name">
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+
+                    <input type="hidden" name="on0" value="Enter Skater's Name"><p class="lighttext" style="color: #aad400; text-align: center">Pay Registration Fee
+
+                    <input type="text" name="os0" maxlength="200" style="width: 165px; margin: 0 20px"
+                           placeholder="Skater's Name">
+
                     <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_paynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!" style="margin: 10px 35px">
                     <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
                 </form>
@@ -178,7 +173,7 @@
                 </ul><br>
                 <p class="darktext">
                     Monthly dues may be paid in person or through our 
-                    <a href="../pages/store.php">online store page</a>. We 
+                    <a href="../pages/store.php" style='text-decoration: underline'>online store page</a>. We 
                     recommend setting up automatic payments through Paypal.com 
                     to assure timely payments.
                 </p>
@@ -193,7 +188,7 @@
                     equipment at every practice and game.
                 </p><br>
                     
-                <ul class="darktext">
+                <ul class="darktext" style="text-align: left">
                     <li>Supplemental insurance (approximately $25 annually)</li>
                     <li>Rocket City Rebels Team Jersey ($70 + tax)</li>
                     <li>Derby Skates</li>
@@ -244,8 +239,8 @@
         // Adjustments to CSS when boot camp is in season
             document.getElementById("pagetitle").innerHTML = "Become a Rebel";
             if(inSeason()) {
-                window.onload = scrolldown;
-                document.getElementById("start").style.margin = "165px";
+                //window.onload = scrolldown;
+                document.getElementById("start").style.margin = "265px";
                 document.getElementById("bcinfo").style.display = "block";
                 document.getElementById("regfee").style.display = "block";
                 document.getElementById("offseason").style.display = "none";

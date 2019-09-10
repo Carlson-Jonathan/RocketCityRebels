@@ -51,6 +51,16 @@ div.desc {
     font-family: roboto;
 }
 
+@media only screen and (max-width: 900px) {
+    .modal-content {
+        width: 90%;
+    }
+    
+    .modal {
+        padding-top: 25%;
+    }
+}
+
 /* The Close Button */
 .close {
     color: #aaaaaa;
