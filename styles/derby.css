@@ -1,4 +1,4 @@
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 900px) and (max-resolution: 1dppx) {
 
 * {
     box-sizing: border-box;
