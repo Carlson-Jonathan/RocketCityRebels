@@ -87,7 +87,7 @@ ul#navigation {
 
 li.navbuttons {
     display: inline-block;
-    padding: 7px 20px 7px;
+    padding: 10px 20px;
     font-family: 'Allerta Stencil', sans-serif;
     font-size: 1.5em;
 }
@@ -242,7 +242,7 @@ footer {
     padding: 5px 0 0;
     width: 100%;
     text-align: center;
-    margin: auto;
+    margin: 0 auto;
     font-family: roboto;
     border-radius: 10px;
     border: solid #251010 2px;
@@ -329,7 +329,7 @@ html {
 
     .topnav.responsive .icon {
         position: absolute;
-        right: 0;
+        right: 20px;
         top: 0;
     }
 
@@ -340,7 +340,7 @@ html {
     }
 
     .navbuttons {
-        width: 90%;
+        width: 85%;
     }
     
     body {

@@ -35,7 +35,7 @@
             <a href="../pages/more.php">       
                 <li id="more.php" class="navbuttons">MORE</li>            
             </a>
-            <a href="javascript:void(0);" style="font-size:22px;" class="icon" onclick="expandMenu()">&#9776;</a>
+            <a href="javascript:void(0);" style="font-size:26px;" class="icon" onclick="expandMenu()">&#9776;</a>
             </div>
         </ul>    
     </nav>
