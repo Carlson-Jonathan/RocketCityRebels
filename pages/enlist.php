@@ -239,7 +239,7 @@
         // Adjustments to CSS when boot camp is in season
             document.getElementById("pagetitle").innerHTML = "Become a Rebel";
             if(inSeason()) {
-                //window.onload = scrolldown;
+                window.onload = scrolldown;
                 document.getElementById("start").style.margin = "265px";
                 document.getElementById("bcinfo").style.display = "block";
                 document.getElementById("regfee").style.display = "block";

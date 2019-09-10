@@ -287,8 +287,8 @@ html {
     margin: auto;
 }
 
-h1, h2, h3, p, li {
-    font-size: 250%;
+h1, h2, h3, p, li, .lighttext, .darktext, .specialtext {
+    font-size: 400%;
 }
 
 /****************************************************************
