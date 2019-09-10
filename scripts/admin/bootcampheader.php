@@ -31,8 +31,8 @@ while($row = $getBootCamp->fetch(PDO::FETCH_ASSOC)) {
             <script>setDates();</script>
 
             <div class='neon'>
-                <span class='text' data-text='boot_camp'>
-                    boot_camp
+                <span class='text' data-text='boot camp'>
+                    boot camp
                 </span>
                 <span class='gradient'></span>
                 <span class='spotlight'></span>
