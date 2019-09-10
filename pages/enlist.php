@@ -35,11 +35,10 @@
     <main>
         
         <!-------------------------------------------------------------------->
-        
         <div class="embed-responsive embed-responsive-16by9" id="movie">
             <iframe src="https://www.youtube.com/embed/a4Jcieddb60" 
                     frameborder="0" allow="accelerometer; encrypted-media; 
-                    gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    gyroscope; picture-in-picture" allowfullscreen ></iframe>
         </div>
         
         <!-------------------------------------------------------------------->

@@ -1,3 +1,10 @@
+/******************************************************
+* This CSS sheet applies specifically to mobile 
+* devices like cell phones. These settings should only
+* display if the device's pixel density is greater 
+* than a ration of 1.
+******************************************************/
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -105,6 +112,7 @@ li a.active {
 ******************************************************/
 #movie {
     z-index: -1;
+    margin: 0;
 }
 
 .columnleft, .columnright {
@@ -126,8 +134,9 @@ li a.active {
 /* This is the container for boxes */
 .row, .row2 {
     background-color: #251010;
-    margin-bottom: 3px;
-    padding: 20px 15px;
+    margin: 0 0 3px 0;
+    padding: 20px;
+    
 }
 
 .row2 {
@@ -288,6 +297,10 @@ html {
 /****************************************************************
 * Navigation menu hamburger style
 ****************************************************************/
+.icon {
+    display: none;
+}
+
 @media only screen and (min-resolution: 1.1dppx) {
     nav .icon {
         display: none;
