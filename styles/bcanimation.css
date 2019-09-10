@@ -22,13 +22,13 @@
 
 @media only screen and (max-width: 900px) {
     .neon {
-        width: 300px;
+        width: 295px;
         height: 50px;
     }
     
     .text {
         font-size: 40px;
-        padding: 50px 60px 50px 50px;
+        padding: 70px 70px 70px 50px;
     }
 }
 
