@@ -26,6 +26,7 @@ header {
 
 body {
     background-color: #aad400;
+    margin: 0;
 }
 
 main {
@@ -105,7 +106,9 @@ li a.active {
     font-weight: 900;
 }
 
-
+.indent {
+    margin-left: 50px;
+}
 /******************************************************
 * These are the CSS properties to create the box 
 * templates. Default column widths are 25% and 75%.
@@ -295,6 +298,14 @@ html {
 #mapcontainer {
     width: 100%;
     margin: auto;
+}
+
+.phonedit {
+    display: block;
+}
+
+.phonehide {
+    display: none;
 }
 
 /****************************************************************

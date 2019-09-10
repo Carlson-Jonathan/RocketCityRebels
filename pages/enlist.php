@@ -110,7 +110,7 @@
                 <h3 style='color: #aad400'>Boot camp season is here!</h3>
                 <p class="lighttext">
                     From now until <?php echo "$finish"; ?> (the first day of boot camp), the Rebels will be accepting enrollment applications! During boot camp, new skaters will be taught how to skate derby style, learn skating safety techniques, and learn the basic rules of derby. At the end of bootcamp all participants will be offered the opportunity to join the team. To sign up you must:</p><br>
-                <ol class='lighttext'>
+                <ol class='lighttext indent'>
                     <li>Complete the <?php echo "
                     <a href='$bcurl' style='color: #aad400; text-decoration: underline'>
                     enrollment form</a>"; ?></li>
@@ -118,7 +118,7 @@
                 </ol><br>
                 <p class='lighttext'>Boot camp will take place twice a week 
                     (usually on Monday and Wednesday evenings) for 2 weeks in a row starting <?php echo "$finish"; ?>. Skater age range is 8 to 18. Application and fees may be accepted at the door. If you miss Boot Camp and still wish to join during open enrollment, please contact us to schedule a skating evaluation with a coach for training placement. <br><br>
-                    Don't miss out on this once-a-year opportunity! Enroll today!</p>
+                    Don't miss out on this once-a-year opportunity! Enroll today!</p><br>
             </div>
 
             <div class="columnright">
@@ -164,7 +164,7 @@
                 <p class="darktext">
                     If your family has more than one skater playing, discounts 
                     are available as follows: </p><br>
-                <ul class="darktext">
+                <ul class="darktext indent">
                     <li>1st skater - $35</li>
                     <li>2nd skater - $20</li>
                     <li>3rd skater - $15</li>
@@ -184,9 +184,9 @@
                     and up. Check the links below for suggested beginner 
                     equipment. Each skater is required to have all of the below 
                     equipment at every practice and game.
-                </p><br>
+                </p>
                     
-                <ul class="darktext" style="text-align: left">
+                <ul class="darktext indent" style="text-align: left">
                     <li>Supplemental insurance (approximately $25 annually)</li>
                     <li>Rocket City Rebels Team Jersey ($70 + tax)</li>
                     <li>Derby Skates</li>
@@ -238,7 +238,7 @@
             document.getElementById("pagetitle").innerHTML = "Become a Rebel";
             if(inSeason()) {
                 //window.onload = scrolldown;
-                document.getElementById("start").style.margin = "265px";
+                document.getElementById("start").style.margin = "280px";
                 document.getElementById("bcinfo").style.display = "block";
                 document.getElementById("regfee").style.display = "block";
                 document.getElementById("offseason").style.display = "none";

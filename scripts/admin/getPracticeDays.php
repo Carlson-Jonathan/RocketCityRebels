@@ -119,6 +119,7 @@ echo "
 * Change practice location 
 ******************************************************************************/
 echo "
+    <div class='phonehide'>
     <h3 style='color: #251010'>Practice Location</h3>
 ";
 
@@ -150,6 +151,7 @@ echo "
 
 echo "
     $gps
+    </div>
     </div>
     </div>
 ";

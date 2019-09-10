@@ -9,7 +9,6 @@
 
     <main>
         <div class="row">
-
             <div class="columnleft">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p><br>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p><br>
@@ -35,7 +34,7 @@
                     Email:
                     <input type="email" width="500px" placeholder="JohnDoe@Email.com"><br><br>
                     Message:<br>
-                    <textarea rows="10" cols="50" placeholder="Your message here."></textarea><br>
+                    <textarea rows="10" cols="35" placeholder="Your message here."></textarea><br>
                     <input type="submit" name="submit" value="Send Message">    
                 </form>
             </div>

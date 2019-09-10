@@ -32,8 +32,8 @@ while ($row = $getGames->fetch(PDO::FETCH_ASSOC)) {
             <input type='date' value='$day' name='day' class='darktext' required>  
             <input type='text' value='$title' name='title' class='darktext'
             style='width: 60%' required><br><br>
-            <textarea cols='65' rows='4' name='description'
-            class='darktext' required>$description</textarea>";
+            <textarea cols='40' rows='5' name='description'
+            class='darktext' required>$description</textarea><br>";
             
     echo 
         // Save Button
@@ -67,7 +67,7 @@ echo
         <input type='date' name='day' class='darktext' required>  
         <input type='text' name='title' class='darktext' style='width: 60%'
         required><br><br>
-        <textarea cols='65' rows='4' name='description'
+        <textarea cols='40' rows='5' name='description'
         class='darktext' placeholder='Create a new event here' required></textarea>";
 
 echo 
