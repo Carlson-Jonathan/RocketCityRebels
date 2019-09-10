@@ -19,7 +19,6 @@ header {
 
 body {
     background-color: #aad400;
-    zoom: 250%;
 }
 
 main {
@@ -128,7 +127,7 @@ li a.active {
 .row, .row2 {
     background-color: #251010;
     margin-bottom: 3px;
-    padding: 20px 30px;
+    padding: 20px 15px;
 }
 
 .row2 {
@@ -161,7 +160,7 @@ li a.active {
     font-size: 18px;
     font-weight: 100;
     line-height: 1.3em;
-    font-family: roboto;
+    font-family: roboto, arial, sans-serif;
 }
 
 .lighttext {
@@ -328,5 +327,7 @@ html {
         width: 90%;
     }
     
-    
+    body {
+        zoom: 250%;
+    }
 }
