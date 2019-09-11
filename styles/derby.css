@@ -327,6 +327,16 @@ html {
 
 .phonehide {
     display: block;
-}    
+}  
+    
+div.passwordblock {
+    width: 645px;
+    margin: auto;
+    height: 200px;
+}
+    
+#fix {
+    width: 50%;
+}
     
 }

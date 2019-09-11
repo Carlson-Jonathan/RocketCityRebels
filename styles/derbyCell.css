@@ -308,6 +308,16 @@ html {
     display: none;
 }
 
+div.passwordblock {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+#fix {
+    margin-bottom: 30px;
+}
+
 /****************************************************************
 * Navigation menu hamburger style
 ****************************************************************/
@@ -315,7 +325,7 @@ html {
     display: none;
 }
 
-@media only screen and (min-resolution: 1.1dppx) {
+@media only screen and (min-resolution: 1.1dppx), (max-width: 900px) {
     nav .icon {
         display: none;
     }
@@ -340,7 +350,7 @@ html {
 
     .topnav.responsive .icon {
         position: absolute;
-        right: 20px;
+        right: 0px;
         top: 0;
     }
 
@@ -353,7 +363,8 @@ html {
     .navbuttons {
         width: 85%;
     }
-    
+}
+@media only screen and (min-resolution: 1.1dppx) {  
     body {
         zoom: 250%;
     }

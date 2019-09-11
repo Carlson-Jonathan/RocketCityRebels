@@ -42,7 +42,7 @@ echo "
     <h3>Boot Camp Enrollment Form URL</h3><br>
     <p>Paste your enrollment form address link here:</p>
     <form method='POST' action='../scripts/admin/setEnrollmentURL.php'>
-        <input type='text' name='url' value='$url' style='width: 60%'>
+        <input type='text' name='url' value='$url' style='width: 100%'><br>
         <input type='submit' value='Save URL' class='save'>
     </form>
         
