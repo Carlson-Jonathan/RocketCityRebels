@@ -91,7 +91,6 @@ li.navbuttons {
     padding: 10px 20px;
     font-family: 'Allerta Stencil', sans-serif;
     font-size: 1.5em;
-    width: 65%;
 }
 
 li.navbuttons:hover {
@@ -362,7 +361,7 @@ div.passwordblock {
     }
 
     .navbuttons {
-        width: 85%;
+        width: 75%;
     }
 }
 @media only screen and (min-resolution: 1.1dppx) {  
