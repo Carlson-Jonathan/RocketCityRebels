@@ -30,7 +30,7 @@ while($row = $getBootCamp->fetch(PDO::FETCH_ASSOC)) {
             <script src='../scripts/bootcamp.js'></script>
             <script>setDates();</script>
 
-            <div class='neon'>
+            <div class='neon' style='margin-bottom: 10px'   >
                 <span class='text' data-text='boot_camp'>
                     boot_camp
                 </span>
