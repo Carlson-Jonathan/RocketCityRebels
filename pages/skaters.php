@@ -3,6 +3,9 @@
 
 <?php include "head.php"; ?>
 <head>
+    <title>Roller Skaters | Coaches | Referees: Meet The Team – Rocket City Rebels</title> 
+
+    <meta name="description" content="Meet our team: The Rocket City Rebels. Read bios for skater, coaches, referees, and even our board of directors’ and see why they love roller derby."> 
     <link id="styles" rel="stylesheet" href="../styles/skaters.css">
 </head>
     

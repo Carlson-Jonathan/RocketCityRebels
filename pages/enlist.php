@@ -2,6 +2,9 @@
 <html lang="en-US">
 
 <head>
+    <title>Youth Sports Activity Sign Up: Leagues in North Alabama</title> 
+    <meta name="description" content="Stay strong, healthy and connected by becoming a valued team member of the Rocket City Rebels Jr. Roller Derby team. Boot camp starts in the Fall."> 
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
 <?php include "head.php"; ?>

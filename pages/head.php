@@ -1,7 +1,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="Rocket City Rebels" content="width=device-width, initial-scale=1">
-    <meta name = "description" content="Rocket City Rebels Jr. Roller Derby">
+    <meta name="description" content="Rocket City Rebels Jr. Roller Derby">
     
     <!-------------------------------------------------------------------------
     - Fonts & jQuery
@@ -21,6 +21,4 @@
     <link id="styles" rel="stylesheet" href="../styles/derbyCell.css">
     <link id="styles" rel="stylesheet" href="../styles/derby.css">
     <link id="styles" rel="stylesheet" href="../styles/bcanimation.css">
-    
-    <title>Rocket City Rebels Prototype Page</title>
 </head>

@@ -2,7 +2,11 @@
 <html lang="en-US">
 
 <?php include "head.php"; ?>
-    
+<head>
+    <title>Sponsors and Advertising: Get Your Business Noticed Now</title> 
+
+    <meta name="description" content="Advertise your business by sponsoring the Rocket City Rebels. Get your logo seen on our website, game banners, fliers, and during game announcements."> 
+</head>    
 <body>
 
     <?php include "title-nav.php"; ?>

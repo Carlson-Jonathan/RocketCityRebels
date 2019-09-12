@@ -2,7 +2,12 @@
 <html lang="en-US">
 
 <?php include "head.php"; ?>
+<head>
+    <title>Games | Bouts | Events | Practices: Skate  Times And Locations</title> 
 
+    <meta name="description" content="Rocket City Rebels: Times and locations for upcoming practices, game bouts, and events, both locally and abroad. Stay up to date here.">     
+    
+</head>
 <body>
 
     <?php 
