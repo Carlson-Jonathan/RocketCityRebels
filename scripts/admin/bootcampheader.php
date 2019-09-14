@@ -27,9 +27,14 @@ while($row = $getBootCamp->fetch(PDO::FETCH_ASSOC)) {
 
     <a href='../pages/enlist.php' style='text-decoration: none'>
         <div id='bootcampbar'>
+            
             <script src='../scripts/bootcamp.js'></script>
+            
+            <h4>BOOT CAMP</h4>
+            
             <script>setDates();</script>
-
+            
+            <!--
             <div class='neon' style='margin-bottom: 10px'   >
                 <span class='text' data-text='boot_camp'>
                     boot_camp
@@ -37,6 +42,7 @@ while($row = $getBootCamp->fetch(PDO::FETCH_ASSOC)) {
                 <span class='gradient'></span>
                 <span class='spotlight'></span>
             </div>
+            -->
             <p style='color:#aad400; font-size: 24px; margin: 0; padding: 0'>
                 Enrollment Season Now Open!
             </p>
