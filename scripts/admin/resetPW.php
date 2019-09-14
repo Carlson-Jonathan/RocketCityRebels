@@ -32,7 +32,7 @@
             <li>At least 1 UPPERCASE letter</li>
             <li>At least 1 lowercase letter</li>
             <li>At least 1 number</li>
-            <li>At least 1 symbol ( !@#$%^&* )</li>
+            <li>At least 1 symbol (!@#$%^&*)</li>
         </ul>
     </div>
     

@@ -99,7 +99,7 @@
                     'http://insanitycomplex.com/roller-derby/'" class="save">
                         Buy Home Game Tickets</button>
                 </div>
-                    <p class="lighttext" style="font-size: 13px; text-align: center; width: 250px; margin: auto">
+                    <p class="lighttext" style="font-size: 13px; text-align: center; width: 170px; margin: auto">
                         All home bouts are double headers with our adult sister 
                         leage, the
                         <a href="http://www.dixiederbygirls.com/" 

@@ -365,7 +365,7 @@ div.passwordblock {
     }
 }
 
-@media only screen and (min-resolution: 1.1dppx) {  
+@media only screen and (min-resolution: 1.25dppx) {  
     body {
         zoom: 250%;
     }
