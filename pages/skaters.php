@@ -32,7 +32,7 @@
 
     <main>
         <h2>Rocket City Rebels Team</h2>
-        <img src="../images/PagePhotos/SkatersPage/TeamPicture.jpg"><br><br>
+        <img src="../images/PagePhotos/SkatersPage/TeamPicture.jpg" style="width: 100%"><br><br>
         
         <!-------------------------------------------------------------------->
         

@@ -7,6 +7,7 @@
 
     <nav>
         <ul id="navigation">
+            <div class="topnav" id="myTopnav">
             <a href="../index.php">      
                 <li id="index.php" class="navbuttons">HOME</li>           
             </a>
@@ -34,11 +35,16 @@
             <a href="../pages/more.php">       
                 <li id="more.php" class="navbuttons">MORE</li>            
             </a>
+            <a href="javascript:void(0);" style="font-size:34px; margin-right: 15px" class="icon" onclick="expandMenu()">&#9776;</a>
+            </div>
         </ul>    
     </nav>
     
+    <div id='shift'>
     <?php require ($_SERVER['DOCUMENT_ROOT'].'/scripts/admin/bootcampheader.php');?>
+    </div>
     
+    <script src="../scripts/hamburger.js"></script>
     <script src="../scripts/activeNav.js">
         // Highlights active page on navigation bar
     </script>

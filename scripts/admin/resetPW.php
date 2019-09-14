@@ -24,10 +24,10 @@
         the password to know what it is.
     </p><br>
     
-    <div style="width: 645px; margin: auto; height: 200px">
-    <div class="columnleft2" style="width: 50%">
+    <div class='passwordblock'>
+    <div class="columnleft2" id='fix'>
         <p class='lighttext' style="color: #aad400">Password Requirements:<br></p>
-        <ul class='lighttext'><br>
+        <ul class='lighttext indent'><br>
             <li>Minimum of 8 characters</li>
             <li>At least 1 UPPERCASE letter</li>
             <li>At least 1 lowercase letter</li>
@@ -36,7 +36,6 @@
         </ul>
     </div>
     
-    <div class="columnright2" style="width: 50%">
         <form method='POST' action='../scripts/admin/resetPWscr.php' 
         style='text-align: center' onsubmit=compare()>
             <p class='lighttext' style='text-align: center; color: #aad400'>
@@ -51,7 +50,6 @@
             </p><br>
             <input type='submit' value='Change Password' class='save'>
         </form>
-    </div>
     </div>
 </div>
 

@@ -14,8 +14,10 @@
     <main>
         
         <div class="row">
-            <div class="columnleft" style="width: 40%" >
-                <img class="boximagehome" src="../images/logo.webp">
+            <div class="columnleft homeL">
+                <div text-align: center>
+                    <img class="boximagehome" src="../images/logo.webp">
+                </div>
                 <p class="greentext"><span id="specialtext">Rebel:</span><br>"True rebels 
                     know who they are and do not compromise their individuality 
                     or personal opinion for anyone."
@@ -30,19 +32,19 @@
                     lifestyles on and off the track. Roller derby is a very 
                     physically and emotionally demanding sport. It is also a 
                     very rewarding and character building adventure.
-                </p>
+                </p><br>
                 
             </div>
-            <div class="columnright" style="width: 60%">
+            <div class="columnright homeR">
                 <img src="images/poster.jpg" width="100%">
             </div>
         </div>
         <!-------------------------------------------------------------------->
         
         <h2>What is Roller Derby?</h2>
-        <div class="row" style="padding-top: 12px">
+        <div class="row">
             
-            <iframe src="https://www.youtube.com/embed/sFC6YE8zLmY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen width="100%" height="450px"></iframe><br><br>
+            <iframe src="https://www.youtube.com/embed/sFC6YE8zLmY" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen width="100%" height="250px"></iframe><br><br>
             
             <p class="lighttext">
                 "Roller derby is a contact sport played by two teams of five 

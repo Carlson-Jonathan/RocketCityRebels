@@ -1,12 +1,3 @@
-.neon {
-    position: relative;
-    overflow: hidden;
-    filter: brightness(200%);
-    width: 375px;
-    height: 47px;
-    margin: auto;
-}
-
 .text {
     background-color: black;
     color: white;
@@ -16,6 +7,29 @@
     text-transform: uppercase;
     position: relative;
     user-select: none;
+    padding: 50px 20px;
+}
+
+.neon {
+    position: relative;
+    overflow: hidden;
+    width: 340px;
+    height: 65px;
+    filter: brightness(200%);
+    margin: 0 auto;
+    
+}
+
+@media only screen and (max-width: 900px) {
+    .neon {
+        width: 295px;
+        height: 50px;
+    }
+    
+    .text {
+        font-size: 40px;
+        padding: 50px;
+    }
 }
 
 .text::before {

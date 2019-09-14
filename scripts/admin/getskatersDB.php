@@ -14,6 +14,7 @@ $skaterList = $db->prepare("SELECT * FROM skaters ORDER BY name ASC");
 $skaterList->execute();
 $x = 1;
 
+echo "<h3 style='text-align: center; color: darkgreen; margin-bottom: 20px' id='phonedit'>I see that you are trying to edit the database using your phone. Turn it sideways for a better view.</h3>";
 // Heading for table
 echo "
     <table>

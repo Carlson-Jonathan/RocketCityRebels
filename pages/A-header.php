@@ -17,7 +17,7 @@
 
     <nav>
         <ul id="navigation">
-            
+            <div class="topnav" id="myTopnav">
             <a href="../pages/A-instructions.php">   
                 <li id="A-instructions.php" class="navbuttons">INSTRUCTIONS</li>   
             </a>
@@ -45,9 +45,13 @@
             <a href="../index.php">      
                 <li id="index.php" class="navbuttons">RETURN</li>           
             </a>
+            
+            <a href="javascript:void(0);" style="font-size:34px; margin-right: 15px" class="icon" onclick="expandMenu()">&#9776;</a>
+            </div>
         </ul>    
     </nav>
     
+    <script src="../scripts/hamburger.js"></script>
     <script src="../scripts/activeNav.js">
         // Highlights active page on navigation bar
     </script>

@@ -1,5 +1,4 @@
 <footer>
-
     <p>&copy; 2019 Rocket City Rebels Jr. Roller Derby<br>Huntsville, Alabama
         <br><br>
         <a href="https://www.facebook.com/RocketCityRebels/">
@@ -7,6 +6,7 @@
         <br>Sponsored by:<br></p>
     
     <?php
+        require($_SERVER['DOCUMENT_ROOT'].'/scripts/dbsetup.php');
         $displaySponsors = $db->prepare("SELECT logo FROM sponsors");
         $displaySponsors->execute();
         

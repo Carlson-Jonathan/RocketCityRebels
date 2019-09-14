@@ -196,3 +196,111 @@ VALUES
 ('$2y$10$YS8qQEG0O/zPqTEi8kMnWORxdKQb2/jfUurqHj1Sm82SqQ2nQyaii', 
 '$2y$10$JQgtFqLUcwM9TZPT7i.qROoEMgy85.ebRXZURwn3H.mZgGQc0F/Xq');
 
+/******************************************************************************
+* "practicedays" Table
+* This table contains the weekdays and times that practices are held. 
+* Contents: 
+*   SERIAL "id"
+*   "day" - Day of the week (eg. "Mondays", "Wednesdays")
+*   "begin" - Time that the practice begins.
+*   "stop" - Time that practice ends.
+******************************************************************************/
+CREATE TABLE public.practicedays (
+    id SERIAL PRIMARY KEY,
+    day VARCHAR(25),
+    begin VARCHAR(25),
+    stop VARCHAR(25)
+);
+
+/* practicedays table inserts */
+INSERT INTO practicedays (day, begin, stop)
+VALUES
+('Mondays', '6:00 PM', '8:00 PM'),
+('Wednesdays', '6:00 PM', '8:00 PM');
+
+/******************************************************************************
+* "schedulechanges" Table
+* This table stores information about any upcomming changes to the weekly 
+* practice schedule. 
+* Contents: 
+*   SERIAL "id"
+*   "day" - Date of change
+*   "description" - An explaination of why the change is happening.
+******************************************************************************/
+CREATE TABLE public.schedulechanges (
+    id SERIAL PRIMARY KEY,
+    day date,
+    description text
+);
+
+/* practicedays table inserts */
+INSERT INTO schedulechanges (day, description)
+VALUES
+('2019-07-24', 'Practice cancelled due to zombie apocolypse'),
+('2019-11-21', 'Monday practice will be held on Tuesday 11/22/2019'),
+('2019-12-18', 'Cookout at Shannon''s house');
+
+/******************************************************************************
+* "googlemap" Table
+* This table stores the google map code that shows the GPS location of the
+* roller rink where the Rebels practice and have games. 
+* Contents: 
+*   SERIAL "id"
+*   "gps" - Google's GPS code - see https://www.maps.ie/create-google-map/
+******************************************************************************/
+CREATE TABLE public.gps (
+    id SERIAL PRIMARY KEY,
+    gps text
+);
+
+/* Insanity complex GPS */
+INSERT INTO gps (gps)
+VALUES
+('<div style="width: 100%"><iframe width="100%" height="400" src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;q=100%20Skate%20Park%20Dr+(Insanity%20Complex)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"><a href="https://www.maps.ie/coordinates.html">find my coordinates</a></iframe></div><br />');
+
+/******************************************************************************
+* "games" Table
+* This table stores the upcomming games and events for the schedule page. 
+* Contents: 
+*   SERIAL "id"
+*   "day" - Date of the upcomming game/event
+*   "title" - The heading of the event
+*   "description" - details about the event (location, times, etc)
+******************************************************************************/
+CREATE TABLE public.games (
+    id SERIAL PRIMARY KEY,
+    day date,
+    title VARCHAR(255),
+    description text
+);
+
+/* Insanity complex GPS */
+INSERT INTO games (day, title, description)
+VALUES
+('2019-12-24', 'Christmas Eve Bash', 'Will be held at Wonder Womans house
+at 555 Bunny Hop Lane from 4:30 PM to 1:00 AM. Bring drinks, fireworks,
+and your favorite voodoo doll.'),
+('2020-01-13', 'Jonnyboys Birthday', 'Celebraties only. Will be held on a
+private yacht and sail to Hawaii. Bring lots of money for Jonnyboy and gifts.'),
+('2023-07-13', 'Solar Eclipse!', 'Bring your eclipse glasses because this will
+be awesome! I will go to Austin to see this bad boy and chill with Damon, the
+wussy and Andrea.'),
+('2019-10-31', 'Haloween Party', 'Dress up. There will be a costume contest. The 
+winner will get a Willi Wankas everlasting gob stopper that explodes in your mouth!');
+
+/******************************************************************************
+* "enroll" Table
+* This table stores the enrollment form URL address for boot camp season. 
+* Contents: 
+*   SERIAL "id"
+*   "url" - URL of enrollment form
+******************************************************************************/
+CREATE TABLE public.enroll (
+    id SERIAL PRIMARY KEY,
+    url VARCHAR(255)
+);
+
+/* Insanity complex GPS */
+INSERT INTO enroll (url)
+VALUES
+('https://www.rocketcityrebels.com/boot-camp');

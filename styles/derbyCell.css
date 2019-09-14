@@ -1,4 +1,9 @@
-@media only screen and (min-width: 900px) and (max-resolution: 1dppx) {
+/******************************************************
+* This CSS sheet applies specifically to mobile 
+* devices like cell phones. These settings should only
+* display if the device's pixel density is greater 
+* than a ration of 1.
+******************************************************/
 
 * {
     box-sizing: border-box;
@@ -15,29 +20,22 @@
 
 header {
     background-color: #251010;
-    position: fixed;
-    top: 0;
     width: 100%;
-    padding: 10px;
     font-size: 1.5em;
 }
 
 body {
-    background-image: url("../images/background.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    zoom: 0%;
+    background-color: #aad400;
+    margin: 0;
 }
 
 main {
-    width: 900px;
-    margin: auto;
-    opacity: 1;
+    width: 100%;
+    margin: 0;
 }
-    
+
 #start {
-    display: block;
+    display: none;
 }
 
 /******************************************************
@@ -45,10 +43,6 @@ main {
 * of the page because the fixed title and navigation
 * bar sit on top of the rest of the page content.
 ******************************************************/
-#start {
-    margin: 175px;
-    line-height: 0;
-}
 
 /* Page titles */
 h1 {
@@ -57,16 +51,17 @@ h1 {
     font-style: normal;
     color: #aad400;
     text-align: center;
-    font-size: 3em;
+    font-size: 2em;
     padding: 15px;
     margin: 0;
+    line-height: 70px;
 }
 
 /* Heading bars */
 h2 {
     background-color: #251010;
     padding: 19px 0 0;
-    font-size: 2.5em;
+    font-size: 2em;
     font-family: 'docktrinregular';
     font-weight: normal;
     font-style: normal;
@@ -76,9 +71,8 @@ h2 {
 }
 
 h3 {
-    font-family: roboto;
-    font-weight: 900;
-    font-size: 24px;
+    font-family: roboto, arial, sans-serif;
+    font-size: 20px;
 }
 
 /* Navigation Bar */
@@ -94,7 +88,7 @@ ul#navigation {
 
 li.navbuttons {
     display: inline-block;
-    padding: 3px 20px;
+    padding: 10px 20px;
     font-family: 'Allerta Stencil', sans-serif;
     font-size: 1.5em;
 }
@@ -112,59 +106,41 @@ li a.active {
     font-weight: 900;
 }
 
+.indent {
+    margin-left: 50px;
+}
 /******************************************************
 * These are the CSS properties to create the box 
 * templates. Default column widths are 25% and 75%.
-*******************1.***********************************/
+******************************************************/
+#movie {
+    z-index: -1;
+    margin: 0;
+}
 
-.columnleft, .columnright{
-    width: 75%;
-    float: left;
+.columnleft, .columnright {
     color: white;
-    padding: 0 35px 0 0;
-}
-    
-.homeL {
-    width: 40%
+    width: 100%;
 }
 
-.columnright {
-    width: 25%;
-    padding: 0;
-}
-
-.homeR {
-    width: 60%
-}
-    
 .columnleft2, .columnright2 {
-    width: 25%;
-    float: left;
     color: #251010;
-    padding: 0 35px 0 0;
-}
-
-.columnright2 {
-    width: 75%;
-    padding: 0;
+    width: 100%;
 }
 
 .boximage {
-    width: 100%;
-    display: block;
+    display: none;
 }
 
 .boximagehome {
-    display: block;
-    width: 70%;
-    margin: auto;
+    display: none;
 }
 
 /* This is the container for boxes */
 .row, .row2 {
     background-color: #251010;
-    margin-bottom: 30px;
-    padding: 40px;
+    margin: 0 0 3px 0;
+    padding: 20px;
 }
 
 .row2 {
@@ -180,7 +156,7 @@ li a.active {
 /* A horizontal line break */
 .line {
     border-bottom: solid #251010 1px;
-    margin: 30px 0;
+    margin: 20px 0;
 }
 
 /******************************************************
@@ -197,7 +173,8 @@ li a.active {
     font-size: 18px;
     font-weight: 100;
     line-height: 1.3em;
-    font-family: roboto;
+    font-family: roboto, arial, sans-serif;
+    padding: 0;
 }
 
 .lighttext {
@@ -217,7 +194,7 @@ li a.active {
     text-align: center;
     font-size: 1.15em;
     color: #aad400;
-    margin: 45px 45px;
+    margin: 0 45px 20px;
 }
 
 #specialtext {
@@ -258,10 +235,6 @@ footer {
     margin: 10px;
     max-height: 50px;
 }
-    
-.icon {
-    display: none;
-}
 
 /******************************************************
 * CSS for boot camp related items
@@ -269,12 +242,12 @@ footer {
 #bootcampbar {
     display: none;
     background-color: black;
-    padding: 7px;
-    width: 900px;
+    padding: 5px 0 0;
+    width: 100%;
     text-align: center;
-    margin: auto;
+    margin: 0 auto;
     font-family: roboto;
-    border-radius: 100px;
+    border-radius: 10px;
     border: solid #251010 2px;
 }
 
@@ -294,6 +267,7 @@ html {
     border-top: solid #aad400 2px;
     border-bottom: solid #aad400 2px;
     padding: 7px 0;
+    width: 100%;
 }
 
 #regfee, #onseason {
@@ -320,23 +294,78 @@ html {
     padding: 0 10px;
     margin-top: 10px;
 }
-  
+
+#mapcontainer {
+    width: 100%;
+    margin: auto;
+}
+
 .phonedit {
-    display: none;
+    display: block;
 }
 
 .phonehide {
-    display: block;
-}  
-    
+    display: none;
+}
+
 div.passwordblock {
-    width: 645px;
+    width: 100%;
     margin: auto;
-    height: 200px;
+    text-align: center;
 }
-    
+
 #fix {
-    width: 50%;
+    margin-bottom: 30px;
 }
+
+/****************************************************************
+* Navigation menu hamburger style
+****************************************************************/
+.icon {
+    display: none;
+}
+
+@media only screen and (min-resolution: 1.1dppx), (max-width: 900px) {
+    nav .icon {
+        display: none;
+    }
+
+    .icon {
+        color: #aad400;
+    }
+
+    .topnav a:not(:first-child) {display: none;}
+
+    .topnav a.icon {
+        float: right;
+        display: block;
+        text-decoration: none;
+    }
+
+    a.icon:hover {
+        color: #aad400;
+    }
     
+    .topnav.responsive {position: relative;}
+
+    .topnav.responsive .icon {
+        position: absolute;
+        right: 0px;
+        top: 0;
+    }
+
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: center;
+    }
+
+    .navbuttons {
+        width: 75%;
+    }
+}
+@media only screen and (min-resolution: 1.1dppx) {  
+    body {
+        zoom: 250%;
+    }
 }

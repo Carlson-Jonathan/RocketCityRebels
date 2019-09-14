@@ -12,7 +12,7 @@
     <?php $_SESSION['access'] = false; ?>
 
     <main>
-        <div style="margin-top: 50px;"></div>
+        <div style="margin-top: 30px;"></div>
         
         <!-------------------------------------------------------------------->
         

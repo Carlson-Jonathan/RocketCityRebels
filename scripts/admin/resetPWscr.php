@@ -28,6 +28,7 @@ if($password == $reentered) {
     $sethash = $db->prepare("UPDATE passwords SET hash1='$hash' 
         WHERE id=1");
     $sethash->execute();
+}
 
 header("Location: ../../pages/A-misc.php");
 die();	
