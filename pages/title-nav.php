@@ -41,7 +41,7 @@
     </nav>
     
     <div id='shift'>
-    <?php require ($_SERVER['DOCUMENT_ROOT'].'/scripts/admin/bootcampheader.php');?>
+    <!-- <?php require ($_SERVER['DOCUMENT_ROOT'].'/scripts/admin/bootcampheader.php');?> -->
     </div>
     
     <script src="../scripts/hamburger.js"></script>
