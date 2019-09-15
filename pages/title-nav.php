@@ -42,7 +42,7 @@
     
     <div id='shift'>
     <?php require ($_SERVER['DOCUMENT_ROOT'].'/scripts/admin/bootcampheader.php');?>
-    </div><br><br>
+    </div>
     
     <script src="../scripts/hamburger.js"></script>
     <script src="../scripts/activeNav.js">
