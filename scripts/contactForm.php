@@ -1,0 +1,41 @@
+<?php
+/******************************************************************************
+* contactForm.php
+* Author:
+*   Jonathan Carlson
+* Description:
+*   This is the server-side code that enables the contact form to send emails.
+******************************************************************************/
+// Security
+function test_input($data) {
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+}
+
+$name = test_input($_POST['name']);
+$email = test_input($_POST['email']);
+$phone = test_input($_POST['phone']);
+$message = test_input($_POST['message']);
+$message = wordwrap($message, 70, "\r\n");
+
+$formcontent=" From: $name \n Email: $email \n Phone: $phone \n Message: $message";
+
+$recipient = "JonathanCarlson3712@Hotmail.com";
+$subject = "Contact Form";
+$mailheader = "From: $email \r\n";
+
+//mail($recipient, $subject, $formcontent, $mailheader) or die("Error!");
+mail('JonathanCarlson3712@Hotmail.com', 'testing', 'Is this thing working?', 'From: myself') or die("still not working!");
+
+echo "
+    <br><br><br>To: $recipient<br>
+    Subject: $subject<br><br>
+    $formcontent<br><br>
+    $mailheader<br><br>
+";
+
+
+
+?>
