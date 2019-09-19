@@ -236,12 +236,15 @@ footer {
     max-height: 50px;
 }
 
+.spLogos {
+    display: block;
+}
+
 /******************************************************
 * CSS for boot camp related items
 ******************************************************/
 #bootcampbar {
     display: none;
-    background-color: black;
     padding: 5px 0 0;
     width: 100%;
     text-align: center;
@@ -300,7 +303,7 @@ html {
     margin: auto;
 }
 
-.phonedit {
+#phonedit {
     display: block;
 }
 
@@ -364,7 +367,8 @@ div.passwordblock {
         width: 75%;
     }
 }
-@media only screen and (min-resolution: 1.1dppx) {  
+
+@media only screen and (min-resolution: 1.25dppx) {  
     body {
         zoom: 250%;
     }

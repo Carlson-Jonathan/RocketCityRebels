@@ -2,7 +2,11 @@
 <html lang="en-US">
 
 <?php include "head.php"; ?>
-    
+<head>
+    <title>Derby Merchandise, Gifts, Goodies and Swag: Buy Now</title> 
+
+    <meta name="description" content="Get your Rocket City Rebel merch here at our online store and show your friends that you support the rebels and the fitness of the children of Madison, Alabama.">    
+</head>
 <body>
 
     <?php include "title-nav.php"; ?>

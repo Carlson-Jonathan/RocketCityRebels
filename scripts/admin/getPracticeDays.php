@@ -41,7 +41,7 @@ while ($row = $getpracticedays->fetch(PDO::FETCH_ASSOC)) {
                 <input type='text' name='stop' value='$stop' style='width: 100px'>
                 <input type='submit' value='Save' class='save' style='font-size: 14px; padding: 0 5px'>
                 <input type='hidden' name='inc' value='$x'>
-            </p>
+            </p><br><br>
         </form>
     ";
     $x++;

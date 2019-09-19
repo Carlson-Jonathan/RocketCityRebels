@@ -2,7 +2,12 @@
 <html lang="en-US">
 
 <?php include "head.php"; ?>
+<head>
+    <title>Games | Bouts | Events | Practices: Skate  Times And Locations</title> 
 
+    <meta name="description" content="Rocket City Rebels: Times and locations for upcoming practices, game bouts, and events, both locally and abroad. Stay up to date here.">     
+    
+</head>
 <body>
 
     <?php 
@@ -94,7 +99,7 @@
                     'http://insanitycomplex.com/roller-derby/'" class="save">
                         Buy Home Game Tickets</button>
                 </div>
-                    <p class="lighttext" style="font-size: 13px; text-align: center; width: 250px; margin: auto">
+                    <p class="lighttext" style="font-size: 13px; text-align: center; width: 170px; margin: auto">
                         All home bouts are double headers with our adult sister 
                         leage, the
                         <a href="http://www.dixiederbygirls.com/" 

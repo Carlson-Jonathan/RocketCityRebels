@@ -2,7 +2,11 @@
 <html lang="en-US">
 
 <?php include "head.php"; ?>
-    
+<head>
+    <title>Contact | Blog | Social Media: The Rebels Are Out There</title> 
+
+    <meta name="description" content="Contact our board of directors, visit us on Facebook, and stay up to date with the latest Rocket City Rebel activities."> 
+</head>
 <body>
 
     <?php include "title-nav.php"; ?>

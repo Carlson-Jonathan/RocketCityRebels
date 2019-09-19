@@ -29,7 +29,8 @@ while ($row = $getGames->fetch(PDO::FETCH_ASSOC)) {
         // Display events and allow for editing
         "<form method='POST' action='../scripts/admin/setGames.php'>
             <input value='$id' name='id' type='hidden'>
-            <input type='date' value='$day' name='day' class='darktext' required>  
+            <input type='date' value='$day' name='day' class='darktext' required> 
+            <br><br>
             <input type='text' value='$title' name='title' class='darktext'
             style='width: 60%' required><br><br>
             <textarea cols='40' rows='5' name='description'
@@ -64,7 +65,7 @@ while ($row = $getGames->fetch(PDO::FETCH_ASSOC)) {
 echo 
     // Create New Event
     "<form method='POST' action='../scripts/admin/setGames.php'>
-        <input type='date' name='day' class='darktext' required>  
+        <input type='date' name='day' class='darktext' required><br><br>  
         <input type='text' name='title' class='darktext' style='width: 60%'
         required><br><br>
         <textarea cols='40' rows='5' name='description'

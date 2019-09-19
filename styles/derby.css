@@ -1,4 +1,4 @@
-@media only screen and (min-width: 900px) and (max-resolution: 1dppx) {
+@media only screen and (min-width: 900px) and (max-resolution: 1.25dppx) {
 
 * {
     box-sizing: border-box;
@@ -39,7 +39,11 @@ main {
 #start {
     display: block;
 }
-
+    
+.spLogos {
+    display: inline;
+}
+    
 /******************************************************
 * The "start" class introduces a margin from the top 
 * of the page because the fixed title and navigation
@@ -268,7 +272,6 @@ footer {
 ******************************************************/
 #bootcampbar {
     display: none;
-    background-color: black;
     padding: 7px;
     width: 900px;
     text-align: center;
@@ -321,7 +324,7 @@ html {
     margin-top: 10px;
 }
   
-.phonedit {
+#phonedit {
     display: none;
 }
 

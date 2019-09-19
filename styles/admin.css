@@ -55,7 +55,7 @@ input[type=date] {
 
 .schedulesave, .scheduledelete {
     font-size: 14px;
-    width: 45%;
+    width: 40%;
     text-align: right;
     float: left;
     margin: 0 10px;

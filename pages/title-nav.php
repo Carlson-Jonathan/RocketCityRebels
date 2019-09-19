@@ -33,7 +33,7 @@
             </a>
             
             <a href="../pages/more.php">       
-                <li id="more.php" class="navbuttons">MORE</li>            
+                <li id="more.php" class="navbuttons">CONTACT</li>            
             </a>
             <a href="javascript:void(0);" style="font-size:34px; margin-right: 15px" class="icon" onclick="expandMenu()">&#9776;</a>
             </div>

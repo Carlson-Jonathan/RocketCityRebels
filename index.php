@@ -6,6 +6,11 @@
     include "pages/head.php"; 
     $_SESSION['access'] = false;
 ?>
+<head>
+    <title>Roller Derby Sports Team in Huntsville, Al - Rocket City Rebels</title> 
+
+    <meta name="description" content="The Rocket City Rebels are a junior roller derby team in Huntsville and Madison, Alabama comprised of around 30 youth ranging from ages 8 to 18."> 
+</head>
     
 <body>
 

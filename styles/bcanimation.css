@@ -22,8 +22,8 @@
 
 @media only screen and (max-width: 900px) {
     .neon {
-        width: 295px;
-        height: 50px;
+        width: 305px;
+        height: 45px;
     }
     
     .text {
@@ -75,4 +75,41 @@
     to {
         transform: translate(50%, 50%);
     }
+}
+
+/* This subsitutes all of the above code because the original animation
+   was just too unreliable */
+
+h4 {
+    font-size: 50px;
+    color: #aad400;
+    margin: 5px;
+    padding: 0;
+    line-height: 40px;
+    font-family: 'Allerta Stencil', sans-serif;
+    font-weight: 100;
+    
+    -webkit-animation-name: bc; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
+    animation-name: bc;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;   
+    animation-direction: alternate;
+}
+
+@-webkit-keyframes bc {
+    0%   {color: red;}
+    20% {color: orange;}
+    40%  {color: yellow;}
+    80% {color: white;}
+    100%  {color: #aad400;}
+}
+
+/* Standard syntax */
+@keyframes bc {
+    0%   {color: red;}
+    20% {color: orange;}
+    40%  {color: yellow;}
+    80% {color: white;}    
+    100%  {color: #aad400;}   
 }
