@@ -82,7 +82,7 @@ while($row = $storeList->fetch(PDO::FETCH_ASSOC)) {
                                 <input name='name' type='text' value='$name' maxlength='49' required><br><br>
                             
                             <span class='popuptext'>Item Price</span><br> 
-                                <input name='price' type='number' value='$price' required><br><br>
+                                <input name='price' type='number' value='$price' step='0.01' required><br><br>
                         </div>
                         
                         <div class='line'></div>
@@ -135,7 +135,7 @@ echo "
                     style='background-color: #aad400'></td>
                 <td><input class='darktext' type='text' maxlength='49' 
                     name='name' required></td>
-                <td><input class='darktext' type='number' name='price' required></td>
+                <td><input class='darktext' type='number' name='price' step='0.01' required></td>
                 <td><input class='darktext' type='text' name='image' 
                     maxlength='19' required></td>
                 <input type='hidden' name='table' value='store'>
