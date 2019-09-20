@@ -5,6 +5,7 @@
 
 <head>
     <link id="styles" rel="stylesheet" href="../styles/admin.css">
+    <link id="styles" rel="stylesheet" href="../styles/skaters.css">    
 </head>
 
 <body>
