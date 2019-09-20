@@ -304,3 +304,20 @@ CREATE TABLE public.enroll (
 INSERT INTO enroll (url)
 VALUES
 ('https://www.rocketcityrebels.com/boot-camp');
+
+/******************************************************************************
+* "store" Table
+* Contents:
+*   SERIAL "item_id"
+*   "name" - The name of the product
+*   "price" - The price to be payed if purchased.
+*   "description" - Information about the product.
+*   "image" - The name of the .jpg file for the item
+******************************************************************************/
+CREATE TABLE public.store (
+	item_id SERIAL PRIMARY KEY,		
+	name VARCHAR(50) NOT NULL UNIQUE,
+	price numeric NOT NULL,
+	description text,
+    image VARCHAR(20)
+);
