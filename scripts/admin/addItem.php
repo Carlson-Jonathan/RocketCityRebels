@@ -19,7 +19,7 @@ function test_input($data) {
         echo "<p>Error Loading name!</p>";
 
     if(isset($_POST['price']))
-        $number = test_input($_POST['price']);
+        $price = test_input($_POST['price']);
     else
         echo "<p>Error Loading number!</p>";
 
