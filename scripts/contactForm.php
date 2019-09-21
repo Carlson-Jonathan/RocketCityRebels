@@ -23,6 +23,7 @@ $message = wordwrap($message, 70, "\r\n");
 $formcontent=" From: $name \n Email: $email \n Phone: $phone \n Message: $message";
 
 $recipient = "rocketcityrebels256@gmail.com";
+//$recipient = "JonathanCarlson3712@Hotmail.com";
 $subject = "Contact Form";
 $mailheader = "From: $email \r\n";
 

@@ -321,3 +321,7 @@ CREATE TABLE public.store (
 	description text,
     image VARCHAR(20)
 );
+
+INSERT INTO store (name, price, description, image)
+VALUES
+('pizza', 23, 'Pizza is yummy!', 'pizza.jpg');
