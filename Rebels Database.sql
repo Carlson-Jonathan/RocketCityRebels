@@ -330,7 +330,7 @@ VALUES
 /******************************************************************************
 * "clothing" Table
 * Contents:
-*   SERIAL "clothing_id"
+*   SERIAL "item_id"
 *   "name" - The name of the clothing product
 *   "price" - The price to be payed if purchased.
 *   "description" - Information about the clothing product.
@@ -341,7 +341,7 @@ VALUES
 *   "image" - The name of the .jpg file for the clothing item
 ******************************************************************************/
 CREATE TABLE public.clothing (
-	clothing_id SERIAL PRIMARY KEY,		
+	item_id SERIAL PRIMARY KEY,		
 	name VARCHAR(50) NOT NULL UNIQUE,
 	price numeric NOT NULL,
 	description text,
