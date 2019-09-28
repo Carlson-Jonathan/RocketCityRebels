@@ -34,6 +34,31 @@ if(isset($_POST['price']))
 else
     echo "<p>Error Loading price!</p>";
 
+if(isset($_POST['quantity']))
+    $quantity = test_input($_POST['quantity']);
+else
+    echo "<p>Error Loading quantity!</p>";
+
+if(isset($_POST['small']))
+    $small = test_input($_POST['small']);
+else
+    echo "<p>Error Loading small quantity!</p>";
+
+if(isset($_POST['medium']))
+    $medium = test_input($_POST['medium']);
+else
+    echo "<p>Error Loading medium quantity!</p>";
+
+if(isset($_POST['large']))
+    $large = test_input($_POST['large']);
+else
+    echo "<p>Error Loading large quantity!</p>";
+
+if(isset($_POST['xlarge']))
+    $xlarge = test_input($_POST['xlarge']);
+else
+    echo "<p>Error Loading xlarge quantity!</p>";
+
 if(isset($_POST['image'])) 
     $image = htmlspecialchars($_POST['image']);
 else
@@ -43,11 +68,28 @@ if(isset($_POST['description']))
     $description = htmlspecialchars($_POST['description']);
 else
     echo "<p>Error Loading description!</p>";
+
+if(isset($_POST['table'])) 
+    $table = htmlspecialchars($_POST['table']);
+else
+    echo "<p>Error Loading table!</p>";
     
-// Update the item in the store table 
-        $editItem = $db->prepare("
-        UPDATE store SET name='$name', price=$price, description='$description'
-        WHERE item_id=($item_id)");
+// Update the item in the current table 
+switch($table) {
+	case 'store':
+	$editItem = $db->prepare("
+    UPDATE store SET name='$name', price=$price, 
+	description='$description', quantity='$quantity'
+    WHERE item_id=($item_id)");
+	break;
+	case 'clothing':
+	$editItem = $db->prepare("
+	UPDATE clothing SET name='$name', price=$price, 
+	description='$description', small=$small, 
+	medium=$medium, large=$large, xlarge=$xlarge
+	WHERE item_id=($item_id)");
+	break;
+}
     
 $editItem->execute();
 
