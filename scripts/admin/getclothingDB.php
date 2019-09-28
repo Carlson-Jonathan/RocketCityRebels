@@ -52,9 +52,9 @@ while($row = $clothingList->fetch(PDO::FETCH_ASSOC)) {
     $image = $row['image'];
     
     // Variables that make this page unique
-    $btnID = "clBtn" . $x;
-    $modelID = "clModel" . $x;
-    $close = "clclose" . $x;
+    $clbtnID = "clBtn" . $x;
+    $clmodelID = "clModel" . $x;
+    $clclose = "clclose" . $x;
 
     /**************************************************************************
     * Displays clothing table by line with associated buttons.
@@ -76,14 +76,14 @@ while($row = $clothingList->fetch(PDO::FETCH_ASSOC)) {
 			<td><p class='darktext'>$xlarge</p></td>
             <td><p class='darktext'>$image</p></td>
             <td style='text-align: center'>
-            <button type='text' class='edit' id='$btnID'>Edit</button></td>
+            <button type='text' class='edit' id='$clbtnID'>Edit</button></td>
             
             <!-----------------------------------------------------------------
             - The pop-up that appears when the 'edit' button is clicked.
             ------------------------------------------------------------------>
-            <div id='$modelID' class='modal'>
+            <div id='$clmodelID' class='modal'>
                 <div class='modal-content'>
-                    <span class='close' id='$close'>&times;</span>
+                    <span class='close' id='$clclose'>&times;</span>
                     
                     <form method='POST' action='../scripts/admin/editItem.php'>
                         
@@ -125,21 +125,21 @@ while($row = $clothingList->fetch(PDO::FETCH_ASSOC)) {
 
             <script>
             // Get the modal
-            var modal" . $x . " = document.getElementById('$modelID');
+            var clmodal" . $x . " = document.getElementById('$clmodelID');
 
             // Get the button that opens the modal
-            var btn" . $x . " = document.getElementById('$btnID');
+            var clbtn" . $x . " = document.getElementById('$clbtnID');
 
-            var exit" . $x . " = document.getElementById('$close');
+            var clexit" . $x . " = document.getElementById('$clclose');
             
             // When the user clicks the button, open the modal 
-            btn" . $x . ".onclick = function() {
-              modal" . $x . ".style.display = 'block';
+            clbtn" . $x . ".onclick = function() {
+              clmodal" . $x . ".style.display = 'block';
             }
 
             // When the user clicks 'X', close the modal
-            exit" . $x . ".onclick=function() {
-                modal" . $x . ".style.display = 'none';
+            clexit" . $x . ".onclick=function() {
+                clmodal" . $x . ".style.display = 'none';
             }
 
             </script>
