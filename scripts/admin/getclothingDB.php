@@ -53,7 +53,7 @@ while($row = $clothingList->fetch(PDO::FETCH_ASSOC)) {
     
     // Variables that make this page unique
     $btnID = "myBtn" . $x;
-    $modelID = "myModel" . $x;
+    $clmodelID = "clModel" . $x;
     $close = "close" . $x;
 
     /**************************************************************************
@@ -81,7 +81,7 @@ while($row = $clothingList->fetch(PDO::FETCH_ASSOC)) {
             <!-----------------------------------------------------------------
             - The pop-up that appears when the 'edit' button is clicked.
             ------------------------------------------------------------------>
-            <div id='$modelID' class='modal'>
+            <div id='$clmodelID' class='modal'>
                 <div class='modal-content'>
                     <span class='close' id='$close'>&times;</span>
                     
@@ -125,7 +125,7 @@ while($row = $clothingList->fetch(PDO::FETCH_ASSOC)) {
 
             <script>
             // Get the modal
-            var modal" . $x . " = document.getElementById('$modelID');
+            var modal" . $x . " = document.getElementById('$clmodelID');
 
             // Get the button that opens the modal
             var btn" . $x . " = document.getElementById('$btnID');
