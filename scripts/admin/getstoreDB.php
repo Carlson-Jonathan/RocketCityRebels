@@ -22,6 +22,7 @@ echo "
             <th></th>
             <th>Item Name</th>
             <th style='width: 75px'>Price</th>
+			<th style='width: 75px'>Quantity</th>
             <th>Image File</th>
             <th style='text-align: center'>Details</th>
         </tr>
