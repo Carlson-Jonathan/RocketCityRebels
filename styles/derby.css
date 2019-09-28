@@ -44,6 +44,14 @@ main {
     display: inline;
 }
     
+#contact1 {
+    width: 35%
+}    
+
+#contact2 {
+    width: 65%
+}
+    
 /******************************************************
 * The "start" class introduces a margin from the top 
 * of the page because the fixed title and navigation

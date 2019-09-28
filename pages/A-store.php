@@ -17,9 +17,18 @@
 
     <main>
         <div class="start"></div>
+		<!-------------------------------------------------------------------->
+
         <h2>Store Items</h2>
         <div class="row2">
             <?php include "../scripts/admin/getstoreDB.php"; ?>
+        </div>
+
+		<!-------------------------------------------------------------------->
+
+		<h2>Store Clothing Items</h2>
+        <div class="row2">
+            <?php include "../scripts/admin/getclothingDB.php"; ?>
         </div>
 
 

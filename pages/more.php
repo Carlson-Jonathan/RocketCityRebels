@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE HTML>  
 <html lang="en-US">
 
@@ -12,34 +13,34 @@
     <?php include "title-nav.php"; ?>
 
     <main>
-        <div class="row">
-            <div class="columnleft">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p><br>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p><br>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-            </div>
-
-            <div class="columnright">
-                <img src="../images/logo.webp" class="boximage">
-            </div>
-                
-        </div>
-
         <h2>Contact Us:</h2>  
         <div class="row2">
-            <div class="columnleft2">
-            <p class="darktext">Left column content</p>
+            <div class="columnleft2" id='contact1'>
+                <img src='../images/logo.webp' style='width: 80%'>
+            <p class="darktext">If you have any questions, comments, or
+                concerns, please contact us using the form and a member of 
+                the Rocket City Rebels board of directors will get back with
+                you. You may also contact us through our Facebook page
+                (information below).</p><br>
             </div>
 
-            <div class="columnright2">
-                <form action="" method="get">
+            <div class="columnright2" id='contact2'>
+                <form action="../scripts/contactForm.php" method="POST"
+                      class='darktext'>
                     Name:
-                    <input type="text" width="500px" placeholder="John Doe"><br><br>
+                    <input type="text" width="500px" placeholder="John Doe"
+                           name='name' required><br><br>
                     Email:
-                    <input type="email" width="500px" placeholder="JohnDoe@Email.com"><br><br>
+                    <input type="email" width="500px" placeholder="JohnDoe@Email.com" name='email' required><br><br>
+                    Phone:
+                    <input type='phone' width='500px' name='phone'
+                           placeholder='555-555-5555' required><br><br>
                     Message:<br>
-                    <textarea rows="10" cols="35" placeholder="Your message here."></textarea><br>
-                    <input type="submit" name="submit" value="Send Message">    
+                    <textarea rows="10" cols="35" placeholder="Your message here." name='message' required></textarea><br>
+                    <div style='margin-left: 85px'>
+                        <input type="submit" name="submit" value="Send Message"
+                           class="save">    
+                    </div>
                 </form>
             </div>
         </div>
@@ -48,28 +49,18 @@
         <div class="row">
 
             <div class="columnleft">
-                <p class="emphasistext">Honorable Mentions:</p><br>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
-                </p><br>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim.</p>
+                <p class='lighttext'>Join us on Facebook to chat, get information about news, events, special offers, minute-to-minute updates during games, or just to socialize.</p><br>
+                <image src='../images/logo.webp' style="width: 200px"></image>
             </div>
 
-            <div class="columnright">
-                <p>Lorem ipsum dolor sit amet, </p>
+            <div class="columnright" style='text-align: center'>
+                <a href="https://www.facebook.com/RocketCityRebels/" style='text-decoration: none'>
+                <p class='lighttext' style='text-align: center; font-size: 20px; color: #aad400'>Visit Our</p>
+                <image src='../images/FBLogo.png'></image>
+                <p class='lighttext' style='text-align: center; font-size: 18px; color: #aad400'>Facebook<br>Page</p></a>
             </div>
 
         </div>
-        <h2>Blog:</h2>  
-        <div class="row">
-            <div class="columnleft">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa.</p><br>
-            </div>
-
-            <div class="columnright">
-                <p>Lore#5cf236m ipsum dolor </p>
-            </div>
-        </div>
-
     </main>
 
     <?php include "../pages/footer.php"; ?>

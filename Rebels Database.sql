@@ -319,5 +319,39 @@ CREATE TABLE public.store (
 	name VARCHAR(50) NOT NULL UNIQUE,
 	price numeric NOT NULL,
 	description text,
+	quantity int NOT NULL,
     image VARCHAR(20)
 );
+
+INSERT INTO store (name, price, description, quantity, image)
+VALUES
+('pizza', 23, 'Pizza is yummy!', 15, 'pizza.jpg');
+
+/******************************************************************************
+* "clothing" Table
+* Contents:
+*   SERIAL "item_id"
+*   "name" - The name of the clothing product
+*   "price" - The price to be payed if purchased.
+*   "description" - Information about the clothing product.
+*   "small" - The quantity of available small sizes.
+*   "medium" - The quantity of available medium sizes.
+*   "large" - The quantity of available large sizes.
+*   "xlarge" - The quantity of available xlarge sizes.
+*   "image" - The name of the .jpg file for the clothing item
+******************************************************************************/
+CREATE TABLE public.clothing (
+	item_id SERIAL PRIMARY KEY,		
+	name VARCHAR(50) NOT NULL UNIQUE,
+	price numeric NOT NULL,
+	description text,
+	small int NOT NULL,
+	medium int NOT NULL,
+	large int NOT NULL,
+	xlarge int NOT NULL,
+    image VARCHAR(20)
+);
+
+INSERT INTO clothing (name, price, description, small, medium, large, xlarge, image)
+VALUES
+('jersey', 15, 'Best darn jersey around!', 20, 15, 15, 10, 'jersey.jpg');

@@ -1,6 +1,6 @@
 <?php
 /*****************************************************************************
-* This script adds an item to the store table in the database.
+* This script adds an item to the store or clothing table in the database.
 ***************************************************************************/
 require($_SERVER['DOCUMENT_ROOT'].'/scripts/dbsetup.php');
 
@@ -23,10 +23,40 @@ function test_input($data) {
     else
         echo "<p>Error Loading number!</p>";
 
+	if(isset($_POST['quantity']))
+        $quantity = test_input($_POST['quantity']);
+    else
+        echo "<p>Error Loading quantity!</p>";
+
+	if(isset($_POST['small']))
+    $small = test_input($_POST['small']);
+		else
+    echo "<p>Error Loading small quantity!</p>";
+
+if(isset($_POST['medium']))
+    $medium = test_input($_POST['medium']);
+		else
+    echo "<p>Error Loading medium quantity!</p>";
+
+if(isset($_POST['large']))
+    $large = test_input($_POST['large']);
+		else
+    echo "<p>Error Loading large quantity!</p>";
+
+if(isset($_POST['xlarge']))
+    $xlarge = test_input($_POST['xlarge']);
+		else
+    echo "<p>Error Loading xlarge quantity!</p>";
+
     if(isset($_POST['image'])) 
         $image = htmlspecialchars($_POST['image']);
     else
         echo "<p>Error Loading image!</p>";
+
+	if(isset($_POST['table'])) 
+        $table = htmlspecialchars($_POST['table']);
+    else
+        echo "<p>Error Loading table!</p>";
 
 /* Test output
 echo "
@@ -36,10 +66,19 @@ echo "
 ";
 */
 
-// Query store table and insert new row
-$addItem = $db->prepare("
-        INSERT INTO store (name, price, image)
-        VALUES ('$name', '$price', '$image')");
+// Query correct table
+switch($table) {
+	case 'store':
+	$addItem = $db->prepare("
+    INSERT INTO store (name, price, quantity, image)
+    VALUES ('$name', '$price', '$quantity', '$image')");
+	break;
+	case 'clothing':
+	$addItem = $db->prepare("
+    INSERT INTO clothing (name, price, small, medium, large, xlarge, image)
+    VALUES ('$name', '$price', '$small', '$medium', '$large', '$xlarge', '$image')");
+	break;
+}
     
 $addItem->execute();
 
