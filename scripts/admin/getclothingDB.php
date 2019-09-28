@@ -52,9 +52,9 @@ while($row = $clothingList->fetch(PDO::FETCH_ASSOC)) {
     $image = $row['image'];
     
     // Variables that make this page unique
-    $btnID = "myBtn" . $x;
-    $clmodelID = "clModel" . $x;
-    $close = "close" . $x;
+    $btnID = "clBtn" . $x;
+    $modelID = "clModel" . $x;
+    $close = "clclose" . $x;
 
     /**************************************************************************
     * Displays clothing table by line with associated buttons.
@@ -81,7 +81,7 @@ while($row = $clothingList->fetch(PDO::FETCH_ASSOC)) {
             <!-----------------------------------------------------------------
             - The pop-up that appears when the 'edit' button is clicked.
             ------------------------------------------------------------------>
-            <div id='$clmodelID' class='modal'>
+            <div id='$modelID' class='modal'>
                 <div class='modal-content'>
                     <span class='close' id='$close'>&times;</span>
                     
@@ -125,7 +125,7 @@ while($row = $clothingList->fetch(PDO::FETCH_ASSOC)) {
 
             <script>
             // Get the modal
-            var modal" . $x . " = document.getElementById('$clmodelID');
+            var modal" . $x . " = document.getElementById('$modelID');
 
             // Get the button that opens the modal
             var btn" . $x . " = document.getElementById('$btnID');
