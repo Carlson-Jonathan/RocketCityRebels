@@ -5,11 +5,10 @@
 * Author:
 *   Jonathan Carlson, Kyle Kadous
 * Description:   
-*   The skaters page contains 4 sections of participants as named by the files
-*   shown above. Each of these sections requires a file containing the below
-*   code, which accesses a specific table from the Rebels database, displays 
-*   the content in the appropriate section, and generates a pop-up window on 
-*   click.
+*   Almost identical to the /scripts/clothing.php page, each row in the 
+*   store table will be displayed on the page with a picture and name of
+*   an item. A Modal will appear when an item is selected, displaying the 
+*   items description, price, and a quantity selector. 
 ******************************************************************************/
 
 /************************************************************************** 
@@ -54,6 +53,8 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
                     <span class='popuptext'>Price:
                     </span><br> $price</p><br>
                     <span class='popuptext'>Select Quantity</span><br>
+					<div id='quantity" . $x . "'>
+					</div>
                 </div>
                 <div class='line'></div>
                 <p style='margin-top: 15px; text-align: left'>
@@ -71,6 +72,15 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
         // When the user clicks the button, open the modal 
         btn" . $x . ".onclick = function() {
           modal" . $x . ".style.display = 'block';
+
+		  // Add quantity selector on modal open
+		  var qtySelect = <select>;
+		  var i;
+		  for (i = 0; i < $quantity; i++) {
+		  	  qtySelect += <option value='" . $quantity . "'>" .quantity . "</option>;
+		  }
+
+		  qtySelect += </select>
         }
 
         // When the user clicks anywhere, close the modal
