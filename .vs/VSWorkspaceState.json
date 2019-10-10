@@ -1,8 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\pages"
+    "\\images",
+    "\\scripts",
+    "\\styles"
   ],
-  "SelectedNode": "\\Rebels Database.sql",
+  "SelectedNode": "\\styles\\skaters.css",
   "PreviewInSolutionExplorer": false
 }
