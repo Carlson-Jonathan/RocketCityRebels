@@ -6,10 +6,14 @@
     <title>Derby Merchandise, Gifts, Goodies and Swag: Buy Now</title> 
 
     <meta name="description" content="Get your Rocket City Rebel merch here at our online store and show your friends that you support the rebels and the fitness of the children of Madison, Alabama.">    
+	<link id="styles" rel="stylesheet" href="../styles/skaters.css">
 </head>
 <body>
 
-    <?php include "title-nav.php"; ?>
+    <?php include "title-nav.php";
+	require "../scripts/dbsetup.php"; 
+
+	?>
 
     <main>
         <div class="start"></div>
@@ -29,7 +33,9 @@
 
         <h2>Stuff to buy and payments and stuff</h2>    
         <div class="row2">
-            <div class="columnleft2" style="width: 75%">
+            <?php require "../scripts/store.php"; ?>
+
+            <!-- <div class="columnleft2" style="width: 75%">
                 <p class="lighttext">Pay Monthly Dues and Skater Insurance Securely With Paypal:</p><br>
                 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" style="background-color: white; padding: 10px;">
                     <input type="hidden" name="cmd" value="_s-xclick">
@@ -51,8 +57,16 @@
                     <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
                 </form>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa.</p><br>
-                <br><br>
+                <br><br> -->
             </div>
+
+            <!-------------------------------------------------------------------->
+
+            <div class="row2">
+                <?php require "../scripts/clothing.php"; ?>
+            </div>
+
+            <!-------------------------------------------------------------------->
 
             <div class="columnright2" style="width: 25%">
                 <p>Lorem - ipsum dolor sit amet!
@@ -61,22 +75,6 @@
                 <p>Exercitation - nisi ut aliquip ex ea commodo consequat!<br></p><br>
                 
 
-            </div>
-
-        </div>
-
-        <h2>Donations</h2>    
-        <div class="row">
-
-            <div class="columnleft">
-                <p class="emphasistext">Sponsors:</p><br>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                </p><br>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim.</p>
-            </div>
-
-            <div class="columnright">
-                
             </div>
 
         </div>
