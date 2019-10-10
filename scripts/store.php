@@ -63,6 +63,20 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
         </div>
 
         <script>
+		// Add the quantity select to each item onload
+		function loadQuantity() {
+		  var qtySelect = <select>;
+		  var i;
+		  for (i = 0; i < $quantity; i++) {
+		  	  qtySelect += <option value='" . $quantity . "'>" .quantity . "</option>;
+		  }
+		  qtySelect += </select>
+
+		  document.getElementById('quantity" . $x . "').innerHTML = qtySelect;
+		}
+
+		window.onload = loadQuantity();
+
         // Get the modal
         var modal" . $x . " = document.getElementById('$modelID');
 
@@ -73,8 +87,6 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
         btn" . $x . ".onclick = function() {
           modal" . $x . ".style.display = 'block';
 
-		  // Add quantity selector on modal open
-		  
         }
 
         // When the user clicks anywhere, close the modal
