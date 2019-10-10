@@ -74,14 +74,7 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
           modal" . $x . ".style.display = 'block';
 
 		  // Add quantity selector on modal open
-		  var qtySelect = <select>;
-		  var i;
-		  for (i = 0; i < $quantity; i++) {
-		  	  qtySelect += <option value='" . $quantity . "'>" .quantity . "</option>;
-		  }
-		  qtySelect += </select>
-
-		  document.getElementById('quantity" . $x . "').innerHTML = qtySelect;
+		  
         }
 
         // When the user clicks anywhere, close the modal
