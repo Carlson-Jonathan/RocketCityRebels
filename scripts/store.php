@@ -79,8 +79,9 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
 		  for (i = 0; i < $quantity; i++) {
 		  	  qtySelect += <option value='" . $quantity . "'>" .quantity . "</option>;
 		  }
-
 		  qtySelect += </select>
+
+		  document.getElementById('quantity" . $x . "').innerHTML = qtySelect;
         }
 
         // When the user clicks anywhere, close the modal
