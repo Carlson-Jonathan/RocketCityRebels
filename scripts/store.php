@@ -65,13 +65,12 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
         <script>
 		// Add the quantity select to each item onload
 		function loadQuantity() {
-		  var qtySelect = '<select>';
+		  var qtySelect = <select>;
 		  var i;
 		  for (i = 0; i < $quantity; i++) {
-		  	  qtySelect += '<option value='" . $quantity . "'>" .quantity . "</option>';
+		  	  qtySelect += <option value='" . $quantity . "'>" .quantity . "</option>;
 		  }
-		  qtySelect += '</select>';
-		  console.log(qtySelect);
+		  qtySelect += </select>;
 
 		  document.getElementById('quantity" . $x . "').innerHTML = qtySelect;
 		}
