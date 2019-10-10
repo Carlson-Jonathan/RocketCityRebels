@@ -75,8 +75,6 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
 		  document.getElementById('quantity" . $x . "').innerHTML = qtySelect;
 		}
 
-		window.onload = loadQuantity();
-
         // Get the modal
         var modal" . $x . " = document.getElementById('$modelID');
 
@@ -86,6 +84,7 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
         // When the user clicks the button, open the modal 
         btn" . $x . ".onclick = function() {
           modal" . $x . ".style.display = 'block';
+		  loadQuantity();
 
         }
 
