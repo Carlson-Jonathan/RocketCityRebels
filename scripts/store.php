@@ -57,7 +57,7 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
 					<div id='quantity" . $x . "'>
 					<select>";
 					for ($i = 0; $i < $quantity; $i++) {
-						echo "option value='" . $quantity . "'>"$quantity"</option>";
+						echo "option value='" . $i . "'>"$i"</option>";
 					}
 					echo "</select>
 					</div>
