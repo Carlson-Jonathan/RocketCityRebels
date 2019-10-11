@@ -30,6 +30,7 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
 
     $btnID = "myBtn" . $x;
     $modelID = "myModel" . $x;
+
     
 
     /**********************************************************************
@@ -54,6 +55,11 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
                     </span><br> $price</p><br>
                     <span class='popuptext'>Select Quantity</span><br>
 					<div id='quantity" . $x . "'>
+					<select>";
+					for ($i = 0; $i < $quantity; $i++) {
+						echo "option value='" . $quantity . "'>"$quantity"</option>";
+					}
+					echo "</select>
 					</div>
                 </div>
                 <div class='line'></div>
@@ -63,18 +69,6 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
         </div>
 
         <script>
-		// Add the quantity select to each item onload
-		function loadQuantity() {
-		  var qtySelect = '<select>';
-		  var i;
-		  for (i = 0; i < 13; i++) {
-		  	  qtySelect += '<option value='1'>1</option>';
-		  }
-		  qtySelect += '</select>';
-		  alert(qtySelect);
-
-		  document.getElementById('quantity" . $x . "').innerHTML = qtySelect;
-		}
 
         // Get the modal
         var modal" . $x . " = document.getElementById('$modelID');
@@ -85,7 +79,6 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
         // When the user clicks the button, open the modal 
         btn" . $x . ".onclick = function() {
           modal" . $x . ".style.display = 'block';
-		  loadQuantity();
 
         }
 
