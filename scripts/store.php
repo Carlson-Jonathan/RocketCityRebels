@@ -34,7 +34,7 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
 	$qtySelect = '';
 	$qtySelect .= '<select>';
 	for ($i = 0; $i < $quantity; $i++) {
-	$qtySelect .= "option value='" . $i . "'>" . $i . "</option>";
+	$qtySelect .= "<option value='" . $i . "'>" . $i . "</option>";
 	}
 	$qtySelect .= "</select>";
     
@@ -85,9 +85,9 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
         }
 
         // When the user clicks anywhere, close the modal
-        modal" . $x . ".onclick=function() {
-            modal" . $x . ".style.display = 'none';
-        }
+        //modal" . $x . ".onclick=function() {
+       //     modal" . $x . ".style.display = 'none';
+       // }
 
         </script>
     ";
