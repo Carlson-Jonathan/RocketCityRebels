@@ -8,8 +8,3 @@
 var path = window.location.pathname;
 var page = path.split("/").pop();
 document.getElementById(page).classList.add("thispage");
-
-if (page == 'store.php') {
-    var nav = document.getElementById('navigation');
-    nav.insertAdjacentElement('afterend', '<div><p>store baby</p></div>');
-}
