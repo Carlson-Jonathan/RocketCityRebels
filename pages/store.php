@@ -49,8 +49,7 @@
         <script>
             document.getElementById("pagetitle").innerHTML = "Rad Rebel Merch";
 
-			var nav = document.getElementById('navigation');
-			nav.insertAdjacentElement('afterend', '<div><p>store baby</p></div>');
+			document.getElementById('navigation').insertAdjacentElement('afterend', '<div><p>Hello</p></div>');
         </script>
 
     </main>
