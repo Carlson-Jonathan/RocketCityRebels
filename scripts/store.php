@@ -5,11 +5,10 @@
 * Author:
 *   Jonathan Carlson, Kyle Kadous
 * Description:   
-*   The skaters page contains 4 sections of participants as named by the files
-*   shown above. Each of these sections requires a file containing the below
-*   code, which accesses a specific table from the Rebels database, displays 
-*   the content in the appropriate section, and generates a pop-up window on 
-*   click.
+*   Almost identical to the /scripts/clothing.php page, each row in the 
+*   store table will be displayed on the page with a picture and name of
+*   an item. A Modal will appear when an item is selected, displaying the 
+*   items description, price, and a quantity selector. 
 ******************************************************************************/
 
 /************************************************************************** 
@@ -31,6 +30,13 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
 
     $btnID = "myBtn" . $x;
     $modelID = "myModel" . $x;
+
+	$qtySelect = '';
+	$qtySelect .= '<select>';
+	for ($i = 1; $i <= $quantity; $i++) {
+	$qtySelect .= "<option value='" . $i . "'>" . $i . "</option>";
+	}
+	$qtySelect .= "</select>";
     
 
     /**********************************************************************
@@ -53,7 +59,10 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
                     </span><br>
                     <span class='popuptext'>Price:
                     </span><br> $price</p><br>
-                    <span class='popuptext'>Select Quantity</span><br>
+                    <span class='popuptext'>Quantity</span><br>
+					<div id='quantity" . $x . "'>
+					$qtySelect
+					</div>
                 </div>
                 <div class='line'></div>
                 <p style='margin-top: 15px; text-align: left'>
@@ -62,6 +71,7 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
         </div>
 
         <script>
+
         // Get the modal
         var modal" . $x . " = document.getElementById('$modelID');
 
@@ -71,12 +81,13 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
         // When the user clicks the button, open the modal 
         btn" . $x . ".onclick = function() {
           modal" . $x . ".style.display = 'block';
+
         }
 
         // When the user clicks anywhere, close the modal
-        modal" . $x . ".onclick=function() {
-            modal" . $x . ".style.display = 'none';
-        }
+        //modal" . $x . ".onclick=function() {
+       //     modal" . $x . ".style.display = 'none';
+       // }
 
         </script>
     ";
