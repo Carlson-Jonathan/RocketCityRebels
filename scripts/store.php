@@ -68,7 +68,8 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
 		  var qtySelect = '<select>';
 		  var i;
 		  for (i = 0; i < $quantity; i++) {
-		  	  qtySelect += '<option value='$quantity'>quantity</option>';
+		  	  qtySelect += '<option value='$quantity'>$quantity</option>';
+			  console.log(qtySelect);
 		  }
 		  qtySelect += '</select>';
 		  console.log(qtySelect);
