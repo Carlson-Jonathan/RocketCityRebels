@@ -34,6 +34,38 @@ while ($row = $clothingItems->fetch(PDO::FETCH_ASSOC)) {
 
     $clbtnID = "clBtn" . $x;
     $clmodelID = "clModel" . $x;
+
+	// Create qty select for small
+	$qtySmall = '';
+	$qtySmall .= '<select>';
+	for ($i = 1; $i <= $small; $i++) {
+	$qtySmall .= "<option value='" . $i . "'>" . $i . "</option>";
+	}
+	$qtySmall .= "</select>";
+
+	// Create qty select for medium
+	$qtyMedium = '';
+	$qtyMedium .= '<select>';
+	for ($i = 1; $i <= $medium; $i++) {
+	$qtyMedium .= "<option value='" . $i . "'>" . $i . "</option>";
+	}
+	$qtyMedium .= "</select>";
+
+	// Create qty select for large
+	$qtyLarge = '';
+	$qtyLarge .= '<select>';
+	for ($i = 1; $i <= $large; $i++) {
+	$qtyLarge .= "<option value='" . $i . "'>" . $i . "</option>";
+	}
+	$qtyLarge .= "</select>";
+
+	// Create qty select for xlarge
+	$qtyXLarge = '';
+	$qtyXLarge .= '<select>';
+	for ($i = 1; $i <= $xlarge; $i++) {
+	$qtyXLarge .= "<option value='" . $i . "'>" . $i . "</option>";
+	}
+	$qtyXLarge .= "</select>";
     
 
     /**********************************************************************
@@ -56,9 +88,21 @@ while ($row = $clothingItems->fetch(PDO::FETCH_ASSOC)) {
                     <span class='popuptext'>Price
                     </span><br> $price</p><br>
                     <span class='popuptext'>Small</span><br>
+					<div id='smallQty" . $x . "'>
+					$qtySmall
+					</div>
                     <span class='popuptext'>Medium</span><br> 
+					<div id='mediumQty" . $x . "'>
+					$qtyMedium
+					</div>
                     <span class='popuptext'>Large</span><br> 
+					<div id='largeQty" . $x . "'>
+					$qtyLarge
+					</div>
                     <span class='popuptext'>XLarge</span><br>  
+					<div id='xlargeQty" . $x . "'>
+					$qtyXLarge
+					</div>
                 </div>
                 <div class='line'></div>
                 <p style='margin-top: 15px; text-align: left'>

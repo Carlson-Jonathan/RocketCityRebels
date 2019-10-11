@@ -33,7 +33,7 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
 
 	$qtySelect = '';
 	$qtySelect .= '<select>';
-	for ($i = 0; $i < $quantity; $i++) {
+	for ($i = 1; $i <= $quantity; $i++) {
 	$qtySelect .= "<option value='" . $i . "'>" . $i . "</option>";
 	}
 	$qtySelect .= "</select>";
