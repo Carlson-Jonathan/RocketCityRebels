@@ -59,7 +59,7 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
                     </span><br>
                     <span class='popuptext'>Price:
                     </span><br> $price</p><br>
-                    <span class='popuptext'>Select Quantity</span><br>
+                    <span class='popuptext'>Quantity</span><br>
 					<div id='quantity" . $x . "'>
 					$qtySelect
 					</div>

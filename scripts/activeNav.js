@@ -8,3 +8,4 @@
 var path = window.location.pathname;
 var page = path.split("/").pop();
 document.getElementById(page).classList.add("thispage");
+alert(page);

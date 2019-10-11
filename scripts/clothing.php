@@ -5,11 +5,10 @@
 * Author:
 *   Jonathan Carlson, Kyle Kadous
 * Description:   
-*   The skaters page contains 4 sections of participants as named by the files
-*   shown above. Each of these sections requires a file containing the below
-*   code, which accesses a specific table from the Rebels database, displays 
-*   the content in the appropriate section, and generates a pop-up window on 
-*   click.
+*   Almost identical to the /scripts/store.php page, each row in the 
+*   clothing table will be displayed on the page with a picture and name of
+*   an item. A Modal will appear when an item is selected, displaying the 
+*   items description, price, and a quantity selector for each size.
 ******************************************************************************/
 
 /************************************************************************** 
