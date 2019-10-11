@@ -31,6 +31,12 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
     $btnID = "myBtn" . $x;
     $modelID = "myModel" . $x;
 
+	$qtySelect = '';
+	$qtySelect .= '<select>';
+	for ($i = 0; $i < $quantity; $i++) {
+	$qtySelect .= "option value='" . $i . "'>" . $i . "</option>";
+	}
+	$qtySelect .= "</select>";
     
 
     /**********************************************************************
@@ -55,11 +61,7 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
                     </span><br> $price</p><br>
                     <span class='popuptext'>Select Quantity</span><br>
 					<div id='quantity" . $x . "'>
-					<select>";
-					for ($i = 0; $i < $quantity; $i++) {
-						echo "option value='" . $i . "'>"$i"</option>";
-					}
-					echo "</select>
+					$qtySelect
 					</div>
                 </div>
                 <div class='line'></div>
