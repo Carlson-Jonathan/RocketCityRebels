@@ -90,6 +90,8 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
             modal" . $x . ".style.display = 'none';
         }
 
+		alert('$qtySelect');
+
         </script>
     ";
     $x++;
