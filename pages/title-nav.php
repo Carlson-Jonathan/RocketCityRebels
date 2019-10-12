@@ -43,6 +43,9 @@
     <div id='shift'>
     <?php require ($_SERVER['DOCUMENT_ROOT'].'/scripts/admin/bootcampheader.php');?>
     </div>
+
+	<div id='shoppingCart'>
+	</div>
     
     <script src="../scripts/hamburger.js"></script>
     <script src="../scripts/activeNav.js">
