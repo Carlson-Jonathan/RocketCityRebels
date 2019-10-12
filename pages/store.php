@@ -7,6 +7,7 @@
 
     <meta name="description" content="Get your Rocket City Rebel merch here at our online store and show your friends that you support the rebels and the fitness of the children of Madison, Alabama.">    
 	<link id="styles" rel="stylesheet" href="../styles/skaters.css">
+	<link id="styles" rel="stylesheet" href="../styles/store.css">
 </head>
 <body>
 
@@ -49,7 +50,7 @@
         <script>
             document.getElementById("pagetitle").innerHTML = "Rad Rebel Merch";
 
-			document.getElementById('shoppingCart').innerHTML = "<div><p>Hello</p></div>";
+			document.getElementById('shoppingCart').innerHTML = "<div id='cartDiv'><button id='shoppingCart' class='.btn'><span class='cart'></span>Cart</div>";
         </script>
 
     </main>
