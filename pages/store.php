@@ -50,7 +50,7 @@
         <script>
             document.getElementById("pagetitle").innerHTML = "Rad Rebel Merch";
 
-			document.getElementById('shoppingCart').innerHTML = "<div id='cartDiv'><button id='shoppingCart' class='.btn'><span class='cart'></span>Cart</div>";
+			document.getElementById('shoppingCart').innerHTML = "<div id='cartDiv'><button id='shoppingCart' class='btn'><span class='cart'></span>Cart</div>";
         </script>
 
     </main>
