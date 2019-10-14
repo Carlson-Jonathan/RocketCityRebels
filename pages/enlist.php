@@ -49,7 +49,7 @@
         <h2>What We Do</h2>    
         <div class="row2">
             <div class="columnleft2">
-                <img class="boximage" src="../images/derbygirl.jpg">
+                <img class="boximage" src="../images/EnlistPage/derbygirl.jpg">
             </div>
 
             <div class="columnright2">

@@ -72,7 +72,7 @@ while($row = $refList->fetch(PDO::FETCH_ASSOC)) {
                     <span class='close' id='$rclose'>&times;</span>   
                     
                     <form method='POST' action='../scripts/admin/editPerson.php'>
-                        <img src='../images/portraits/$image'
+                        <img src='../images/skaterspage/portraits/$image'
                         alt='Image file not found' class='innerpic'>
                     
                     <div class='textblock'>

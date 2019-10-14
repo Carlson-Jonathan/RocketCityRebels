@@ -41,7 +41,7 @@
                 
             </div>
             <div class="columnright homeR">
-                <img src="images/poster.jpg" width="100%">
+                <img src="images/HomePage/poster.jpg" width="100%">
             </div>
         </div>
         <!-------------------------------------------------------------------->

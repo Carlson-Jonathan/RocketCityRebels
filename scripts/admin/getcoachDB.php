@@ -70,7 +70,7 @@ while($row = $coachList->fetch(PDO::FETCH_ASSOC)) {
                 <div class='modal-content'>
                     <span class='close' id='$cclose'>&times;</span>   
                     <form method='POST' action='../scripts/admin/editPerson.php'>
-                        <img src='../images/portraits/$image'
+                        <img src='../images/skaterspage/portraits/$image'
                         alt='Image file not found' class='innerpic'>
                     
                     <div class='textblock'>

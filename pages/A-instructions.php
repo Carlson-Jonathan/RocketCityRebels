@@ -39,7 +39,7 @@
 
                 The navigation menu of this site will take you to other administrative 
                 sections where you can make changes to the corresponding pages. If 
-                you wish to return to the main site’s home page, simply by click 
+                you wish to return to the main site’s home page, simply click 
                 “RETURN” on the navigation bar. Changes made in the administrative 
                 section take effect immediately. <br><br>
                 
@@ -68,13 +68,13 @@
                     to create a connection.</li>
                 <li>Configure Filezilla to connect using the below settings 
                     (get password from president):</li>
-                <img src="../images/PagePhotos/AdminSite/Filezilla.jpg" 
+                <img src="../images/AdminSite/Filezilla.jpg" 
                      style="text-align: center" width="100%"><br><br>
                 <li>Navigate to the folder containing the images. They will all 
                     be under "public_html/images". <br>
                 CAUTION: Do not touch any of the other folders. You will likely 
                     break the website if you do!</li>
-                <img src="../images/PagePhotos/AdminSite/Filezilla2.jpg" 
+                <img src="../images/AdminSite/Filezilla2.jpg" 
                      style="text-align: center" width="100%">
                 <li>The folders in the left column show the files on your hard drive. 
                     The folders in the right
