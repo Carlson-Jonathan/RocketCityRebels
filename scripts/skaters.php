@@ -18,7 +18,7 @@
 * element ID which allows specific information to be displayed when any
 * individual element is clicked on. 
 **************************************************************************/
-$skaterPortraits = $db->prepare("SELECT * FROM skaters");
+$skaterPortraits = $db->prepare("SELECT * FROM skaters ORDER BY start");
 $skaterPortraits->execute();
 $x = 1;
 
