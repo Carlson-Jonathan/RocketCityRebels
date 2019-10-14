@@ -199,6 +199,10 @@
                     <li>Wrist Guards</li>
                     <li>Moldable Mouth Guard</li>
                 </ul>
+                <a href="https://www.derbywarehouse.com/"><h4 style="font-size: 
+                    36px; text-align: center; background-color: #251010; padding: 
+                    7px; border-radius: 100px">Get Your Equipment Here</h4></a>
+                <p class="darktext" style="font-size: 14px; text-align: center">Mention the Rocket City Rebels for a discount!</p>
                 
                 <div class="line"></div>
                 
