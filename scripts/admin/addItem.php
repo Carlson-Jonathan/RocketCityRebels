@@ -4,6 +4,8 @@
 ***************************************************************************/
 require($_SERVER['DOCUMENT_ROOT'].'/scripts/dbsetup.php');
 
+echo '<script>window.location.href = "../../pages/A-store.php";</script>';
+
 // Security
 function test_input($data) {
     $data = trim($data);

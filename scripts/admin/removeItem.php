@@ -5,6 +5,8 @@
 *****************************************************************************/
 require($_SERVER['DOCUMENT_ROOT'].'/scripts/dbsetup.php');
 
+echo '<script>window.location.href = "../../pages/A-store.php";</script>';
+
 if(isset($_GET['item_id']))
     $item_id = htmlspecialchars($_GET['item_id']);
 else

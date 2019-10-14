@@ -235,7 +235,6 @@
         </div>
         
         <!-------------------------------------------------------------------->     
-        
         <script>
         // Adjustments to CSS when boot camp is in season
             document.getElementById("pagetitle").innerHTML = "Become a Rebel";
@@ -248,7 +247,7 @@
                 document.getElementById("onseason").style.display = "block";
             }
             else
-                document.getElementById("start").style.margin = "58px";
+                document.getElementById("start").style.margin = "153px";
         </script>
         
     </main>

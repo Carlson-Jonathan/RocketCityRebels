@@ -6,6 +6,9 @@
 * Description:
 *   This is the server-side code that enables the contact form to send emails.
 ******************************************************************************/
+
+echo '<script>window.location.href = "../../pages/more.php";</script>';
+
 // Security
 function test_input($data) {
     $data = trim($data);

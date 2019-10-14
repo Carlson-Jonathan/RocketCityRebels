@@ -5,6 +5,8 @@
 *****************************************************************************/
 require($_SERVER['DOCUMENT_ROOT'].'/scripts/dbsetup.php');
 
+echo '<script>window.location.href = "../../pages/A-skaters.php";</script>';
+
 if(isset($_GET['person_id']))
     $person_id = htmlspecialchars($_GET['person_id']);
 else
