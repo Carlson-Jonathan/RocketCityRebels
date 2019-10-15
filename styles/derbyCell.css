@@ -109,10 +109,7 @@ li a.active {
 .indent {
     margin-left: 50px;
 }
-/******************************************************
-* These are the CSS properties to create the box 
-* templates. Default column widths are 25% and 75%.
-******************************************************/
+
 @media only screen and (max-width: 700px) and (max-resolution: 1.25dppx) {
     #movie {
         z-index: -1;
@@ -128,6 +125,11 @@ li a.active {
     }
 }
 
+/******************************************************
+* These are the CSS properties to create the box 
+* templates. Default column widths are 25% and 75%.
+******************************************************/
+
 .columnleft, .columnright {
     color: white;
     width: 100%;
@@ -139,7 +141,8 @@ li a.active {
 }
 
 .boximage {
-    display: none;
+    height: auto;
+    text-align: center;
 }
 
 .boximagehome {

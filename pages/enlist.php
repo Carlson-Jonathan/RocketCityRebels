@@ -47,7 +47,7 @@
         <h2>What We Do</h2>    
         <div class="row2">
             <div class="columnleft2">
-                <img class="boximage" src="../images/EnlistPage/derbygirl.jpg">
+                <img class="boximage phonehide" src="../images/EnlistPage/derbygirl.jpg">
             </div>
 
             <div class="columnright2">
@@ -123,7 +123,9 @@
             </div>
 
             <div class="columnright">
-                <img class="boximage" src="../images/logo.webp" style="margin-bottom: 20px">
+                <div class="boximage">
+                    <img src="../images/EnlistPage/RR3.jpg" style="margin-bottom: 20px">
+                </div>
                 
                 <p class="lighttext" id="bcinfo">Enrollment closes in<br>
                     <span style="font-size: 56px; line-height: 56px">    
@@ -151,13 +153,13 @@
         <h2>Player and Parental Commitments</h2>    
         <div class="row2">
             <div class="columnleft2">
-                <img class="boximage" src="../images/logo.webp">
-                <div class="start"></div>
-                <img class="boximage" src="../images/logo.webp">
-                <div class="start"></div>
-                <img class="boximage" src="../images/logo.webp">
-                <div class="start"></div>
-                <img class="boximage" src="../images/logo.webp">
+                <div class="boximage">
+                    <img src="../images/EnlistPage/RR6.jpg" class="phonehide" style="margin-bottom: 80px">
+                    <img src="../images/EnlistPage/RR1.jpg" class="phonehide" style="margin-bottom: 80px">
+                    <img src="../images/EnlistPage/RR5.jpg" class="phonehide" style="margin-bottom: 80px">
+                    <img src="../images/EnlistPage/RR4.jpg" class="phonehide" style="margin-bottom: 80px">
+                    <img src="../images/EnlistPage/RR2.jpg" style="margin-bottom: 20px">
+                </div>
             </div>
 
             <div class="columnright2">
