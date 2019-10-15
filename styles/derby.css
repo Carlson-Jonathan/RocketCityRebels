@@ -246,6 +246,10 @@ li a.active {
 .calendar {
     color: white;
 }
+   
+#movie {
+    height: 500px;
+}
 
 /******************************************************
 * Used to highlight active navigation bar tab.

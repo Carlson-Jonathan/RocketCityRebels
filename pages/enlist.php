@@ -38,11 +38,9 @@
     <main>
         
         <!-------------------------------------------------------------------->
-        <div class="embed-responsive embed-responsive-16by9" id="movie">
             <iframe src="https://www.youtube.com/embed/a4Jcieddb60" 
-                    frameborder="0" allow="accelerometer; encrypted-media; 
-                    gyroscope; picture-in-picture" allowfullscreen ></iframe>
-        </div>
+                    frameborder="0" width="100%" height="500px" allow="accelerometer; encrypted-media; 
+                    gyroscope; picture-in-picture" id="movie" allowfullscreen ></iframe>
         
         <!-------------------------------------------------------------------->
         
