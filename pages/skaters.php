@@ -34,7 +34,7 @@
     ?>
 
     <main>
-        <h2>Rocket City Rebels Team</h2>
+        <h2 style="padding-bottom: 10px">Rocket City Rebels Team</h2>
         <img src="../images/skaterspage/TeamPicture.jpg" style="width: 100%"><br><br>
         
         <!-------------------------------------------------------------------->

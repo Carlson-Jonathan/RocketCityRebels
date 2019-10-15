@@ -39,7 +39,7 @@
             
             </div>
             <div class="columnright">
-                <img src='../images/logo.webp' style="width: 100%">
+                <img src='../images/sponsors/huddle.jpg' style="width: 100%; margin: 20px 0; border-radius: 15px; border: solid #aad400 1px">
             </div>
         </div>
         
@@ -47,8 +47,8 @@
 
         <h2>Advertisment Packages</h2>    
         <div class="row2">
-            <div class="columnleft2">
-                <img src='../images/logo.webp' style="width: 100%">
+            <div class="columnleft2 phonehide">
+                <img src='../images/sponsors/Sat5.jpg' style="width: 100%; margin-top: 415px">
             </div>
 
             <div class="columnright2">

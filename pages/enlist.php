@@ -154,10 +154,10 @@
         <div class="row2">
             <div class="columnleft2">
                 <div class="boximage">
-                    <img src="../images/EnlistPage/RR6.jpg" class="phonehide" style="margin-bottom: 80px">
-                    <img src="../images/EnlistPage/RR1.jpg" class="phonehide" style="margin-bottom: 80px">
-                    <img src="../images/EnlistPage/RR5.jpg" class="phonehide" style="margin-bottom: 80px">
-                    <img src="../images/EnlistPage/RR4.jpg" class="phonehide" style="margin-bottom: 80px">
+                    <img src="../images/EnlistPage/RR6.jpg" class="phonehide" style="margin-bottom: 75px">
+                    <img src="../images/EnlistPage/RR1.jpg" class="phonehide" style="margin-bottom: 75px">
+                    <img src="../images/EnlistPage/RR5.jpg" class="phonehide" style="margin-bottom: 75px">
+                    <img src="../images/EnlistPage/RR4.jpg" class="phonehide" style="margin-bottom: 75px">
                     <img src="../images/EnlistPage/RR2.jpg" style="margin-bottom: 20px">
                 </div>
             </div>
@@ -202,8 +202,6 @@
                 <a href="https://www.derbywarehouse.com/"><h4 style="font-size: 
                     36px; text-align: center; background-color: #251010; padding: 
                     7px; border-radius: 100px">Get Your Equipment Here</h4></a>
-                <p class="darktext" style="font-size: 14px; text-align: center">Mention the Rocket City Rebels for a discount!</p>
-                
                 <div class="line"></div>
                 
 
