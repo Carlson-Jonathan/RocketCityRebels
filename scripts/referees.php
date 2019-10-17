@@ -61,11 +61,6 @@ while ($row = $refereePortraits->fetch(PDO::FETCH_ASSOC)) {
                     </span>
                     <p>$position</p><br>
 
-                    <span class='popuptext'>
-                        Filler:</span><br>
-                    </span>
-                    <p>$filler</p><br>
-
                     <p>Referee since " . adjust_date($start) . "</p><br>
 
                 </div>
