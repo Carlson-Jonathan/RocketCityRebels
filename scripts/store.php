@@ -22,7 +22,8 @@ $storeItems->execute();
 $x = 1;
 
 while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
-    $name = $row['name'];
+    $item_id = $row['item_id'];
+	$name = $row['name'];
     $price = $row['price'];
     $description = $row['description'];
     $quantity = $row['quantity'];
@@ -32,7 +33,7 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
     $modelID = "myModel" . $x;
 
 	$qtySelect = '';
-	$qtySelect .= '<select>';
+	$qtySelect .= '<select name="selectQty' . $x . '">';
 	for ($i = 1; $i <= $quantity; $i++) {
 	$qtySelect .= "<option value='" . $i . "'>" . $i . "</option>";
 	}
@@ -58,13 +59,23 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
                 <div class='textblock'>
                     <span class='popuptext'>$name
                     </span><br>
-                    <span class='popuptext'>Price:
+                    <span class='popuptext'>Price: 
                     </span><br> $price</p><br>
                     <span class='popuptext'>Quantity</span><br>
-					<div id='quantity" . $x . "'>
-					$qtySelect
-					</div>
+					<form action='' method='post'>
+						<div id='quantity" . $x . "' name='quantity" . $x . "'>
+							$qtySelect
+						</div>
+						<div class='textblock' id='addItemsDiv'>
+							<input type='hidden' name='itemId" . $x . "' value='" . $item_id . "'>
+							<input type='hidden' name='itemName" . $x . "' value='" . $name . "'>
+							<input type='hidden' name='itemPrice" . $x . "' value='" . $price . "'>
+							<input type='hidden' name='availableQty" . $x . "' value='" . $quantity . "'>
+							<button type='submit' name='AddItem" . $x . "' value='Add to cart'>				
+						</div>
+					</form>
                 </div>
+				
                 <div class='line'></div>
                 <p style='margin-top: 15px; text-align: left'>
                 $description</p>
@@ -98,6 +109,15 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
 
         </script>
     ";
+
+	// On Form Post set Session variables
+	if (isset($_POST['AddItem' . $x])) {
+		
+		// $_SESSION['picturenum'] = $_POST['picturenum'];
+	} 
+
+
+
     $x++;
 }
 ?>
