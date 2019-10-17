@@ -33,7 +33,7 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
     $modelID = "myModel" . $x;
 
 	$qtySelect = '';
-	$qtySelect .= '<select name="selectQty' . $x . '">';
+	$qtySelect .= '<select name="selectQty">';
 	for ($i = 1; $i <= $quantity; $i++) {
 	$qtySelect .= "<option value='" . $i . "'>" . $i . "</option>";
 	}
@@ -70,10 +70,10 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
 							$qtySelect
 						</div>
 						<div class='textblock' id='addItemsDiv'>
-							<input type='hidden' name='itemId" . $x . "' value='" . $item_id . "'>
-							<input type='hidden' name='itemName" . $x . "' value='" . $name . "'>
-							<input type='hidden' name='itemPrice" . $x . "' value='" . $price . "'>
-							<input type='hidden' name='availableQty" . $x . "' value='" . $quantity . "'>
+							<input type='hidden' name='itemId' value='" . $item_id . "'>
+							<input type='hidden' name='itemName' value='" . $name . "'>
+							<input type='hidden' name='itemPrice' value='" . $price . "'>
+							<input type='hidden' name='availableQty' value='" . $quantity . "'>
 							<button type='submit' name='AddItem" . $x . "'>Add to cart</button>		
 							<p>$itemArray</p>
 						</div>
@@ -114,18 +114,17 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
         </script>
     ";
 	// On Form Post set Session variables
-	if (isset($_POST['AddItem' . $x])) {
-	$_SESSION['item2']['name'] = 'heello';
-		//$_SESSION['item' . $x] = array (
-			//'item_id' => $_POST['itemID' . $x],
-	//		'name' => $_POST['itemName' . $x],
-	//		'price' => $_POST['itemPrice' . $x],
-	//		'qty' => $_POST["availableQty" . $x],
-	//		'selectQty' => $_POST['selectQty' . $x],
-	//	);
+	// Set all variables
+	$AddItem = "AddItem" . $x;
+	if (isset($_POST[$AddItem])) {
+		$_SESSION['item' . $x] = array (
+			'item_id' => $_POST['itemID'],
+			'name' => $_POST['itemName'],
+			'price' => $_POST['itemPrice'],
+			'qty' => $_POST["availableQty"],
+			'selectQty' => $_POST['selectQty'],
+		);
 	} 
-
-	$_SESSION['item' . $x]['name'] = 'heello';
 
 
 
