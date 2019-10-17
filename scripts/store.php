@@ -116,7 +116,7 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
 	// On Form Post set Session variables
 	// Set all variables
 	$AddItem = "AddItem" . $x;
-	if (isset($_POST['AddItem' . $x])) {
+	if (isset($_POST[$AddItem])) {
 	$_SESSION['test'] = "hey";
 		$_SESSION['item' . $x] = array (
 			'item_id' => $_POST['itemID'],
