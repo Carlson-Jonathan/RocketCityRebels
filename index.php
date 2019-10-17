@@ -32,7 +32,7 @@
                     roller derby team in north Alabama for skaters ages 8 to 18 
                     who are dedicated to learning the sport. Coaches teach 
                     skaters to respect themselves, teammates, coaches, 
-                    officials, fans and opponents. All of this knowledge is 
+                    officials, fans, and opponents. All of this knowledge is 
                     used to build healthy bodies, healthy minds, and healthy 
                     lifestyles on and off the track. Roller derby is a very 
                     physically and emotionally demanding sport. It is also a 

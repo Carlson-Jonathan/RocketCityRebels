@@ -52,11 +52,11 @@
 
             <div class="columnright2">
                 <p class="darktext">
-                    Established in 2011 the Rocket City Rebels is Alabama’s 
+                    Established in 2011, the Rocket City Rebels is Alabama’s 
                     first Junior Roller Derby team.  We are a co-ed team with 
                     skaters ranging from 8-18 years old who are dedicated to 
                     learning the sport.  We pride ourselves on building healthy 
-                    bodies, minds and lifestyles for our skaters on and off the 
+                    bodies, minds, and lifestyles for our skaters on and off the 
                     track.  Our coaches teach skaters respect not only 
                     themselves but their teammates, coaches, officials, fans 
                     and opponents. Roller derby is an inclusive sport that is 
@@ -64,14 +64,14 @@
                     abilities. <br><br>
                     
                     The Rebels practice twice a week on Mondays and Wednesdays 
-                    from 6-8pm at Insanity complex. (100 Skate Park drive 
+                    from 6-8pm at Insanity Complex. (100 Skate Park Drive 
                     Madison Al, 35758).  Mondays are dedicated to skill and 
                     strength building drills and exercises while Wednesdays are 
-                    set aside for Scrimmaging and game play practice. <br><br>
+                    set aside for scrimmaging and game play practice. <br><br>
                     
                     Home games are typically played once a month from March 
                     through August. Most games are played by the “Charter” 
-                    team (high level more experience players)  but we build 1 
+                    team (high level, more experience players) but we hold 1 
                     or 2 team mixers per season that all skaters are invited 
                     to participate in.
                 </p>
@@ -87,7 +87,7 @@
                 <p class="lighttext">
                     The Rocket City Rebels hosts a 4-day Boot Camp once a year 
                     in the fall. Boot camp dates will be announced on our 
-                    facebook page and will be listed on our 
+                    Facebook page and will be listed on our 
                     <a href="../pages/schedule.php">schedule page</a>. During 
                     this camp new skaters will be taught how to skate derby style 
                     and learn the basic rules of derby.  At the end of bootcamp 
@@ -176,15 +176,14 @@
                     Monthly dues may be paid in person or through our 
                     <a href="../pages/store.php" style='text-decoration: underline'>online store page</a>. We 
                     recommend setting up automatic payments through Paypal.com 
-                    to assure timely payments.
+                    to ensure timely payments.
                 </p>
                 
                 <div class="line"></div>
                 
                 <h3>Required Purchases</h3>
                 <p class="darktext">
-                    A set of basic derby equipment will cost approximately $250 
-                    and up. Check the links below for suggested beginner 
+                    A set of basic derby equipment costs approximately $250, but can cost more. Check the link below for suggested beginner 
                     equipment. Each skater is required to have all of the below 
                     equipment at every practice and game.
                 </p>
@@ -225,7 +224,7 @@
                     
                 <h3>Volunteering</h3>
                 <p class="darktext">
-                    A member from each skater's family must voluteer their time 
+                    A member from each skater's family must volunteer their time 
                     to assist with 3 of the monthly bouts (games against other 
                     teams - 2.5 hours per bout). A family member of each skater 
                     must also volunteer at a minimum of 2 Saturday events (approx. 

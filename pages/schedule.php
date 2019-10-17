@@ -62,7 +62,7 @@
             ?>
             <div class='line'></div>
             <h3 style="color: #251010">
-                Upcomming Changes to Weekly Schedule
+                Upcoming Changes to Weekly Schedule
             </h3><br>
             <?php 
                 while ($row = $getScheduleChanges->fetch(PDO::FETCH_ASSOC)) {
@@ -91,7 +91,7 @@
                 
         <!-------------------------------------------------------------------->
         
-        <h2>Upcomming Games and Events</h2>
+        <h2>Upcoming Games and Events</h2>
         <div class="row">
             <div class="columnleft2">
                 <div class="boximage">
