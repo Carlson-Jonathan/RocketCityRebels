@@ -22,7 +22,8 @@ $clothingItems->execute();
 $x = 1;
 
 while ($row = $clothingItems->fetch(PDO::FETCH_ASSOC)) {
-    $name = $row['name'];
+    $item_id = $row['item_id'];
+	$name = $row['name'];
     $price = $row['price'];
     $description = $row['description'];
     $small = $row['small'];
@@ -36,7 +37,7 @@ while ($row = $clothingItems->fetch(PDO::FETCH_ASSOC)) {
 
 	// Create qty select for small
 	$qtySmall = '';
-	$qtySmall .= '<select>';
+	$qtySmall .= '<select name="selectSmall' . $x . '">';;
 	for ($i = 1; $i <= $small; $i++) {
 	$qtySmall .= "<option value='" . $i . "'>" . $i . "</option>";
 	}
@@ -44,7 +45,7 @@ while ($row = $clothingItems->fetch(PDO::FETCH_ASSOC)) {
 
 	// Create qty select for medium
 	$qtyMedium = '';
-	$qtyMedium .= '<select>';
+	$qtyMedium .= '<select name="selectMedium' . $x . '">';
 	for ($i = 1; $i <= $medium; $i++) {
 	$qtyMedium .= "<option value='" . $i . "'>" . $i . "</option>";
 	}
@@ -52,7 +53,7 @@ while ($row = $clothingItems->fetch(PDO::FETCH_ASSOC)) {
 
 	// Create qty select for large
 	$qtyLarge = '';
-	$qtyLarge .= '<select>';
+	$qtyLarge .= '<select name="selectLarge' . $x . '">';
 	for ($i = 1; $i <= $large; $i++) {
 	$qtyLarge .= "<option value='" . $i . "'>" . $i . "</option>";
 	}
@@ -60,7 +61,7 @@ while ($row = $clothingItems->fetch(PDO::FETCH_ASSOC)) {
 
 	// Create qty select for xlarge
 	$qtyXLarge = '';
-	$qtyXLarge .= '<select>';
+	$qtyXLarge .= '<select name="selectXLarge' . $x . '">';
 	for ($i = 1; $i <= $xlarge; $i++) {
 	$qtyXLarge .= "<option value='" . $i . "'>" . $i . "</option>";
 	}
@@ -74,17 +75,18 @@ while ($row = $clothingItems->fetch(PDO::FETCH_ASSOC)) {
     **********************************************************************/
     echo "
         <div class='gallery' id='$clbtnID'>
-            <img src='../images/portraits/$image
+            <img src='../images/store/$image
             ' alt='Image file not found'>
         </div>
 
         <div id='$clmodelID' class='modal'>
             <div class='modal-content'>
+			<button data-dismiss='modal' class='close' id='exitClBtn" . $x . "'>x</button>
                 <img src='../images/store/$image
                 ' alt='Image file not found' class='innerpic'>
                 <div class='textblock'>
                     <span class='popuptext'>$name</span><br>
-                    <span class='popuptext'>Price
+                    <span class='popuptext'>Price: 
                     </span><br> $price</p><br>
                     <span class='popuptext'>Small</span><br>
 					<div id='smallQty" . $x . "'>
@@ -121,10 +123,16 @@ while ($row = $clothingItems->fetch(PDO::FETCH_ASSOC)) {
           clmodal" . $x . ".style.display = 'block';
         }
 
-        // When the user clicks anywhere, close the modal
-        clmodal" . $x . ".onclick=function() {
-            clmodal" . $x . ".style.display = 'none';
+		// When the user clicks the exit button, close the modal 
+        exitClBtn" . $x . ".onclick = function() {
+          clmodal" . $x . ".style.display = 'none';
+
         }
+
+        // When the user clicks anywhere, close the modal
+        //clmodal" . $x . ".onclick=function() {
+      //      clmodal" . $x . ".style.display = 'none';
+       // }
 
         </script>
     ";

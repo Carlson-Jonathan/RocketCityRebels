@@ -13,6 +13,8 @@
 
     <?php include "title-nav.php";
 	require "../scripts/dbsetup.php"; 
+	 // starting the session
+	session_start();
 
 	?>
 
