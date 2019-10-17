@@ -52,7 +52,7 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
 
         <div id='$modelID' class='modal'>
             <div class='modal-content'>
-			<button data-dismiss='modal' class="close" id='exitBtn" . $x . "'>×</button>
+			<button data-dismiss='modal' class='close' id='exitBtn" . $x . "'>×</button>
                 <img src='../images/store/$image
                 ' alt='Image file not found' class='innerpic'>
                 <div class='textblock'>
