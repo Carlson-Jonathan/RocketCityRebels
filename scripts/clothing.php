@@ -80,6 +80,7 @@ while ($row = $clothingItems->fetch(PDO::FETCH_ASSOC)) {
 
         <div id='$clmodelID' class='modal'>
             <div class='modal-content'>
+			<button data-dismiss='modal' class='close' id='exitClBtn" . $x . "'>x</button>
                 <img src='../images/store/$image
                 ' alt='Image file not found' class='innerpic'>
                 <div class='textblock'>
@@ -121,10 +122,16 @@ while ($row = $clothingItems->fetch(PDO::FETCH_ASSOC)) {
           clmodal" . $x . ".style.display = 'block';
         }
 
-        // When the user clicks anywhere, close the modal
-        clmodal" . $x . ".onclick=function() {
-            clmodal" . $x . ".style.display = 'none';
+		// When the user clicks the exit button, close the modal 
+        exitClBtn" . $x . ".onclick = function() {
+          clmodal" . $x . ".style.display = 'none';
+
         }
+
+        // When the user clicks anywhere, close the modal
+        //clmodal" . $x . ".onclick=function() {
+      //      clmodal" . $x . ".style.display = 'none';
+       // }
 
         </script>
     ";
