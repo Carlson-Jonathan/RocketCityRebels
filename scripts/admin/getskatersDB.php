@@ -81,7 +81,7 @@ while($row = $skaterList->fetch(PDO::FETCH_ASSOC)) {
                     
                     <form method='POST' action='../scripts/admin/editPerson.php'>
                         
-                        <img src='../images/portraits/$image' alt='Image file not found' class='innerpic'>
+                        <img src='../images/skaterspage/portraits/$image' alt='Image file not found' class='innerpic'>
                         
                         <div class='textblock'>
                             <span class='popuptext'>Player name:</span><br>

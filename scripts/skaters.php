@@ -18,7 +18,7 @@
 * element ID which allows specific information to be displayed when any
 * individual element is clicked on. 
 **************************************************************************/
-$skaterPortraits = $db->prepare("SELECT * FROM skaters");
+$skaterPortraits = $db->prepare("SELECT * FROM skaters ORDER BY start");
 $skaterPortraits->execute();
 $x = 1;
 
@@ -41,13 +41,13 @@ while ($row = $skaterPortraits->fetch(PDO::FETCH_ASSOC)) {
     **********************************************************************/
     echo "
         <div class='gallery' id='$btnID'>
-            <img src='../images/portraits/$image
+            <img src='../images/skaterspage/portraits/$image
             ' alt='Image file not found'>
         </div>
 
         <div id='$modelID' class='modal'>
             <div class='modal-content'>
-                <img src='../images/portraits/$image
+                <img src='../images/skaterspage/portraits/$image
                 ' alt='Image file not found' class='innerpic'>
                 <div class='textblock'>
                     <span class='popuptext'>Player name:

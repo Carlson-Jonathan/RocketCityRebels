@@ -38,6 +38,7 @@ main {
     
 #start {
     display: block;
+    
 }
     
 .spLogos {
@@ -157,7 +158,8 @@ li a.active {
 }
 
 .columnright2 {
-    width: 75%;
+    width: 65%;
+    margin-left: 30px;
     padding: 0;
 }
 
@@ -244,6 +246,10 @@ li a.active {
 
 .calendar {
     color: white;
+}
+   
+#movie {
+    height: 500px;
 }
 
 /******************************************************

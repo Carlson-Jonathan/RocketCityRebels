@@ -41,13 +41,13 @@ while ($row = $boardPortraits->fetch(PDO::FETCH_ASSOC)) {
 
     echo "
         <div class='gallery' id='$bbtnID'>
-            <img src='../images/portraits/$image
+            <img src='../images/skaterspage/portraits/$image
             'alt='Image file not found'>
         </div>
 
         <div id='$bmodelID' class='modal'>
             <div class='modal-content'>
-                <img src='../images/portraits/$image
+                <img src='../images/skaterspage/portraits/$image
                 'alt='Image file not found' class='innerpic'>
 
                 <div class='textblock'>

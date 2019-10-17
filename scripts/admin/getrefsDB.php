@@ -22,7 +22,6 @@ echo "
             <th>Ref Name</th>
             <th>Position</th>
             <th>Start Date</th>
-            <th>Filler</th>
             <th>Image File</th>
             <th style='text-align: center'>Profile</th>
         </tr>
@@ -58,7 +57,6 @@ while($row = $refList->fetch(PDO::FETCH_ASSOC)) {
             <td><p class='darktext'>$name</p></td>
             <td><p class='darktext'>$position</p></td>
             <td><p class='darktext'>" . format_date($start) . "</p></td>
-            <td><p class='darktext'>$filler</p></td>
             <td><p class='darktext'>$image</p></td>
             <td style='text-align: center'>
             <button type='text' class='edit' id='$rbtnID'>Edit</button></td>
@@ -72,7 +70,7 @@ while($row = $refList->fetch(PDO::FETCH_ASSOC)) {
                     <span class='close' id='$rclose'>&times;</span>   
                     
                     <form method='POST' action='../scripts/admin/editPerson.php'>
-                        <img src='../images/portraits/$image'
+                        <img src='../images/skaterspage/portraits/$image'
                         alt='Image file not found' class='innerpic'>
                     
                     <div class='textblock'>
@@ -80,8 +78,6 @@ while($row = $refList->fetch(PDO::FETCH_ASSOC)) {
                             <input name='name' type='text' value='$name' maxlength='49' required><br><br>
                         <span class='popuptext'>Position:</span><br>
                             <input name='position' type='text' value='$position' maxlength='30' required><br><br>
-                        <span class='popuptext'>Filler:</span><br> 
-                            <input type='text' name='filler' value='$filler' maxlength='50' required><br><br>
                         <span class='popuptext'>Referee since</span><br>
                             <input type='date' name='start' value='$start' required>
                     </div>
@@ -136,7 +132,6 @@ echo "
                     name='name' required></td>
                 <td><input class='darktext' type='text' name='position' required></td>
                 <td><input class='darktext' type='date' name='start' required></td>
-                <td><input class='darktext' type='text' name='filler' required></td>
                 <td><input class='darktext' type='text' name='image' 
                     maxlength='19' required></td>
                 <input type='hidden' name='table' value='referees'>

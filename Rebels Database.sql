@@ -194,7 +194,7 @@ CREATE TABLE public.passwords (
 INSERT INTO passwords (hash1, hash2)
 VALUES
 ('$2y$10$YS8qQEG0O/zPqTEi8kMnWORxdKQb2/jfUurqHj1Sm82SqQ2nQyaii', 
-'$2y$10$JQgtFqLUcwM9TZPT7i.qROoEMgy85.ebRXZURwn3H.mZgGQc0F/Xq');
+'$2y$10$LnbyA4krpGSr4htuhEgFLOBfEvhDMwXhsuWemXhJZE6U6ongPu1fe');
 
 /******************************************************************************
 * "practicedays" Table

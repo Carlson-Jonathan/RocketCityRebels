@@ -38,27 +38,25 @@
     <main>
         
         <!-------------------------------------------------------------------->
-        <div class="embed-responsive embed-responsive-16by9" id="movie">
             <iframe src="https://www.youtube.com/embed/a4Jcieddb60" 
-                    frameborder="0" allow="accelerometer; encrypted-media; 
-                    gyroscope; picture-in-picture" allowfullscreen ></iframe>
-        </div>
+                    frameborder="0" width="100%" height="500px" allow="accelerometer; encrypted-media; 
+                    gyroscope; picture-in-picture" id="movie" allowfullscreen ></iframe>
         
         <!-------------------------------------------------------------------->
         
         <h2>What We Do</h2>    
         <div class="row2">
             <div class="columnleft2">
-                <img class="boximage" src="../images/derbygirl.jpg">
+                <img class="boximage phonehide" src="../images/EnlistPage/derbygirl.jpg">
             </div>
 
             <div class="columnright2">
                 <p class="darktext">
-                    Established in 2011 the Rocket City Rebels is Alabama’s 
+                    Established in 2011, the Rocket City Rebels is Alabama’s 
                     first Junior Roller Derby team.  We are a co-ed team with 
                     skaters ranging from 8-18 years old who are dedicated to 
                     learning the sport.  We pride ourselves on building healthy 
-                    bodies, minds and lifestyles for our skaters on and off the 
+                    bodies, minds, and lifestyles for our skaters on and off the 
                     track.  Our coaches teach skaters respect not only 
                     themselves but their teammates, coaches, officials, fans 
                     and opponents. Roller derby is an inclusive sport that is 
@@ -66,14 +64,14 @@
                     abilities. <br><br>
                     
                     The Rebels practice twice a week on Mondays and Wednesdays 
-                    from 6-8pm at Insanity complex. (100 Skate Park drive 
+                    from 6-8pm at Insanity Complex. (100 Skate Park Drive 
                     Madison Al, 35758).  Mondays are dedicated to skill and 
                     strength building drills and exercises while Wednesdays are 
-                    set aside for Scrimmaging and game play practice. <br><br>
+                    set aside for scrimmaging and game play practice. <br><br>
                     
                     Home games are typically played once a month from March 
                     through August. Most games are played by the “Charter” 
-                    team (high level more experience players)  but we build 1 
+                    team (high level, more experience players) but we hold 1 
                     or 2 team mixers per season that all skaters are invited 
                     to participate in.
                 </p>
@@ -89,7 +87,7 @@
                 <p class="lighttext">
                     The Rocket City Rebels hosts a 4-day Boot Camp once a year 
                     in the fall. Boot camp dates will be announced on our 
-                    facebook page and will be listed on our 
+                    Facebook page and will be listed on our 
                     <a href="../pages/schedule.php">schedule page</a>. During 
                     this camp new skaters will be taught how to skate derby style 
                     and learn the basic rules of derby.  At the end of bootcamp 
@@ -125,7 +123,9 @@
             </div>
 
             <div class="columnright">
-                <img class="boximage" src="../images/logo.webp" style="margin-bottom: 20px">
+                <div class="boximage">
+                    <img src="../images/EnlistPage/RR3.jpg" style="margin-bottom: 20px">
+                </div>
                 
                 <p class="lighttext" id="bcinfo">Enrollment closes in<br>
                     <span style="font-size: 56px; line-height: 56px">    
@@ -153,13 +153,13 @@
         <h2>Player and Parental Commitments</h2>    
         <div class="row2">
             <div class="columnleft2">
-                <img class="boximage" src="../images/logo.webp">
-                <div class="start"></div>
-                <img class="boximage" src="../images/logo.webp">
-                <div class="start"></div>
-                <img class="boximage" src="../images/logo.webp">
-                <div class="start"></div>
-                <img class="boximage" src="../images/logo.webp">
+                <div class="boximage">
+                    <img src="../images/EnlistPage/RR6.jpg" class="phonehide" style="margin-bottom: 75px">
+                    <img src="../images/EnlistPage/RR1.jpg" class="phonehide" style="margin-bottom: 75px">
+                    <img src="../images/EnlistPage/RR5.jpg" class="phonehide" style="margin-bottom: 75px">
+                    <img src="../images/EnlistPage/RR4.jpg" class="phonehide" style="margin-bottom: 75px">
+                    <img src="../images/EnlistPage/RR2.jpg" style="margin-bottom: 20px">
+                </div>
             </div>
 
             <div class="columnright2">
@@ -176,15 +176,14 @@
                     Monthly dues may be paid in person or through our 
                     <a href="../pages/store.php" style='text-decoration: underline'>online store page</a>. We 
                     recommend setting up automatic payments through Paypal.com 
-                    to assure timely payments.
+                    to ensure timely payments.
                 </p>
                 
                 <div class="line"></div>
                 
                 <h3>Required Purchases</h3>
                 <p class="darktext">
-                    A set of basic derby equipment will cost approximately $250 
-                    and up. Check the links below for suggested beginner 
+                    A set of basic derby equipment costs approximately $250, but can cost more. Check the link below for suggested beginner 
                     equipment. Each skater is required to have all of the below 
                     equipment at every practice and game.
                 </p>
@@ -199,7 +198,9 @@
                     <li>Wrist Guards</li>
                     <li>Moldable Mouth Guard</li>
                 </ul>
-                
+                <a href="https://www.derbywarehouse.com/"><h4 style="font-size: 
+                    36px; text-align: center; background-color: #251010; padding: 
+                    7px; border-radius: 100px">Get Your Equipment Here</h4></a>
                 <div class="line"></div>
                 
 
@@ -223,7 +224,7 @@
                     
                 <h3>Volunteering</h3>
                 <p class="darktext">
-                    A member from each skater's family must voluteer their time 
+                    A member from each skater's family must volunteer their time 
                     to assist with 3 of the monthly bouts (games against other 
                     teams - 2.5 hours per bout). A family member of each skater 
                     must also volunteer at a minimum of 2 Saturday events (approx. 
@@ -235,7 +236,6 @@
         </div>
         
         <!-------------------------------------------------------------------->     
-        
         <script>
         // Adjustments to CSS when boot camp is in season
             document.getElementById("pagetitle").innerHTML = "Become a Rebel";
@@ -248,7 +248,7 @@
                 document.getElementById("onseason").style.display = "block";
             }
             else
-                document.getElementById("start").style.margin = "58px";
+                document.getElementById("start").style.margin = "153px";
         </script>
         
     </main>

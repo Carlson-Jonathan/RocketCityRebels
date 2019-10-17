@@ -26,7 +26,7 @@
             </div>
 
             <div class="columnright" style="width: 75%">
-                <p class="lighttext">Rebel Store Comming Soon!</p>
+                <p class="lighttext">Rebel Store Coming Soon!</p>
             </div>
         </div>
         

@@ -39,9 +39,11 @@
         <div class="row2">
             
             <div class="columnleft2">
-                <img src="../images/logo.webp" class="boximage">
-                <img src="../images/logo.webp" class="boximage">
-                <img src="../images/logo.webp" class="boximage">
+                <div class="boximage" style="margin-bottom: 20px">
+                    <img src="../images/SchedulePage/jam2.JPG" class="boximage" style="border-radius: 20px">
+                    <img src="../images/SchedulePage/boutday.jpg" class="boximage phonehide" style="margin-top: 130px">
+                    <img src="../images/SchedulePage/EG.jpeg" class="boximage phonehide" style="margin-top: 110px; border-radius: 20px">
+                </div>
             </div>
             
             <div class="columnright2">
@@ -60,7 +62,7 @@
             ?>
             <div class='line'></div>
             <h3 style="color: #251010">
-                Upcomming Changes to Weekly Schedule
+                Upcoming Changes to Weekly Schedule
             </h3><br>
             <?php 
                 while ($row = $getScheduleChanges->fetch(PDO::FETCH_ASSOC)) {
@@ -89,10 +91,12 @@
                 
         <!-------------------------------------------------------------------->
         
-        <h2>Upcomming Games and Events</h2>
+        <h2>Upcoming Games and Events</h2>
         <div class="row">
             <div class="columnleft2">
-                <img src="../images/logo.webp" class="boximage">
+                <div class="boximage">
+                    <img src="../images/SchedulePage/jam1.jpeg" style="border-radius: 20px; border: solid #aad400 1px">
+                </div>
                 <div style="width: 100%; margin: auto; text-align: center">
                 <p class="darktext"></p>
                     <button onclick="window.location.href = 

@@ -1,10 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\images",
+    "\\pages",
     "\\scripts",
     "\\styles"
   ],
-  "SelectedNode": "\\images\\store",
+  "SelectedNode": "\\styles\\normalize.css",
   "PreviewInSolutionExplorer": false
 }

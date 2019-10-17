@@ -41,13 +41,13 @@ while ($row = $refereePortraits->fetch(PDO::FETCH_ASSOC)) {
     
     echo "
         <div class='gallery' id='$rbtnID'>
-            <img src='../images/portraits/$image
+            <img src='../images/skaterspage/portraits/$image
             'alt='Image file not found'>
         </div>
 
         <div id='$rmodelID' class='modal'>
             <div class='modal-content'>
-                <img src='../images/portraits/$image
+                <img src='../images/skaterspage/portraits/$image
                 'alt='Image file not found' class='innerpic'>
 
                 <div class='textblock'>
@@ -60,11 +60,6 @@ while ($row = $refereePortraits->fetch(PDO::FETCH_ASSOC)) {
                         Position:
                     </span>
                     <p>$position</p><br>
-
-                    <span class='popuptext'>
-                        Filler:</span><br>
-                    </span>
-                    <p>$filler</p><br>
 
                     <p>Referee since " . adjust_date($start) . "</p><br>
 

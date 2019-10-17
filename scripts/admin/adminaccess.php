@@ -38,9 +38,11 @@ if (password_verify($password, $hash1) ||
     $_SESSION['pw'] = false;
     $_SESSION['access'] = true;
     header("Location: ../../pages/A-instructions.php");
+    echo '<script>window.location.href = "../../pages/A-instructions.php";</script>';
 } else {
     $_SESSION['pw'] = true;
     echo $_SESSION['pw'];
     header("Location: ../../pages/admin.php");
+    echo '<script>window.location.href = "../../pages/admin.php";</script>';
 }  
 ?>
