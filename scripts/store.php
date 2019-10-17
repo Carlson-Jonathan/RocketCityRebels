@@ -125,6 +125,8 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
 	//	);
 	} 
 
+	$_SESSION['item2']['name'] = 'heello';
+
 
 
     $x++;
