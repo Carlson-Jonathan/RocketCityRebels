@@ -46,7 +46,7 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
     **********************************************************************/
     echo "
         <div class='gallery' id='$btnID'>
-            <img src='../images/portraits/$image
+            <img src='../images/store/$image
             ' alt='Image file not found'>
         </div>
 
