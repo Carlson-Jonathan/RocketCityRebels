@@ -38,6 +38,9 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
 	$qtySelect .= "<option value='" . $i . "'>" . $i . "</option>";
 	}
 	$qtySelect .= "</select>";
+
+		session_start();
+		$itemArray = $_SESSION['AddItem2'];
     
 
     /**********************************************************************
@@ -71,7 +74,8 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
 							<input type='hidden' name='itemName" . $x . "' value='" . $name . "'>
 							<input type='hidden' name='itemPrice" . $x . "' value='" . $price . "'>
 							<input type='hidden' name='availableQty" . $x . "' value='" . $quantity . "'>
-							<button type='submit' name='AddItem" . $x . "'>Add to cart</button>				
+							<button type='submit' name='AddItem" . $x . "'>Add to cart</button>		
+							<p>$itemArray</p>
 						</div>
 					</form>
                 </div>
@@ -109,8 +113,6 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
 
         </script>
     ";
-
-	session_start();
 	// On Form Post set Session variables
 	if (isset($_POST['AddItem' . $x])) {
 		$_SESSION['item' . $x] = array (
