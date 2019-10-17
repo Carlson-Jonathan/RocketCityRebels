@@ -40,7 +40,7 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
 	$qtySelect .= "</select>";
 
 		session_start();
-		$itemArray = $_SESSION['item2']['name'];
+		$itemArray = $_SESSION['test'];
     
 
     /**********************************************************************
@@ -117,6 +117,7 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
 	// Set all variables
 	$AddItem = "AddItem" . $x;
 	if (isset($_POST['AddItem2'])) {
+	$_SESSION['test'] = "hey";
 		$_SESSION['item' . $x] = array (
 			'item_id' => $_POST['itemID'],
 			'name' => $_POST['itemName'],
