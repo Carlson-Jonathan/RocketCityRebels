@@ -52,6 +52,7 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
 
         <div id='$modelID' class='modal'>
             <div class='modal-content'>
+			<button data-dismiss='modal' class="close" id='exitBtn" . $x . "'>×</button>
                 <img src='../images/store/$image
                 ' alt='Image file not found' class='innerpic'>
                 <div class='textblock'>
@@ -81,6 +82,12 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
         // When the user clicks the button, open the modal 
         btn" . $x . ".onclick = function() {
           modal" . $x . ".style.display = 'block';
+
+        }
+
+		// When the user clicks the exit button, close the modal 
+        exitBtn" . $x . ".onclick = function() {
+          modal" . $x . ".style.display = 'none';
 
         }
 
