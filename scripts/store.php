@@ -40,16 +40,6 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
 	$qtySelect .= "</select>";
 
 		session_start();
-		if (isset($_POST["AddItem".$x])) {
-	$	$_SESSION['test'] = "hey";
-		$_SESSION['item' . $x] = array (
-			'item_id' => $_POST['itemID'],
-			'name' => $_POST['itemName'],
-			'price' => $_POST['itemPrice'],
-			'qty' => $_POST["availableQty"],
-			'selectQty' => $_POST['selectQty'],
-		);
-	} 
 		$itemArray = $_SESSION['test'];
     
 
@@ -84,7 +74,7 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
 							<input type='hidden' name='itemName' value='" . $name . "'>
 							<input type='hidden' name='itemPrice' value='" . $price . "'>
 							<input type='hidden' name='availableQty' value='" . $quantity . "'>
-							<button type='submit' name='AddItem" . $x . "'>Add to cart</button>		
+							<button type='submit' name='AddItem'>Add to cart</button>		
 							<p>$itemArray</p>
 						</div>
 					</form>
@@ -125,6 +115,19 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
     ";
 	// On Form Post set Session variables
 	// Set all variables
+	if (isset($_POST["AddItem"])) {
+	$_SESSION['test'] = "hey";
+		$_SESSION['item' . $x] = array (
+			'item_id' => $_POST['itemID'],
+			'name' => $_POST['itemName'],
+			'price' => $_POST['itemPrice'],
+			'qty' => $_POST["availableQty"],
+			'selectQty' => $_POST['selectQty'],
+		);
+	} 
+
+
+
     $x++;
 }
 ?>
