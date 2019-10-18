@@ -50,6 +50,7 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
 		if (isset($_POST["AddItem"])) {
 			$_SESSION['items']['2'] = array('item_id' => '5555');
 		}
+		$_SESSION['items']['2'] = array('item_id' => '5555');
 
 		$tempdata = $SESSION['items']['2']['item_id'];
 		
