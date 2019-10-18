@@ -45,7 +45,9 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
 		if (!isset($_SESSION['items'])) {
 			$_SESSION['items'] = array();
 		}
-		$itemArray = $_SESSION['items']['2']['name'];
+
+		$_SESSION['test'] = $description;
+		$itemArray = $_SESSION['test'];
     
 
     /**********************************************************************
