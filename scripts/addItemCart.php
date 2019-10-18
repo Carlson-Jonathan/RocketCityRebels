@@ -78,12 +78,20 @@ if(isset($_POST['xlarge']))
 
 
 		// Add new array item to items array in Session.
-		$_SESSION['items']['2'] = array (
-			'item_id' => $itemID,
-			'name' => $name,
-			'price' => $price,
-			'qty' => $quantity,
-			'selectQty' => $selectQty,
+		// Stupid possible workaround. Save each into a session variable, then do the array
+		$_SESSION['item_id'] = $itemID;
+		$_SESSION['name'] = $name;
+		$_SESSION['price'] = $price;
+		$_SESSION['qty'] = $quantity;
+		$_SESSION['selectQty'] = $selectQty;
+		$_SESSION['itemNum'] = $itemNum;
+		// Now set the array
+		$_SESSION['items'][$_SESSION['itemNum']] = array (
+			'item_id' => $_SESSION['item_id'],
+			'name' => $_SESSION['name'],
+			'price' => $_SESSION['price'],
+			'qty' => $_SESSION['qty'] ,
+			'selectQty' => $_SESSION['selectQty'],
 		);
 
 
