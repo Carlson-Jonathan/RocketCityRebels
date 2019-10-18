@@ -86,7 +86,7 @@ if(isset($_POST['xlarge']))
 		$_SESSION['selectQty'] = $selectQty;
 		$_SESSION['itemNum'] = $itemNum;
 		// Now set the array
-		$_SESSION['items'][$_SESSION['itemNum']] = array (
+		$_SESSION['items'][$itemNum] = array (
 			'item_id' => $_SESSION['item_id'],
 			'name' => $_SESSION['name'],
 			'price' => $_SESSION['price'],

@@ -49,7 +49,7 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
 		$_SESSION['test'] = 'test';
 		$tempdata = $_SESSION['test'];
 		$_SESSION['items'][$tempdata] = $quantity;
-		$itemArray = $_SESSION['items']['test'];
+		$itemArray = $_SESSION['items']['2']['name'];
     
 
     /**********************************************************************
