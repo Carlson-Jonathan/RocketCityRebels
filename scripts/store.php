@@ -123,7 +123,6 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
 	// On Form Post set Session variables
 	// Set all variables
 	if (isset($_POST["AddItem"])) {
-	$itemId = $_POST['itemID'];
 		$_SESSION['items'] = array (
 			'item_id' => $_POST['itemID'],
 			'name' => $_POST['itemName'],
