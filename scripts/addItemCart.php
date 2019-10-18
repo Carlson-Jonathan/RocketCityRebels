@@ -5,6 +5,7 @@
 require($_SERVER['DOCUMENT_ROOT'].'/scripts/dbsetup.php');
 
 echo '<script>window.location.href = "../../pages/store.php";</script>';
+session_start();
 
 // Security
 function test_input($data) {
