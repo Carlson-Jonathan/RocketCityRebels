@@ -70,7 +70,7 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
                     <span class='popuptext'>Price: 
                     </span><br> $price</p><br>
                     <span class='popuptext'>Quantity</span><br>
-					<form action='../scripts/addCartItem.php?itemNum=" . $x . "' method='post'>
+					<form action='../scripts/addItemCart.php?itemNum=" . $x . "' method='post'>
 						<div id='quantity" . $x . "' name='quantity" . $x . "'>
 							$qtySelect
 						</div>
@@ -120,16 +120,6 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
     ";
 	// On Form Post set Session variables
 	// Set all variables
-	if (isset($_POST["AddItem"])) {
-	//$_SESSION['test'] = "hey";
-		$_SESSION['items'][$x] = array (
-			'item_id' => $_POST['itemID'],
-			'name' => $_POST['itemName'],
-			'price' => $_POST['itemPrice'],
-			'qty' => $_POST["availableQty"],
-			'selectQty' => $_POST['selectQty'],
-		);
-	} 
 
 
 
