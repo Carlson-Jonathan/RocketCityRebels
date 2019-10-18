@@ -46,7 +46,13 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
 			$_SESSION['items'] = array();
 		}
 
-		$itemArray = $_SESSION['test'];
+		// Add to items array by $x
+		if (isset($_POST["AddItem"])) {
+			$_SESSION['items'][$x] = array('item_id' => $_POST['itemID'], 'name' => $_POST['itemName'], 'price' => $_POST['itemPrice']);
+		}
+
+		$tempdata = $SESSION['items']['2']['name'];
+		
     
 
     /**********************************************************************
@@ -71,7 +77,7 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
                     <span class='popuptext'>Price: 
                     </span><br> $price</p><br>
                     <span class='popuptext'>Quantity</span><br>
-					<form action='../scripts/addItemCart.php?itemNum=" . $x . "' method='post'>
+					<form action='' method='post'>
 						<div id='quantity" . $x . "' name='quantity" . $x . "'>
 							$qtySelect
 						</div>
@@ -81,7 +87,7 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
 							<input type='hidden' name='itemPrice' value='" . $price . "'>
 							<input type='hidden' name='availableQty' value='" . $quantity . "'>
 							<button type='submit' name='AddItem'>Add to cart</button>		
-							<p>$itemArray</p>
+							<p>$tempdata</p>
 						</div>
 					</form>
                 </div>
