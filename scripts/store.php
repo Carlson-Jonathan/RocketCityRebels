@@ -42,7 +42,7 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
 		session_start();
 
 		// Initialize parent Item if (!isset($_SESSION['items']) {
-		if (!isset($_SESSION['items']) {
+		if (!isset($_SESSION['items'])) {
 			$_SESSION['items'] = array();
 		}
 		//$itemArray = $_SESSION['item2']['name'];
