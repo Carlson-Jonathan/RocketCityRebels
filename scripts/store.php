@@ -47,7 +47,7 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
 			}
 
 		//Testing
-		$testItem = $_SESSION['items'];
+		//$testItem = $_SESSION['items'];
 }
     
 
@@ -118,7 +118,7 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
        //     modal" . $x . ".style.display = 'none';
        // }
 
-	   console.log($testItem);
+	   //console.log($testItem);
 
         </script>
     ";
