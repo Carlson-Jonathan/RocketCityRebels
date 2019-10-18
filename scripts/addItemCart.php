@@ -76,8 +76,8 @@ if(isset($_POST['xlarge']))
         echo "<p>Error Loading table!</p>";
 
 
-
-		$_SESSION['items'][$itemNum] = array (
+		// Add new array item to items array in Session.
+		$_SESSION['items']['2'] = array (
 			'item_id' => $itemID,
 			'name' => $name,
 			'price' => $price,
