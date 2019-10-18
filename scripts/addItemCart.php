@@ -94,7 +94,7 @@ if(isset($_POST['xlarge']))
 			'selectQty' => $_SESSION['selectQty'],
 		);
 
-		$_SESSION['test'] = $name;
+		$_SESSION['test'] = 'testing';
 
 
 header("Location: ../../pages/store.php");
