@@ -122,7 +122,7 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
 	// Set all variables
 	if (isset($_POST["AddItem"])) {
 	//$_SESSION['test'] = "hey";
-		$_SESSION['items'][$x] = array (
+		$_SESSION['items'][2] = array (
 			'item_id' => $_POST['itemID'],
 			'name' => $_POST['itemName'],
 			'price' => $_POST['itemPrice'],
