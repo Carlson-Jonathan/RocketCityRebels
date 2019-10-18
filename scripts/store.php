@@ -42,9 +42,9 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
 		session_start();
 
 		// If the items array has not yet been set
-		if (!isset($_SESSION['items']) {
-			$_SESSION['items'] = array();
-			}
+		//if (!isset($_SESSION['items']) {
+	//		$_SESSION['items'] = array();
+		//	}
 
 		//Testing
 		//$testItem = $_SESSION['items'];
