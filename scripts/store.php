@@ -48,11 +48,10 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
 
 		// Add to items array by $x
 		if (isset($_POST["AddItem"])) {
-			$_SESSION['items']['2'] = array('item_id' => '5555');
+			$_SESSION['test'] = "Heya";
 		}
-		$_SESSION['items']['2'] = array('item_id' => '5555');
 
-		$tempdata = $SESSION['items']['2']['item_id'];
+		$tempdata = $SESSION['test'];
 		
     
 
