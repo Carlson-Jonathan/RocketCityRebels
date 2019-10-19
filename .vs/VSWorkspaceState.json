@@ -1,10 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\scripts",
-    "\\scripts\\admin",
-    "\\styles"
+    "\\pages",
+    "\\scripts"
   ],
-  "SelectedNode": "\\scripts\\admin\\getstoreDB.php",
+  "SelectedNode": "\\scripts\\store.php",
   "PreviewInSolutionExplorer": false
 }
