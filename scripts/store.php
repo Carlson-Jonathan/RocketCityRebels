@@ -106,7 +106,7 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
 							<input type='hidden' name='itemPrice' value='" . $price . "'>
 							<input type='hidden' name='availableQty' value='" . $quantity . "'>
 							<button type='submit' name='AddItem'>Add to cart</button>		
-							<p>$itemCount/p>
+							<p>$itemCount</p>
 						</div>
 					</form>
                 </div>
@@ -118,6 +118,8 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
         </div>
 
         <script>
+
+		conole.log($itemArray);
 
         // Get the modal
         var modal" . $x . " = document.getElementById('$modelID');
