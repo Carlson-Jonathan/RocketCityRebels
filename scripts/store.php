@@ -67,7 +67,7 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
 				<div class='modal-content'>
 					<div class='modal-header'>
 						<h5 class='modal-title'>Shopping Cart</h5>
-						<button data-dismiss='modal' class='close' id='exitBtn" . $x . "'>x</button>
+						<button data-dismiss='modal' class='close' id='exitCartBtn'>x</button>
 					</div>
 					<div class='modal-body'>
 						<table class='show-cart table'>
@@ -105,6 +105,7 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
 							<input type='hidden' name='itemPrice' value='" . $price . "'>
 							<input type='hidden' name='availableQty' value='" . $quantity . "'>
 							<button type='submit' name='AddItem'>Add to cart</button>		
+							<p>$itemArray</p>
 						</div>
 					</form>
                 </div>
