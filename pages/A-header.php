@@ -10,7 +10,12 @@
 
 <!-- Redirects the user to a non-existing page if they attempt to input an 
      admin address directly in the URL address bar. -->
-<?php if($_SESSION['access'] == false) header("Location: error404.php"); ?>
+<?php 
+    if($_SESSION['access'] == false) {
+        header("Location: ../index.php"); 
+        echo '<script>window.location.href = "../index.php";</script>';
+    }
+?>
 
 <header>
     <h1 id="pagetitle">Administrative Access</h1>
@@ -34,10 +39,6 @@
                 <li id="A-store.php" class="navbuttons">STORE</li>            
             </a>
                         
-            <a href="../pages/A-more.php">       
-                <li id="A-more.php" class="navbuttons">MORE</li>            
-            </a>
-            
             <a href="../pages/A-misc.php">    
                 <li id="A-misc.php" class="navbuttons">MISC</li>      
             </a> 
