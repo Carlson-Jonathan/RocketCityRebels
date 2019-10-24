@@ -61,7 +61,7 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
             ' alt='Image file not found'>
         </div>
 
-		// Cart modal *Still a Work in Progress
+		<!-- Cart modal *Still a Work in Progress -->
 		<div class='modal fade' id='cart' tabindex='-1' role='dialog'>
 			<div class='modal-dialog modal-lg' role='document'>
 				<div class='modal-content'>
