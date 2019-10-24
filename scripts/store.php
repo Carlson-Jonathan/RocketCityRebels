@@ -47,7 +47,7 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
 		}
 
 		// Just for testing purposes
-		$itemArray = $_SESSION['items'];
+		$itemArray = sizeof($_SESSION['items']);
     
 
     /**********************************************************************
