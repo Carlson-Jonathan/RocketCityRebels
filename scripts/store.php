@@ -119,7 +119,7 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
 
         <script>
 
-		conole.log($itemArray);
+		console.log($itemArray);
 
         // Get the modal
         var modal" . $x . " = document.getElementById('$modelID');
