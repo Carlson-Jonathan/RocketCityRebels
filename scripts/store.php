@@ -49,6 +49,9 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
 		}
 
 		// Just for testing purposes
+		foreach($_SESSION['items'] as $row) {
+   echo $row;
+}
 		$itemThree = $_SESSION['items'];
 
 		$itemTwo = $itemThree[2]['name'];
