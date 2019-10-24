@@ -39,6 +39,8 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
 	}
 	$qtySelect .= "</select>";
 
+	$arrayIndex = $x - 1;
+
 		session_start();
 
 		//Check if items array already exists. If it does not, then instantiate
@@ -95,7 +97,7 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
                     </span><br> $price</p><br>
                     <span class='popuptext'>Quantity</span><br>
 					<form action='' method='post'>
-						<div id='quantity" . $x . "' name='quantity" . $x . "'>
+						<div id='quantity" . $x . "' name='quantity" . $arrayIndex . "'>
 							$qtySelect
 						</div>
 						<div class='textblock' id='addItemsDiv'>
@@ -149,13 +151,20 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
 	if (isset($_POST["AddItem"])) {
 	// PHP variable must have daat received from SESSION or POSt to be accepted as Parameters, dumb right?!
 	    $itemNum = $_POST['itemNum'];
-		$_SESSION['items'][$itemNum] = array (
-			'item_id' => $_POST['itemID'],
-			'name' => $_POST['itemName'],
-			'price' => $_POST['itemPrice'],
-			'qty' => $_POST["availableQty"],
-			'selectQty' => $_POST['selectQty'],
-		);
+		if (array_key_exists($itemNum, $_SESSION['items']))
+		{
+		
+		}
+		else {
+			array_push($_SESSION['items'], array (
+				'item_id' => $_POST['itemID'],
+				'name' => $_POST['itemName'],
+				'price' => $_POST['itemPrice'],
+				'qty' => $_POST["availableQty"],
+				'selectQty' => $_POST['selectQty'],
+			));
+		}
+		
 	} 
 
 
