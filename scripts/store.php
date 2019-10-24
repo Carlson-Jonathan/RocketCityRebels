@@ -49,8 +49,6 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
 		}
 
 		// Just for testing purposes
-		foreach($_SESSION['items'] as $row) {
-   echo $row;
 }
 		$itemThree = $_SESSION['items'];
 
@@ -101,16 +99,16 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
                     </span><br> $price</p><br>
                     <span class='popuptext'>Quantity</span><br>
 					<form action='' method='post'>
-						<div id='quantity" . $x . "' name='quantity" . $arrayIndex . "'>
+						<div id='quantity" . $x . "' name='quantity" . $x . "'>
 							$qtySelect
 						</div>
 						<div class='textblock' id='addItemsDiv'>
-						<input type='hidden' name='itemNum' value='" . $x . "'>
+						<input type='hidden' name='itemNum' value='" . $arrayIndex . "'>
 							<input type='hidden' name='itemId' value='" . $item_id . "'>
 							<input type='hidden' name='itemName' value='" . $name . "'>
 							<input type='hidden' name='itemPrice' value='" . $price . "'>
 							<input type='hidden' name='availableQty' value='" . $quantity . "'>
-							<button type='submit' name='AddItem'>Add to cart</button>		
+							<button type='submit' name='AddItem" . $arrayIndex . "'>Add to cart</button>		
 							<p>$itemThree</p>
 							<p>$itemTwo</p>
 						</div>
@@ -152,7 +150,8 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
     ";
 	// On Form Post set Session variables
 	// Set all variables
-	if (isset($_POST["AddItem"])) {
+	
+	if (isset($_POST['AddItem' . $arrayIndex . ''])) {
 	// PHP variable must have daat received from SESSION or POSt to be accepted as Parameters, dumb right?!
 	    $itemNum = $_POST['itemNum'];
 		if (array_key_exists($itemNum, $_SESSION['items']))
