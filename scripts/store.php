@@ -47,7 +47,8 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
 		}
 
 		// Just for testing purposes
-		$itemArray = count($_SESSION['items'][]);
+		$itemArray = $_SESSION['items'];
+		$itemCount = count($itemArray);
     
 
     /**********************************************************************
@@ -105,7 +106,7 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
 							<input type='hidden' name='itemPrice' value='" . $price . "'>
 							<input type='hidden' name='availableQty' value='" . $quantity . "'>
 							<button type='submit' name='AddItem'>Add to cart</button>		
-							<p>$itemArray</p>
+							<p>$itemCount/p>
 						</div>
 					</form>
                 </div>
