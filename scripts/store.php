@@ -49,8 +49,9 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
 		}
 
 		// Just for testing purposes
-		$itemThree = $_SESSION['items'][3]['name'];
-		$itemTwo = sizeof($_SESSION['items']);
+		$itemThree = $_SESSION['items'];
+
+		$itemTwo = sizeof($itemThree);
 
     /**********************************************************************
     * Propogates and displays each element to the screen upon page load. On
