@@ -47,7 +47,7 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
 		}
 
 		// Just for testing purposes
-		$itemArray = count($_SESSION['items']);
+		$itemArray = count($_SESSION['items'][]);
     
 
     /**********************************************************************
