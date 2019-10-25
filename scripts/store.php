@@ -68,28 +68,6 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
             ' alt='Image file not found'>
         </div>
 
-		<!-- Cart modal *Still a Work in Progress -->
-		<div class='modal fade' id='cart' tabindex='-1' role='dialog'>
-			<div class='modal-dialog modal-lg' role='document'>
-				<div class='modal-content'>
-					<div class='modal-header'>
-						<h5 class='modal-title'>Shopping Cart</h5>
-						<button data-dismiss='modal' class='close' id='exitCartBtn'>x</button>
-					</div>
-					<div class='modal-body'>
-						<table class='show-cart table'>
-          
-						</table>
-						<div>Total price: $<span class='total-cart'></span></div>
-					</div>
-					<div class='modal-footer'>
-						<button type='button' class='btn btn-secondary' data-dismiss='modal'>Close</button>
-						<button type='button' class='btn btn-primary'>Order now</button>
-					</div>
-				</div>
-			</div>
-		</div> 
-
         <div id='$modelID' class='modal'>
             <div class='modal-content'>
 			<button data-dismiss='modal' class='close' id='exitBtn" . $x . "'>x</button>
