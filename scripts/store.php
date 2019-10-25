@@ -108,7 +108,7 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
 							<input type='hidden' name='itemName' value='" . $name . "'>
 							<input type='hidden' name='itemPrice' value='" . $price . "'>
 							<input type='hidden' name='availableQty' value='" . $quantity . "'>
-							<button type='submit' name='AddItem'>Add to cart</button>		
+							<input type='submit' name='AddItem'>Add to cart</button>		
 							<p>$itemThree</p>
 							<p>$itemTwo</p>
 						</div>
