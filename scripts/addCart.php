@@ -24,7 +24,10 @@ function test_input($data) {
 	// PHP variable must have daat received from SESSION or POSt to be accepted as Parameters, dumb right?!
 	    $itemID = $_POST["itemID"];
 		$exists = "false";
-		for ($i = 0; i <= sizeof($_SESSION['items']); $i++)
+
+		$i = 0;
+		$count = sizeof($_SESSION['items']);
+		do
 		{
 			if ($_SESSION['items'][$i]['item_id'] == $itemID)
 			{
@@ -38,7 +41,8 @@ function test_input($data) {
 
 				$exists = "true";
 			}
-		}
+			$i++;
+		} while ($i <= $count)
 
 		if ($exists == "false")
 		{
