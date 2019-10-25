@@ -25,6 +25,7 @@ if(!isset($_SESSION)) {
      session_start();
 	 echo "Session id" . session_id();
 }
+print_r($_SESSION);
 
 		//Check if items array already exists. If it does not, then instantiate
 		if (!isset($_SESSION['items'])) {
