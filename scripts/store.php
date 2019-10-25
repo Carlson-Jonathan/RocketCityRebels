@@ -36,13 +36,14 @@ session_start();
 	if (isset($_POST["AddItem"])) {
 	// PHP variable must have daat received from SESSION or POSt to be accepted as Parameters, dumb right?!
 	    $itemNum = $_POST["itemNum"];
-		array_push($_SESSION['items'], array (
+		$newArray = array (
 			'item_id' => $_POST['itemID'],
 			'name' => $_POST['itemName'],
 			'price' => $_POST['itemPrice'],
 			'qty' => $_POST["availableQty"],
 			'selectQty' => $_POST['selectQty'],
-		));
+		);
+		array_push($_SESSION['items'], $newArray);
 	} 
 
 while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
