@@ -12,7 +12,7 @@ if(!isset($_SESSION)) {
 *   Session items array.
 ******************************************************************************/
 
-echo '<script>window.location.href = "../pages/store.php";</script>';
+//echo '<script>window.location.href = "../pages/store.php";</script>';
 
 // Security
 function test_input($data) {
