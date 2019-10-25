@@ -39,7 +39,7 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
 	}
 	$qtySelect .= "</select>";
 
-	$arrayIndex = $x - 1;
+	$arrayIndex = $x;
 
 		session_start();
 
