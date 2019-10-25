@@ -1,6 +1,7 @@
 <?php
 if(!isset($_SESSION)) {
      session_start();
+	 echo session_id();
 }
 /******************************************************************************
 * File name:
@@ -12,7 +13,7 @@ if(!isset($_SESSION)) {
 *   Session items array.
 ******************************************************************************/
 
-//echo '<script>window.location.href = "../pages/store.php";</script>';
+echo '<script>window.location.href = "../pages/store.php";</script>';
 
 // Security
 function test_input($data) {
@@ -34,12 +35,5 @@ function test_input($data) {
 		);
 
 		$testing = $_SESSION['test'];
-//header("Location: ../pages/store.php");
+header("Location: ../pages/store.php");
 ?>
-
-<!DOCTYPE HTML>  
-<html lang="en-US">
-<body>
-<?php echo "<p>$testing</p>"; ?>
-</body>
-</html>

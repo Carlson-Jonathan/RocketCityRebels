@@ -23,6 +23,7 @@ $x = 1;
 
 if(!isset($_SESSION)) {
      session_start();
+	 echo session_id();
 }
 
 		//Check if items array already exists. If it does not, then instantiate
@@ -103,7 +104,7 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
                     <span class='popuptext'>Price: 
                     </span><br> $price</p><br>
                     <span class='popuptext'>Quantity</span><br>
-					<form action='../scripts/addCart.php' method='POST'>
+					<form action='' method='POST'>
 						<div id='quantity" . $x . "' name='quantity" . $x . "'>
 							$qtySelect
 						</div>
