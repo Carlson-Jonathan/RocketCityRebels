@@ -21,6 +21,16 @@ $storeItems = $db->prepare("SELECT * FROM store");
 $storeItems->execute();
 $x = 1;
 
+session_start();
+
+		//Check if items array already exists. If it does not, then instantiate
+		if (!isset($_SESSION['items'])) {
+			$_SESSION['items'] = array();
+		}
+
+		// Just for testing purposes
+		$itemArray = sizeof($_SESSION['items']);
+
 while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
     $item_id = $row['item_id'];
 	$name = $row['name'];
@@ -39,15 +49,7 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
 	}
 	$qtySelect .= "</select>";
 
-		session_start();
-
-		//Check if items array already exists. If it does not, then instantiate
-		if (!isset($_SESSION['items'])) {
-			$_SESSION['items'] = array();
-		}
-
-		// Just for testing purposes
-		$itemArray = sizeof($_SESSION['items']);
+		
     
 
     /**********************************************************************
@@ -145,7 +147,7 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
     ";
 	// On Form Post set Session variables
 	// Set all variables
-	if (isset($_POST["AddItems"])) {
+	if (isset($_POST["AddItem"])) {
 	// PHP variable must have daat received from SESSION or POSt to be accepted as Parameters, dumb right?!
 	    $itemNum = $_POST["itemNum"];
 		array_push($_SESSION['items'], array (
