@@ -42,7 +42,7 @@ function test_input($data) {
 				$exists = "true";
 			}
 			$i++;
-		} while ($i <= $count)
+		} while ($i <= $count);
 
 		if ($exists == "false")
 		{
