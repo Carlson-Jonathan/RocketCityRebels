@@ -34,6 +34,6 @@ function test_input($data) {
 			'selectQty' => $_POST['selectQty'],
 		);
 
-		$testing = $_SESSION['test'];
+		$_SESSION['test'] = "testing";
 header("Location: ../pages/store.php");
 ?>

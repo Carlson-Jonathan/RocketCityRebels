@@ -33,7 +33,6 @@ if(!isset($_SESSION)) {
 
 		// Just for testing purposes
 		//$itemArray = $_SESSION['items'][2]['name'];
-		$_SESSION['test'] = "testing";
 		$itemArray = $_SESSION['test'];
 
 		// On Form Post set Session variables

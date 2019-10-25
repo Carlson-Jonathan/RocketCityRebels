@@ -1,3 +1,9 @@
+<?php 
+if(!isset($_SESSION)) {
+     session_start();
+	 echo "Session id" . session_id();
+}
+?>
 <!DOCTYPE HTML>  
 <html lang="en-US">
 
