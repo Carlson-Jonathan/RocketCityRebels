@@ -29,8 +29,7 @@ function test_input($data) {
 		$count = sizeof($_SESSION['items']);
 		do
 		{
-			$tempID = $_SESSION['items'][$i]['item_id'];
-			if ($tempID == $itemID)
+			if ($_SESSION['items'][$i]['item_id'] == $itemID)
 			{
 				$_SESSION['items'][$i] = array (
 				'item_id' => $_POST['itemId'],
