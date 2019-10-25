@@ -12,7 +12,7 @@ if(!isset($_SESSION)) {
 *   Session items array.
 ******************************************************************************/
 
-//echo '<script>window.location.href = "../pages/store.php";</script>';
+echo '<script>window.location.href = "../pages/store.php";</script>';
 
 // Security
 function test_input($data) {
@@ -32,16 +32,5 @@ function test_input($data) {
 			'qty' => $_POST["availableQty"],
 			'selectQty' => $_POST['selectQty'],
 		);
-$test = $_SESSION['items'][$itemNum]['name'];
-//header("Location: ../pages/store.php");
+header("Location: ../pages/store.php");
 ?>
-
-<!DOCTYPE HTML>  
-<html lang="en-US">
-<body>
-<?php
-echo "<p>$test</p>";
-?>
-</body>
-
-</html>
