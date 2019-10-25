@@ -47,7 +47,7 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
 		}
 
 		// Just for testing purposes
-		//$itemArray = $_SESSION['items']['2']['name'];
+		$itemArray = sizeof($_SESSION['items']);
     
 
     /**********************************************************************
@@ -148,13 +148,13 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
 	if (isset($_POST["AddItem"])) {
 	// PHP variable must have daat received from SESSION or POSt to be accepted as Parameters, dumb right?!
 	    $itemNum = $_POST["itemNum"];
-		$_SESSION['items'][$itemNum] = array (
+		array_push($_SESSION['items'], array (
 			'item_id' => $_POST['itemID'],
 			'name' => $_POST['itemName'],
 			'price' => $_POST['itemPrice'],
 			'qty' => $_POST["availableQty"],
 			'selectQty' => $_POST['selectQty'],
-		);
+		));
 	} 
 
 
