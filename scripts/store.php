@@ -39,8 +39,6 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
 	}
 	$qtySelect .= "</select>";
 
-	$arrayIndex = $x;
-
 		session_start();
 
 		//Check if items array already exists. If it does not, then instantiate
@@ -49,11 +47,8 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
 		}
 
 		// Just for testing purposes
-		$itemThree = $_SESSION['items'];
-
-		$itemTwo = $itemThree[0]['name'];
-}
-		
+		//$itemArray = $_SESSION['items']['2']['name'];
+    
 
     /**********************************************************************
     * Propogates and displays each element to the screen upon page load. On
@@ -66,13 +61,13 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
             ' alt='Image file not found'>
         </div>
 
-		<!-- Cart modal *Still a Work in Progress -->
+		// Cart modal *Still a Work in Progress
 		<div class='modal fade' id='cart' tabindex='-1' role='dialog'>
 			<div class='modal-dialog modal-lg' role='document'>
 				<div class='modal-content'>
 					<div class='modal-header'>
 						<h5 class='modal-title'>Shopping Cart</h5>
-						<button data-dismiss='modal' class='close' id='exitCartBtn'>x</button>
+						<button data-dismiss='modal' class='close' id='exitBtn" . $x . "'>x</button>
 					</div>
 					<div class='modal-body'>
 						<table class='show-cart table'>
@@ -104,13 +99,13 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
 							$qtySelect
 						</div>
 						<div class='textblock' id='addItemsDiv'>
-						<input type='hidden' name='itemNum' value='" . $arrayIndex . "'>
+						<input type='hidden' name='itemNum' value='" . $x . "'>
 							<input type='hidden' name='itemId' value='" . $item_id . "'>
 							<input type='hidden' name='itemName' value='" . $name . "'>
 							<input type='hidden' name='itemPrice' value='" . $price . "'>
 							<input type='hidden' name='availableQty' value='" . $quantity . "'>
-							<input type='submit' name='AddItem'>Add to cart</button>		
-
+							<button type='submit' name='AddItem'>Add to cart</button>		
+							<p>$itemArray</p>
 						</div>
 					</form>
                 </div>
@@ -150,20 +145,16 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
     ";
 	// On Form Post set Session variables
 	// Set all variables
-	
-	if (isset($_POST['AddItem'])) {
+	if (isset($_POST["AddItem"])) {
 	// PHP variable must have daat received from SESSION or POSt to be accepted as Parameters, dumb right?!
-	    $itemNum = $_POST['itemNum'];
-		
-			array_push($_SESSION['items'], array (
-				'item_id' => $_POST['itemID'],
-				'name' => $_POST['itemName'],
-				'price' => $_POST['itemPrice'],
-				'qty' => $_POST["availableQty"],
-				'selectQty' => $_POST['selectQty'],
-			));
-		
-		
+	    $itemNum = $_POST["itemNum"];
+		$_SESSION['items'][$itemNum] = array (
+			'item_id' => $_POST['itemID'],
+			'name' => $_POST['itemName'],
+			'price' => $_POST['itemPrice'],
+			'qty' => $_POST["availableQty"],
+			'selectQty' => $_POST['selectQty'],
+		);
 	} 
 
 
