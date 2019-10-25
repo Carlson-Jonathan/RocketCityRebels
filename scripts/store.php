@@ -29,7 +29,7 @@ session_start();
 		}
 
 		// Just for testing purposes
-		$itemArray = $_SESSION['items'][0]['name'];
+		$itemArray = $_SESSION['items'][2]['name'];
 
 		// On Form Post set Session variables
 	

@@ -23,13 +23,12 @@ function test_input($data) {
 // Set all variables
 	// PHP variable must have daat received from SESSION or POSt to be accepted as Parameters, dumb right?!
 	    $itemNum = $_POST["itemNum"];
-		$newArray = array (
+		$_SESSION['items'][$itemNum] = array (
 			'item_id' => $_POST['itemID'],
 			'name' => $_POST['itemName'],
 			'price' => $_POST['itemPrice'],
 			'qty' => $_POST["availableQty"],
 			'selectQty' => $_POST['selectQty'],
 		);
-		$_SESSION['items'][0] = $newArray;
 header("Location: ../pages/store.php");
 ?>
