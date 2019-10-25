@@ -30,6 +30,6 @@ function test_input($data) {
 			'qty' => $_POST["availableQty"],
 			'selectQty' => $_POST['selectQty'],
 		);
-		//$_SESSION['items'][$itemNum] = $newArray);
+		$_SESSION['items'] = $newArray);
 header("Location: ../pages/store.php");
 ?>
