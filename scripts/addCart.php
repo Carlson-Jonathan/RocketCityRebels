@@ -32,8 +32,7 @@ function test_input($data) {
 			'qty' => $_POST["availableQty"],
 			'selectQty' => $_POST['selectQty'],
 		);
-$test = $_POST['items'][0]['name'];
-echo "<script>console.log($test)</script>";
+$test = $_SESSION['items'][0]['name'];
 //header("Location: ../pages/store.php");
 ?>
 
