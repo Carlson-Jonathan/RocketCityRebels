@@ -10,7 +10,7 @@ session_start();
 *   Session items array.
 ******************************************************************************/
 
-echo '<script>window.location.href = "../pages/store.php";</script>';
+//echo '<script>window.location.href = "../pages/store.php";</script>';
 
 // Security
 function test_input($data) {
@@ -32,5 +32,15 @@ function test_input($data) {
 		);
 $test = $_POST['itemName'];
 echo "<script>console.log($test)</script>";
-header("Location: ../pages/store.php");
+//header("Location: ../pages/store.php");
 ?>
+
+<!DOCTYPE HTML>  
+<html lang="en-US">
+<body>
+<?php
+echo "<p>$test</p>";
+?>
+</body>
+
+</html>
