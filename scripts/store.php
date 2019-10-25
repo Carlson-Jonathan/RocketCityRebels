@@ -21,7 +21,9 @@ $storeItems = $db->prepare("SELECT * FROM store");
 $storeItems->execute();
 $x = 1;
 
-session_start();
+if(!isset($_SESSION)) {
+     session_start();
+}
 
 		//Check if items array already exists. If it does not, then instantiate
 		if (!isset($_SESSION['items'])) {
