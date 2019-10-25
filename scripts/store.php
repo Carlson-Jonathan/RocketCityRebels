@@ -23,7 +23,7 @@ $x = 1;
 
 if(!isset($_SESSION)) {
      session_start();
-	 echo session_id();
+	 echo "Session id" . session_id();
 }
 
 		//Check if items array already exists. If it does not, then instantiate
