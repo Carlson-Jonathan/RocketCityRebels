@@ -30,7 +30,7 @@ function test_input($data) {
 			'qty' => $_POST["availableQty"],
 			'selectQty' => $_POST['selectQty'],
 		);
-$test = $_POST['itemName'];
+$test = $_POST['items'][$itemNum]['name'];
 echo "<script>console.log($test)</script>";
 //header("Location: ../pages/store.php");
 ?>
