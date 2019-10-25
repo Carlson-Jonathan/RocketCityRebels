@@ -21,17 +21,7 @@ $storeItems = $db->prepare("SELECT * FROM store");
 $storeItems->execute();
 $x = 1;
 
-if(!isset($_SESSION)) {
-     session_start();
-}
 
-		//Check if items array already exists. If it does not, then instantiate
-		if (!isset($_SESSION['items'])) {
-			$_SESSION['items'] = array();
-		}
-
-		// Just for testing purposes
-		$itemArray = $_SESSION['items'][2]['name'];
 
 		// On Form Post set Session variables
 	
@@ -53,6 +43,18 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
 	$qtySelect .= "<option value='" . $i . "'>" . $i . "</option>";
 	}
 	$qtySelect .= "</select>";
+
+	if(!isset($_SESSION)) {
+     session_start();
+}
+
+		//Check if items array already exists. If it does not, then instantiate
+		if (!isset($_SESSION['items'])) {
+			$_SESSION['items'] = array();
+		}
+
+		// Just for testing purposes
+		$itemArray = $_SESSION['items'][2]['name'];
 
 		
     
