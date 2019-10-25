@@ -26,35 +26,36 @@ function test_input($data) {
 		$exists = "false";
 
 		$i = 0;
-		$count = sizeof($_SESSION['items']);
-		do
-		{
-			if ($_SESSION['items'][$i]['item_id'] == $itemID)
+		if (isset($_POST["AddItem"])) {
+			$count = sizeof($_SESSION['items']);
+			do
 			{
-				$_SESSION['items'][$i] = array (
+				if ($_SESSION['items'][$i]['item_id'] == $itemID)
+				{
+					$_SESSION['items'][$i] = array (
+					'item_id' => $_POST['itemId'],
+					'name' => $_POST['itemName'],
+					'price' => $_POST['itemPrice'],
+					'qty' => $_POST["availableQty"],
+					'selectQty' => $_POST['selectQty'],
+					);
+
+					$exists = "true";
+				}
+				$i++;
+			} while ($i <= $count);
+
+			if ($exists == "false")
+			{
+				$_SESSION['items'][] = array (
 				'item_id' => $_POST['itemId'],
 				'name' => $_POST['itemName'],
 				'price' => $_POST['itemPrice'],
 				'qty' => $_POST["availableQty"],
 				'selectQty' => $_POST['selectQty'],
 				);
-
-				$exists = "true";
 			}
-			$i++;
-		} while ($i <= $count);
-
-		if ($exists == "false")
-		{
-			$_SESSION['items'][] = array (
-			'item_id' => $_POST['itemId'],
-			'name' => $_POST['itemName'],
-			'price' => $_POST['itemPrice'],
-			'qty' => $_POST["availableQty"],
-			'selectQty' => $_POST['selectQty'],
-			);
 		}
-
-		$_SESSION['test'] = "testing";
+		
 header("Location: ../pages/store.php");
 ?>
