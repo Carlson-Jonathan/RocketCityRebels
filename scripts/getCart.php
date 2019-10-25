@@ -11,6 +11,18 @@ session_start();
 *   cart, aka SESSION, or add/subtract from the total quantity selected.
 *   PayPal button is available to submit and complete the order
 ******************************************************************************/
+// Counts for looping through both arrays in SESSION
+$itemCount = 0;
+$clothingCount = 0;
+
+// Store forms for each array item
+$itemArray = '';
+$clothingArray = '';
+
+while ($itemCount < sizeof($_SESSION['items'])) {
+	$itemArray .= "";
+}
+
 
 echo "
 	<div class='modal fade' id='cart' tabindex='-1' role='dialog'>
@@ -22,7 +34,10 @@ echo "
 				</div>
 				<div class='modal-body'>
 					<table class='show-cart table'>
-          
+					$itemArray
+					</table>
+					<table class='show-cart table'>
+					$clothingArray
 					</table>
 					<div>Total price: $<span class='total-cart'></span></div>
 				</div>
@@ -35,7 +50,7 @@ echo "
 	</div> 
 
 	<script>
-	// When the user clicks the Cart, open the modal 
+		// When the user clicks the Cart, open the modal 
         document.getElementById('shoppingCart').onclick = function() {
           document.getElementById('cart').style.display = 'block';
         }

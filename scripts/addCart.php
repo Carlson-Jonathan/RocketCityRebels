@@ -32,13 +32,7 @@ function test_input($data) {
 			{
 				if ($_SESSION['items'][$i]['item_id'] == $itemID)
 				{
-					$_SESSION['items'][$i] = array (
-					'item_id' => $_POST['itemId'],
-					'name' => $_POST['itemName'],
-					'price' => $_POST['itemPrice'],
-					'qty' => $_POST["availableQty"],
-					'selectQty' => $_POST['selectQty'],
-					);
+					$_SESSION['items'][$i]['selectQty' = $_POST['selectQty'];
 
 					$exists = "true";
 				}
