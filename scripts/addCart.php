@@ -9,7 +9,7 @@
 *   Session items array.
 ******************************************************************************/
 
-echo '<script>window.location.href = "/store.php";</script>';
+echo '<script>window.location.href = "../pages/store.php";</script>';
 
 // Security
 function test_input($data) {
@@ -32,5 +32,5 @@ function test_input($data) {
 		);
 		array_push($_SESSION['items'], $newArray);
 	} 
-header("Location: /store.php.php");
+header("Location: ../pages/store.php");
 ?>
