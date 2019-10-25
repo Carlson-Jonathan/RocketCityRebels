@@ -22,7 +22,7 @@ function test_input($data) {
 
 // Set all variables
 	// PHP variable must have daat received from SESSION or POSt to be accepted as Parameters, dumb right?!
-	    $itemID = $_POST["itemID"];
+	    $itemID = $_POST["itemId"];
 		$exists = "false";
 
 		$i = 0;
@@ -33,7 +33,7 @@ function test_input($data) {
 			if ($tempID == $itemID)
 			{
 				$_SESSION['items'][$i] = array (
-				'item_id' => $_POST['itemID'],
+				'item_id' => $_POST['itemId'],
 				'name' => $_POST['itemName'],
 				'price' => $_POST['itemPrice'],
 				'qty' => $_POST["availableQty"],
@@ -48,7 +48,7 @@ function test_input($data) {
 		if ($exists == "false")
 		{
 			$_SESSION['items'][] = array (
-			'item_id' => $_POST['itemID'],
+			'item_id' => $_POST['itemId'],
 			'name' => $_POST['itemName'],
 			'price' => $_POST['itemPrice'],
 			'qty' => $_POST["availableQty"],
