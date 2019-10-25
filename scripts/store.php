@@ -31,7 +31,6 @@ print_r($_SESSION);
 		}
 
 		// Just for testing purposes
-		$itemArray = $_SESSION['items'][2]['name'];
 		echo "size" . sizeof($_SESSION['items']);
 
 		// On Form Post set Session variables
@@ -113,7 +112,6 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
 							<input type='hidden' name='itemPrice' value='" . $price . "'>
 							<input type='hidden' name='availableQty' value='" . $quantity . "'>
 							<input type='submit' name='AddItem'>Add to cart</button>		
-							<p>$itemArray</p>
 						</div>
 					</form>
                 </div>
