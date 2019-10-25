@@ -34,17 +34,12 @@
                 <p class="lighttext">Rebel Store Coming Soon!</p>
             </div>
         </div>
-
-		<!-------------------------------------------------------------------->
- 
-        <div class="row2">
-            <?php require "../scripts/getCart.php"; ?>
-        </div>
         
         <!-------------------------------------------------------------------->
 
         <h2>Stuff to buy and payments and stuff</h2>    
         <div class="row2">
+			<?php require "../scripts/getCart.php"; ?>
             <?php require "../scripts/store.php"; ?>
         </div>
 
