@@ -31,8 +31,8 @@ print_r($_SESSION);
 		}
 
 		// Just for testing purposes
-		//$itemArray = $_SESSION['items'][2]['name'];
 		$itemArray = $_SESSION['items'][2]['name'];
+		echo "size" . sizeof($_SESSION['items']);
 
 		// On Form Post set Session variables
 	
