@@ -1,7 +1,5 @@
 <?php 
-if(!isset($_SESSION)) {
      session_start();
-}
 ?>
 <!DOCTYPE HTML>  
 <html lang="en-US">
