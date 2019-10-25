@@ -145,7 +145,7 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
     ";
 	// On Form Post set Session variables
 	// Set all variables
-	if (isset($_POST["AddItem"])) {
+	if (isset($_POST["AddItems"])) {
 	// PHP variable must have daat received from SESSION or POSt to be accepted as Parameters, dumb right?!
 	    $itemNum = $_POST["itemNum"];
 		array_push($_SESSION['items'], array (
