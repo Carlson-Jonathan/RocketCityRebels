@@ -31,6 +31,20 @@ session_start();
 		// Just for testing purposes
 		$itemArray = sizeof($_SESSION['items']);
 
+		// On Form Post set Session variables
+	// Set all variables
+	if (isset($_POST["AddItem"])) {
+	// PHP variable must have daat received from SESSION or POSt to be accepted as Parameters, dumb right?!
+	    $itemNum = $_POST["itemNum"];
+		array_push($_SESSION['items'], array (
+			'item_id' => $_POST['itemID'],
+			'name' => $_POST['itemName'],
+			'price' => $_POST['itemPrice'],
+			'qty' => $_POST["availableQty"],
+			'selectQty' => $_POST['selectQty'],
+		));
+	} 
+
 while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
     $item_id = $row['item_id'];
 	$name = $row['name'];
@@ -145,19 +159,7 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
 
         </script>
     ";
-	// On Form Post set Session variables
-	// Set all variables
-	if (isset($_POST["AddItem"])) {
-	// PHP variable must have daat received from SESSION or POSt to be accepted as Parameters, dumb right?!
-	    $itemNum = $_POST["itemNum"];
-		array_push($_SESSION['items'], array (
-			'item_id' => $_POST['itemID'],
-			'name' => $_POST['itemName'],
-			'price' => $_POST['itemPrice'],
-			'qty' => $_POST["availableQty"],
-			'selectQty' => $_POST['selectQty'],
-		));
-	} 
+	
 
 
 
