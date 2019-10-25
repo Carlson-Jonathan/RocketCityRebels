@@ -49,10 +49,11 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
 		}
 
 		// Just for testing purposes
-}
 		$itemThree = $_SESSION['items'];
 
 		$itemTwo = $itemThree[0]['name'];
+}
+		
 
     /**********************************************************************
     * Propogates and displays each element to the screen upon page load. On
@@ -109,8 +110,7 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
 							<input type='hidden' name='itemPrice' value='" . $price . "'>
 							<input type='hidden' name='availableQty' value='" . $quantity . "'>
 							<input type='submit' name='AddItem'>Add to cart</button>		
-							<p>$itemThree</p>
-							<p>$itemTwo</p>
+
 						</div>
 					</form>
                 </div>
