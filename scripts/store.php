@@ -32,19 +32,7 @@ session_start();
 		$itemArray = sizeof($_SESSION['items']);
 
 		// On Form Post set Session variables
-	// Set all variables
-	if (isset($_POST["AddItem"])) {
-	// PHP variable must have daat received from SESSION or POSt to be accepted as Parameters, dumb right?!
-	    $itemNum = $_POST["itemNum"];
-		$newArray = array (
-			'item_id' => $_POST['itemID'],
-			'name' => $_POST['itemName'],
-			'price' => $_POST['itemPrice'],
-			'qty' => $_POST["availableQty"],
-			'selectQty' => $_POST['selectQty'],
-		);
-		array_push($_SESSION['items'], $newArray);
-	} 
+	
 
 while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
     $item_id = $row['item_id'];
@@ -111,7 +99,7 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
                     <span class='popuptext'>Price: 
                     </span><br> $price</p><br>
                     <span class='popuptext'>Quantity</span><br>
-					<form action='' method='post'>
+					<form action='/addCart.php' method='POST'>
 						<div id='quantity" . $x . "' name='quantity" . $x . "'>
 							$qtySelect
 						</div>
