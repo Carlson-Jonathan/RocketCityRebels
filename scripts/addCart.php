@@ -10,7 +10,7 @@ session_start();
 *   Session items array.
 ******************************************************************************/
 
-//echo '<script>window.location.href = "../pages/store.php";</script>';
+echo '<script>window.location.href = "../pages/store.php";</script>';
 
 // Security
 function test_input($data) {
@@ -32,11 +32,5 @@ function test_input($data) {
 		);
 
 		$_SESSION['test'] = "testing";
-//header("Location: ../pages/store.php");
+header("Location: ../pages/store.php");
 ?>
-<!DOCTYPE HTML>
-<html>
-<body>
-<?php echo "Session id = " . session_id(); ?>
-</body>
-</html>

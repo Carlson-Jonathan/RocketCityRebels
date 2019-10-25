@@ -102,7 +102,7 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
                     <span class='popuptext'>Price: 
                     </span><br> $price</p><br>
                     <span class='popuptext'>Quantity</span><br>
-					<form action='/addCart.php' method='POST'>
+					<form action='../scripts/addCart.php' method='POST'>
 						<div id='quantity" . $x . "' name='quantity" . $x . "'>
 							$qtySelect
 						</div>
