@@ -21,6 +21,21 @@ $storeItems = $db->prepare("SELECT * FROM store");
 $storeItems->execute();
 $x = 1;
 
+     session_start();
+	 echo "Session id" . session_id();
+print_r($_SESSION);
+
+		//Check if items array already exists. If it does not, then instantiate
+		if (!isset($_SESSION['items'])) {
+			$_SESSION['items'] = array();
+		}
+
+		// Just for testing purposes
+		echo "size" . sizeof($_SESSION['items']);
+
+		// On Form Post set Session variables
+	
+
 while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
     $item_id = $row['item_id'];
 	$name = $row['name'];
@@ -39,15 +54,7 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
 	}
 	$qtySelect .= "</select>";
 
-		session_start();
-
-		//Check if items array already exists. If it does not, then instantiate
-		if (!isset($_SESSION['items'])) {
-			$_SESSION['items'] = array();
-		}
-
-		// Just for testing purposes
-		//$itemArray = $_SESSION['items']['2']['name'];
+		
     
 
     /**********************************************************************
@@ -61,28 +68,6 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
             ' alt='Image file not found'>
         </div>
 
-		// Cart modal *Still a Work in Progress
-		<div class='modal fade' id='cart' tabindex='-1' role='dialog'>
-			<div class='modal-dialog modal-lg' role='document'>
-				<div class='modal-content'>
-					<div class='modal-header'>
-						<h5 class='modal-title'>Shopping Cart</h5>
-						<button data-dismiss='modal' class='close' id='exitBtn" . $x . "'>x</button>
-					</div>
-					<div class='modal-body'>
-						<table class='show-cart table'>
-          
-						</table>
-						<div>Total price: $<span class='total-cart'></span></div>
-					</div>
-					<div class='modal-footer'>
-						<button type='button' class='btn btn-secondary' data-dismiss='modal'>Close</button>
-						<button type='button' class='btn btn-primary'>Order now</button>
-					</div>
-				</div>
-			</div>
-		</div> 
-
         <div id='$modelID' class='modal'>
             <div class='modal-content'>
 			<button data-dismiss='modal' class='close' id='exitBtn" . $x . "'>x</button>
@@ -94,7 +79,7 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
                     <span class='popuptext'>Price: 
                     </span><br> $price</p><br>
                     <span class='popuptext'>Quantity</span><br>
-					<form action='' method='post'>
+					<form action='../scripts/addCart.php' method='POST'>
 						<div id='quantity" . $x . "' name='quantity" . $x . "'>
 							$qtySelect
 						</div>
@@ -104,8 +89,7 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
 							<input type='hidden' name='itemName' value='" . $name . "'>
 							<input type='hidden' name='itemPrice' value='" . $price . "'>
 							<input type='hidden' name='availableQty' value='" . $quantity . "'>
-							<button type='submit' name='AddItem'>Add to cart</button>		
-							<p>$itemArray</p>
+							<input type='submit' name='AddItem'>Add to cart</button>		
 						</div>
 					</form>
                 </div>
@@ -143,19 +127,7 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
 
         </script>
     ";
-	// On Form Post set Session variables
-	// Set all variables
-	if (isset($_POST["AddItem"])) {
-	// PHP variable must have daat received from SESSION or POSt to be accepted as Parameters, dumb right?!
-	    $itemNum = $_POST["itemNum"];
-		$_SESSION['items'][$itemNum] = array (
-			'item_id' => $_POST['itemID'],
-			'name' => $_POST['itemName'],
-			'price' => $_POST['itemPrice'],
-			'qty' => $_POST["availableQty"],
-			'selectQty' => $_POST['selectQty'],
-		);
-	} 
+	
 
 
 

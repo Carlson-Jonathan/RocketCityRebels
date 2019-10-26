@@ -1,3 +1,6 @@
+<?php 
+     session_start();
+?>
 <!DOCTYPE HTML>  
 <html lang="en-US">
 
@@ -36,16 +39,17 @@
 
         <h2>Stuff to buy and payments and stuff</h2>    
         <div class="row2">
+			<?php require "../scripts/getCart.php"; ?>
             <?php require "../scripts/store.php"; ?>
         </div>
 
-            <!-------------------------------------------------------------------->
+        <!-------------------------------------------------------------------->
 
-            <div class="row2">
-                <?php require "../scripts/clothing.php"; ?>
-            </div>
+        <div class="row2">
+            <?php require "../scripts/clothing.php"; ?>
+        </div>
 
-            <!-------------------------------------------------------------------->
+        <!-------------------------------------------------------------------->
 
         </div>
         
