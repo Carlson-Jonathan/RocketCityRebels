@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\pages"
+    "\\pages",
+    "\\scripts"
   ],
-  "SelectedNode": "\\scripts",
+  "SelectedNode": "\\scripts\\editCart.php",
   "PreviewInSolutionExplorer": false
 }
