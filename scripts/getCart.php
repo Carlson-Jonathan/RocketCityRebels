@@ -31,7 +31,7 @@ while ($itemCount <= $key) {
 	$maxQty = $_SESSION['items'][$itemCount]['qty'];
 	$qtySelected = $_SESSION['items'][$itemCount]['selectQty'];
 	$qtyList = '';
-	$qtyList .= '<select name="selectQty">';
+	$qtyList .= '<select name="newQty">';
 
 	for ($i = 1; $i <= $maxQty; $i++) {
 	// Auto select the qty saved in the SESSION
@@ -50,10 +50,11 @@ while ($itemCount <= $key) {
 						<td><input type='submit' value='X'></td>
 					  </form>
 					  <td>" . $_SESSION['items'][$itemCount]['name'] . "</td>
-					  <form method='POST' action=''>
+					  <form action='../scripts/editCartItem.php' method='POST'>
 					  <td>" . $qtyList . "</td>
-					  </form>
 					  <td>" . $itemPrice . "</td>
+					  <td><input type='submit' name='EditItem'>Add to cart</button></td>
+					  </form>
 					  </tr>";
 
 		$totalPrice = $totalPrice + floatval($itemPrice);
@@ -77,6 +78,7 @@ echo "
 							<th>Item</th>
 							<th>Quantity</th>
 							<th>Price</th>
+							<th>Change</th>
 						</tr>
 					$itemArray
 					</table>
