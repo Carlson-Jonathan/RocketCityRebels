@@ -19,9 +19,7 @@ $clothingCount = 0;
 $itemArray = '';
 $clothingArray = '';
 
-while ($itemCount < sizeof($_SESSION['items'])) {
-	$itemArray .= "";
-}
+
 
 
 echo "
