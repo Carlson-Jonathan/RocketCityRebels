@@ -119,12 +119,6 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
           modal" . $x . ".style.display = 'none';
 
         }
-
-        // When the user clicks anywhere, close the modal
-        //modal" . $x . ".onclick=function() {
-       //     modal" . $x . ".style.display = 'none';
-       // }
-
         </script>
     ";
 	

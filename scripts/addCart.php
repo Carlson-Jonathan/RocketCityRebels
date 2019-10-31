@@ -21,11 +21,10 @@ function test_input($data) {
 }
 
 // Set all variables
-	    $itemID = $_POST["itemId"];
-		$exists = "false";
-
-		$i = 0;
 		if (isset($_POST["AddItem"])) {
+		$itemID = $_POST["itemId"];
+		$exists = "false";
+		$i = 0;
 			$count = sizeof($_SESSION['items']);
 			do
 			{

@@ -6,7 +6,8 @@ session_start();
 * Author:
 *   Kyle Kadous
 * Description:   
-*   Edit a Cart item in the session array based on new qtyselected and array key
+*   Edit a cart item in the session array based on new qtyselected and array key
+*   Both types of items can be changed here.
 ******************************************************************************/
 
 echo '<script>window.location.href = "../pages/store.php";</script>';
