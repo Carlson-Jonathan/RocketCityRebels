@@ -21,12 +21,10 @@ function test_input($data) {
 }
 
 // Set all variables
-	// PHP variable must have daat received from SESSION or POSt to be accepted as Parameters, dumb right?!
-	    $itemID = $_POST["itemId"];
-		$exists = "false";
-
-		$i = 0;
 		if (isset($_POST["AddItem"])) {
+		$itemID = $_POST["itemId"];
+		$exists = "false";
+		$i = 0;
 			$count = sizeof($_SESSION['items']);
 			do
 			{
