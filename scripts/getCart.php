@@ -27,7 +27,7 @@ $key = key($_SESSION['items']);
 while ($itemCount <= $key) {
 	if (isset($_SESSION['items'][$itemCount]) && !empty($_SESSION['items'][$itemCount])) {
 		$itemArray .= "<tr><form method='POST' action='../scripts/removeCartItem.php?itemArray_id=" . $itemCount . "'>
-						<td><input type='submit' class='delete' value='X'></td>
+						<td><input type='submit' value='X'></td>
 					  </form></tr>";
 	}
 $itemCount++;
@@ -44,6 +44,12 @@ echo "
 				</div>
 				<div class='modal-body'>
 					<table class='show-cart table'>
+						<tr>
+							<th></th>
+							<th>Item</th>
+							<th>Quantity</th>
+							<th>Total Price</th>
+						</tr>
 					$itemArray
 					</table>
 					<table class='show-cart table'>
