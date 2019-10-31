@@ -26,9 +26,34 @@ $key = key($_SESSION['items']);
 
 while ($itemCount <= $key) {
 	if (isset($_SESSION['items'][$itemCount]) && !empty($_SESSION['items'][$itemCount])) {
+	// Using selected qty and max allowed qty, display dropdown in case user wishes to change selection
+	$maxQty = $_SESSION['items'][$itemCount]['qty'];
+	$qtySelected = $_SESSION['items'][$itemCount]['selectQty'];
+	$qtyList = '';
+	$qtyList .= '<select name="selectQty">';
+
+	for ($i = 1; $i <= $maxQty; $i++) {
+	// Auto select the qty saved in the SESSION
+		if ($i == $qtySelected) {
+			$qtyList .= "<option value='" . $i . "' selected>" .$i . "</option>";
+	}
+		$qtyList .= "<option value='" . $i . "'>" . $i . "</option>";
+	}
+	$qtyList .= "</select>";
+
+	// Total price for row
+	$itemPrice = $_SESSION['items'][$itemCount]['price'] * $qtySelected;
+
+
 		$itemArray .= "<tr><form method='POST' action='../scripts/removeCartItem.php?itemArray_id=" . $itemCount . "'>
 						<td><input type='submit' value='X'></td>
-					  </form></tr>";
+					  </form>
+					  <td>" . $_SESSION['items'][$itemCount]['name'] . "</td>
+					  <form method='POST' action=''>
+					  <td>" . $qtyList . "</td>
+					  </form>
+					  <td>" . $itemPrice . "</td>
+					  </tr>";
 	}
 $itemCount++;
 }
@@ -48,7 +73,7 @@ echo "
 							<th></th>
 							<th>Item</th>
 							<th>Quantity</th>
-							<th>Total Price</th>
+							<th>Price</th>
 						</tr>
 					$itemArray
 					</table>
