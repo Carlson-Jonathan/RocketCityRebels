@@ -14,7 +14,7 @@ session_start();
 // Counts for looping through both arrays in SESSION
 $itemCount = 0;
 $clothingCount = 0;
-$totalPrice = 0;
+$totalPrice = floatval(0);
 
 // Store forms for each array item
 $itemArray = '';
@@ -56,7 +56,7 @@ while ($itemCount <= $key) {
 					  <td>" . $itemPrice . "</td>
 					  </tr>";
 
-		$totalPrice .= $itemPrice;
+		$totalPrice .= floatval($itemPrice);
 	}
 $itemCount++;
 }
