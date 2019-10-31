@@ -43,7 +43,7 @@ while ($itemCount <= $key) {
 	$qtyList .= "</select>";
 
 	// Total price for row
-	$itemPrice = $_SESSION['items'][$itemCount]['price'] * $qtySelected;
+	$itemPrice = floatval($_SESSION['items'][$itemCount]['price']) * floatval($qtySelected);
 
 
 		$itemArray .= "<tr><form method='POST' action='../scripts/removeCartItem.php?itemArray_id=" . $itemCount . "'>
