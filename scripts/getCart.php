@@ -21,12 +21,13 @@ $clothingArray = '';
 
 // Set internal pointer to array
 end($_SESSION['items']);
+// Get the last key in the array, because we may be removing items
 $key = key($_SESSION['items']);
 
 while ($itemCount <= $key) {
 	if (isset($_SESSION['items'][$itemCount]) && !empty($_SESSION['items'][$itemCount])) {
 		$itemArray .= "<tr><form method='POST' action='../scripts/removeCartItem.php?itemArray_id=" . $itemCount . "'>
-						<td><input type='submit' value='X'></td>
+						<td><input type='submit' class='delete' value='X'></td>
 					  </form></tr>";
 	}
 $itemCount++;
