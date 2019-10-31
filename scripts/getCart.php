@@ -56,7 +56,7 @@ while ($itemCount <= $key) {
 					  <td>" . $itemPrice . "</td>
 					  </tr>";
 
-		$totalPrice .= floatval($itemPrice);
+		$totalPrice = $totalPrice + floatval($itemPrice);
 	}
 $itemCount++;
 }
