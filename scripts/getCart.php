@@ -20,7 +20,7 @@ $itemArray = '';
 $clothingArray = '';
 
 while ($itemCount < sizeof($_SESSION['items'])) {
-	
+	$itemCount++;
 }
 
 
