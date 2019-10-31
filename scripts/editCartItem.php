@@ -20,7 +20,12 @@ function test_input($data) {
 }
 
 // Set all variables
+if (isset($_POST["EditItem"])) {
+	$key = $_POST["key"];
 
+	// Changed Selected Quantity
+	$_SESSION['items'][$key]['selectQty'] = $_POST['newQty'];
+}
 		
 header("Location: ../pages/store.php");
 ?>

@@ -53,7 +53,9 @@ while ($itemCount <= $key) {
 					  <form action='../scripts/editCartItem.php' method='POST'>
 					  <td>" . $qtyList . "</td>
 					  <td>" . $itemPrice . "</td>
-					  <td><input type='submit' name='EditItem'>Add to cart</button></td>
+					  <td>
+					  <input type='hidden' name='key' value='" . $itemCount . "'>
+					  <input type='submit' name='EditItem' value='Save Change'/></td>
 					  </form>
 					  </tr>";
 
