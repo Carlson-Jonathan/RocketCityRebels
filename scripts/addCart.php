@@ -22,9 +22,9 @@ function test_input($data) {
 
 // Set all variables
 		if (isset($_POST["AddItem"])) {
-		$itemID = $_POST["itemId"];
-		$exists = "false";
-		$i = 0;
+			$itemID = $_POST["itemId"];
+			$exists = "false";
+			$i = 0;
 			$count = sizeof($_SESSION['items']);
 			do
 			{
@@ -53,6 +53,11 @@ function test_input($data) {
 				'selectQty' => $_POST['selectQty'],
 				);
 			}
+		}
+
+		// For clothing items
+		if (isset($_POST["AddClothing"])) {
+		
 		}
 		
 header("Location: ../pages/store.php");

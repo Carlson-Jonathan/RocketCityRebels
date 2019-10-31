@@ -49,6 +49,7 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
 
 	$qtySelect = '';
 	$qtySelect .= '<select name="selectQty">';
+	$qtySelect .= "<option value='0' selected>0</option>"
 	for ($i = 1; $i <= $quantity; $i++) {
 	$qtySelect .= "<option value='" . $i . "'>" . $i . "</option>";
 	}
@@ -84,7 +85,7 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
 							$qtySelect
 						</div>
 						<div class='textblock' id='addItemsDiv'>
-						<input type='hidden' name='itemNum' value='" . $x . "'>
+							<input type='hidden' name='itemNum' value='" . $x . "'>
 							<input type='hidden' name='itemId' value='" . $item_id . "'>
 							<input type='hidden' name='itemName' value='" . $name . "'>
 							<input type='hidden' name='itemPrice' value='" . $price . "'>

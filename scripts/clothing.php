@@ -1,4 +1,5 @@
 <?php 
+session_start();
 /******************************************************************************
 * File names:
 *   store.php, clothing.php
@@ -21,6 +22,11 @@ $clothingItems = $db->prepare("SELECT * FROM clothing");
 $clothingItems->execute();
 $x = 1;
 
+//Check if items array already exists. If it does not, then instantiate
+		if (!isset($_SESSION['clothing'])) {
+			$_SESSION['clothing'] = array();
+		}
+
 while ($row = $clothingItems->fetch(PDO::FETCH_ASSOC)) {
     $item_id = $row['item_id'];
 	$name = $row['name'];
@@ -37,7 +43,8 @@ while ($row = $clothingItems->fetch(PDO::FETCH_ASSOC)) {
 
 	// Create qty select for small
 	$qtySmall = '';
-	$qtySmall .= '<select name="selectSmall' . $x . '">';;
+	$qtySmall .= '<select name="selectSmall' . $x . '">';
+	$qtySmall .= "<option value='0' selected>0</option>";
 	for ($i = 1; $i <= $small; $i++) {
 	$qtySmall .= "<option value='" . $i . "'>" . $i . "</option>";
 	}
@@ -46,6 +53,7 @@ while ($row = $clothingItems->fetch(PDO::FETCH_ASSOC)) {
 	// Create qty select for medium
 	$qtyMedium = '';
 	$qtyMedium .= '<select name="selectMedium' . $x . '">';
+	$qtyMedium .= "<option value='0' selected>0</option>";
 	for ($i = 1; $i <= $medium; $i++) {
 	$qtyMedium .= "<option value='" . $i . "'>" . $i . "</option>";
 	}
@@ -54,6 +62,7 @@ while ($row = $clothingItems->fetch(PDO::FETCH_ASSOC)) {
 	// Create qty select for large
 	$qtyLarge = '';
 	$qtyLarge .= '<select name="selectLarge' . $x . '">';
+	$qtyLarge .= "<option value='0' selected>0</option>";
 	for ($i = 1; $i <= $large; $i++) {
 	$qtyLarge .= "<option value='" . $i . "'>" . $i . "</option>";
 	}
@@ -62,6 +71,7 @@ while ($row = $clothingItems->fetch(PDO::FETCH_ASSOC)) {
 	// Create qty select for xlarge
 	$qtyXLarge = '';
 	$qtyXLarge .= '<select name="selectXLarge' . $x . '">';
+	$qtyXLarge .= "<option value='0' selected>0</option>";
 	for ($i = 1; $i <= $xlarge; $i++) {
 	$qtyXLarge .= "<option value='" . $i . "'>" . $i . "</option>";
 	}
@@ -89,21 +99,34 @@ while ($row = $clothingItems->fetch(PDO::FETCH_ASSOC)) {
                     <span class='popuptext'>Price: 
                     </span><br> $price</p><br>
                     <span class='popuptext'>Small</span><br>
-					<div id='smallQty" . $x . "'>
-					$qtySmall
-					</div>
-                    <span class='popuptext'>Medium</span><br> 
-					<div id='mediumQty" . $x . "'>
-					$qtyMedium
-					</div>
-                    <span class='popuptext'>Large</span><br> 
-					<div id='largeQty" . $x . "'>
-					$qtyLarge
-					</div>
-                    <span class='popuptext'>XLarge</span><br>  
-					<div id='xlargeQty" . $x . "'>
-					$qtyXLarge
-					</div>
+					<form action='../scripts/addCart.php' method='POST'>
+						<div id='smallQty" . $x . "'>
+						$qtySmall
+						</div>
+						<span class='popuptext'>Medium</span><br> 
+						<div id='mediumQty" . $x . "'>
+						$qtyMedium
+						</div>
+						<span class='popuptext'>Large</span><br> 
+						<div id='largeQty" . $x . "'>
+						$qtyLarge
+						</div>
+						<span class='popuptext'>XLarge</span><br>  
+						<div id='xlargeQty" . $x . "'>
+						$qtyXLarge
+						</div>
+						<div class='textblock' id='addClothingDiv'>
+							<input type='hidden' name='itemNum' value='" . $x . "'>
+							<input type='hidden' name='itemId' value='" . $item_id . "'>
+							<input type='hidden' name='itemName' value='" . $name . "'>
+							<input type='hidden' name='itemPrice' value='" . $price . "'>
+							<input type='hidden' name='availableSmall' value='" . $small . "'>
+							<input type='hidden' name='availableMedium' value='" . $medium . "'>
+							<input type='hidden' name='availableLarge' value='" . $large . "'>
+							<input type='hidden' name='availableXLarge' value='" . $xlarge . "'>
+							<input type='submit' name='AddClothing'>Add to cart</button>		
+						</div>
+					</form>
                 </div>
                 <div class='line'></div>
                 <p style='margin-top: 15px; text-align: left'>
@@ -128,11 +151,6 @@ while ($row = $clothingItems->fetch(PDO::FETCH_ASSOC)) {
           clmodal" . $x . ".style.display = 'none';
 
         }
-
-        // When the user clicks anywhere, close the modal
-        //clmodal" . $x . ".onclick=function() {
-      //      clmodal" . $x . ".style.display = 'none';
-       // }
 
         </script>
     ";
