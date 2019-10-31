@@ -14,6 +14,7 @@ session_start();
 // Counts for looping through both arrays in SESSION
 $itemCount = 0;
 $clothingCount = 0;
+$totalPrice = 0;
 
 // Store forms for each array item
 $itemArray = '';
@@ -54,6 +55,8 @@ while ($itemCount <= $key) {
 					  </form>
 					  <td>" . $itemPrice . "</td>
 					  </tr>";
+
+		$totalPrice .= $itemPrice;
 	}
 $itemCount++;
 }
@@ -80,7 +83,7 @@ echo "
 					<table class='show-cart table'>
 					$clothingArray
 					</table>
-					<div>Total price: $<span class='total-cart'></span></div>
+					<div>Total price: $" . $totalPrice . "<span class='total-cart'></span></div>
 				</div>
 				<div class='modal-footer'>
 					<button type='button' class='btn btn-secondary' data-dismiss='modal'>Close</button>
