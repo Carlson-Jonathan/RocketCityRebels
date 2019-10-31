@@ -23,7 +23,7 @@ $clothingArray = '';
 end($_SESSION['items']);
 $key = key($_SESSION['items']);
 
-while ($itemCount < $key) {
+while ($itemCount <= $key) {
 	if (isset($_SESSION['items'][$itemCount]) && !empty($_SESSION['items'][$itemCount])) {
 		$itemArray .= "<tr><form method='POST' action='../scripts/removeCartItem.php?itemArray_id=" . $itemCount . "'>
 						<td><input type='submit' value='X'></td>
