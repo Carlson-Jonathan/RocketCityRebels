@@ -95,7 +95,7 @@ function test_input($data) {
 				$i++;
 			} while ($i <= $count);
 
-			if ($exists == "false" && $_POST['selectSmall'] == 0 && $_POST['selectMedium'] == 0 && $_POST['selectLarge'] == 0 && $_POST['selectXLarge'] == 0)
+			if ($exists == "false" && $_POST['selectSmall'] != 0 && $_POST['selectMedium'] != 0 && $_POST['selectLarge'] != 0 && $_POST['selectXLarge'] != 0)
 			{
 				$_SESSION['clothing'][] = array (
 					'item_id' => $_POST['itemId'],
