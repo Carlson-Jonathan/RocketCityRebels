@@ -44,8 +44,7 @@ while ($row = $clothingItems->fetch(PDO::FETCH_ASSOC)) {
 	// Create qty select for small
 	$qtySmall = '';
 	$qtySmall .= '<select name="selectSmall">';
-	$qtySmall .= "<option value='0' selected>0</option>";
-	for ($i = 1; $i <= $small; $i++) {
+	for ($i = 0; $i <= $small; $i++) {
 	$qtySmall .= "<option value='" . $i . "'>" . $i . "</option>";
 	}
 	$qtySmall .= "</select>";
@@ -53,8 +52,7 @@ while ($row = $clothingItems->fetch(PDO::FETCH_ASSOC)) {
 	// Create qty select for medium
 	$qtyMedium = '';
 	$qtyMedium .= '<select name="selectMedium">';
-	$qtyMedium .= "<option value='0' selected>0</option>";
-	for ($i = 1; $i <= $medium; $i++) {
+	for ($i = 0; $i <= $medium; $i++) {
 	$qtyMedium .= "<option value='" . $i . "'>" . $i . "</option>";
 	}
 	$qtyMedium .= "</select>";
@@ -62,8 +60,7 @@ while ($row = $clothingItems->fetch(PDO::FETCH_ASSOC)) {
 	// Create qty select for large
 	$qtyLarge = '';
 	$qtyLarge .= '<select name="selectLarge">';
-	$qtyLarge .= "<option value='0' selected>0</option>";
-	for ($i = 1; $i <= $large; $i++) {
+	for ($i = 0; $i <= $large; $i++) {
 	$qtyLarge .= "<option value='" . $i . "'>" . $i . "</option>";
 	}
 	$qtyLarge .= "</select>";
@@ -71,8 +68,7 @@ while ($row = $clothingItems->fetch(PDO::FETCH_ASSOC)) {
 	// Create qty select for xlarge
 	$qtyXLarge = '';
 	$qtyXLarge .= '<select name="selectXLarge">';
-	$qtyXLarge .= "<option value='0' selected>0</option>";
-	for ($i = 1; $i <= $xlarge; $i++) {
+	for ($i = 0; $i <= $xlarge; $i++) {
 	$qtyXLarge .= "<option value='" . $i . "'>" . $i . "</option>";
 	}
 	$qtyXLarge .= "</select>";

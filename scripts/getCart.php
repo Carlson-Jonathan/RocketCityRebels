@@ -27,24 +27,23 @@ $key = key($_SESSION['items']);
 
 while ($itemCount <= $key) {
 	if (isset($_SESSION['items'][$itemCount]) && !empty($_SESSION['items'][$itemCount])) {
-	// Using selected qty and max allowed qty, display dropdown in case user wishes to change selection
-	$maxQty = $_SESSION['items'][$itemCount]['qty'];
-	$qtySelected = $_SESSION['items'][$itemCount]['selectQty'];
-	$qtyList = '';
-	$qtyList .= '<select name="newQty">';
+		// Using selected qty and max allowed qty, display dropdown in case user wishes to change selection
+		$maxQty = $_SESSION['items'][$itemCount]['qty'];
+		$qtySelected = $_SESSION['items'][$itemCount]['selectQty'];
+		$qtyList = '';
+		$qtyList .= '<select name="newQty">';
 
-	for ($i = 1; $i <= $maxQty; $i++) {
-	// Auto select the qty saved in the SESSION
-		if ($i == $qtySelected) {
-			$qtyList .= "<option value='" . $i . "' selected>" .$i . "</option>";
-	}
-		$qtyList .= "<option value='" . $i . "'>" . $i . "</option>";
-	}
-	$qtyList .= "</select>";
+		for ($i = 1; $i <= $maxQty; $i++) {
+		// Auto select the qty saved in the SESSION
+			if ($i == $qtySelected) {
+				$qtyList .= "<option value='" . $i . "' selected>" .$i . "</option>";
+			}
+			$qtyList .= "<option value='" . $i . "'>" . $i . "</option>";
+		}
+		$qtyList .= "</select>";
 
-	// Total price for row
-	$itemPrice = floatval($_SESSION['items'][$itemCount]['price']) * floatval($qtySelected);
-
+		// Total price for row
+		$itemPrice = floatval($_SESSION['items'][$itemCount]['price']) * floatval($qtySelected);
 
 		$itemArray .= "<tr><form method='POST' action='../scripts/removeCartItem.php?itemArray_id=" . $itemCount . "'>
 						<td><input type='submit' value='X'></td>
@@ -72,80 +71,78 @@ $clothingKey = key($_SESSION['clothing']);
 while ($clothingCount <= $clothingKey) {
 	if (isset($_SESSION['clothing'][$clothingCount]) && !empty($_SESSION['clothing'][$clothingCount])) {
 
-	// Using selected qty's and max allowed qty's, display dropdown in case user wishes to change selection
+		// Using selected qty's and max allowed qty's, display dropdown in case user wishes to change selection
+		/***************************************************************
+		* Small Selector
+		****************************************************************/
+		$maxSmall = $_SESSION['clothing'][$clothingCount]['availableSmall'];
+		$selectedSmall = $_SESSION['clothing'][$clothingCount]['selectSmall'];
+		$smallList = '';
+		$smallList .= '<select name="newSmall">';
 
-	/***************************************************************
-	* Small Selector
-	****************************************************************/
-	$maxSmall = $_SESSION['clothing'][$clothingCount]['availableSmall'];
-	$selectedSmall = $_SESSION['clothing'][$clothingCount]['selectSmall'];
-	$smallList = '';
-	$smallList .= '<select name="newSmall">';
+		for ($i = 0; $i <= $maxSmall; $i++) {
+			// Auto select the qty saved in the SESSION
+			if ($i == $selectedSmall) {
+				$smallList .= "<option value='" . $i . "' selected>" .$i . "</option>";
+			}
+			$smallList .= "<option value='" . $i . "'>" . $i . "</option>";
+		}
+		$smallList .= "</select>";
 
-	for ($i = 0; $i <= $maxSmall; $i++) {
-	// Auto select the qty saved in the SESSION
-		if ($i == $selectedSmall) {
-			$smallList .= "<option value='" . $i . "' selected>" .$i . "</option>";
-	}
-		$smallList .= "<option value='" . $i . "'>" . $i . "</option>";
-	}
-	$smallList .= "</select>";
+		/***************************************************************
+		* Medium Selector
+		****************************************************************/
+		$maxMedium = $_SESSION['clothing'][$clothingCount]['availableMedium'];
+		$selectedMedium = $_SESSION['clothing'][$clothingCount]['selectMedium'];
+		$mediumList = '';
+		$mediumList .= '<select name="newMedium">';
 
-	/***************************************************************
-	* Medium Selector
-	****************************************************************/
-	$maxMedium = $_SESSION['clothing'][$clothingCount]['availableMedium'];
-	$selectedMedium = $_SESSION['clothing'][$clothingCount]['selectMedium'];
-	$mediumList = '';
-	$mediumList .= '<select name="newMedium">';
+		for ($i = 0; $i <= $maxMedium; $i++) {
+			// Auto select the qty saved in the SESSION
+			if ($i == $selectedMedium) {
+				$mediumList .= "<option value='" . $i . "' selected>" .$i . "</option>";
+			}
+			$mediumList .= "<option value='" . $i . "'>" . $i . "</option>";
+		}
+		$mediumList .= "</select>";
 
-	for ($i = 0; $i <= $maxMedium; $i++) {
-	// Auto select the qty saved in the SESSION
-		if ($i == $selectedMedium) {
-			$mediumList .= "<option value='" . $i . "' selected>" .$i . "</option>";
-	}
-		$mediumList .= "<option value='" . $i . "'>" . $i . "</option>";
-	}
-	$mediumList .= "</select>";
+		/****************************************************************
+		* Large Selector
+		*****************************************************************/
+		$maxLarge = $_SESSION['clothing'][$clothingCount]['availableLarge'];
+		$selectedLarge = $_SESSION['clothing'][$clothingCount]['selectLarge'];
+		$largeList = '';
+		$largeList .= '<select name="newLarge">';
 
-	/****************************************************************
-	* Large Selector
-	*****************************************************************/
-	$maxLarge = $_SESSION['clothing'][$clothingCount]['availableLarge'];
-	$selectedLarge = $_SESSION['clothing'][$clothingCount]['selectLarge'];
-	$largeList = '';
-	$largeList .= '<select name="newLarge">';
+		for ($i = 0; $i <= $maxLarge; $i++) {
+			// Auto select the qty saved in the SESSION
+			if ($i == $selectedLarge) {
+				$largeList .= "<option value='" . $i . "' selected>" .$i . "</option>";
+			}
+			$largeList .= "<option value='" . $i . "'>" . $i . "</option>";
+		}
+		$largeList .= "</select>";
 
-	for ($i = 0; $i <= $maxLarge; $i++) {
-	// Auto select the qty saved in the SESSION
-		if ($i == $selectedLarge) {
-			$largeList .= "<option value='" . $i . "' selected>" .$i . "</option>";
-	}
-		$largeList .= "<option value='" . $i . "'>" . $i . "</option>";
-	}
-	$largeList .= "</select>";
+		/*******************************************************************
+		* XLarge Selector
+		********************************************************************/
+		$maxXLarge = $_SESSION['clothing'][$clothingCount]['availableXLarge'];
+		$selectedXLarge = $_SESSION['clothing'][$clothingCount]['selectXLarge'];
+		$xLargeList = '';
+		$xLargeList .= '<select name="newXLarge">';
 
-	/*******************************************************************
-	* XLarge Selector
-	********************************************************************/
-	$maxXLarge = $_SESSION['clothing'][$clothingCount]['availableXLarge'];
-	$selectedXLarge = $_SESSION['clothing'][$clothingCount]['selectXLarge'];
-	$xLargeList = '';
-	$xLargeList .= '<select name="newXLarge">';
+		for ($i = 0; $i <= $maxXLarge; $i++) {
+			// Auto select the qty saved in the SESSION
+			if ($i == $selectedXLarge) {
+				$xLargeList .= "<option value='" . $i . "' selected>" .$i . "</option>";
+			}
+			$xLargeList .= "<option value='" . $i . "'>" . $i . "</option>";
+		}
+		$xLargeList .= "</select>";
 
-	for ($i = 0; $i <= $maxXLarge; $i++) {
-	// Auto select the qty saved in the SESSION
-		if ($i == $selectedXLarge) {
-			$xLargeList .= "<option value='" . $i . "' selected>" .$i . "</option>";
-	}
-		$xLargeList .= "<option value='" . $i . "'>" . $i . "</option>";
-	}
-	$xLargeList .= "</select>";
-
-	// Total price for row, based on price and total amount of Qty
-	$totalQty = floatval($selectedSmall) + floatval($selectedMedium) + floatval($selectedLarge) + floatval($selectedXLarge);
-	$itemPrice = floatval($_SESSION['clothing'][$clothingCount]['price']) * floatval($totalQty);
-
+		// Total price for row, based on price and total amount of Qty
+		$totalQty = floatval($selectedSmall) + floatval($selectedMedium) + floatval($selectedLarge) + floatval($selectedXLarge);
+		$itemPrice = floatval($_SESSION['clothing'][$clothingCount]['price']) * floatval($totalQty);
 
 		$clothingArray .= "<tr><form method='POST' action='../scripts/removeCartItem.php?clothingArray_id=" . $clothingCount . "'>
 						<td><input type='submit' value='X'></td>
