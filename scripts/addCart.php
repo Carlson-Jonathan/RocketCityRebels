@@ -57,7 +57,49 @@ function test_input($data) {
 
 		// For clothing items
 		if (isset($_POST["AddClothing"])) {
-		
+			$itemID = $_POST["itemId"];
+			$exists = "false";
+			$i = 0;
+			$count = sizeof($_SESSION['clothing']);
+			do
+			{
+				if ($_SESSION['clothing'][$i]['item_id'] == $itemID)
+				{
+					$_SESSION['clothing'][$i] = array (
+					'item_id' => $_POST['itemId'],
+					'name' => $_POST['itemName'],
+					'price' => $_POST['itemPrice'],
+					'availableSmall' => $_POST["availableSmall"],
+					'availableMedium' => $_POST["availableMedium"],
+					'availableLarge' => $_POST["availableLarge"],
+					'availableXLarge' => $_POST["availableXLarge"],
+					'selectSmall' => $_POST['selectSmall'],
+					'selectMedium' => $_POST['selectMedium'],
+					'selectLarge' => $_POST['selectLarge'],
+					'selectXLarge' => $_POST['selectXLarge'],
+					);
+
+					$exists = "true";
+				}
+				$i++;
+			} while ($i <= $count)
+
+			if ($exists == "false")
+			{
+				$_SESSION['clothing'][] = array (
+					'item_id' => $_POST['itemId'],
+					'name' => $_POST['itemName'],
+					'price' => $_POST['itemPrice'],
+					'availableSmall' => $_POST["availableSmall"],
+					'availableMedium' => $_POST["availableMedium"],
+					'availableLarge' => $_POST["availableLarge"],
+					'availableXLarge' => $_POST["availableXLarge"],
+					'selectSmall' => $_POST['selectSmall'],
+					'selectMedium' => $_POST['selectMedium'],
+					'selectLarge' => $_POST['selectLarge'],
+					'selectXLarge' => $_POST['selectXLarge'],
+					);
+			}
 		}
 		
 header("Location: ../pages/store.php");

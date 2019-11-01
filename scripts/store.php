@@ -22,16 +22,12 @@ $storeItems->execute();
 $x = 1;
 
      session_start();
-	 echo "Session id" . session_id();
-print_r($_SESSION);
+print_r($_SESSION['clothing']);
 
 		//Check if items array already exists. If it does not, then instantiate
 		if (!isset($_SESSION['items'])) {
 			$_SESSION['items'] = array();
 		}
-
-		// Just for testing purposes
-		echo "size" . sizeof($_SESSION['items']);
 
 		// On Form Post set Session variables
 	
