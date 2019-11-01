@@ -97,7 +97,7 @@ while ($clothingCount <= $clothingKey) {
 	$maxMedium = $_SESSION['clothing'][$clothingCount]['availableMedium'];
 	$selectedMedium = $_SESSION['clothing'][$clothingCount]['selectMedium'];
 	$mediumList = '';
-	$mediumList .= '<select name="newmedium">';
+	$mediumList .= '<select name="newMedium">';
 
 	for ($i = 0; $i <= $maxMedium; $i++) {
 	// Auto select the qty saved in the SESSION
