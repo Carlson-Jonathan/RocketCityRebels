@@ -27,6 +27,22 @@ if (isset($_POST["EditItem"])) {
 	// Changed Selected Quantity
 	$_SESSION['items'][$key]['selectQty'] = $_POST['newQty'];
 }
+else {
+	echo "Unable to change Quantity";
+}
+
+if (isset($_POST["EditClothing"])) {
+	$key = $_POST["key"];
+
+	// Change quantities
+	$_SESSION['clothing'][$key]['selectSmall'] = $_POST['newSmall'];
+	$_SESSION['clothing'][$key]['selectMedium'] = $_POST['newMedium'];
+	$_SESSION['clothing'][$key]['selectLarge'] = $_POST['newLarge'];
+	$_SESSION['clothing'][$key]['selectXLarge'] = $_POST['newXLarge'];
+}
+else {
+	echo "Unable to change Quantities";
+}
 		
 header("Location: ../pages/store.php");
 ?>
