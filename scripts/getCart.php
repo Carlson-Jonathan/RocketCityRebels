@@ -38,7 +38,9 @@ while ($itemCount <= $key) {
 			if ($i == $qtySelected) {
 				$qtyList .= "<option value='" . $i . "' selected>" .$i . "</option>";
 			}
-			$qtyList .= "<option value='" . $i . "'>" . $i . "</option>";
+			else {
+				$qtyList .= "<option value='" . $i . "'>" . $i . "</option>";
+			}
 		}
 		$qtyList .= "</select>";
 
@@ -85,7 +87,9 @@ while ($clothingCount <= $clothingKey) {
 			if ($i == $selectedSmall) {
 				$smallList .= "<option value='" . $i . "' selected>" .$i . "</option>";
 			}
-			$smallList .= "<option value='" . $i . "'>" . $i . "</option>";
+			else {
+				$smallList .= "<option value='" . $i . "'>" . $i . "</option>";
+			}
 		}
 		$smallList .= "</select>";
 
@@ -102,7 +106,9 @@ while ($clothingCount <= $clothingKey) {
 			if ($i == $selectedMedium) {
 				$mediumList .= "<option value='" . $i . "' selected>" .$i . "</option>";
 			}
-			$mediumList .= "<option value='" . $i . "'>" . $i . "</option>";
+			else {
+				$mediumList .= "<option value='" . $i . "'>" . $i . "</option>";
+			}
 		}
 		$mediumList .= "</select>";
 
@@ -119,7 +125,9 @@ while ($clothingCount <= $clothingKey) {
 			if ($i == $selectedLarge) {
 				$largeList .= "<option value='" . $i . "' selected>" .$i . "</option>";
 			}
-			$largeList .= "<option value='" . $i . "'>" . $i . "</option>";
+			else {
+				$largeList .= "<option value='" . $i . "'>" . $i . "</option>";
+			}
 		}
 		$largeList .= "</select>";
 
@@ -136,7 +144,9 @@ while ($clothingCount <= $clothingKey) {
 			if ($i == $selectedXLarge) {
 				$xLargeList .= "<option value='" . $i . "' selected>" .$i . "</option>";
 			}
-			$xLargeList .= "<option value='" . $i . "'>" . $i . "</option>";
+			else {
+				$xLargeList .= "<option value='" . $i . "'>" . $i . "</option>";
+			}
 		}
 		$xLargeList .= "</select>";
 
@@ -203,7 +213,7 @@ echo "
 				<div class='modal-footer'>
 					<button type='button' class='btn btn-secondary' data-dismiss='modal'>Close</button>
 					<form method='POST' action=''>
-						<input type='submit' name='SubmitOrder' class='btn btn-primary' value='Order Now' />
+						<input type='submit' name='OrderSubmit' class='btn btn-primary' value='Order Now' />
 					</form>
 				</div>
 			</div>
