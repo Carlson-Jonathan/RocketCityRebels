@@ -55,7 +55,14 @@ function test_input($data) {
 			}
 		}
 
-		
+		// For clothing items
+		if (isset($_POST["AddClothing"])) {
+			$itemID = $_POST["itemId"];
+			$exists = "false";
+			$i = 0;
+			$count = sizeof($_SESSION['clothing']);
+			
+		}
 		
 header("Location: ../pages/store.php");
 ?>
