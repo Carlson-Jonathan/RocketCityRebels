@@ -30,20 +30,25 @@ function test_input($data) {
 			{
 				if ($_SESSION['items'][$i]['item_id'] == $itemID)
 				{
-					$_SESSION['items'][$i] = array (
-					'item_id' => $_POST['itemId'],
-					'name' => $_POST['itemName'],
-					'price' => $_POST['itemPrice'],
-					'qty' => $_POST["availableQty"],
-					'selectQty' => $_POST['selectQty'],
-					);
-
+					// If submitted Quantity equals Zero, delete row from array
+					if ($_POST['selectQty'] == 0) {
+						unset($_SESSION['items'][$i]);
+					}
+					else {
+						$_SESSION['items'][$i] = array (
+							'item_id' => $_POST['itemId'],
+							'name' => $_POST['itemName'],
+							'price' => $_POST['itemPrice'],
+							'qty' => $_POST["availableQty"],
+							'selectQty' => $_POST['selectQty'],
+						);
+					}				
 					$exists = "true";
 				}
 				$i++;
 			} while ($i <= $count);
 
-			if ($exists == "false")
+			if ($exists == "false" && $_POST['selectQty'] != 0)
 			{
 				$_SESSION['items'][] = array (
 				'item_id' => $_POST['itemId'],
