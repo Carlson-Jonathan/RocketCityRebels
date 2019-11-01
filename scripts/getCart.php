@@ -202,7 +202,9 @@ echo "
 				</div>
 				<div class='modal-footer'>
 					<button type='button' class='btn btn-secondary' data-dismiss='modal'>Close</button>
-					<button type='button' class='btn btn-primary'>Order now</button>
+					<form method='POST' action=''>
+						<input type='submit' name='SubmitOrder' class='btn btn-primary' value='Order Now' />
+					</form>
 				</div>
 			</div>
 		</div>
