@@ -48,6 +48,7 @@ function test_input($data) {
 				$i++;
 			} while ($i <= $count);
 
+			// If exists and the submitted Quantity does not equal 0
 			if ($exists == "false" && $_POST['selectQty'] != 0)
 			{
 				$_SESSION['items'][] = array (
@@ -70,26 +71,31 @@ function test_input($data) {
 			{
 				if ($_SESSION['clothing'][$i]['item_id'] == $itemID)
 				{
-					$_SESSION['clothing'][$i] = array (
-					'item_id' => $_POST['itemId'],
-					'name' => $_POST['itemName'],
-					'price' => $_POST['itemPrice'],
-					'availableSmall' => $_POST["availableSmall"],
-					'availableMedium' => $_POST["availableMedium"],
-					'availableLarge' => $_POST["availableLarge"],
-					'availableXLarge' => $_POST["availableXLarge"],
-					'selectSmall' => $_POST['selectSmall'],
-					'selectMedium' => $_POST['selectMedium'],
-					'selectLarge' => $_POST['selectLarge'],
-					'selectXLarge' => $_POST['selectXLarge'],
-					);
-
+					// Verify that not all quantity values are zero
+					if ($_POST['selectSmall'] == 0 && $_POST['selectMedium'] == 0 && $_POST['selectLarge'] == 0 && $_POST['selectXLarge'] == 0) {
+					unset($_SESSION['clothing'][$i]);
+					}
+					else {
+						$_SESSION['clothing'][$i] = array (
+							'item_id' => $_POST['itemId'],
+							'name' => $_POST['itemName'],
+							'price' => $_POST['itemPrice'],
+							'availableSmall' => $_POST["availableSmall"],
+							'availableMedium' => $_POST["availableMedium"],
+							'availableLarge' => $_POST["availableLarge"],
+							'availableXLarge' => $_POST["availableXLarge"],
+							'selectSmall' => $_POST['selectSmall'],
+							'selectMedium' => $_POST['selectMedium'],
+							'selectLarge' => $_POST['selectLarge'],
+							'selectXLarge' => $_POST['selectXLarge'],
+						);
+					}
 					$exists = "true";
 				}
 				$i++;
 			} while ($i <= $count);
 
-			if ($exists == "false")
+			if ($exists == "false" && $_POST['selectSmall'] == 0 && $_POST['selectMedium'] == 0 && $_POST['selectLarge'] == 0 && $_POST['selectXLarge'] == 0)
 			{
 				$_SESSION['clothing'][] = array (
 					'item_id' => $_POST['itemId'],
