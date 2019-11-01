@@ -22,16 +22,12 @@ $storeItems->execute();
 $x = 1;
 
      session_start();
-	 echo "Session id" . session_id();
-print_r($_SESSION);
+print_r($_SESSION['clothing']);
 
 		//Check if items array already exists. If it does not, then instantiate
 		if (!isset($_SESSION['items'])) {
 			$_SESSION['items'] = array();
 		}
-
-		// Just for testing purposes
-		echo "size" . sizeof($_SESSION['items']);
 
 		// On Form Post set Session variables
 	
@@ -49,7 +45,7 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
 
 	$qtySelect = '';
 	$qtySelect .= '<select name="selectQty">';
-	for ($i = 1; $i <= $quantity; $i++) {
+	for ($i = 0; $i <= $quantity; $i++) {
 	$qtySelect .= "<option value='" . $i . "'>" . $i . "</option>";
 	}
 	$qtySelect .= "</select>";
@@ -84,7 +80,7 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
 							$qtySelect
 						</div>
 						<div class='textblock' id='addItemsDiv'>
-						<input type='hidden' name='itemNum' value='" . $x . "'>
+							<input type='hidden' name='itemNum' value='" . $x . "'>
 							<input type='hidden' name='itemId' value='" . $item_id . "'>
 							<input type='hidden' name='itemName' value='" . $name . "'>
 							<input type='hidden' name='itemPrice' value='" . $price . "'>
@@ -119,12 +115,6 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
           modal" . $x . ".style.display = 'none';
 
         }
-
-        // When the user clicks anywhere, close the modal
-        //modal" . $x . ".onclick=function() {
-       //     modal" . $x . ".style.display = 'none';
-       // }
-
         </script>
     ";
 	

@@ -14,5 +14,13 @@ if(isset($_GET['itemArray_id']))
 else
     echo "<p>Error Loading item_id!</p>";
 
+if(isset($_GET['clothingArray_id']))
+{
+	$item_id = $_GET['clothingArray_id'];
+	unset($_SESSION['clothing'][$item_id]);
+}
+else
+    echo "<p>Error Loading item_id!</p>";
+
 header("Location: ../pages/store.php");
 ?>
