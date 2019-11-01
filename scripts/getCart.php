@@ -82,7 +82,7 @@ while ($clothingCount <= $clothingKey) {
 	$smallList = '';
 	$smallList .= '<select name="newSmall">';
 
-	for ($i = 1; $i <= $maxSmall; $i++) {
+	for ($i = 0; $i <= $maxSmall; $i++) {
 	// Auto select the qty saved in the SESSION
 		if ($i == $selectedSmall) {
 			$smallList .= "<option value='" . $i . "' selected>" .$i . "</option>";
@@ -99,7 +99,7 @@ while ($clothingCount <= $clothingKey) {
 	$mediumList = '';
 	$mediumList .= '<select name="newmedium">';
 
-	for ($i = 1; $i <= $maxMedium; $i++) {
+	for ($i = 0; $i <= $maxMedium; $i++) {
 	// Auto select the qty saved in the SESSION
 		if ($i == $selectedMedium) {
 			$mediumList .= "<option value='" . $i . "' selected>" .$i . "</option>";
@@ -116,7 +116,7 @@ while ($clothingCount <= $clothingKey) {
 	$largeList = '';
 	$largeList .= '<select name="newLarge">';
 
-	for ($i = 1; $i <= $maxLarge; $i++) {
+	for ($i = 0; $i <= $maxLarge; $i++) {
 	// Auto select the qty saved in the SESSION
 		if ($i == $selectedLarge) {
 			$largeList .= "<option value='" . $i . "' selected>" .$i . "</option>";
@@ -133,7 +133,7 @@ while ($clothingCount <= $clothingKey) {
 	$xLargeList = '';
 	$xLargeList .= '<select name="newXLarge">';
 
-	for ($i = 1; $i <= $maxXLarge; $i++) {
+	for ($i = 0; $i <= $maxXLarge; $i++) {
 	// Auto select the qty saved in the SESSION
 		if ($i == $selectedXLarge) {
 			$xLargeList .= "<option value='" . $i . "' selected>" .$i . "</option>";
