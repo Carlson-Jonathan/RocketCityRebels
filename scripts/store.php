@@ -20,9 +20,10 @@
 $storeItems = $db->prepare("SELECT * FROM store");
 $storeItems->execute();
 $x = 1;
+$test = "" + $x;
 
      session_start();
-print_r($_SESSION['items'][$x]);
+print_r($_SESSION['items'][$test]);
 
 		//Check if items array already exists. If it does not, then instantiate
 		if (!isset($_SESSION['items'])) {
