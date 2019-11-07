@@ -27,7 +27,17 @@ $itemId = $_SESSION['items'][0]['item_id'];
 		$storeList = $db->prepare("SELECT * FROM store WHERE item_id = " . $itemId . "");
 		$storeList->execute();
 		while ($row = $storeList->fetch(PDO::FETCH_ASSOC)) {
-		echo "<p>" . $row['name'];
+		if ($row['quantity'] >= test_input($_SESSION['items'][$itemCount]['selectQty']) && $row['price'] == test_input($_SESSION['items'][$itemCount]['price'])) {
+						echo "<p>" . $row['name'];
+				$item_name = 'item_name_' + $x;
+				$item_amount = 'amount_' + $x;
+				$item_Qty = 'quantity_' + $x;
+				$item_id = 'item_id_' + $x;
+				$_SESSION[$item_name] = $item['name'];
+				$_SESSION[$item_amount] = $item['price'];
+				$_SESSION[$item_Qty] = $item['selectQty'];
+				$_SESSION[$item_id] = $itemId;
+			}
 		}
 
 		//Check if items array already exists. If it does not, then instantiate
