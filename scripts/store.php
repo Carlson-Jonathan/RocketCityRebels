@@ -23,6 +23,12 @@ $x = 1;
 
      session_start();
 print_r($_SESSION['items']);
+$itemId = $_SESSION['items'][0]['item_id'];
+		$storeList = $db->prepare("SELECT * FROM store WHERE item_id = " . $itemId . "");
+		$storeList->execute();
+		while ($row = $storeList->fetch(PDO::FETCH_ASSOC)) {
+		echo "<p>" . $row['name'];
+		}
 
 		//Check if items array already exists. If it does not, then instantiate
 		if (!isset($_SESSION['items'])) {

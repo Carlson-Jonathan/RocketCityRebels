@@ -55,7 +55,7 @@ $clothingCount = 0;
 	while ($itemCount <= $key) {
 		// Get row by id
 		$itemId = test_input($_SESSION['items'][$itemCount]['item_id']);
-		$storeList = $db->prepare("SELECT * FROM store WHERE item_id=1");
+		$storeList = $db->prepare("SELECT * FROM store WHERE item_id = " . $itemId . "");
 		$storeList->execute();
 
 		while ($row = $storeList->fetch(PDO::FETCH_ASSOC)) {
