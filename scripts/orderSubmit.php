@@ -59,7 +59,7 @@ $clothingCount = 0;
 		$storeList->execute();
 
 		while ($row = $storeList->fetch(PDO::FETCH_ASSOC)) {
-			if ($row['quantity'] < test_input($_SESSION['items'][$itemCount]['selectQty']) || $row['price'] != test_input($_SESSION['items'][$itemCount]['price'])) {
+			if ($row['quantity'] >= test_input($_SESSION['items'][$itemCount]['selectQty']) && $row['price'] == test_input($_SESSION['items'][$itemCount]['price'])) {
 				$item_name = 'item_name_' + $x;
 				$item_amount = 'amount_' + $x;
 				$item_Qty = 'quantity_' + $x;
