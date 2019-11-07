@@ -34,6 +34,7 @@ $itemName = 'Test Item';
 $itemAmount = 5.00;
 $itemName1 = 'Test Itemsss';
 $itemAmount1 = 7.00;
+$quantity = 2;
 
 // Check if paypal request or response
 if (!isset($_POST["txn_id"]) && !isset($_POST["txn_type"])) {
@@ -59,6 +60,7 @@ if (!isset($_POST["txn_id"]) && !isset($_POST["txn_type"])) {
 	$data['item_name_2'] = $itemName1;
     $data['amount_2'] = $itemAmount1;
     $data['currency_code'] = 'GBP';
+	$data['quantity_1'] = $quantity;
 
 	 $queryString = http_build_query($data);
 
