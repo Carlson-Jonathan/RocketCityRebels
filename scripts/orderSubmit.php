@@ -29,15 +29,34 @@ $paypalConfig = [
 // If Sandbox is enabled use it, otherwise compete real order transaction
 $paypalUrl = $enableSandbox ? 'https://www.sandbox.paypal.com/cgi-bin/webscr' : 'https://www.paypal.com/cgi-bin/webscr';
 
-// Product being purchased.
-$itemName = 'Test Item';
-$itemAmount = 5.00;
-$itemName1 = 'Test Itemsss';
-$itemAmount1 = 7.00;
-$quantity = 2;
-
 // Check if paypal request or response
 if (!isset($_POST["txn_id"]) && !isset($_POST["txn_type"])) {
+	// Count for each item added to data array 
+	$x = 1;
+	// First we need to test data from Sessions and verify quantities and prices with
+	// the database
+	foreach ($_SESSION['items'] as $key => $item) {
+		// Get row by id
+		$itemId = $item['item_id'];
+		$storeList = $db->prepare("SELECT * FROM store WHERE item_id=($itemId)");
+		$storeList->execute();
+
+		while ($row = $storeList->fetch(PDO::FETCH_ASSOC)) {
+			if ($row['quantity'] < $item['selectQty'] || $row['price'] != $item['price']) {
+				$item_name = 'item_name_' + $x;
+				$item_amount = 'amount_' + $x;
+				$item_Qty = 'quantity_' + $x;
+				$item_id = 'item_id_' + $x;
+				$data[$item_name] = $item['name'];
+				$data[$item_amount] = $item['price'];
+				$data[$item_Qty] = $item['selectQty'];
+				$data[$item_id] = $itemId;
+			}
+		}
+	}
+
+
+
 	// Create data array and begin setting each item data in it, as well as paypal parameters
 	// Loop through all purchased items and set them
 	 $data = [];
@@ -55,12 +74,7 @@ if (!isset($_POST["txn_id"]) && !isset($_POST["txn_type"])) {
     $data['notify_url'] = stripslashes($paypalConfig['notify_url']);
 
 	 // and currency so that these aren't overridden by the form data.
-    $data['item_name_1'] = $itemName;
-    $data['amount_1'] = $itemAmount;
-	$data['item_name_2'] = $itemName1;
-    $data['amount_2'] = $itemAmount1;
-    $data['currency_code'] = 'GBP';
-	$data['quantity_1'] = $quantity;
+    $data['currency_code'] = 'USD';
 
 	 $queryString = http_build_query($data);
 
