@@ -32,6 +32,8 @@ $paypalUrl = $enableSandbox ? 'https://www.sandbox.paypal.com/cgi-bin/webscr' : 
 // Product being purchased.
 $itemName = 'Test Item';
 $itemAmount = 5.00;
+$itemName1 = 'Test Itemsss';
+$itemAmount1 = 7.00;
 
 // Check if paypal request or response
 if (!isset($_POST["txn_id"]) && !isset($_POST["txn_type"])) {
@@ -52,8 +54,10 @@ if (!isset($_POST["txn_id"]) && !isset($_POST["txn_type"])) {
     $data['notify_url'] = stripslashes($paypalConfig['notify_url']);
 
 	 // and currency so that these aren't overridden by the form data.
-    $data['item_name'] = $itemName;
-    $data['amount'] = $itemAmount;
+    $data['item_name_1'] = $itemName;
+    $data['amount_1'] = $itemAmount;
+	$data['item_name_2'] = $itemName1;
+    $data['amount_2'] = $itemAmount1;
     $data['currency_code'] = 'GBP';
 
 	 $queryString = http_build_query($data);

@@ -213,7 +213,8 @@ echo "
 				<div class='modal-footer'>
 					<button type='button' class='btn btn-secondary' data-dismiss='modal'>Close</button>
 					<form method='POST' action='../scripts/orderSubmit.php'>
-					<input type='hidden' name='cmd' value='_xclick' />
+					<input type='hidden' name='cmd' value='_cart' />
+					<input type='hidden' name='upload' value='1'>
         <input type='hidden' name='no_note' value='1' />
         <input type='hidden' name='lc' value='UK' />
         <input type='hidden' name='bn' value='PP-BuyNowBF:btn_buynow_LG.gif:NonHostedGuest' />
