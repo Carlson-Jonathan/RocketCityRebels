@@ -38,18 +38,28 @@ $paypalUrl = $enableSandbox ? 'https://www.sandbox.paypal.com/cgi-bin/webscr' : 
 
 // Check if paypal request or response
 if (!isset($_POST["txn_id"]) && !isset($_POST["txn_type"])) {
+// Counts for looping through both arrays in SESSION
+$itemCount = 0;
+$clothingCount = 0;
+
 	// Count for each item added to data array 
 	$x = 1;
 	// First we need to test data from Sessions and verify quantities and prices with
 	// the database
-	foreach ($_SESSION['items'] as $key => $item) {
+
+	// Set internal pointer to array
+	end($_SESSION['items']);
+	// Get the last key in the array, because we may be removing items
+	$key = key($_SESSION['items']);
+
+	while ($itemCount <= $key) {
 		// Get row by id
-		$itemId = test_input($item['item_id']);
+		$itemId = test_input($_SESSION['items'][$itemCount]['item_id']);
 		$storeList = $db->prepare("SELECT * FROM store WHERE item_id=($item_id)");
 		$storeList->execute();
 
 		while ($row = $storeList->fetch(PDO::FETCH_ASSOC)) {
-			if ($row['quantity'] < test_input($item['selectQty']) || $row['price'] != test_input($item['price'])) {
+			if ($row['quantity'] < test_input($_SESSION['items'][$itemCount]['selectQty']) || $row['price'] != test_input($_SESSION['items'][$itemCount]['price'])) {
 				$item_name = 'item_name_' + $x;
 				$item_amount = 'amount_' + $x;
 				$item_Qty = 'quantity_' + $x;
@@ -60,6 +70,7 @@ if (!isset($_POST["txn_id"]) && !isset($_POST["txn_type"])) {
 				$data[$item_id] = $itemId;
 			}
 		}
+		$itemCount++;
 	}
 
 
