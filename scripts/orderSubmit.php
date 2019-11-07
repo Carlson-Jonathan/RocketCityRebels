@@ -15,6 +15,13 @@ require($_SERVER['DOCUMENT_ROOT'].'/scripts/dbsetup.php');
 
 echo '<script>window.location.href = "../pages/store.php";</script>';
 
+function test_input($data) {
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+}
+
 // payments through then this setting needs changing to `false`.
 $enableSandbox = true;
 
@@ -37,12 +44,12 @@ if (!isset($_POST["txn_id"]) && !isset($_POST["txn_type"])) {
 	// the database
 	foreach ($_SESSION['items'] as $key => $item) {
 		// Get row by id
-		$itemId = $item['item_id'];
-		$storeList = $db->prepare("SELECT * FROM store WHERE item_id=($itemId)");
+		$itemId = test_input($item['item_id']);
+		$storeList = $db->prepare("SELECT * FROM store WHERE item_id=($item_id)");
 		$storeList->execute();
 
 		while ($row = $storeList->fetch(PDO::FETCH_ASSOC)) {
-			if ($row['quantity'] < $item['selectQty'] || $row['price'] != $item['price']) {
+			if ($row['quantity'] < test_input($item['selectQty']) || $row['price'] != test_input($item['price'])) {
 				$item_name = 'item_name_' + $x;
 				$item_amount = 'amount_' + $x;
 				$item_Qty = 'quantity_' + $x;
