@@ -33,7 +33,10 @@ $itemId = $_SESSION['items'][0]['item_id'];
 				$item_amount = 'amount_' + $x;
 				$item_Qty = 'quantity_' + $x;
 				$item_id = 'item_id_' + $x;
-				
+				$_SESSION[$item_name] = $item['name'];
+				$_SESSION[$item_amount] = $item['price'];
+				$_SESSION[$item_Qty] = $item['selectQty'];
+				$_SESSION[$item_id] = $itemId;
 			}
 		}
 
