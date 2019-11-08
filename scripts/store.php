@@ -22,7 +22,6 @@ $storeItems->execute();
 $x = 1;
 
      session_start();
-<<<<<<< HEAD
 print_r($_SESSION['items']);
 $itemId = $_SESSION['items'][0]['item_id'];
 		$storeList = $db->prepare("SELECT * FROM store WHERE item_id = " . $itemId . "");
@@ -37,9 +36,6 @@ $itemId = $_SESSION['items'][0]['item_id'];
 				
 			}
 		}
-=======
-print_r($_SESSION['clothing']);
->>>>>>> 460f0c1676ec10873cd5a33c6cb945b30a580ca2
 
 		//Check if items array already exists. If it does not, then instantiate
 		if (!isset($_SESSION['items'])) {

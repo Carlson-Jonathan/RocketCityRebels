@@ -38,13 +38,9 @@ while ($itemCount <= $key) {
 			if ($i == $qtySelected) {
 				$qtyList .= "<option value='" . $i . "' selected>" .$i . "</option>";
 			}
-<<<<<<< HEAD
 			else {
 				$qtyList .= "<option value='" . $i . "'>" . $i . "</option>";
 			}
-=======
-			$qtyList .= "<option value='" . $i . "'>" . $i . "</option>";
->>>>>>> 460f0c1676ec10873cd5a33c6cb945b30a580ca2
 		}
 		$qtyList .= "</select>";
 
@@ -91,13 +87,9 @@ while ($clothingCount <= $clothingKey) {
 			if ($i == $selectedSmall) {
 				$smallList .= "<option value='" . $i . "' selected>" .$i . "</option>";
 			}
-<<<<<<< HEAD
 			else {
 				$smallList .= "<option value='" . $i . "'>" . $i . "</option>";
 			}
-=======
-			$smallList .= "<option value='" . $i . "'>" . $i . "</option>";
->>>>>>> 460f0c1676ec10873cd5a33c6cb945b30a580ca2
 		}
 		$smallList .= "</select>";
 
@@ -114,13 +106,9 @@ while ($clothingCount <= $clothingKey) {
 			if ($i == $selectedMedium) {
 				$mediumList .= "<option value='" . $i . "' selected>" .$i . "</option>";
 			}
-<<<<<<< HEAD
 			else {
 				$mediumList .= "<option value='" . $i . "'>" . $i . "</option>";
 			}
-=======
-			$mediumList .= "<option value='" . $i . "'>" . $i . "</option>";
->>>>>>> 460f0c1676ec10873cd5a33c6cb945b30a580ca2
 		}
 		$mediumList .= "</select>";
 
@@ -137,13 +125,9 @@ while ($clothingCount <= $clothingKey) {
 			if ($i == $selectedLarge) {
 				$largeList .= "<option value='" . $i . "' selected>" .$i . "</option>";
 			}
-<<<<<<< HEAD
 			else {
 				$largeList .= "<option value='" . $i . "'>" . $i . "</option>";
 			}
-=======
-			$largeList .= "<option value='" . $i . "'>" . $i . "</option>";
->>>>>>> 460f0c1676ec10873cd5a33c6cb945b30a580ca2
 		}
 		$largeList .= "</select>";
 
@@ -160,13 +144,9 @@ while ($clothingCount <= $clothingKey) {
 			if ($i == $selectedXLarge) {
 				$xLargeList .= "<option value='" . $i . "' selected>" .$i . "</option>";
 			}
-<<<<<<< HEAD
 			else {
 				$xLargeList .= "<option value='" . $i . "'>" . $i . "</option>";
 			}
-=======
-			$xLargeList .= "<option value='" . $i . "'>" . $i . "</option>";
->>>>>>> 460f0c1676ec10873cd5a33c6cb945b30a580ca2
 		}
 		$xLargeList .= "</select>";
 
@@ -232,7 +212,6 @@ echo "
 				</div>
 				<div class='modal-footer'>
 					<button type='button' class='btn btn-secondary' data-dismiss='modal'>Close</button>
-<<<<<<< HEAD
 					<form method='POST' action='../scripts/orderSubmit.php'>
 					<input type='hidden' name='cmd' value='_cart' />
 					<input type='hidden' name='upload' value='1'>
@@ -241,9 +220,6 @@ echo "
 					<input type='hidden' name='bn' value='PP-BuyNowBF:btn_buynow_LG.gif:NonHostedGuest' />
 					<input type='submit' name='OrderSubmit' class='btn btn-primary' value='Order Now' />
 					</form>
-=======
-					<button type='button' class='btn btn-primary'>Order now</button>
->>>>>>> 460f0c1676ec10873cd5a33c6cb945b30a580ca2
 				</div>
 			</div>
 		</div>
