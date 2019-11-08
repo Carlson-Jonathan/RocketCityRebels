@@ -22,8 +22,7 @@ $storeItems->execute();
 $x = 1;
 
      session_start();
-print_r($_SESSION['clothing']);
-
+print_r($_SESSION['items']);
 		//Check if items array already exists. If it does not, then instantiate
 		if (!isset($_SESSION['items'])) {
 			$_SESSION['items'] = array();

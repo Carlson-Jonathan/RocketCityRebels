@@ -38,7 +38,9 @@ while ($itemCount <= $key) {
 			if ($i == $qtySelected) {
 				$qtyList .= "<option value='" . $i . "' selected>" .$i . "</option>";
 			}
-			$qtyList .= "<option value='" . $i . "'>" . $i . "</option>";
+			else {
+				$qtyList .= "<option value='" . $i . "'>" . $i . "</option>";
+			}
 		}
 		$qtyList .= "</select>";
 
@@ -85,7 +87,9 @@ while ($clothingCount <= $clothingKey) {
 			if ($i == $selectedSmall) {
 				$smallList .= "<option value='" . $i . "' selected>" .$i . "</option>";
 			}
-			$smallList .= "<option value='" . $i . "'>" . $i . "</option>";
+			else {
+				$smallList .= "<option value='" . $i . "'>" . $i . "</option>";
+			}
 		}
 		$smallList .= "</select>";
 
@@ -102,7 +106,9 @@ while ($clothingCount <= $clothingKey) {
 			if ($i == $selectedMedium) {
 				$mediumList .= "<option value='" . $i . "' selected>" .$i . "</option>";
 			}
-			$mediumList .= "<option value='" . $i . "'>" . $i . "</option>";
+			else {
+				$mediumList .= "<option value='" . $i . "'>" . $i . "</option>";
+			}
 		}
 		$mediumList .= "</select>";
 
@@ -119,7 +125,9 @@ while ($clothingCount <= $clothingKey) {
 			if ($i == $selectedLarge) {
 				$largeList .= "<option value='" . $i . "' selected>" .$i . "</option>";
 			}
-			$largeList .= "<option value='" . $i . "'>" . $i . "</option>";
+			else {
+				$largeList .= "<option value='" . $i . "'>" . $i . "</option>";
+			}
 		}
 		$largeList .= "</select>";
 
@@ -136,7 +144,9 @@ while ($clothingCount <= $clothingKey) {
 			if ($i == $selectedXLarge) {
 				$xLargeList .= "<option value='" . $i . "' selected>" .$i . "</option>";
 			}
-			$xLargeList .= "<option value='" . $i . "'>" . $i . "</option>";
+			else {
+				$xLargeList .= "<option value='" . $i . "'>" . $i . "</option>";
+			}
 		}
 		$xLargeList .= "</select>";
 
@@ -202,7 +212,14 @@ echo "
 				</div>
 				<div class='modal-footer'>
 					<button type='button' class='btn btn-secondary' data-dismiss='modal'>Close</button>
-					<button type='button' class='btn btn-primary'>Order now</button>
+					<form method='POST' action='../scripts/orderSubmit.php'>
+					<input type='hidden' name='cmd' value='_cart' />
+					<input type='hidden' name='upload' value='1'>
+					<input type='hidden' name='no_note' value='1' />
+					<input type='hidden' name='lc' value='UK' />
+					<input type='hidden' name='bn' value='PP-BuyNowBF:btn_buynow_LG.gif:NonHostedGuest' />
+					<input type='submit' name='OrderSubmit' class='btn btn-primary' value='Order Now' />
+					</form>
 				</div>
 			</div>
 		</div>
