@@ -28,23 +28,22 @@ $enableSandbox = true;
 // PayPal Configuration settings
 $paypalConfig = [
     'email' => 'sb-i6faj504453@business.example.com',
-    'return_url' => 'http://example.com/payment-successful.html',
+    'return_url' => 'https://hidden-ridge-45617.herokuapp.com/pages/store.php',
     'cancel_url' => 'http://example.com/payment-cancelled.html',
-    'notify_url' => 'https://hidden-ridge-45617.herokuapp.com//scripts/orderSubmit.php'
+    'notify_url' => 'http://hidden-ridge-45617.herokuapp.com/scripts/orderSubmit.php'
 ];
+
 
 // If Sandbox is enabled use it, otherwise compete real order transaction
 $paypalUrl = $enableSandbox ? 'https://www.sandbox.paypal.com/cgi-bin/webscr' : 'https://www.paypal.com/cgi-bin/webscr';
 
 // Check if paypal request or response
 if (!isset($_POST["txn_id"]) && !isset($_POST["txn_type"])) {
-// Create data array and begin setting each item data in it, as well as paypal parameters
-	 $data = [];
-// Counts for looping through both arrays in SESSION
-$itemCount = 0;
-$clothingCount = 0;
-
-	// Count for each item added to data array 
+	// Create data array and begin setting each item data in it, as well as paypal parameters
+		 $data = [];
+	// Counts for looping through both arrays in SESSION
+	$itemCount = 0;
+	$clothingCount = 0; 
 	$x = 1;
 	// First we need to test data from Sessions and verify quantities and prices with
 	// the database
@@ -52,9 +51,9 @@ $clothingCount = 0;
 	// Set internal pointer to array
 	end($_SESSION['items']);
 	// Get the last key in the array, because we may be removing items
-	$key = key($_SESSION['items']);
+	$itemKey = key($_SESSION['items']);
 
-	while ($itemCount <= $key) {
+	while ($itemCount <= $itemKey) {
 		if (isset($_SESSION['items'][$itemCount]) && !empty($_SESSION['items'][$itemCount])) {
 			// Get row by id
 			$itemId = test_input($_SESSION['items'][$itemCount]['item_id']);
@@ -66,7 +65,6 @@ $clothingCount = 0;
 					$item_name = 'item_name_' . $x;
 					$item_amount = 'amount_' . $x;
 					$item_Qty = 'quantity_' . $x;
-					$_SESSION[$item_name] = 'works';
 					$item_id = 'item_id_' . $x;
 					$data[$item_name] = $row['name'];
 					$data[$item_amount] = $row['price'];
@@ -77,6 +75,55 @@ $clothingCount = 0;
 			}
 		}
 		$itemCount++;
+	}
+
+	// Now do the same for Clothing items
+	// Set internal pointer to array
+	end($_SESSION['clothing']);
+	// Get the last key in the array
+	$clothingKey = key($_SESSION['clothing']);
+
+	while ($clothingCount <= $clothingKey) {
+		if (isset($_SESSION['clothing'][$clothingCount]) && !empty($_SESSION['clothing'][$clothingCount])) {
+			// Get row by id
+			$clothingId = test_input($_SESSION['clothing'][$clothingCount]['item_id']);
+			$clothingList = $db->prepare("SELECT * FROM clothing WHERE item_id = " . $clothingId . "");
+			$clothingList->execute();
+
+			while ($row = $clothingList->fetch(PDO::FETCH_ASSOC)) {
+				if ($row['small'] >= test_input($_SESSION['clothing'][$clothingCount]['selectSmall']) && 
+					$row['medium'] >= test_input($_SESSION['clothing'][$clothingCount]['selectMedium']) &&
+					$row['large'] >= test_input($_SESSION['clothing'][$clothingCount]['selectLarge']) &&
+					$row['xlarge'] >= test_input($_SESSION['clothing'][$clothingCount]['selectXLarge'])) {	
+					// Set Data Parameters
+					$item_name = 'item_name_' . $x;
+					$item_amount = 'amount_' . $x;
+					$item_Qty = 'quantity_' . $x;
+					$item_id = 'item_id_' . $x;
+					$item_small = 'item_small' . $x;
+					$item_medium = 'item_medium' . $x;
+					$item_large = 'item_large' . $x;
+					$item_xLarge = 'item_xLarge' . $x;
+
+					// Set each qty Value
+					$small = test_input($_SESSION['clothing'][$clothingCount]['selectSmall']);
+					$medium = test_input($_SESSION['clothing'][$clothingCount]['selectMedium']);
+					$large = test_input($_SESSION['clothing'][$clothingCount]['selectLarge']);
+					$xLarge = test_input($_SESSION['clothing'][$clothingCount]['selectXLarge']);
+					// Save to Data
+					$data[$item_name] = $row['name'];
+					$data[$item_amount] = $row['price'];
+					$data[$item_Qty] = floatval($small) + floatval($medium) + floatval($large) + floatval($xLarge);
+					$data[$item_small] = $small;
+					$data[$item_medium] = $medium;
+					$data[$item_large] = $large;
+					$data[$item_xLarge] = $xLarge;
+					$data[$item_id] = $itemId;
+					$x++;
+				}
+			}
+		}
+		$clothingCount++;
 	}
 
 
