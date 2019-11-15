@@ -45,6 +45,9 @@ if (!isset($_POST["txn_id"]) && !isset($_POST["txn_type"])) {
 	$itemCount = 0;
 	$clothingCount = 0; 
 	$x = 1;
+
+	// Object for storing new qty's for post back
+	$updateObj = new stdClass();
 	// First we need to test data from Sessions and verify quantities and prices with
 	// the database
 
@@ -65,11 +68,15 @@ if (!isset($_POST["txn_id"]) && !isset($_POST["txn_type"])) {
 					$item_name = 'item_name_' . $x;
 					$item_amount = 'amount_' . $x;
 					$item_Qty = 'quantity_' . $x;
-					$item_id = 'item_id_' . $x;
+					$item_NewQty = 'Q' . $x;
+					$item_id = 'item_number_' . $x;
 					$data[$item_name] = $row['name'];
 					$data[$item_amount] = $row['price'];
 					$data[$item_Qty] = test_input($_SESSION['items'][$itemCount]['selectQty']);
 					$data[$item_id] = $itemId;
+
+					// Add newQty to Object
+					$updateObj->$item_NewQty = $row['quantity'] - floatval(test_input($_SESSION['items'][$itemCount]['selectQty']));
 					$x++;
 				}
 			}
@@ -99,11 +106,13 @@ if (!isset($_POST["txn_id"]) && !isset($_POST["txn_type"])) {
 					$item_name = 'item_name_' . $x;
 					$item_amount = 'amount_' . $x;
 					$item_Qty = 'quantity_' . $x;
-					$item_id = 'item_id_' . $x;
-					$item_small = 'item_small' . $x;
-					$item_medium = 'item_medium' . $x;
-					$item_large = 'item_large' . $x;
-					$item_xLarge = 'item_xLarge' . $x;
+					$item_id = 'item_number_' . $x;
+
+					// New Qty's for obj storage'
+					$item_small = 'S' . $x;
+					$item_medium = 'M' . $x;
+					$item_large = 'L' . $x;
+					$item_xLarge = 'X' . $x;
 
 					// Set each qty Value
 					$small = test_input($_SESSION['clothing'][$clothingCount]['selectSmall']);
@@ -114,11 +123,14 @@ if (!isset($_POST["txn_id"]) && !isset($_POST["txn_type"])) {
 					$data[$item_name] = $row['name'];
 					$data[$item_amount] = $row['price'];
 					$data[$item_Qty] = floatval($small) + floatval($medium) + floatval($large) + floatval($xLarge);
-					$data[$item_small] = $small;
-					$data[$item_medium] = $medium;
-					$data[$item_large] = $large;
-					$data[$item_xLarge] = $xLarge;
-					$data[$item_id] = $itemId;
+					$data[$item_id] = $clothingId;
+
+					$updateObj->$item_small = floatval($row['small']) - floatval($small);
+					$updateObj->$item_medium = floatval($row['medium']) - floatval($medium);
+					$updateObj->$item_large = floatval($row['large']) - floatval($large);
+					$updateObj->$item_xLarge = floatval($row['xlarge']) - floatval($xLarge);
+
+
 					$x++;
 				}
 			}
@@ -138,6 +150,11 @@ if (!isset($_POST["txn_id"]) && !isset($_POST["txn_type"])) {
 	// Set the PayPal account.
     $data['business'] = $paypalConfig['email'];
 
+	// Also add both counts to Data
+	$data['num_cart_items'] = floatval($itemCount) + floatval(clothingCount);
+
+	// Testing Memo variable
+
     // Set the PayPal return addresses.
     $data['return'] = stripslashes($paypalConfig['return_url']);
     $data['cancel_return'] = stripslashes($paypalConfig['cancel_url']);
@@ -146,14 +163,67 @@ if (!isset($_POST["txn_id"]) && !isset($_POST["txn_type"])) {
 	 // and currency so that these aren't overridden by the form data.
     $data['currency_code'] = 'USD';
 
+	// Set custom variable, which stores JSON of all qty values for updating Quantities in DB
+	$updateJSON = json_encode($updateObj);
+	$data['custom'] = $updateJSON;
+
+
 	 $queryString = http_build_query($data);
 
 	 // Redirect to paypal IPN
     header('location:' . $paypalUrl . '?' . $queryString);
     exit();
-
 }
 else {
+	// Handle Response from PayPal IPN
+
+	// Set a count variable to help us loop through all items and then all clothingItems
+	$responseCount = 1;
+
+	$totalItems = $_POST['num_cart_items'];
+	$jsonObject = json_decode($_POST['custom']);
+
+
+
+	// Loop through each Posted item and edit DataBase.
+	while ($responseCount <= $totalItems) {
+		// Get Item number
+		$itemID = 'item_number' . $responseCount;
+
+		// Set Post search parameters
+		$Qty = 'Q' . $responseCount;
+		$S = 'S' . $responseCount;
+		$M = 'M' . $responseCount;
+		$L = 'L' . $responseCount;
+		$XL = 'X' . $responseCount;
+
+		$id = test_input($_POST[$itemID]);
+		// Check if $Qty exists, else do Update to Store
+		if (isset($jsonObject->$qty)) {
+			$newQty = $jsonObject->$Qty;
+
+			// Edit row in database
+			$editItem = $db->prepare("
+			UPDATE store SET quantity='$newQty'
+			WHERE item_id=($id)");
+		}
+		else {
+			$newSmall = $jsonObject->$S;
+			$newMedium = $jsonObject->$M;
+			$newLarge = $jsonObject->$L;
+			$newXLarge = $jsonObject->$XL;
+
+			$editItem = $db->prepare("
+			UPDATE clothing SET small=$newSmall, 
+			medium=$newMedium, large=$newLarge, xlarge=$newXLarge
+			WHERE item_id=($id)");
+		}
+
+		$editItem->execute();	
+
+		$responseCount++;
+	}
+
 }
 
 header("Location: ../pages/store.php");
