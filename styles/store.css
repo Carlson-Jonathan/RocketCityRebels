@@ -5,10 +5,32 @@
     border: none;
     text-align: center;
     font-size: 28px;
-    padding: 20px;
     width: 100px;
     height: 50px;
     transition: all 0.5s;
     cursor: pointer;
-    margin: 5px;
+}
+
+.modal-header {
+    padding: 15px;
+    border-bottom: 1px solid #eceeef;
+}
+
+.modal-title {
+    font-size: 1.25rem;
+}
+
+td {
+}
+
+.modal-dialog {
+
+}
+
+table.center {
+    margin-left: auto;
+    margin-right: auto;
+    border-top: 1px solid #eceeef;
+    border-bottom: 1px solid #eceeef;
+    padding: 15px;
 }

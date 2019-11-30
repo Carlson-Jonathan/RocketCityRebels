@@ -1,4 +1,5 @@
 <?php 
+session_start();
 /******************************************************************************
 * File names:
 *   store.php, clothing.php
@@ -21,15 +22,10 @@ $storeItems = $db->prepare("SELECT * FROM store");
 $storeItems->execute();
 $x = 1;
 
-     session_start();
-print_r($_SESSION['items']);
-		//Check if items array already exists. If it does not, then instantiate
-		if (!isset($_SESSION['items'])) {
-			$_SESSION['items'] = array();
-		}
-
-		// On Form Post set Session variables
-	
+//Check if items array already exists. If it does not, then instantiate it
+if (!isset($_SESSION['items'])) {
+	$_SESSION['items'] = array();
+}
 
 while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
     $item_id = $row['item_id'];
@@ -42,6 +38,10 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
     $btnID = "myBtn" . $x;
     $modelID = "myModel" . $x;
 
+	/*********************************************************************
+	* Create variable to hold Quantity selector for the current item, 
+	* making sure that the available quantity shown matches the DB values
+	**********************************************************************/
 	$qtySelect = '';
 	$qtySelect .= '<select name="selectQty">';
 	for ($i = 0; $i <= $quantity; $i++) {
@@ -49,13 +49,13 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
 	}
 	$qtySelect .= "</select>";
 
-		
-    
-
     /**********************************************************************
     * Propogates and displays each element to the screen upon page load. On
     * clicking a specific element, this code will display a special CSS 
     * box which can be un-displayed by re-clicking anywhere on the screen.
+	*
+	* The form submit button will send selected values to Scripts/addCart.php
+	* and add the item to the cart via the Session 'items' array.
     **********************************************************************/
     echo "
         <div class='gallery' id='$btnID'>
@@ -116,9 +116,6 @@ while ($row = $storeItems->fetch(PDO::FETCH_ASSOC)) {
         }
         </script>
     ";
-	
-
-
 
     $x++;
 }

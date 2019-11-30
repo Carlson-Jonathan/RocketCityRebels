@@ -7,7 +7,7 @@ session_start();
 *   Kyle Kadous
 * Description:   
 *   Loop through all items currently saved to the SESSION arrays and display
-*   each saved item in a modal. Each line will allow you delete the item from the
+*   each saved item in a modal. Each line will allow you to delete the item from the
 *   cart, aka SESSION, or add/subtract from the total quantity selected.
 *   PayPal button is available to submit and complete the order
 ******************************************************************************/
@@ -20,11 +20,19 @@ $totalPrice = floatval(0);
 $itemArray = '';
 $clothingArray = '';
 
+/*********************************************************************************
+* Begin looping through 'items' array, first by getting the key of the last array 
+* value, then loop through the array until you hit that key.
+* For each key in the array, make sure it exists and is not empty.
+* Get the quantity values from array, create quantity dropdowns, and store all this
+* to the 'itemArray' var to be added to the Cart Modal.
+*********************************************************************************/
 // Set internal pointer to array
 end($_SESSION['items']);
 // Get the last key in the array, because we may be removing items
 $key = key($_SESSION['items']);
 
+// Loop through array until we hit the last key. (some values may have been deleted, which is why we check)
 while ($itemCount <= $key) {
 	if (isset($_SESSION['items'][$itemCount]) && !empty($_SESSION['items'][$itemCount])) {
 		// Using selected qty and max allowed qty, display dropdown in case user wishes to change selection
@@ -65,6 +73,13 @@ while ($itemCount <= $key) {
 $itemCount++;
 }
 
+/*********************************************************************************
+* Begin looping through 'clothing' array, first by getting the key of the last array 
+* value, then loop through the array until you hit that key.
+* For each key in the array, make sure it exists and is not empty.
+* Get the quantity values from array, create quantity dropdowns, and store all this
+* to the 'clothingArray' var to be added to the Cart Modal.
+*********************************************************************************/
 // Set internal pointer to aclothing array
 end($_SESSION['clothing']);
 // Get the last key in the clothing array, because we may be removing clothing items
@@ -181,11 +196,11 @@ echo "
 		<div class='modal-dialog modal-lg' role='document'>
 			<div class='modal-content'>
 				<div class='modal-header'>
-					<h5 class='modal-title'>Shopping Cart</h5>
 					<button data-dismiss='modal' class='close' id='exitCartBtn'>x</button>
+					<h5 class='modal-title'>Shopping Cart</h5>
 				</div>
 				<div class='modal-body'>
-					<table class='show-cart table'>
+					<table class='center'>
 						<tr>
 							<th></th>
 							<th>Item</th>
@@ -195,7 +210,7 @@ echo "
 						</tr>
 					$itemArray
 					</table>
-					<table class='show-cart table'>
+					<table class='center'>
 						<tr>
 							<th></th>
 							<th>Item</th>
@@ -211,7 +226,6 @@ echo "
 					<div>Total price: $" . $totalPrice . "<span class='total-cart'></span></div>
 				</div>
 				<div class='modal-footer'>
-					<button type='button' class='btn btn-secondary' data-dismiss='modal'>Close</button>
 					<form method='POST' action='../scripts/orderSubmit.php'>
 					<input type='hidden' name='cmd' value='_cart' />
 					<input type='hidden' name='upload' value='1'>
@@ -237,5 +251,4 @@ echo "
         }
 	</script>
 ";
-
 ?>

@@ -138,9 +138,6 @@ if (!isset($_POST["txn_id"]) && !isset($_POST["txn_type"])) {
 		$clothingCount++;
 	}
 
-
-
-	
 	// Loop through all purchased items and set them
     foreach ($_POST as $key => $value) {
         $data[$key] = stripslashes($value);

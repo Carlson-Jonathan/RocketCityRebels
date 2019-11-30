@@ -22,15 +22,15 @@ function test_input($data) {
 
 // Set all variables
 if (isset($_POST["EditItem"])) {
-	$key = $_POST["key"];
+	$key = test_input($_POST["key"]);
 
 	// Make sure new quantity is not Zero
-	if ($_POST['newQty'] == 0) {
+	if (test_input($_POST['newQty']) == 0) {
 		unset($_SESSION['items'][$key]);
 	}
 	else {
 		// Changed Selected Quantity
-		$_SESSION['items'][$key]['selectQty'] = $_POST['newQty'];
+		$_SESSION['items'][$key]['selectQty'] = test_input($_POST['newQty']);
 	}
 }
 else {
@@ -38,18 +38,18 @@ else {
 }
 
 if (isset($_POST["EditClothing"])) {
-	$key = $_POST["key"];
+	$key = test_input($_POST["key"]);
 
 	// Make sure all new values are Not all Zero
-	if ($_POST['newSmall'] == 0 && $_POST['newMedium'] == 0 && $_POST['newLarge'] == 0 && $_POST['newXLarge'] == 0) {
+	if (test_input($_POST['newSmall']) == 0 && test_input($_POST['newMedium']) == 0 && test_input($_POST['newLarge']) == 0 && test_input($_POST['newXLarge']) == 0) {
 		unset($_SESSION['clothing'][$key]);
 	}
 	else {
 		// Change quantities
-		$_SESSION['clothing'][$key]['selectSmall'] = $_POST['newSmall'];
-		$_SESSION['clothing'][$key]['selectMedium'] = $_POST['newMedium'];
-		$_SESSION['clothing'][$key]['selectLarge'] = $_POST['newLarge'];
-		$_SESSION['clothing'][$key]['selectXLarge'] = $_POST['newXLarge'];
+		$_SESSION['clothing'][$key]['selectSmall'] = test_input($_POST['newSmall']);
+		$_SESSION['clothing'][$key]['selectMedium'] = test_input($_POST['newMedium']);
+		$_SESSION['clothing'][$key]['selectLarge'] = test_input($_POST['newLarge']);
+		$_SESSION['clothing'][$key]['selectXLarge'] = test_input($_POST['newXLarge']);
 	}
 }
 else {

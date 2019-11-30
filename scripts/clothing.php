@@ -22,10 +22,10 @@ $clothingItems = $db->prepare("SELECT * FROM clothing");
 $clothingItems->execute();
 $x = 1;
 
-//Check if items array already exists. If it does not, then instantiate
-		if (!isset($_SESSION['clothing'])) {
-			$_SESSION['clothing'] = array();
-		}
+//Check if clothing array already exists. If it does not, then instantiate it
+if (!isset($_SESSION['clothing'])) {
+	$_SESSION['clothing'] = array();
+}
 
 while ($row = $clothingItems->fetch(PDO::FETCH_ASSOC)) {
     $item_id = $row['item_id'];
@@ -41,6 +41,11 @@ while ($row = $clothingItems->fetch(PDO::FETCH_ASSOC)) {
     $clbtnID = "clBtn" . $x;
     $clmodelID = "clModel" . $x;
 
+	/*********************************************************************
+	* Create variables to hold Quantity selectors for the current clothing
+	* item, making sure that the available quantity shown matches the 
+	* DB values
+	**********************************************************************/
 	// Create qty select for small
 	$qtySmall = '';
 	$qtySmall .= '<select name="selectSmall">';
@@ -72,12 +77,14 @@ while ($row = $clothingItems->fetch(PDO::FETCH_ASSOC)) {
 	$qtyXLarge .= "<option value='" . $i . "'>" . $i . "</option>";
 	}
 	$qtyXLarge .= "</select>";
-    
 
     /**********************************************************************
     * Propogates and displays each element to the screen upon page load. On
     * clicking a specific element, this code will display a special CSS 
     * box which can be un-displayed by re-clicking anywhere on the screen.
+	*
+	* The form submit button will send selected values to Scripts/addCart.php
+	* and add the clothing item to the cart via the Session 'clothing' array.
     **********************************************************************/
     echo "
         <div class='gallery' id='$clbtnID'>
