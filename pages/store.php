@@ -37,7 +37,7 @@
 		<h2>Monthly Dues</h2>
 		<div class="row">
 			<div class="columnright" style="width: 75%">
-				<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+				<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" style="width: 0; margin: auto">
 					<input type="hidden" name="cmd" value="_s-xclick">
 					<input type="hidden" name="hosted_button_id" value="K6CGBB6UB6SS4">
 					<table>

@@ -13,14 +13,11 @@
 
 .modal-header {
     padding: 15px;
-    border-bottom: 1px solid #eceeef;
+    border-bottom: 2px solid #eceeef;
 }
 
 .modal-title {
     font-size: 1.25rem;
-}
-
-td {
 }
 
 .modal-dialog {
@@ -30,7 +27,13 @@ td {
 table.center {
     margin-left: auto;
     margin-right: auto;
-    border-top: 1px solid #eceeef;
-    border-bottom: 1px solid #eceeef;
-    padding: 15px;
+    border-bottom: 2px solid #eceeef;
+    padding: 10px;
+    width: 50%;
+    margin-bottom: .75rem;
+}
+
+.center th td {
+    padding: .5rem;
+    vertical-align: top;
 }

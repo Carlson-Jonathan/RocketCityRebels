@@ -64,7 +64,7 @@ while ($itemCount <= $key) {
 					  <td>" . $itemPrice . "</td>
 					  <td>
 					  <input type='hidden' name='key' value='" . $itemCount . "'>
-					  <input type='submit' name='EditItem' value='Save Change'/></td>
+					  <input type='submit' name='EditItem' value='Save'/></td>
 					  </form>
 					  </tr>";
 
@@ -181,7 +181,7 @@ while ($clothingCount <= $clothingKey) {
 					  <td>" . $itemPrice . "</td>
 					  <td>
 					  <input type='hidden' name='key' value='" . $clothingCount . "'>
-					  <input type='submit' name='EditClothing' value='Save Change'/></td>
+					  <input type='submit' name='EditClothing' value='Save'/></td>
 					  </form>
 					  </tr>";
 
